@@ -78,6 +78,9 @@ dependencies {
     // System UI
     implementation(libs.accompanist.systemuicontroller)
 
+    // Splash screen
+    implementation(libs.androidx.splashscreen)
+
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
