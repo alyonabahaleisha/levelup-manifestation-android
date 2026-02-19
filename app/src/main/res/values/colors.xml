@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark purple launch background — prevents white flash -->
+    <color name="launch_background">#240D24</color>
+</resources>

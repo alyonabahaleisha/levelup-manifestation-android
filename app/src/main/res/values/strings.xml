@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LevelUp</string>
+    <string name="tab_affirmations">Affirmations</string>
+    <string name="tab_reprogram">Reprogram</string>
+    <string name="tab_dream_life">Dream Life</string>
+</resources>
