@@ -25,6 +25,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.levelup.manifestation.ui.components.StarSkyView
 import com.levelup.manifestation.ui.theme.ToneTheme
 import kotlinx.coroutines.delay
 
@@ -80,7 +81,7 @@ fun SplashScreen(modifier: Modifier = Modifier) {
             .background(Brush.linearGradient(theme.gradientColors)),
         contentAlignment = Alignment.Center
     ) {
-        ParticlesView()
+        StarSkyView()
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Spacer(modifier = Modifier.weight(1f))

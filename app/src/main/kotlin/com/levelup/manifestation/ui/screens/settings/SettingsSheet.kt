@@ -50,7 +50,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.levelup.manifestation.ui.screens.splash.ParticlesView
+import com.levelup.manifestation.ui.components.StarSkyView
 import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.GlassChip
 import com.levelup.manifestation.ui.theme.LocalToneTheme
@@ -76,7 +76,7 @@ fun SettingsSheet(
             .fillMaxWidth()
             .background(Brush.linearGradient(theme.gradientColors))
     ) {
-        ParticlesView(modifier = Modifier.height(600.dp))
+        StarSkyView(modifier = Modifier.height(600.dp))
 
         Column(
             modifier = Modifier

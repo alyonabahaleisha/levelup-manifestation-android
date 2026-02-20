@@ -42,7 +42,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.levelup.manifestation.data.content.AffirmationContent
 import com.levelup.manifestation.data.model.Affirmation
-import com.levelup.manifestation.ui.screens.splash.ParticlesView
+import com.levelup.manifestation.ui.components.StarSkyView
 import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.GlassChip
 import com.levelup.manifestation.ui.theme.LifeArea
@@ -75,7 +75,7 @@ fun AffirmationsScreen(
     Box(modifier = Modifier.fillMaxSize()) {
         if (affirmations.isEmpty()) {
             Box(Modifier.fillMaxSize().background(Brush.linearGradient(theme.gradientColors))) {
-                ParticlesView()
+                StarSkyView()
             }
         } else {
             VerticalPager(
@@ -153,7 +153,7 @@ fun AffirmationCard(affirmation: Affirmation) {
                 .fillMaxSize()
                 .background(Brush.linearGradient(theme.gradientColors))
         )
-        ParticlesView()
+        StarSkyView()
 
         Box(
             modifier = Modifier
