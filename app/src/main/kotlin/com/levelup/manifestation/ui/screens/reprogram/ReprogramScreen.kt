@@ -65,7 +65,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.levelup.manifestation.data.content.ProgramContent
 import com.levelup.manifestation.data.model.HiddenProgram
-import com.levelup.manifestation.ui.screens.splash.ParticlesView
+import com.levelup.manifestation.ui.components.StarSkyView
 import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.LifeArea
 import com.levelup.manifestation.ui.theme.LocalToneTheme
@@ -88,7 +88,7 @@ fun ReprogramScreen(
 
     Box(modifier = Modifier.fillMaxSize()) {
         Box(modifier = Modifier.fillMaxSize().background(Brush.linearGradient(theme.gradientColors)))
-        ParticlesView()
+        StarSkyView()
 
         AnimatedContent(
             targetState = selectedArea,
@@ -165,7 +165,7 @@ private fun AreaCard(area: LifeArea, index: Int, glowColor: Color, onClick: () -
         cornerRadius = 20.dp,
         modifier = Modifier
             .fillMaxWidth()
-            .shadow(16.dp, RoundedCornerShape(20.dp), ambientColor = glowColor, spotColor = glowColor)
+            .shadow(16.dp, RoundedCornerShape(20.dp), clip = false, ambientColor = glowColor, spotColor = glowColor)
             .graphicsLayer { scaleX = scale; scaleY = scale; this.alpha = alpha }
             .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null, onClick = onClick)
     ) {
@@ -256,7 +256,7 @@ private fun ProgramListContent(
                     cornerRadius = 18.dp,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .shadow(10.dp, RoundedCornerShape(18.dp), ambientColor = theme.glowColor, spotColor = theme.glowColor)
+                        .shadow(10.dp, RoundedCornerShape(18.dp), clip = false, ambientColor = theme.glowColor, spotColor = theme.glowColor)
                         .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {
                             haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
                             onSelect(program)
@@ -344,10 +344,11 @@ private fun ProgramRewriteContent(
         // New program
         GlassCard(
             cornerRadius = 22.dp,
+            borderWidth = 1.5.dp,
+            borderColor = newBorderColor,
             modifier = Modifier
                 .padding(horizontal = 24.dp)
-                .shadow(newGlowRadius, RoundedCornerShape(22.dp), ambientColor = theme.glowColor, spotColor = theme.glowColor)
-                .border(1.5.dp, newBorderColor, RoundedCornerShape(22.dp))
+                .shadow(newGlowRadius, RoundedCornerShape(22.dp), clip = false, ambientColor = theme.glowColor, spotColor = theme.glowColor)
                 .graphicsLayer { alpha = newCardAlpha }
         ) {
             Column(

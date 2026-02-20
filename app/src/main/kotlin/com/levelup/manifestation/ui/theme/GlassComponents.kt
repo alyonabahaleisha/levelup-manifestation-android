@@ -30,6 +30,8 @@ import androidx.compose.foundation.background
 fun GlassCard(
     modifier: Modifier = Modifier,
     cornerRadius: Dp = 24.dp,
+    borderWidth: Dp = 1.dp,
+    borderColor: Color = Color.Transparent,
     content: @Composable BoxScope.() -> Unit
 ) {
     val shape = RoundedCornerShape(cornerRadius)
@@ -37,7 +39,7 @@ fun GlassCard(
         modifier = modifier
             .clip(shape)
             .background(Color.White.copy(alpha = 0.07f))
-            .border(1.dp, Color.White.copy(alpha = 0.13f), shape),
+            .border(borderWidth, borderColor, shape),
         content = content
     )
 }

@@ -134,7 +134,7 @@ fun GlassTabBar(
 
     Row(
         modifier = modifier
-            .shadow(24.dp, CircleShape)
+            .shadow(24.dp, CircleShape, clip = false)
             .clip(CircleShape)
             .background(Color.Black.copy(alpha = 0.25f))
             .border(1.dp, Color.White.copy(alpha = 0.12f), CircleShape)

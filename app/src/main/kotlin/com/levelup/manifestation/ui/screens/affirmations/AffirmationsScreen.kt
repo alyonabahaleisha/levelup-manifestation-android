@@ -193,7 +193,7 @@ fun AffirmationCard(affirmation: Affirmation) {
                     cornerRadius = 28.dp,
                     modifier = Modifier
                         .padding(horizontal = 24.dp)
-                        .shadow(glowRadius, androidx.compose.foundation.shape.RoundedCornerShape(28.dp), ambientColor = glowColor, spotColor = glowColor)
+                        .shadow(glowRadius, androidx.compose.foundation.shape.RoundedCornerShape(28.dp), clip = false, ambientColor = glowColor, spotColor = glowColor)
                         .graphicsLayer {
                             translationY = cardOffset
                             alpha = cardAlpha
