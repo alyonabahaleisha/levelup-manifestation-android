@@ -165,7 +165,6 @@ private fun AreaCard(area: LifeArea, index: Int, glowColor: Color, onClick: () -
         cornerRadius = 20.dp,
         modifier = Modifier
             .fillMaxWidth()
-            .shadow(16.dp, RoundedCornerShape(20.dp), clip = false, ambientColor = glowColor, spotColor = glowColor)
             .graphicsLayer { scaleX = scale; scaleY = scale; this.alpha = alpha }
             .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null, onClick = onClick)
     ) {
@@ -256,7 +255,6 @@ private fun ProgramListContent(
                     cornerRadius = 18.dp,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .shadow(10.dp, RoundedCornerShape(18.dp), clip = false, ambientColor = theme.glowColor, spotColor = theme.glowColor)
                         .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {
                             haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
                             onSelect(program)
@@ -348,7 +346,6 @@ private fun ProgramRewriteContent(
             borderColor = newBorderColor,
             modifier = Modifier
                 .padding(horizontal = 24.dp)
-                .shadow(newGlowRadius, RoundedCornerShape(22.dp), clip = false, ambientColor = theme.glowColor, spotColor = theme.glowColor)
                 .graphicsLayer { alpha = newCardAlpha }
         ) {
             Column(
