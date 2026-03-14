@@ -1,22 +1,27 @@
 package com.levelup.manifestation.ui.screens.affirmations
 
+import android.Manifest
+import android.os.Build
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.Text
@@ -26,99 +31,263 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.levelup.manifestation.ui.theme.AppTypography
+import com.levelup.manifestation.ui.theme.Manrope
+import com.levelup.manifestation.ui.theme.PlayfairDisplay
+import androidx.datastore.preferences.core.edit
+import androidx.hilt.navigation.compose.hiltViewModel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.launch
+import com.levelup.manifestation.Translations
 import com.levelup.manifestation.data.content.AffirmationContent
 import com.levelup.manifestation.data.model.Affirmation
-import com.levelup.manifestation.ui.components.StarSkyView
+import com.levelup.manifestation.data.store.PrefsKeys
+import com.levelup.manifestation.data.store.dataStore
+import com.levelup.manifestation.ui.components.FeatherBackground
 import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.GlassChip
 import com.levelup.manifestation.ui.theme.LifeArea
 import com.levelup.manifestation.ui.theme.LocalToneTheme
+import com.levelup.manifestation.ui.viewmodel.NotificationViewModel
 import com.levelup.manifestation.ui.viewmodel.SavedProgramsViewModel
 import com.levelup.manifestation.ui.viewmodel.ThemeViewModel
 
+// Feed item types
+private sealed class FeedItem {
+    data class AffirmationItem(val affirmation: Affirmation) : FeedItem()
+    object NotifPromoItem : FeedItem()
+}
+
 @Composable
 fun AffirmationsScreen(
-    savedProgramsViewModel: SavedProgramsViewModel,
-    themeViewModel: ThemeViewModel
+    themeViewModel: ThemeViewModel,
+    notifViewModel: NotificationViewModel = hiltViewModel(),
+    deepLinkText: String? = null,
+    onDeepLinkConsumed: () -> Unit = {}
 ) {
     val theme = LocalToneTheme.current
-    val saved by savedProgramsViewModel.saved.collectAsState()
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+    val notifSettings by notifViewModel.settings.collectAsState()
     var selectedArea by remember { mutableStateOf<LifeArea?>(null) }
 
-    val affirmations = remember(selectedArea, saved) {
-        buildFeed(selectedArea, saved)
+    // Scroll hint — shown only on first ever visit
+    val scrollHintShown by remember {
+        context.dataStore.data.map { it[PrefsKeys.SCROLL_HINT_SHOWN] ?: false }
+    }.collectAsState(initial = true) // default true avoids flash; real value loads instantly
+    var showScrollHint by remember { mutableStateOf(false) }
+
+    LaunchedEffect(scrollHintShown) {
+        if (!scrollHintShown) {
+            showScrollHint = true
+            delay(3500)
+            showScrollHint = false
+            scope.launch { context.dataStore.edit { it[PrefsKeys.SCROLL_HINT_SHOWN] = true } }
+        }
     }
 
-    val pagerState = rememberPagerState(pageCount = { affirmations.size.coerceAtLeast(1) })
+    val affirmations = remember(selectedArea) {
+        buildFeed(selectedArea)
+    }
+
+    val feedItems = remember(affirmations, notifSettings.isEnabled) {
+        buildFeedWithPromo(affirmations, showPromo = !notifSettings.isEnabled)
+    }
+
+    val pagerState = rememberPagerState(pageCount = { feedItems.size.coerceAtLeast(1) })
     val haptics = LocalHapticFeedback.current
+
+    // Permission launcher for the promo card "Enable" button
+    val notifPermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted -> if (granted) notifViewModel.enable() }
+
+    fun onEnableNotifications() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            notifPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        } else {
+            notifViewModel.enable()
+        }
+    }
+
+    // Deep link: store pending text locally so we can scroll after feed rebuilds
+    var pendingDeepLink by remember { mutableStateOf<String?>(null) }
+
+    LaunchedEffect(deepLinkText) {
+        if (deepLinkText != null) {
+            pendingDeepLink = deepLinkText
+            selectedArea = null
+            onDeepLinkConsumed()
+        }
+    }
+
+    val currentFeedItems by rememberUpdatedState(feedItems)
+    LaunchedEffect(pendingDeepLink, feedItems) {
+        val text = pendingDeepLink ?: return@LaunchedEffect
+        val idx = currentFeedItems.indexOfFirst {
+            it is FeedItem.AffirmationItem && it.affirmation.text == text
+        }
+        if (idx >= 0) {
+            pagerState.animateScrollToPage(idx)
+            pendingDeepLink = null
+        }
+    }
 
     LaunchedEffect(pagerState) {
         snapshotFlow { pagerState.currentPage }.collect {
             haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+            // Dismiss hint on first manual scroll
+            if (showScrollHint) {
+                showScrollHint = false
+                scope.launch { context.dataStore.edit { it[PrefsKeys.SCROLL_HINT_SHOWN] = true } }
+            }
         }
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        if (affirmations.isEmpty()) {
+        if (feedItems.isEmpty()) {
             Box(Modifier.fillMaxSize().background(Brush.linearGradient(theme.gradientColors))) {
-                StarSkyView()
+                FeatherBackground()
             }
         } else {
             VerticalPager(
                 state = pagerState,
                 modifier = Modifier.fillMaxSize()
             ) { page ->
-                AffirmationCard(affirmation = affirmations[page])
+                when (val item = feedItems[page]) {
+                    is FeedItem.AffirmationItem -> AffirmationCard(affirmation = item.affirmation)
+                    FeedItem.NotifPromoItem -> NotificationPromoCard(
+                        onEnableClick = { onEnableNotifications() }
+                    )
+                }
             }
         }
 
-        // Filter bar
-        LazyRow(
-            modifier = Modifier
-                .align(Alignment.TopCenter)
-                .fillMaxWidth()
-                .padding(top = 60.dp),
-            contentPadding = PaddingValues(horizontal = 16.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            item {
-                FilterChip(
-                    label = "✦  All",
-                    isSelected = selectedArea == null,
-                    accentColor = theme.accent,
-                    onClick = { selectedArea = null }
-                )
-            }
-            items(LifeArea.entries) { area ->
-                FilterChip(
-                    label = "${area.emoji}  ${area.label}",
-                    isSelected = selectedArea == area,
-                    accentColor = theme.accent,
-                    onClick = { selectedArea = if (selectedArea == area) null else area }
-                )
-            }
+        // First-time scroll hint
+        if (showScrollHint) {
+            ScrollHint(modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 120.dp))
         }
+
     }
 }
 
-private fun buildFeed(area: LifeArea?, saved: List<Affirmation>): List<Affirmation> {
-    val personal = if (area == null) saved else saved.filter { it.area == area }
-    val regular = AffirmationContent.feed(if (area == null) emptyList() else listOf(area))
-    return personal + regular
+private fun buildFeed(area: LifeArea?): List<Affirmation> =
+    AffirmationContent.feed(if (area == null) emptyList() else listOf(area))
+
+// Insert a promo card after every 2 affirmations (so it's every 3rd card)
+private fun buildFeedWithPromo(
+    affirmations: List<Affirmation>,
+    showPromo: Boolean
+): List<FeedItem> {
+    if (!showPromo || affirmations.isEmpty()) {
+        return affirmations.map { FeedItem.AffirmationItem(it) }
+    }
+    val result = mutableListOf<FeedItem>()
+    affirmations.forEachIndexed { index, affirmation ->
+        result.add(FeedItem.AffirmationItem(affirmation))
+        if ((index + 1) % 2 == 0) result.add(FeedItem.NotifPromoItem)
+    }
+    return result
+}
+
+@Composable
+private fun NotificationPromoCard(onEnableClick: () -> Unit) {
+    val theme = LocalToneTheme.current
+    var appeared by remember { mutableStateOf(false) }
+
+    val alpha by animateFloatAsState(
+        targetValue = if (appeared) 1f else 0f,
+        animationSpec = spring(dampingRatio = 0.78f, stiffness = Spring.StiffnessMediumLow),
+        label = "promoAlpha"
+    )
+    val offset by animateFloatAsState(
+        targetValue = if (appeared) 0f else 24f,
+        animationSpec = spring(dampingRatio = 0.78f, stiffness = Spring.StiffnessMediumLow),
+        label = "promoOffset"
+    )
+
+    LaunchedEffect(Unit) {
+        appeared = false
+        appeared = true
+    }
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        Box(Modifier.fillMaxSize().background(Brush.linearGradient(theme.gradientColors)))
+        FeatherBackground()
+
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(bottom = 88.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            GlassCard(
+                cornerRadius = 28.dp,
+                modifier = Modifier
+                    .padding(horizontal = 24.dp)
+                    .graphicsLayer { translationY = offset; this.alpha = alpha }
+            ) {
+                Column(
+                    modifier = Modifier.padding(horizontal = 32.dp, vertical = 40.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(20.dp)
+                ) {
+                    Text(
+                        text = "✦",
+                        style = AppTypography.displayMedium,
+                        color = theme.accent
+                    )
+                    Text(
+                        text = Translations.ui("notifPromoTitle"),
+                        style = AppTypography.headingMedium,
+                        color = Color.White,
+                        textAlign = TextAlign.Center,
+                        lineHeight = 30.sp
+                    )
+                    Text(
+                        text = Translations.ui("notifPromoBody"),
+                        style = AppTypography.bodyMedium,
+                        color = Color.White.copy(alpha = 0.6f),
+                        textAlign = TextAlign.Center,
+                        lineHeight = 20.sp
+                    )
+                    Spacer(Modifier.height(4.dp))
+                    GlassChip(
+                        isSelected = true,
+                        accentColor = theme.accent,
+                        modifier = Modifier.clickable(
+                            interactionSource = remember { MutableInteractionSource() },
+                            indication = null,
+                            onClick = onEnableClick
+                        )
+                    ) {
+                        Text(
+                            text = Translations.ui("notifPromoButton"),
+                            style = AppTypography.labelLarge,
+                            color = theme.accent,
+                            modifier = Modifier.padding(horizontal = 24.dp, vertical = 10.dp)
+                        )
+                    }
+                }
+            }
+        }
+    }
 }
 
 @Composable
@@ -153,41 +322,28 @@ fun AffirmationCard(affirmation: Affirmation) {
                 .fillMaxSize()
                 .background(Brush.linearGradient(theme.gradientColors))
         )
-        StarSkyView()
+        FeatherBackground()
 
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(bottom = 140.dp),
+                .padding(bottom = 88.dp),
             contentAlignment = Alignment.Center
         ) {
-            androidx.compose.foundation.layout.Column(
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                // Area chip
-                GlassChip(
-                    isSelected = affirmation.isPersonal,
-                    accentColor = theme.accent,
-                    modifier = Modifier
-                        .padding(bottom = 28.dp)
-                        .graphicsLayer {
-                            translationY = chipOffset
-                            alpha = cardAlpha
-                        }
-                ) {
-                    Text(
-                        text = if (affirmation.isPersonal) "✦  Your Identity"
-                        else "${affirmation.area.emoji}  ${affirmation.area.label}",
-                        fontSize = 13.sp,
-                        fontWeight = FontWeight.Medium,
-                        color = if (affirmation.isPersonal) theme.accent else Color.White.copy(0.75f),
-                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 7.dp)
-                    )
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                val len = affirmation.text.length
+                val fontSize = when {
+                    len < 60  -> 32.sp
+                    len < 120 -> 26.sp
+                    len < 200 -> 21.sp
+                    else      -> 17.sp
                 }
-
-                // Affirmation card
-                val glowColor = if (affirmation.isPersonal) theme.accent.copy(alpha = 0.4f) else theme.glowColor
-                val glowRadius = if (affirmation.isPersonal) 40.dp else 30.dp
+                val lineHeight = when {
+                    len < 60  -> 42.sp
+                    len < 120 -> 36.sp
+                    len < 200 -> 30.sp
+                    else      -> 26.sp
+                }
 
                 GlassCard(
                     cornerRadius = 28.dp,
@@ -200,16 +356,52 @@ fun AffirmationCard(affirmation: Affirmation) {
                 ) {
                     Text(
                         text = affirmation.text,
-                        fontSize = 32.sp,
-                        fontWeight = FontWeight.Light,
+                        fontFamily = PlayfairDisplay,
+                        fontSize = fontSize,
                         color = Color.White,
                         textAlign = TextAlign.Center,
-                        lineHeight = 42.sp,
+                        lineHeight = lineHeight,
                         modifier = Modifier.padding(horizontal = 32.dp, vertical = 40.dp)
                     )
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun ScrollHint(modifier: Modifier = Modifier) {
+    val theme = LocalToneTheme.current
+    val offsetAnim = remember { Animatable(0f) }
+    val alphaAnim = remember { Animatable(0f) }
+
+    LaunchedEffect(Unit) {
+        alphaAnim.animateTo(1f, tween(400))
+        offsetAnim.animateTo(
+            targetValue = -12f,
+            animationSpec = infiniteRepeatable(
+                animation = tween(600),
+                repeatMode = RepeatMode.Reverse
+            )
+        )
+    }
+
+    Column(
+        modifier = modifier.graphicsLayer { alpha = alphaAnim.value },
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(4.dp)
+    ) {
+        Text(
+            text = "↑",
+            style = AppTypography.headingLarge,
+            color = theme.accent.copy(alpha = 0.8f),
+            modifier = Modifier.graphicsLayer { translationY = offsetAnim.value }
+        )
+        Text(
+            text = Translations.ui("scrollHint"),
+            style = AppTypography.caption.copy(letterSpacing = 1.sp),
+            color = Color.White.copy(alpha = 0.5f),
+        )
     }
 }
 
@@ -234,8 +426,7 @@ private fun FilterChip(
     ) {
         Text(
             text = label,
-            fontSize = 13.sp,
-            fontWeight = FontWeight.Medium,
+            style = AppTypography.labelMedium,
             color = Color.White,
             modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp)
         )

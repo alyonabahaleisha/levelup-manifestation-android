@@ -5,26 +5,23 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.FormatQuote
+import androidx.compose.material.icons.outlined.Headphones
+import androidx.compose.material.icons.outlined.Refresh
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -33,50 +30,59 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.levelup.manifestation.Translations
 import com.levelup.manifestation.ui.screens.affirmations.AffirmationsScreen
+import com.levelup.manifestation.ui.screens.meditations.MeditationsScreen
 import com.levelup.manifestation.ui.screens.reprogram.ReprogramScreen
 import com.levelup.manifestation.ui.screens.settings.SettingsSheet
 import com.levelup.manifestation.ui.theme.AppTab
+import com.levelup.manifestation.ui.theme.AppTypography
 import com.levelup.manifestation.ui.theme.LocalToneTheme
+import com.levelup.manifestation.ui.viewmodel.MeditationViewModel
 import com.levelup.manifestation.ui.viewmodel.SavedProgramsViewModel
 import com.levelup.manifestation.ui.viewmodel.ThemeViewModel
-import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.spring
-import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.FormatQuote
-import androidx.compose.material.icons.outlined.Refresh
-import androidx.compose.material.icons.outlined.Settings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainTabScreen(
     themeViewModel: ThemeViewModel = hiltViewModel(),
-    savedProgramsViewModel: SavedProgramsViewModel = hiltViewModel()
+    savedProgramsViewModel: SavedProgramsViewModel = hiltViewModel(),
+    meditationViewModel: MeditationViewModel = hiltViewModel(),
+    openAffirmations: Boolean = false,
+    onAffirmationsOpened: () -> Unit = {},
+    deepLinkAffirmation: String? = null,
+    onAffirmationDeepLinked: () -> Unit = {}
 ) {
     val tone = themeViewModel.tone.collectAsState().value
+    val theme = LocalToneTheme.current
     val systemUiController = rememberSystemUiController()
+    val haptics = LocalHapticFeedback.current
     var selectedTab by remember { mutableStateOf<AppTab>(AppTab.Affirmations) }
     var showSettings by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
+    LaunchedEffect(openAffirmations) {
+        if (openAffirmations) {
+            selectedTab = AppTab.Affirmations
+            onAffirmationsOpened()
+        }
+    }
+
     SideEffect {
         systemUiController.isStatusBarVisible = false
-        systemUiController.isNavigationBarVisible = false
+        systemUiController.isNavigationBarVisible = true
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        // Animated screen content
+        // Screen content
         AnimatedContent(
             targetState = selectedTab,
             transitionSpec = { fadeIn() togetherWith fadeOut() },
@@ -85,25 +91,87 @@ fun MainTabScreen(
         ) { tab ->
             when (tab) {
                 is AppTab.Affirmations -> AffirmationsScreen(
-                    savedProgramsViewModel = savedProgramsViewModel,
-                    themeViewModel = themeViewModel
+                    themeViewModel = themeViewModel,
+                    deepLinkText = deepLinkAffirmation,
+                    onDeepLinkConsumed = onAffirmationDeepLinked
                 )
                 is AppTab.Reprogram -> ReprogramScreen(
                     savedProgramsViewModel = savedProgramsViewModel,
                     themeViewModel = themeViewModel
                 )
+                is AppTab.Meditations -> MeditationsScreen(
+                    viewModel = meditationViewModel
+                )
             }
         }
 
-        // Floating glass tab bar
-        GlassTabBar(
-            selectedTab = selectedTab,
-            onTabSelected = { selectedTab = it },
-            onSettings = { showSettings = true },
+        // Bottom navigation bar
+        NavigationBar(
             modifier = Modifier
                 .align(Alignment.BottomCenter)
-                .padding(bottom = 36.dp)
-        )
+                .drawBehind {
+                    drawLine(
+                        color = Color.White.copy(alpha = 0.10f),
+                        start = Offset(0f, 0f),
+                        end = Offset(size.width, 0f),
+                        strokeWidth = 1.dp.toPx()
+                    )
+                },
+            containerColor = Color(0xCC000000),
+            tonalElevation = 0.dp
+        ) {
+            val itemColors = NavigationBarItemDefaults.colors(
+                selectedIconColor = theme.accent,
+                selectedTextColor = theme.accent,
+                indicatorColor = theme.accent.copy(alpha = 0.15f),
+                unselectedIconColor = Color.White.copy(alpha = 0.40f),
+                unselectedTextColor = Color.White.copy(alpha = 0.40f)
+            )
+
+            NavigationBarItem(
+                selected = selectedTab is AppTab.Affirmations,
+                onClick = {
+                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                    selectedTab = AppTab.Affirmations
+                },
+                icon = { Icon(Icons.Outlined.FormatQuote, contentDescription = null) },
+                label = { Text(Translations.ui("affirmationsTab"), style = AppTypography.tabLabel) },
+                colors = itemColors
+            )
+
+            NavigationBarItem(
+                selected = selectedTab is AppTab.Reprogram,
+                onClick = {
+                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                    selectedTab = AppTab.Reprogram
+                },
+                icon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
+                label = { Text(Translations.ui("reprogramTab"), style = AppTypography.tabLabel) },
+                colors = itemColors
+            )
+
+            NavigationBarItem(
+                selected = selectedTab is AppTab.Meditations,
+                onClick = {
+                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                    selectedTab = AppTab.Meditations
+                },
+                icon = { Icon(Icons.Outlined.Headphones, contentDescription = null) },
+                label = { Text(Translations.ui("meditationsTab"), style = AppTypography.tabLabel) },
+                colors = itemColors
+            )
+
+            NavigationBarItem(
+                selected = false,
+                onClick = {
+                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                    showSettings = true
+                },
+                icon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
+                label = { Text(Translations.ui("settingsTitle"), style = AppTypography.tabLabel) },
+                colors = itemColors
+            )
+        }
 
         // Settings bottom sheet
         if (showSettings) {
@@ -118,122 +186,6 @@ fun MainTabScreen(
                     onDismiss = { showSettings = false }
                 )
             }
-        }
-    }
-}
-
-@Composable
-fun GlassTabBar(
-    selectedTab: AppTab,
-    onTabSelected: (AppTab) -> Unit,
-    onSettings: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    val theme = LocalToneTheme.current
-    val haptics = LocalHapticFeedback.current
-
-    Row(
-        modifier = modifier
-            .shadow(24.dp, CircleShape, clip = false)
-            .clip(CircleShape)
-            .background(Color.Black.copy(alpha = 0.25f))
-            .border(1.dp, Color.White.copy(alpha = 0.12f), CircleShape)
-            .padding(horizontal = 8.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        // Affirmations tab
-        TabButton(
-            label = "Affirm",
-            icon = { Icon(Icons.Outlined.FormatQuote, contentDescription = "Affirm", tint = if (selectedTab is AppTab.Affirmations) theme.accent else Color.White.copy(0.4f)) },
-            isSelected = selectedTab is AppTab.Affirmations,
-            accentColor = theme.accent,
-            onClick = {
-                haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
-                onTabSelected(AppTab.Affirmations)
-            }
-        )
-
-        // Reprogram tab
-        TabButton(
-            label = "Reprogram",
-            icon = { Icon(Icons.Outlined.Refresh, contentDescription = "Reprogram", tint = if (selectedTab is AppTab.Reprogram) theme.accent else Color.White.copy(0.4f)) },
-            isSelected = selectedTab is AppTab.Reprogram,
-            accentColor = theme.accent,
-            onClick = {
-                haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
-                onTabSelected(AppTab.Reprogram)
-            }
-        )
-
-        // Divider
-        Box(
-            modifier = Modifier
-                .padding(horizontal = 4.dp)
-                .width(1.dp)
-                .height(32.dp)
-                .background(Color.White.copy(alpha = 0.12f))
-        )
-
-        // Settings button
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center,
-            modifier = Modifier
-                .width(72.dp)
-                .height(52.dp)
-                .clickable(
-                    interactionSource = remember { MutableInteractionSource() },
-                    indication = null,
-                    onClick = onSettings
-                )
-        ) {
-            Icon(
-                Icons.Outlined.Settings,
-                contentDescription = "Settings",
-                tint = Color.White.copy(alpha = 0.4f)
-            )
-            Spacer(Modifier.height(4.dp))
-            Text("Settings", fontSize = 10.sp, color = Color.White.copy(alpha = 0.4f))
-        }
-    }
-}
-
-@Composable
-private fun TabButton(
-    label: String,
-    icon: @Composable () -> Unit,
-    isSelected: Boolean,
-    accentColor: Color,
-    onClick: () -> Unit
-) {
-    val scale by animateFloatAsState(
-        targetValue = if (isSelected) 1.05f else 1f,
-        animationSpec = spring(),
-        label = "tabScale"
-    )
-
-    Box(
-        contentAlignment = Alignment.Center,
-        modifier = Modifier
-            .width(88.dp)
-            .height(52.dp)
-            .graphicsLayer { scaleX = scale; scaleY = scale }
-            .clip(CircleShape)
-            .background(if (isSelected) accentColor.copy(alpha = 0.14f) else Color.Transparent)
-            .clickable(
-                interactionSource = remember { MutableInteractionSource() },
-                indication = null,
-                onClick = onClick
-            )
-    ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            icon()
-            Spacer(Modifier.height(4.dp))
-            Text(
-                label,
-                fontSize = 10.sp,
-                color = if (isSelected) accentColor else Color.White.copy(alpha = 0.4f)
-            )
         }
     }
 }

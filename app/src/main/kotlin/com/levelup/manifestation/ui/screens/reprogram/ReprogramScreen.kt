@@ -1,8 +1,8 @@
 package com.levelup.manifestation.ui.screens.reprogram
 
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.core.Spring
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
@@ -12,6 +12,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -31,8 +32,12 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.itemsIndexed
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ArrowDownward
@@ -40,6 +45,7 @@ import androidx.compose.material.icons.outlined.ChevronLeft
 import androidx.compose.material.icons.outlined.ChevronRight
 import androidx.compose.material.icons.outlined.CheckCircle
 import androidx.compose.material.icons.outlined.AutoAwesome
+import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -52,9 +58,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
@@ -63,20 +72,40 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.levelup.manifestation.ui.theme.AppTypography
+import com.levelup.manifestation.ui.theme.Manrope
+import com.levelup.manifestation.ui.theme.PlayfairDisplay
+import com.levelup.manifestation.Translations
 import com.levelup.manifestation.data.content.ProgramContent
+import com.levelup.manifestation.data.model.Affirmation
 import com.levelup.manifestation.data.model.HiddenProgram
-import com.levelup.manifestation.ui.components.StarSkyView
+import com.levelup.manifestation.ui.components.FeatherBackground
 import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.LifeArea
 import com.levelup.manifestation.ui.theme.LocalToneTheme
 import com.levelup.manifestation.ui.viewmodel.SavedProgramsViewModel
 import com.levelup.manifestation.ui.viewmodel.ThemeViewModel
+import kotlin.math.cos
+import kotlin.math.sin
+import kotlin.random.Random
 import kotlinx.coroutines.delay
 
-private val availableAreas = listOf(
-    LifeArea.Money, LifeArea.Relationships, LifeArea.SelfWorth,
-    LifeArea.Fear, LifeArea.Body, LifeArea.Career
-)
+private val availableAreas = LifeArea.entries
+
+private fun areaColor(area: LifeArea): Color = when (area) {
+    LifeArea.Money          -> Color(0xFFFFD966)
+    LifeArea.Confidence     -> Color(0xFFFFE566)
+    LifeArea.Love           -> Color(0xFFFF7A9A)
+    LifeArea.Calm           -> Color(0xFF7EC8E3)
+    LifeArea.Career         -> Color(0xFFFFB347)
+    LifeArea.FeminineEnergy -> Color(0xFFFFB3DE)
+    LifeArea.Relationships  -> Color(0xFFFF9AAF)
+    LifeArea.SelfWorth      -> Color(0xFFB39DFF)
+    LifeArea.Fear           -> Color(0xFF80D4FF)
+    LifeArea.Body           -> Color(0xFF7FFFD4)
+}
+
+// ── Reprogram Screen ───────────────────────────────────────────────────────────
 
 @Composable
 fun ReprogramScreen(
@@ -85,10 +114,12 @@ fun ReprogramScreen(
 ) {
     val theme = LocalToneTheme.current
     var selectedArea by remember { mutableStateOf<LifeArea?>(null) }
+    var showSavedCards by remember { mutableStateOf(false) }
+    val saved by savedProgramsViewModel.saved.collectAsState()
 
     Box(modifier = Modifier.fillMaxSize()) {
         Box(modifier = Modifier.fillMaxSize().background(Brush.linearGradient(theme.gradientColors)))
-        StarSkyView()
+        FeatherBackground()
 
         AnimatedContent(
             targetState = selectedArea,
@@ -103,7 +134,11 @@ fun ReprogramScreen(
             label = "reprogramContent"
         ) { area ->
             if (area == null) {
-                AreaSelectionGrid(onAreaSelected = { selectedArea = it })
+                AreaSelectionGrid(
+                    savedProgramsViewModel = savedProgramsViewModel,
+                    onAreaSelected = { selectedArea = it },
+                    onOpenSavedCards = { if (saved.isNotEmpty()) showSavedCards = true }
+                )
             } else {
                 HiddenProgramsScreen(
                     area = area,
@@ -112,49 +147,323 @@ fun ReprogramScreen(
                 )
             }
         }
+
+        if (showSavedCards && saved.isNotEmpty()) {
+            SavedCardsOverlay(
+                saved = saved,
+                accentColor = theme.accent,
+                onDismiss = { showSavedCards = false }
+            )
+        }
     }
 }
 
 // ── Area Selection Grid ────────────────────────────────────────────────────────
 
 @Composable
-private fun AreaSelectionGrid(onAreaSelected: (LifeArea) -> Unit) {
+private fun AreaSelectionGrid(
+    savedProgramsViewModel: SavedProgramsViewModel,
+    onAreaSelected: (LifeArea) -> Unit,
+    onOpenSavedCards: () -> Unit
+) {
     val theme = LocalToneTheme.current
     val haptics = LocalHapticFeedback.current
+    val saved by savedProgramsViewModel.saved.collectAsState()
+    val totalPerArea = remember { availableAreas.associateWith { ProgramContent.programs(it).size } }
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.fillMaxWidth().padding(top = 80.dp, bottom = 36.dp)
-        ) {
-            Text("Rewrite Your Programs", fontSize = 26.sp, fontWeight = FontWeight.Light, color = Color.White)
-            Spacer(Modifier.height(8.dp))
-            Text("What area of life feels blocked?", fontSize = 15.sp, color = Color.White.copy(0.55f))
-        }
-
-        LazyVerticalGrid(
-            columns = GridCells.Fixed(2),
-            contentPadding = PaddingValues(horizontal = 20.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp),
-            horizontalArrangement = Arrangement.spacedBy(14.dp),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            itemsIndexed(availableAreas) { index, area ->
-                AreaCard(area = area, index = index, glowColor = theme.glowColor) {
-                    haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                    onAreaSelected(area)
-                }
+    LazyVerticalGrid(
+        columns = GridCells.Fixed(2),
+        contentPadding = PaddingValues(start = 20.dp, end = 20.dp, bottom = 88.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp),
+        horizontalArrangement = Arrangement.spacedBy(14.dp),
+        modifier = Modifier.fillMaxSize()
+    ) {
+        item(span = { GridItemSpan(2) }) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.fillMaxWidth().padding(top = 80.dp, bottom = 8.dp)
+            ) {
+                Text(Translations.ui("reprogramTitle"), style = AppTypography.headingLarge, color = Color.White)
+                Spacer(Modifier.height(8.dp))
+                Text(Translations.ui("reprogramSubtitle"), style = AppTypography.bodyMedium, color = Color.White.copy(0.55f))
             }
         }
-        Spacer(Modifier.weight(1f))
+
+        item(span = { GridItemSpan(2) }) {
+            SavedBeliefsRingWidget(
+                saved = saved,
+                accentColor = theme.accent,
+                onTap = onOpenSavedCards
+            )
+        }
+
+        itemsIndexed(availableAreas) { index, area ->
+            val savedCount = saved.count { it.area == area }
+            val totalCount = totalPerArea[area] ?: 0
+            AreaCard(
+                area = area,
+                index = index,
+                glowColor = theme.glowColor,
+                accentColor = theme.accent,
+                savedCount = savedCount,
+                totalCount = totalCount
+            ) {
+                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                onAreaSelected(area)
+            }
+        }
     }
 }
 
+// ── Saved Beliefs Ring Widget ──────────────────────────────────────────────────
+
 @Composable
-private fun AreaCard(area: LifeArea, index: Int, glowColor: Color, onClick: () -> Unit) {
+private fun SavedBeliefsRingWidget(
+    saved: List<Affirmation>,
+    accentColor: Color,
+    onTap: () -> Unit
+) {
+    val allPrograms = remember {
+        availableAreas.flatMap { area -> ProgramContent.programs(area).map { area to it } }
+    }
+    val savedTexts = remember(saved) { saved.map { it.text }.toSet() }
+    val totalCount = allPrograms.size
+    val haptics = LocalHapticFeedback.current
+
+    Box(
+        contentAlignment = Alignment.Center,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(280.dp)
+            .padding(vertical = 8.dp)
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null
+            ) {
+                if (saved.isNotEmpty()) {
+                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                    onTap()
+                }
+            }
+    ) {
+        // Scattered dots ring
+        Canvas(modifier = Modifier.size(260.dp)) {
+            val cx = size.width / 2f
+            val cy = size.height / 2f
+            val baseRingR = size.width * 0.44f
+
+            allPrograms.forEachIndexed { i, (area, program) ->
+                val rng = Random(i * 31337)
+                val angle = (i.toFloat() / totalCount.toFloat() * 2.0 * Math.PI - Math.PI / 2.0).toFloat()
+                val radiusJitter = (rng.nextFloat() - 0.5f) * 12.dp.toPx()
+                val ringR = baseRingR + radiusJitter
+                val x = cx + ringR * cos(angle)
+                val y = cy + ringR * sin(angle)
+                val isSaved = program.rewrite in savedTexts
+
+                if (isSaved) {
+                    val dotR = 4.dp.toPx() + rng.nextFloat() * 2.dp.toPx()
+                    val alpha = 0.80f + rng.nextFloat() * 0.20f
+                    drawCircle(
+                        color = areaColor(area).copy(alpha = alpha),
+                        radius = dotR,
+                        center = Offset(x, y)
+                    )
+                } else {
+                    val dotR = 2.dp.toPx() + rng.nextFloat() * 1.5.dp.toPx()
+                    val alpha = 0.10f + rng.nextFloat() * 0.08f
+                    drawCircle(
+                        color = Color.White.copy(alpha = alpha),
+                        radius = dotR,
+                        center = Offset(x, y)
+                    )
+                }
+            }
+        }
+
+        // Central glow circle
+        Box(
+            contentAlignment = Alignment.Center,
+            modifier = Modifier
+                .size(158.dp)
+                .clip(CircleShape)
+                .background(
+                    Brush.radialGradient(
+                        colors = listOf(
+                            accentColor.copy(alpha = 0.28f),
+                            accentColor.copy(alpha = 0.10f),
+                            Color.Transparent
+                        )
+                    )
+                )
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    "${saved.size}",
+                    style = AppTypography.displayLarge.copy(fontFamily = Manrope, fontWeight = FontWeight.Bold),
+                    color = Color.White
+                )
+                Text(
+                    "из $totalCount",
+                    style = AppTypography.caption.copy(letterSpacing = 0.5.sp),
+                    color = Color.White.copy(0.45f),
+                )
+                if (saved.isNotEmpty()) {
+                    Spacer(Modifier.height(6.dp))
+                    Text(
+                        "смотреть",
+                        style = AppTypography.labelSmall.copy(letterSpacing = 1.5.sp),
+                        color = accentColor.copy(0.75f),
+                    )
+                }
+            }
+        }
+    }
+}
+
+// ── Saved Cards Overlay ────────────────────────────────────────────────────────
+
+@Composable
+private fun SavedCardsOverlay(
+    saved: List<Affirmation>,
+    accentColor: Color,
+    onDismiss: () -> Unit
+) {
+    val pagerState = rememberPagerState { saved.size }
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xF2050508)) // ~95% opaque near-black
+    ) {
+        // Pager sits below header — give it top padding so cards don't hide under header
+        HorizontalPager(
+            state = pagerState,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(top = 120.dp, bottom = 100.dp),
+            contentPadding = PaddingValues(horizontal = 28.dp),
+            pageSpacing = 12.dp
+        ) { page ->
+            val affirmation = saved[page]
+            val dotColor = areaColor(affirmation.area)
+
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier.fillMaxSize()
+            ) {
+                GlassCard(
+                    cornerRadius = 28.dp,
+                    borderWidth = 1.5.dp,
+                    borderColor = dotColor.copy(alpha = 0.40f)
+                ) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 32.dp, vertical = 48.dp)
+                    ) {
+                        Text(affirmation.area.emoji, fontSize = 40.sp)
+                        Spacer(Modifier.height(20.dp))
+                        Text(
+                            affirmation.text,
+                            style = AppTypography.headingSmall.copy(fontFamily = PlayfairDisplay),
+                            color = dotColor.copy(alpha = 0.95f),
+                            textAlign = TextAlign.Center,
+                            lineHeight = 30.sp
+                        )
+                        Spacer(Modifier.height(20.dp))
+                        Text(
+                            Translations.lifeAreaLabel(affirmation.area),
+                            style = AppTypography.labelSmall,
+                            color = Color.White.copy(0.35f),
+                        )
+                    }
+                }
+            }
+        }
+
+        // Page indicator dots — drawn after pager so they're on top
+        Row(
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 128.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            repeat(saved.size.coerceAtMost(15)) { index ->
+                val isActive = index == pagerState.currentPage
+                Box(
+                    modifier = Modifier
+                        .size(if (isActive) 7.dp else 5.dp)
+                        .clip(CircleShape)
+                        .background(if (isActive) accentColor else Color.White.copy(0.25f))
+                )
+            }
+        }
+
+        // Header drawn last = always on top, close button always tappable
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 24.dp)
+                .padding(top = 64.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                "✦  МОИ НОВЫЕ УБЕЖДЕНИЯ  ✦",
+                style = AppTypography.labelSmall.copy(fontWeight = FontWeight.Medium),
+                color = Color.White.copy(0.4f)
+            )
+            GlassCard(
+                cornerRadius = 14.dp,
+                modifier = Modifier
+                    .size(42.dp)
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                        onClick = onDismiss
+                    )
+            ) {
+                Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    Icon(
+                        Icons.Outlined.Close,
+                        contentDescription = "Close",
+                        tint = Color.White.copy(0.8f),
+                        modifier = Modifier.size(20.dp)
+                    )
+                }
+            }
+        }
+    }
+}
+
+// ── Area Card ─────────────────────────────────────────────────────────────────
+
+@Composable
+private fun AreaCard(
+    area: LifeArea,
+    index: Int,
+    glowColor: Color,
+    accentColor: Color,
+    savedCount: Int,
+    totalCount: Int,
+    onClick: () -> Unit
+) {
     var appeared by remember { mutableStateOf(false) }
     val scale by animateFloatAsState(if (appeared) 1f else 0.85f, spring(stiffness = Spring.StiffnessMediumLow), label = "areaScale")
     val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(300), label = "areaAlpha")
+    val targetProgress = if (totalCount > 0) savedCount.toFloat() / totalCount else 0f
+    val animatedProgress by animateFloatAsState(
+        targetValue = if (appeared) targetProgress else 0f,
+        animationSpec = tween(900),
+        label = "circleProgress"
+    )
+    val isComplete = savedCount > 0 && savedCount >= totalCount
 
     LaunchedEffect(Unit) {
         delay(index * 60L)
@@ -171,11 +480,47 @@ private fun AreaCard(area: LifeArea, index: Int, glowColor: Color, onClick: () -
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
-            modifier = Modifier.fillMaxWidth().padding(vertical = 28.dp)
+            modifier = Modifier.fillMaxWidth().padding(vertical = 24.dp)
         ) {
-            Text(area.emoji, fontSize = 36.sp)
+            Box(contentAlignment = Alignment.Center, modifier = Modifier.size(72.dp)) {
+                Canvas(modifier = Modifier.fillMaxSize()) {
+                    val strokeWidth = 11.dp.toPx()
+                    val inset = strokeWidth / 2f
+                    val arcSize = Size(size.width - strokeWidth, size.height - strokeWidth)
+                    val topLeft = Offset(inset, inset)
+                    drawArc(
+                        color = Color.White.copy(alpha = 0.10f),
+                        startAngle = -90f,
+                        sweepAngle = 360f,
+                        useCenter = false,
+                        style = Stroke(strokeWidth, cap = StrokeCap.Round),
+                        topLeft = topLeft,
+                        size = arcSize
+                    )
+                    if (animatedProgress > 0f) {
+                        drawArc(
+                            color = if (isComplete) accentColor else accentColor.copy(alpha = 0.9f),
+                            startAngle = -90f,
+                            sweepAngle = 360f * animatedProgress,
+                            useCenter = false,
+                            style = Stroke(strokeWidth, cap = StrokeCap.Round),
+                            topLeft = topLeft,
+                            size = arcSize
+                        )
+                    }
+                }
+                Text(area.emoji, fontSize = 26.sp)
+            }
             Spacer(Modifier.height(10.dp))
-            Text(area.label, fontSize = 14.sp, fontWeight = FontWeight.Medium, color = Color.White, textAlign = TextAlign.Center)
+            Text(Translations.lifeAreaLabel(area), style = AppTypography.labelLarge, color = Color.White, textAlign = TextAlign.Center)
+            if (savedCount > 0) {
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    "$savedCount / $totalCount",
+                    style = AppTypography.labelSmall.copy(letterSpacing = 0.sp),
+                    color = accentColor.copy(alpha = 0.8f),
+                )
+            }
         }
     }
 }
@@ -189,6 +534,7 @@ private fun HiddenProgramsScreen(
     onBack: () -> Unit
 ) {
     val programs = remember(area) { ProgramContent.programs(area = area) }
+    val saved by savedProgramsViewModel.saved.collectAsState()
     var selectedProgram by remember { mutableStateOf<HiddenProgram?>(null) }
 
     AnimatedContent(
@@ -204,7 +550,7 @@ private fun HiddenProgramsScreen(
         label = "programContent"
     ) { program ->
         if (program == null) {
-            ProgramListContent(programs = programs, area = area, onSelect = { selectedProgram = it }, onBack = onBack)
+            ProgramListContent(programs = programs, area = area, saved = saved, onSelect = { selectedProgram = it }, onBack = onBack)
         } else {
             ProgramRewriteContent(program = program, savedProgramsViewModel = savedProgramsViewModel, onBack = { selectedProgram = null })
         }
@@ -215,6 +561,7 @@ private fun HiddenProgramsScreen(
 private fun ProgramListContent(
     programs: List<HiddenProgram>,
     area: LifeArea,
+    saved: List<Affirmation>,
     onSelect: (HiddenProgram) -> Unit,
     onBack: () -> Unit
 ) {
@@ -234,14 +581,14 @@ private fun ProgramListContent(
                 }
             }
             Spacer(Modifier.weight(1f))
-            Text(area.emoji, fontSize = 22.sp)
+            Text(area.emoji, style = AppTypography.headingMedium)
             Spacer(Modifier.weight(1f))
             Spacer(Modifier.width(44.dp))
         }
 
         Text(
-            "These programs may be\nrunning in your subconscious",
-            fontSize = 22.sp, fontWeight = FontWeight.Light, color = Color.White,
+            Translations.ui("hiddenProgramsSubtitle"),
+            style = AppTypography.headingMedium, color = Color.White,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp, vertical = 0.dp).padding(bottom = 32.dp)
         )
@@ -251,8 +598,11 @@ private fun ProgramListContent(
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             items(programs) { program ->
+                val isReprogrammed = saved.any { it.text == program.rewrite }
                 GlassCard(
                     cornerRadius = 18.dp,
+                    borderWidth = if (isReprogrammed) 1.dp else 0.dp,
+                    borderColor = if (isReprogrammed) theme.accent.copy(0.45f) else Color.Transparent,
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {
@@ -264,13 +614,22 @@ private fun ProgramListContent(
                         modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 18.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text("\"${program.limiting}\"", fontSize = 16.sp, fontWeight = FontWeight.Light,
-                            color = Color.White.copy(0.85f), modifier = Modifier.weight(1f))
-                        Icon(Icons.Outlined.ChevronRight, contentDescription = null, tint = Color.White.copy(0.35f))
+                        Text(
+                            if (isReprogrammed) program.rewrite else program.limiting,
+                            style = AppTypography.bodyLarge,
+                            color = if (isReprogrammed) theme.accent.copy(0.9f) else Color.White.copy(0.85f),
+                            modifier = Modifier.weight(1f)
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Icon(
+                            if (isReprogrammed) Icons.Outlined.CheckCircle else Icons.Outlined.ChevronRight,
+                            contentDescription = null,
+                            tint = if (isReprogrammed) theme.accent else Color.White.copy(0.35f)
+                        )
                     }
                 }
             }
-            item { Spacer(Modifier.height(140.dp)) }
+            item { Spacer(Modifier.height(88.dp)) }
         }
     }
 }
@@ -323,10 +682,10 @@ private fun ProgramRewriteContent(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp, vertical = 24.dp)
             ) {
-                Text("OLD PROGRAM", fontSize = 11.sp, fontWeight = FontWeight.SemiBold,
-                    letterSpacing = 2.sp, color = Color.White.copy(0.35f))
+                Text(Translations.ui("oldProgram"), style = AppTypography.labelSmall,
+                    color = Color.White.copy(0.35f))
                 Spacer(Modifier.height(8.dp))
-                Text("\"${program.limiting}\"", fontSize = 18.sp, fontWeight = FontWeight.Light,
+                Text(program.limiting, style = AppTypography.headingSmall.copy(fontFamily = PlayfairDisplay),
                     color = Color.White.copy(oldAlpha),
                     textDecoration = if (showRewrite) TextDecoration.LineThrough else TextDecoration.None,
                     textAlign = TextAlign.Center)
@@ -352,10 +711,10 @@ private fun ProgramRewriteContent(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp, vertical = 28.dp)
             ) {
-                Text("YOUR NEW PROGRAM", fontSize = 11.sp, fontWeight = FontWeight.SemiBold,
-                    letterSpacing = 2.sp, color = theme.accent.copy(0.7f))
+                Text(Translations.ui("yourNewProgram"), style = AppTypography.labelSmall,
+                    color = theme.accent.copy(0.7f))
                 Spacer(Modifier.height(8.dp))
-                Text(program.rewrite, fontSize = 20.sp, fontWeight = FontWeight.Light,
+                Text(program.rewrite, style = AppTypography.headingSmall.copy(fontFamily = PlayfairDisplay, fontSize = 20.sp),
                     color = Color.White, textAlign = TextAlign.Center, lineHeight = 28.sp)
             }
         }
@@ -364,7 +723,6 @@ private fun ProgramRewriteContent(
 
         // Save button
         Box(modifier = Modifier.padding(horizontal = 24.dp).padding(bottom = 140.dp).fillMaxWidth()) {
-            // Pulse ring
             if (pulseTriggered) {
                 Box(modifier = Modifier.matchParentSize()
                     .border(2.dp, theme.accent, RoundedCornerShape(18.dp))
@@ -398,8 +756,8 @@ private fun ProgramRewriteContent(
                     )
                     Spacer(Modifier.width(10.dp))
                     Text(
-                        if (isSaved) "Saved to Identity" else "Save to Identity",
-                        fontSize = 16.sp, fontWeight = FontWeight.Medium,
+                        if (isSaved) Translations.ui("savedToIdentity") else Translations.ui("saveToIdentity"),
+                        style = AppTypography.bodyLarge.copy(fontWeight = FontWeight.Medium),
                         color = if (isSaved) theme.accent else Color.White
                     )
                 }

@@ -22,16 +22,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.levelup.manifestation.ui.components.StarSkyView
+import com.levelup.manifestation.R
+import com.levelup.manifestation.Translations
+import com.levelup.manifestation.ui.components.FeatherBackground
+import com.levelup.manifestation.ui.theme.AppTypography
+import com.levelup.manifestation.ui.theme.PlayfairDisplay
 import com.levelup.manifestation.ui.theme.ToneTheme
 import kotlinx.coroutines.delay
 
 @Composable
 fun SplashScreen(modifier: Modifier = Modifier) {
-    val theme = ToneTheme.SoftFeminine
+    val theme = ToneTheme.Default
     var appeared by remember { mutableStateOf(false) }
     var logoVisible by remember { mutableStateOf(false) }
     var taglineVisible by remember { mutableStateOf(false) }
@@ -81,7 +85,7 @@ fun SplashScreen(modifier: Modifier = Modifier) {
             .background(Brush.linearGradient(theme.gradientColors)),
         contentAlignment = Alignment.Center
     ) {
-        StarSkyView()
+        FeatherBackground()
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Spacer(modifier = Modifier.weight(1f))
@@ -89,8 +93,7 @@ fun SplashScreen(modifier: Modifier = Modifier) {
             // ✦ Symbol
             Text(
                 text = "✦",
-                fontSize = 52.sp,
-                fontWeight = FontWeight.ExtraLight,
+                style = AppTypography.displayLarge,
                 color = theme.accent,
                 modifier = Modifier.graphicsLayer {
                     scaleX = symbolScale
@@ -101,13 +104,14 @@ fun SplashScreen(modifier: Modifier = Modifier) {
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            // LevelUp
+            // App name
             Text(
-                text = "LevelUp",
-                fontSize = 44.sp,
-                fontWeight = FontWeight.Thin,
+                text = stringResource(R.string.app_name),
+                style = AppTypography.headingLarge.copy(
+                    fontFamily = PlayfairDisplay,
+                    letterSpacing = 3.sp,
+                ),
                 color = Color.White,
-                letterSpacing = 10.sp,
                 modifier = Modifier.graphicsLayer {
                     alpha = logoAlpha
                     scaleX = logoScale
@@ -119,11 +123,9 @@ fun SplashScreen(modifier: Modifier = Modifier) {
 
             // Tagline
             Text(
-                text = "become who you are meant to be",
-                fontSize = 13.sp,
-                fontWeight = FontWeight.Light,
+                text = Translations.ui("splashTagline"),
+                style = AppTypography.labelSmall,
                 color = Color.White.copy(alpha = 0.45f),
-                letterSpacing = 2.sp,
                 modifier = Modifier.graphicsLayer { alpha = taglineAlpha }
             )
 
