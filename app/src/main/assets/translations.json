@@ -612,44 +612,36 @@
     },
     "meditations": {
       "money": [
-        { "id": "money_1", "title": "Притяжение изобилия", "fileName": "money_1.mp3", "durationSeconds": 600 },
-        { "id": "money_2", "title": "Денежный поток", "fileName": "money_2.mp3", "durationSeconds": 480 }
+        { "id": "abundance", "title": "Активация Изобилия", "fileName": "abundance_activation.mp3", "durationSeconds": 1162 }
       ],
       "confidence": [
-        { "id": "confidence_1", "title": "Сила внутренней уверенности", "fileName": "confidence_1.mp3", "durationSeconds": 540 },
-        { "id": "confidence_2", "title": "Непоколебимая вера в себя", "fileName": "confidence_2.mp3", "durationSeconds": 720 }
+        { "id": "divine_dna", "title": "Активация Божественной ДНК", "fileName": "divine_dna.mp3", "durationSeconds": 2353 }
       ],
       "love": [
-        { "id": "love_1", "title": "Открытое сердце", "fileName": "love_1.mp3", "durationSeconds": 600 },
-        { "id": "love_2", "title": "Притяжение истинной любви", "fileName": "love_2.mp3", "durationSeconds": 480 }
+        { "id": "karmic_release", "title": "Завершение кармических отношений", "fileName": "karmic_release.mp3", "durationSeconds": 3210 }
       ],
       "calm": [
-        { "id": "calm_1", "title": "Глубокое умиротворение", "fileName": "calm_1.mp3", "durationSeconds": 900 },
-        { "id": "calm_2", "title": "Внутренняя тишина", "fileName": "calm_2.mp3", "durationSeconds": 600 }
+        { "id": "return_to_self", "title": "Возвращение к себе", "fileName": "return_to_self.mp3", "durationSeconds": 1913 },
+        { "id": "chakra_harmony", "title": "Гармонизация чакр", "fileName": "chakra_harmony.mp3", "durationSeconds": 2377 }
       ],
       "career": [
-        { "id": "career_1", "title": "Путь к призванию", "fileName": "career_1.mp3", "durationSeconds": 540 },
-        { "id": "career_2", "title": "Раскрытие потенциала", "fileName": "career_2.mp3", "durationSeconds": 660 }
+        { "id": "harmonize_life", "title": "Гармонизация жизни", "fileName": "harmonize_life.mp3", "durationSeconds": 2095 },
+        { "id": "create_reality", "title": "Создание желаемой реальности", "fileName": "create_reality.mp3", "durationSeconds": 2332 }
       ],
       "feminineEnergy": [
-        { "id": "feminineEnergy_1", "title": "Пробуждение женственности", "fileName": "feminineEnergy_1.mp3", "durationSeconds": 720 },
-        { "id": "feminineEnergy_2", "title": "Сияние женской силы", "fileName": "feminineEnergy_2.mp3", "durationSeconds": 600 }
+        { "id": "angel_activation", "title": "Активация Ангелов", "fileName": "angel_activation.mp3", "durationSeconds": 2472 }
       ],
       "relationships": [
-        { "id": "relationships_1", "title": "Гармония в отношениях", "fileName": "relationships_1.mp3", "durationSeconds": 540 },
-        { "id": "relationships_2", "title": "Глубокая связь с людьми", "fileName": "relationships_2.mp3", "durationSeconds": 480 }
+        { "id": "subtle_bodies", "title": "Гармонизация тонких тел", "fileName": "subtle_bodies.mp3", "durationSeconds": 2431 }
       ],
       "selfWorth": [
-        { "id": "selfWorth_1", "title": "Принятие своей ценности", "fileName": "selfWorth_1.mp3", "durationSeconds": 600 },
-        { "id": "selfWorth_2", "title": "Безусловная любовь к себе", "fileName": "selfWorth_2.mp3", "durationSeconds": 720 }
+        { "id": "cleansing", "title": "Очищение от сущностей и негативных энергий", "fileName": "cleansing.mp3", "durationSeconds": 3158 }
       ],
       "fear": [
-        { "id": "fear_1", "title": "Освобождение от страха", "fileName": "fear_1.mp3", "durationSeconds": 540 },
-        { "id": "fear_2", "title": "Смелость быть собой", "fileName": "fear_2.mp3", "durationSeconds": 480 }
+        { "id": "return_to_self_2", "title": "Возвращение к себе", "fileName": "return_to_self.mp3", "durationSeconds": 1913 }
       ],
       "body": [
-        { "id": "body_1", "title": "Единство с телом", "fileName": "body_1.mp3", "durationSeconds": 600 },
-        { "id": "body_2", "title": "Исцеляющая энергия", "fileName": "body_2.mp3", "durationSeconds": 540 }
+        { "id": "chakra_harmony_2", "title": "Гармонизация чакр", "fileName": "chakra_harmony.mp3", "durationSeconds": 2377 }
       ]
     }
   }
