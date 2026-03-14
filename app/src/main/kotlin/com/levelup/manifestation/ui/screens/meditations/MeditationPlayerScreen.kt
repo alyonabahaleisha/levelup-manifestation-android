@@ -1,7 +1,9 @@
 package com.levelup.manifestation.ui.screens.meditations
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -41,8 +43,11 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.levelup.manifestation.R
 import com.levelup.manifestation.Translations
 import com.levelup.manifestation.data.audio.PlaybackState
 import com.levelup.manifestation.data.model.Meditation
@@ -127,11 +132,15 @@ fun MeditationPlayerScreen(
                     modifier = Modifier.fillMaxSize()
                 )
 
-                // Area emoji in center
-                Text(
-                    meditation.area.emoji,
-                    fontSize = 64.sp,
-                    textAlign = TextAlign.Center
+                // Mikhail's portrait in center — circular crop with subtle border
+                Image(
+                    painter = painterResource(R.drawable.mikhail_portrait),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(180.dp)
+                        .clip(CircleShape)
+                        .border(1.5.dp, Color.White.copy(alpha = 0.15f), CircleShape)
                 )
 
                 // Elapsed time — left side
