@@ -69,6 +69,28 @@ import kotlinx.coroutines.delay
 
 @Composable
 fun MeditationsScreen(viewModel: MeditationViewModel) {
+    var selectedMeditation by remember { mutableStateOf<Meditation?>(null) }
+
+    val currentMeditation = selectedMeditation
+    if (currentMeditation != null) {
+        MeditationPlayerScreen(
+            meditation = currentMeditation,
+            viewModel = viewModel,
+            onBack = { selectedMeditation = null }
+        )
+    } else {
+        MeditationBrowseContent(
+            viewModel = viewModel,
+            onSelectMeditation = { selectedMeditation = it }
+        )
+    }
+}
+
+@Composable
+private fun MeditationBrowseContent(
+    viewModel: MeditationViewModel,
+    onSelectMeditation: (Meditation) -> Unit
+) {
     val theme = LocalToneTheme.current
     val haptics = LocalHapticFeedback.current
     var selectedArea by remember { mutableStateOf<LifeArea?>(null) }
@@ -159,8 +181,7 @@ fun MeditationsScreen(viewModel: MeditationViewModel) {
                         index = meditations.indexOf(meditation),
                         onPlay = {
                             haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                            if (isActive) viewModel.togglePlayPause()
-                            else viewModel.play(meditation)
+                            onSelectMeditation(meditation)
                         }
                     )
                 }
