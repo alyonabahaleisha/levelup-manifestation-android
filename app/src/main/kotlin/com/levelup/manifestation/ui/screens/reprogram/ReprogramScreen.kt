@@ -75,6 +75,7 @@ import androidx.compose.ui.unit.sp
 import com.levelup.manifestation.ui.theme.AppTypography
 import com.levelup.manifestation.ui.theme.Manrope
 import com.levelup.manifestation.ui.theme.PlayfairDisplay
+import com.levelup.manifestation.ui.theme.areaColor
 import com.levelup.manifestation.Translations
 import com.levelup.manifestation.data.content.ProgramContent
 import com.levelup.manifestation.data.model.Affirmation
@@ -91,19 +92,6 @@ import kotlin.random.Random
 import kotlinx.coroutines.delay
 
 private val availableAreas = LifeArea.entries
-
-private fun areaColor(area: LifeArea): Color = when (area) {
-    LifeArea.Money          -> Color(0xFFFFD966)
-    LifeArea.Confidence     -> Color(0xFFFFE566)
-    LifeArea.Love           -> Color(0xFFFF7A9A)
-    LifeArea.Calm           -> Color(0xFF7EC8E3)
-    LifeArea.Career         -> Color(0xFFFFB347)
-    LifeArea.FeminineEnergy -> Color(0xFFFFB3DE)
-    LifeArea.Relationships  -> Color(0xFFFF9AAF)
-    LifeArea.SelfWorth      -> Color(0xFFB39DFF)
-    LifeArea.Fear           -> Color(0xFF80D4FF)
-    LifeArea.Body           -> Color(0xFF7FFFD4)
-}
 
 // ── Reprogram Screen ───────────────────────────────────────────────────────────
 

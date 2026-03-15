@@ -57,9 +57,25 @@ data class ToneTheme(
 // ── App Tab ───────────────────────────────────────────────────────────────────
 
 sealed class AppTab {
+    object Home : AppTab()
     object Affirmations : AppTab()
     object Reprogram : AppTab()
     object Meditations : AppTab()
+}
+
+// ── Life Area Colors ─────────────────────────────────────────────────────────
+
+fun areaColor(area: LifeArea): Color = when (area) {
+    LifeArea.Money          -> Color(0xFFFFD966)
+    LifeArea.Confidence     -> Color(0xFFFFE566)
+    LifeArea.Love           -> Color(0xFFFF7A9A)
+    LifeArea.Calm           -> Color(0xFF7EC8E3)
+    LifeArea.Career         -> Color(0xFFFFB347)
+    LifeArea.FeminineEnergy -> Color(0xFFFFB3DE)
+    LifeArea.Relationships  -> Color(0xFFFF9AAF)
+    LifeArea.SelfWorth      -> Color(0xFFB39DFF)
+    LifeArea.Fear           -> Color(0xFF80D4FF)
+    LifeArea.Body           -> Color(0xFF7FFFD4)
 }
 
 // ── Composition locals ────────────────────────────────────────────────────────

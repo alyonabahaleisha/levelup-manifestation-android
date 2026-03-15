@@ -8,8 +8,10 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.FormatQuote
 import androidx.compose.material.icons.outlined.Headphones
+import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -40,6 +42,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.levelup.manifestation.Translations
 import com.levelup.manifestation.ui.screens.affirmations.AffirmationsScreen
+import com.levelup.manifestation.ui.screens.home.HomeScreen
 import com.levelup.manifestation.ui.screens.meditations.MeditationsScreen
 import com.levelup.manifestation.ui.screens.reprogram.ReprogramScreen
 import com.levelup.manifestation.ui.screens.settings.SettingsSheet
@@ -65,7 +68,7 @@ fun MainTabScreen(
     val theme = LocalToneTheme.current
     val systemUiController = rememberSystemUiController()
     val haptics = LocalHapticFeedback.current
-    var selectedTab by remember { mutableStateOf<AppTab>(AppTab.Affirmations) }
+    var selectedTab by remember { mutableStateOf<AppTab>(AppTab.Home) }
     var showSettings by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
@@ -90,6 +93,13 @@ fun MainTabScreen(
             label = "tabContent"
         ) { tab ->
             when (tab) {
+                is AppTab.Home -> HomeScreen(
+                    savedProgramsViewModel = savedProgramsViewModel,
+                    meditationViewModel = meditationViewModel,
+                    onNavigateToAffirmations = { selectedTab = AppTab.Affirmations },
+                    onNavigateToReprogram = { selectedTab = AppTab.Reprogram },
+                    onNavigateToMeditations = { selectedTab = AppTab.Meditations }
+                )
                 is AppTab.Affirmations -> AffirmationsScreen(
                     themeViewModel = themeViewModel,
                     deepLinkText = deepLinkAffirmation,
@@ -126,6 +136,17 @@ fun MainTabScreen(
                 indicatorColor = theme.accent.copy(alpha = 0.15f),
                 unselectedIconColor = Color.White.copy(alpha = 0.40f),
                 unselectedTextColor = Color.White.copy(alpha = 0.40f)
+            )
+
+            NavigationBarItem(
+                selected = selectedTab is AppTab.Home,
+                onClick = {
+                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                    selectedTab = AppTab.Home
+                },
+                icon = { Icon(Icons.Outlined.FavoriteBorder, contentDescription = null) },
+                label = { Text(Translations.ui("homeTab"), style = AppTypography.tabLabel) },
+                colors = itemColors
             )
 
             NavigationBarItem(
