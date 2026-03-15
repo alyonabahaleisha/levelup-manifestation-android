@@ -213,12 +213,22 @@ private fun AffirmationCard(
                         .height(480.dp)
                 )
 
-                // Light overlay for text contrast
+                // Radial frosted overlay — strong center, clear edges
                 Box(
                     Modifier
                         .fillMaxWidth()
                         .height(480.dp)
-                        .background(Color.White.copy(alpha = 0.25f))
+                        .background(
+                            Brush.radialGradient(
+                                colors = listOf(
+                                    Color.White.copy(alpha = 0.65f),
+                                    Color.White.copy(alpha = 0.50f),
+                                    Color.White.copy(alpha = 0.15f),
+                                    Color.Transparent
+                                ),
+                                radius = 600f
+                            )
+                        )
                 )
 
                 // Text + action icons inside card
