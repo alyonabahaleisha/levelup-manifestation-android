@@ -1,6 +1,7 @@
 package com.levelup.manifestation.ui.screens.affirmations
 
 import android.content.Intent
+import androidx.compose.animation.Crossfade
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
@@ -113,11 +114,30 @@ fun AffirmationsScreen(
         }
     }
 
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(bgColor)
-    ) {
+    Box(modifier = Modifier.fillMaxSize()) {
+        // Fixed background — crossfades between card images
+        Crossfade(
+            targetState = currentStyle.imageRes,
+            animationSpec = tween(800),
+            label = "bgCrossfade"
+        ) { imageRes ->
+            Box(Modifier.fillMaxSize()) {
+                Image(
+                    painter = painterResource(imageRes),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .graphicsLayer { alpha = 0.5f }
+                )
+                Box(
+                    Modifier
+                        .fillMaxSize()
+                        .background(bgColor.copy(alpha = 0.45f))
+                )
+            }
+        }
+
         if (affirmations.isNotEmpty()) {
             VerticalPager(
                 state = pagerState,
@@ -167,23 +187,7 @@ private fun AffirmationCard(
         appeared = true
     }
 
-    // Full-bleed blurred background = same image as card
     Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(style.imageRes),
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .fillMaxSize()
-                .graphicsLayer { alpha = 0.6f }
-        )
-        // Soft wash over background
-        Box(
-            Modifier
-                .fillMaxSize()
-                .background(style.bgColor.copy(alpha = 0.4f))
-        )
-
         Box(
             modifier = Modifier
                 .fillMaxSize()
