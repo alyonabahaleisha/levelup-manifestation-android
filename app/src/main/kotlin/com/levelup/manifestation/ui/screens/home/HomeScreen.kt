@@ -12,6 +12,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
@@ -196,35 +197,62 @@ fun HomeScreen(
                     )
 
                     if (dailyAffirmation != null) {
-                        GlassCard(
-                            cornerRadius = 24.dp,
+                        val cardImage = remember(dayOfYear) {
+                            listOf(
+                                R.drawable.card_bg_1, R.drawable.card_bg_2, R.drawable.card_bg_3,
+                                R.drawable.card_bg_4, R.drawable.card_bg_5, R.drawable.card_bg_6,
+                                R.drawable.card_bg_7, R.drawable.card_bg_8, R.drawable.card_bg_9,
+                                R.drawable.card_bg_10
+                            )[dayOfYear % 10]
+                        }
+
+                        Box(
                             modifier = Modifier
                                 .fillMaxWidth()
+                                .height(280.dp)
+                                .clip(RoundedCornerShape(36.dp))
                                 .clickable(
                                     interactionSource = remember { MutableInteractionSource() },
                                     indication = null
                                 ) {
                                     haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                                     onNavigateToAffirmations()
-                                }
+                                },
+                            contentAlignment = Alignment.Center
                         ) {
-                            Column(
-                                horizontalAlignment = Alignment.CenterHorizontally,
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(horizontal = 28.dp, vertical = 36.dp)
-                            ) {
-                                Text(
-                                    dailyAffirmation.text,
-                                    style = AppTypography.headingSmall.copy(
-                                        fontFamily = PlayfairDisplay,
-                                        fontSize = 18.sp
-                                    ),
-                                    color = Color.White.copy(0.9f),
-                                    textAlign = TextAlign.Center,
-                                    lineHeight = 28.sp
-                                )
-                            }
+                            Image(
+                                painter = painterResource(cardImage),
+                                contentDescription = null,
+                                contentScale = ContentScale.Crop,
+                                modifier = Modifier.fillMaxSize()
+                            )
+                            // Radial frost — same as affirmation cards
+                            Box(
+                                Modifier
+                                    .fillMaxSize()
+                                    .background(
+                                        Brush.radialGradient(
+                                            colors = listOf(
+                                                Color.White.copy(alpha = 0.65f),
+                                                Color.White.copy(alpha = 0.50f),
+                                                Color.White.copy(alpha = 0.15f),
+                                                Color.Transparent
+                                            ),
+                                            radius = 500f
+                                        )
+                                    )
+                            )
+                            Text(
+                                dailyAffirmation.text,
+                                style = AppTypography.headingSmall.copy(
+                                    fontFamily = PlayfairDisplay,
+                                    fontSize = 18.sp
+                                ),
+                                color = Color(0xFF2A2A3A),
+                                textAlign = TextAlign.Center,
+                                lineHeight = 28.sp,
+                                modifier = Modifier.padding(horizontal = 28.dp, vertical = 24.dp)
+                            )
                         }
                     }
                 }
