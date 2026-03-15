@@ -178,69 +178,78 @@ fun HomeScreen(
                         modifier = Modifier.padding(bottom = 14.dp)
                     )
 
-                    if (dailyAffirmation != null) {
-                        val cardImage = remember(dayOfYear) {
-                            listOf(
-                                R.drawable.card_bg_1, R.drawable.card_bg_2, R.drawable.card_bg_3,
-                                R.drawable.card_bg_4, R.drawable.card_bg_5, R.drawable.card_bg_6,
-                                R.drawable.card_bg_7, R.drawable.card_bg_8, R.drawable.card_bg_9,
-                                R.drawable.card_bg_10
-                            )[dayOfYear % 10]
-                        }
+                    val cardImages = remember {
+                        listOf(
+                            R.drawable.card_bg_1, R.drawable.card_bg_2, R.drawable.card_bg_3,
+                            R.drawable.card_bg_4, R.drawable.card_bg_5, R.drawable.card_bg_6,
+                            R.drawable.card_bg_7, R.drawable.card_bg_8, R.drawable.card_bg_9,
+                            R.drawable.card_bg_10
+                        )
+                    }
+                    val topAffirmations = remember {
+                        AffirmationContent.feed().take(10)
+                    }
 
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(280.dp)
-                                .clip(RoundedCornerShape(36.dp))
-                                .clickable(
-                                    interactionSource = remember { MutableInteractionSource() },
-                                    indication = null
-                                ) {
-                                    haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                                    onNavigateToAffirmations()
-                                },
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Image(
-                                painter = painterResource(cardImage),
-                                contentDescription = null,
-                                contentScale = ContentScale.Crop,
-                                modifier = Modifier.fillMaxSize()
-                            )
-                            // Radial frost — same as affirmation cards
+                    LazyRow(
+                        contentPadding = PaddingValues(start = 0.dp, end = 24.dp),
+                        horizontalArrangement = Arrangement.spacedBy(14.dp)
+                    ) {
+                        itemsIndexed(topAffirmations) { index, affirmation ->
                             Box(
-                                Modifier
-                                    .fillMaxSize()
-                                    .background(
-                                        Brush.radialGradient(
-                                            colors = listOf(
-                                                Color.White.copy(alpha = 0.65f),
-                                                Color.White.copy(alpha = 0.50f),
-                                                Color.White.copy(alpha = 0.15f),
-                                                Color.Transparent
-                                            ),
-                                            radius = 500f
+                                modifier = Modifier
+                                    .width(260.dp)
+                                    .height(220.dp)
+                                    .clip(RoundedCornerShape(28.dp))
+                                    .clickable(
+                                        interactionSource = remember { MutableInteractionSource() },
+                                        indication = null
+                                    ) {
+                                        haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                                        onNavigateToAffirmations()
+                                    },
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Image(
+                                    painter = painterResource(cardImages[index % cardImages.size]),
+                                    contentDescription = null,
+                                    contentScale = ContentScale.Crop,
+                                    modifier = Modifier.fillMaxSize()
+                                )
+                                Box(
+                                    Modifier
+                                        .fillMaxSize()
+                                        .background(
+                                            Brush.radialGradient(
+                                                colors = listOf(
+                                                    Color.White.copy(alpha = 0.65f),
+                                                    Color.White.copy(alpha = 0.50f),
+                                                    Color.White.copy(alpha = 0.15f),
+                                                    Color.Transparent
+                                                ),
+                                                radius = 400f
+                                            )
                                         )
-                                    )
-                            )
-                            Text(
-                                dailyAffirmation.text,
-                                style = AppTypography.headingSmall.copy(
-                                    fontFamily = PlayfairDisplay,
-                                    fontSize = 18.sp
-                                ),
-                                color = Color(0xFF2A2A3A),
-                                textAlign = TextAlign.Center,
-                                lineHeight = 28.sp,
-                                modifier = Modifier.padding(horizontal = 28.dp, vertical = 24.dp)
-                            )
+                                )
+                                Text(
+                                    affirmation.text,
+                                    style = AppTypography.bodyMedium.copy(
+                                        fontFamily = PlayfairDisplay,
+                                        fontSize = 15.sp
+                                    ),
+                                    color = Color(0xFF2A2A3A),
+                                    textAlign = TextAlign.Center,
+                                    lineHeight = 22.sp,
+                                    maxLines = 6,
+                                    overflow = TextOverflow.Ellipsis,
+                                    modifier = Modifier.padding(horizontal = 22.dp, vertical = 20.dp)
+                                )
+                            }
                         }
                     }
                 }
             }
 
-            // Reprogram section — on teal background
+            // Reprogram section
             item {
                 var appeared by remember { mutableStateOf(false) }
                 val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(400), label = "repAlpha")
