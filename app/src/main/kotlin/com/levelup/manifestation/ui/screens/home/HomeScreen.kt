@@ -7,7 +7,6 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -25,7 +24,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -69,9 +67,8 @@ import com.levelup.manifestation.ui.viewmodel.SavedProgramsViewModel
 import kotlinx.coroutines.delay
 import java.time.LocalDate
 
-// Site teal color
-private val siteTeal = Color(0xFF154C6C)
-private val siteTealLight = Color(0xFF1A5A7E)
+// Background color — continues from bg_home image's purple tones
+private val bgDeep = Color(0xFF2A1F35)
 
 @Composable
 fun HomeScreen(
@@ -99,7 +96,7 @@ fun HomeScreen(
         Box(
             Modifier
                 .fillMaxSize()
-                .background(siteTeal)
+                .background(bgDeep)
         )
 
         LazyColumn(
@@ -115,7 +112,7 @@ fun HomeScreen(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(420.dp)
+                        .height(340.dp)
                 ) {
                     // Ethereal image
                     Image(
@@ -125,52 +122,37 @@ fun HomeScreen(
                         modifier = Modifier.fillMaxSize()
                     )
 
-                    // Gradient fade from image into teal at bottom
+                    // Gradient fade into background color
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(120.dp)
+                            .height(140.dp)
                             .align(Alignment.BottomCenter)
                             .background(
                                 Brush.verticalGradient(
-                                    colors = listOf(Color.Transparent, siteTeal)
+                                    colors = listOf(Color.Transparent, bgDeep)
                                 )
                             )
                     )
 
-                    // Content overlay
+                    // Welcome — left aligned, bottom of hero
                     Column(
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 72.dp)
-                            .graphicsLayer { this.alpha = alpha },
-                        horizontalAlignment = Alignment.CenterHorizontally
+                            .align(Alignment.BottomStart)
+                            .padding(horizontal = 24.dp)
+                            .padding(bottom = 24.dp)
+                            .graphicsLayer { this.alpha = alpha }
                     ) {
-                        Image(
-                            painter = painterResource(R.drawable.mikhail_portrait),
-                            contentDescription = null,
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier
-                                .size(110.dp)
-                                .clip(CircleShape)
-                                .border(1.5.dp, Color.White.copy(0.6f), CircleShape)
-                        )
-
-                        Spacer(Modifier.height(24.dp))
-
                         Text(
                             Translations.ui("homeGreeting"),
                             style = AppTypography.headingLarge.copy(fontFamily = PlayfairDisplay),
-                            color = Color.White,
-                            textAlign = TextAlign.Center
+                            color = Color.White
                         )
-
-                        Spacer(Modifier.height(6.dp))
-
+                        Spacer(Modifier.height(4.dp))
                         Text(
                             "Школа Михаила Агеева",
                             style = AppTypography.bodySmall,
-                            color = Color.White.copy(0.7f)
+                            color = Color.White.copy(0.6f)
                         )
                     }
                 }
