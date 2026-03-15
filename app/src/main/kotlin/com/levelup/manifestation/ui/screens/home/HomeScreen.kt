@@ -64,7 +64,7 @@ import kotlinx.coroutines.delay
 import java.time.LocalDate
 
 private val bgLight = Color(0xFFF0E8F0)
-private val textPrimary = Color(0xFF2A2A3A)
+private val textPrimary = Color(0xFF0A0A14)
 private val textSecondary = Color(0xFF5A5070)
 
 private val cardImages = listOf(
