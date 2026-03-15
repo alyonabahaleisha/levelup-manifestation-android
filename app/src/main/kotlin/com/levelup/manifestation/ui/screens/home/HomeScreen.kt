@@ -9,6 +9,8 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -190,16 +192,19 @@ fun HomeScreen(
                         AffirmationContent.feed().take(10)
                     }
 
-                    LazyRow(
-                        contentPadding = PaddingValues(start = 0.dp, end = 24.dp),
-                        horizontalArrangement = Arrangement.spacedBy(14.dp)
-                    ) {
-                        itemsIndexed(topAffirmations) { index, affirmation ->
+                    val affPagerState = rememberPagerState(pageCount = { topAffirmations.size })
+
+                    HorizontalPager(
+                        state = affPagerState,
+                        contentPadding = PaddingValues(horizontal = 40.dp),
+                        pageSpacing = 16.dp
+                    ) { index ->
+                        val affirmation = topAffirmations[index]
                             Box(
                                 modifier = Modifier
-                                    .width(260.dp)
-                                    .height(220.dp)
-                                    .clip(RoundedCornerShape(28.dp))
+                                    .fillMaxWidth()
+                                    .height(300.dp)
+                                    .clip(RoundedCornerShape(32.dp))
                                     .clickable(
                                         interactionSource = remember { MutableInteractionSource() },
                                         indication = null
@@ -244,7 +249,6 @@ fun HomeScreen(
                                     modifier = Modifier.padding(horizontal = 22.dp, vertical = 20.dp)
                                 )
                             }
-                        }
                     }
                 }
             }
