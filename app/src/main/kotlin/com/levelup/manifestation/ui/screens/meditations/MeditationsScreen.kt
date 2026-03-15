@@ -46,7 +46,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.graphicsLayer
@@ -57,7 +56,10 @@ import androidx.compose.ui.unit.dp
 import com.levelup.manifestation.Translations
 import com.levelup.manifestation.data.audio.PlaybackState
 import com.levelup.manifestation.data.model.Meditation
-import com.levelup.manifestation.ui.components.FeatherBackground
+import androidx.compose.foundation.Image
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import com.levelup.manifestation.R
 import com.levelup.manifestation.ui.theme.AppTypography
 import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.GlassChip
@@ -106,8 +108,12 @@ private fun MeditationBrowseContent(
     val duration by viewModel.duration.collectAsState()
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Box(Modifier.fillMaxSize().background(Brush.linearGradient(theme.gradientColors)))
-        FeatherBackground()
+        Image(
+            painter = painterResource(R.drawable.bg_meditations),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
 
         Column(modifier = Modifier.fillMaxSize()) {
             // Header
@@ -209,7 +215,7 @@ private fun AreaFilterChip(
         Text(
             label,
             style = AppTypography.labelMedium,
-            color = if (isSelected) accentColor else Color.White.copy(0.6f),
+            color = if (isSelected) accentColor else Color(0xFF5A5070),
             modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp)
         )
     }
@@ -258,13 +264,13 @@ private fun MeditationCard(
                     modifier = Modifier
                         .size(44.dp)
                         .clip(CircleShape)
-                        .background(if (isActive) accentColor.copy(0.2f) else Color.White.copy(0.08f)),
+                        .background(if (isActive) accentColor.copy(0.2f) else Color(0xFF2A2A3A).copy(0.08f)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         if (isPlaying) Icons.Filled.Pause else Icons.Filled.PlayArrow,
                         contentDescription = null,
-                        tint = if (isActive) accentColor else Color.White.copy(0.7f),
+                        tint = if (isActive) accentColor else Color(0xFF5A5070),
                         modifier = Modifier.size(24.dp)
                     )
                 }
@@ -275,7 +281,7 @@ private fun MeditationCard(
                     Text(
                         meditation.title,
                         style = AppTypography.bodyLarge,
-                        color = if (isActive) Color.White else Color.White.copy(0.85f)
+                        color = if (isActive) Color(0xFF2A2A3A) else Color(0xFF2A2A3A).copy(0.85f)
                     )
                     Spacer(Modifier.height(2.dp))
                     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -287,13 +293,13 @@ private fun MeditationCard(
                         Text(
                             Translations.lifeAreaLabel(meditation.area),
                             style = AppTypography.caption,
-                            color = Color.White.copy(0.4f)
+                            color = Color(0xFF5A5070)
                         )
                         Spacer(Modifier.width(8.dp))
                         Text(
                             formatDuration(meditation.durationSeconds),
                             style = AppTypography.caption,
-                            color = Color.White.copy(0.35f)
+                            color = Color(0xFF5A5070).copy(0.8f)
                         )
                     }
                 }
@@ -306,7 +312,7 @@ private fun MeditationCard(
                     progress = { progress.coerceIn(0f, 1f) },
                     modifier = Modifier.fillMaxWidth().height(3.dp).clip(CircleShape),
                     color = accentColor,
-                    trackColor = Color.White.copy(0.08f),
+                    trackColor = Color(0xFF2A2A3A).copy(0.08f),
                     strokeCap = StrokeCap.Round,
                 )
                 Spacer(Modifier.height(4.dp))
@@ -314,13 +320,13 @@ private fun MeditationCard(
                     Text(
                         formatMs(currentPos),
                         style = AppTypography.caption,
-                        color = Color.White.copy(0.4f)
+                        color = Color(0xFF5A5070)
                     )
                     Spacer(Modifier.weight(1f))
                     Text(
                         formatMs(duration),
                         style = AppTypography.caption,
-                        color = Color.White.copy(0.4f)
+                        color = Color(0xFF5A5070)
                     )
                 }
             }

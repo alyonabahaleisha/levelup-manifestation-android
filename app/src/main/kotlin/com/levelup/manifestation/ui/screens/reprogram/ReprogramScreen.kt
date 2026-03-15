@@ -80,7 +80,10 @@ import com.levelup.manifestation.Translations
 import com.levelup.manifestation.data.content.ProgramContent
 import com.levelup.manifestation.data.model.Affirmation
 import com.levelup.manifestation.data.model.HiddenProgram
-import com.levelup.manifestation.ui.components.FeatherBackground
+import androidx.compose.foundation.Image
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import com.levelup.manifestation.R
 import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.LifeArea
 import com.levelup.manifestation.ui.theme.LocalToneTheme
@@ -106,8 +109,12 @@ fun ReprogramScreen(
     val saved by savedProgramsViewModel.saved.collectAsState()
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Box(modifier = Modifier.fillMaxSize().background(Brush.linearGradient(theme.gradientColors)))
-        FeatherBackground()
+        Image(
+            painter = painterResource(R.drawable.bg_reprogram),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
 
         AnimatedContent(
             targetState = selectedArea,
@@ -500,7 +507,7 @@ private fun AreaCard(
                 Text(area.emoji, fontSize = 26.sp)
             }
             Spacer(Modifier.height(10.dp))
-            Text(Translations.lifeAreaLabel(area), style = AppTypography.labelLarge, color = Color.White, textAlign = TextAlign.Center)
+            Text(Translations.lifeAreaLabel(area), style = AppTypography.labelLarge, color = Color(0xFF2A2A3A), textAlign = TextAlign.Center)
             if (savedCount > 0) {
                 Spacer(Modifier.height(4.dp))
                 Text(
@@ -565,7 +572,7 @@ private fun ProgramListContent(
                 interactionSource = remember { MutableInteractionSource() }, indication = null, onClick = onBack
             )) {
                 Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Icon(Icons.Outlined.ChevronLeft, contentDescription = "Back", tint = Color.White.copy(0.7f))
+                    Icon(Icons.Outlined.ChevronLeft, contentDescription = "Back", tint = Color(0xFF5A5070))
                 }
             }
             Spacer(Modifier.weight(1f))
@@ -605,14 +612,14 @@ private fun ProgramListContent(
                         Text(
                             if (isReprogrammed) program.rewrite else program.limiting,
                             style = AppTypography.bodyLarge,
-                            color = if (isReprogrammed) theme.accent.copy(0.9f) else Color.White.copy(0.85f),
+                            color = if (isReprogrammed) theme.accent.copy(0.9f) else Color(0xFF2A2A3A).copy(0.85f),
                             modifier = Modifier.weight(1f)
                         )
                         Spacer(Modifier.width(8.dp))
                         Icon(
                             if (isReprogrammed) Icons.Outlined.CheckCircle else Icons.Outlined.ChevronRight,
                             contentDescription = null,
-                            tint = if (isReprogrammed) theme.accent else Color.White.copy(0.35f)
+                            tint = if (isReprogrammed) theme.accent else Color(0xFF5A5070)
                         )
                     }
                 }
@@ -657,7 +664,7 @@ private fun ProgramRewriteContent(
                 interactionSource = remember { MutableInteractionSource() }, indication = null, onClick = onBack
             )) {
                 Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Icon(Icons.Outlined.ChevronLeft, contentDescription = "Back", tint = Color.White.copy(0.7f))
+                    Icon(Icons.Outlined.ChevronLeft, contentDescription = "Back", tint = Color(0xFF5A5070))
                 }
             }
         }
@@ -671,10 +678,10 @@ private fun ProgramRewriteContent(
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp, vertical = 24.dp)
             ) {
                 Text(Translations.ui("oldProgram"), style = AppTypography.labelSmall,
-                    color = Color.White.copy(0.35f))
+                    color = Color(0xFF5A5070))
                 Spacer(Modifier.height(8.dp))
                 Text(program.limiting, style = AppTypography.headingSmall.copy(fontFamily = PlayfairDisplay),
-                    color = Color.White.copy(oldAlpha),
+                    color = Color(0xFF2A2A3A).copy(oldAlpha),
                     textDecoration = if (showRewrite) TextDecoration.LineThrough else TextDecoration.None,
                     textAlign = TextAlign.Center)
             }
@@ -703,7 +710,7 @@ private fun ProgramRewriteContent(
                     color = theme.accent.copy(0.7f))
                 Spacer(Modifier.height(8.dp))
                 Text(program.rewrite, style = AppTypography.headingSmall.copy(fontFamily = PlayfairDisplay, fontSize = 20.sp),
-                    color = Color.White, textAlign = TextAlign.Center, lineHeight = 28.sp)
+                    color = Color(0xFF2A2A3A), textAlign = TextAlign.Center, lineHeight = 28.sp)
             }
         }
 
@@ -740,13 +747,13 @@ private fun ProgramRewriteContent(
                     Icon(
                         if (isSaved) Icons.Outlined.CheckCircle else Icons.Outlined.AutoAwesome,
                         contentDescription = null,
-                        tint = if (isSaved) theme.accent else Color.White
+                        tint = if (isSaved) theme.accent else Color(0xFF2A2A3A)
                     )
                     Spacer(Modifier.width(10.dp))
                     Text(
                         if (isSaved) Translations.ui("savedToIdentity") else Translations.ui("saveToIdentity"),
                         style = AppTypography.bodyLarge.copy(fontWeight = FontWeight.Medium),
-                        color = if (isSaved) theme.accent else Color.White
+                        color = if (isSaved) theme.accent else Color(0xFF2A2A3A)
                     )
                 }
             }

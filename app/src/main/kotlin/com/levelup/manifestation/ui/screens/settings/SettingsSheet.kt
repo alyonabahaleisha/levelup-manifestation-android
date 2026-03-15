@@ -8,7 +8,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -44,8 +43,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
@@ -55,7 +52,10 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.levelup.manifestation.Translations
 import com.levelup.manifestation.ui.theme.AppTypography
-import com.levelup.manifestation.ui.components.FeatherBackground
+import androidx.compose.foundation.Image
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import com.levelup.manifestation.R
 import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.GlassChip
 import com.levelup.manifestation.ui.theme.LocalToneTheme
@@ -85,9 +85,13 @@ fun SettingsSheet(
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Brush.linearGradient(theme.gradientColors))
     ) {
-        FeatherBackground(modifier = Modifier.height(600.dp))
+        Image(
+            painter = painterResource(R.drawable.bg_home),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
 
         Column(
             modifier = Modifier
@@ -105,7 +109,7 @@ fun SettingsSheet(
                 GlassCard(cornerRadius = 14.dp, modifier = Modifier.size(44.dp)
                     .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null, onClick = onDismiss)) {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Icon(Icons.Outlined.Close, contentDescription = "Close", tint = Color.White.copy(0.7f))
+                        Icon(Icons.Outlined.Close, contentDescription = "Close", tint = Color(0xFF5A5070))
                     }
                 }
             }
@@ -119,7 +123,7 @@ fun SettingsSheet(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(Translations.ui("dailyAffirmations"), style = AppTypography.bodyLarge,
-                            color = Color.White, modifier = Modifier.weight(1f))
+                            color = Color(0xFF2A2A3A), modifier = Modifier.weight(1f))
                         Switch(
                             checked = notifSettings.isEnabled,
                             onCheckedChange = { enabled ->
@@ -143,7 +147,7 @@ fun SettingsSheet(
                         exit = shrinkVertically()
                     ) {
                         Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                            HorizontalDivider(color = Color.White.copy(0.08f))
+                            HorizontalDivider(color = Color(0xFF2A2A3A).copy(0.08f))
 
                             // Time window
                             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -157,7 +161,7 @@ fun SettingsSheet(
                                     accentColor = theme.accent
                                 )
                                 Spacer(Modifier.width(8.dp))
-                                Text(Translations.ui("timeTo"), style = AppTypography.bodySmall, color = Color.White.copy(0.35f))
+                                Text(Translations.ui("timeTo"), style = AppTypography.bodySmall, color = Color(0xFF5A5070))
                                 Spacer(Modifier.width(8.dp))
                                 TimeButton(
                                     hour = notifSettings.endHour,
@@ -170,12 +174,12 @@ fun SettingsSheet(
                                     tint = theme.accent.copy(0.7f), modifier = Modifier.size(16.dp))
                             }
 
-                            HorizontalDivider(color = Color.White.copy(0.08f))
+                            HorizontalDivider(color = Color(0xFF2A2A3A).copy(0.08f))
 
                             // Interval chips
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Text(Translations.ui("every"), style = AppTypography.bodyMedium,
-                                    color = Color.White.copy(0.5f))
+                                    color = Color(0xFF5A5070))
                                 Spacer(Modifier.width(10.dp))
                                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                                     intervalOptions.forEach { (minutes, label) ->
@@ -189,7 +193,7 @@ fun SettingsSheet(
                                             }
                                         ) {
                                             Text(label, style = AppTypography.labelMedium,
-                                                color = if (isSelected) theme.accent else Color.White.copy(0.4f),
+                                                color = if (isSelected) theme.accent else Color(0xFF5A5070),
                                                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 7.dp))
                                         }
                                     }
@@ -210,7 +214,7 @@ private fun SettingsSection(title: String, content: @Composable () -> Unit) {
     Column {
         Text(
             title, style = AppTypography.labelSmall,
-            color = Color.White.copy(0.4f),
+            color = Color(0xFF5A5070),
             modifier = Modifier.padding(horizontal = 24.dp, vertical = 0.dp).padding(bottom = 12.dp)
         )
         GlassCard(cornerRadius = 22.dp, modifier = Modifier.padding(horizontal = 16.dp).fillMaxWidth()) {

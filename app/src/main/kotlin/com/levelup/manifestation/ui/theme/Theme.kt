@@ -35,14 +35,14 @@ data class ToneTheme(
         val Default = ToneTheme(
             displayName = "Default",
             gradientColors = listOf(
-                Color(0xFF08090C),  // deep near-black
-                Color(0xFF0D1520),  // midnight navy
-                Color(0xFF111D2B)   // dark navy top
+                Color(0xFFE8D5E0),  // soft rose
+                Color(0xFFD4C0E0),  // lavender
+                Color(0xFFCBB8D8)   // deeper lavender
             ),
-            accent = Color(0xFFC9A96E),          // champagne gold
-            glowColor = Color(0x40C9A96E),       // gold glow
-            surface = Color.White.copy(alpha = 0.06f),
-            surfaceBorder = Color(0x30C9A96E)    // subtle gold border
+            accent = Color(0xFFB88AAE),          // warm mauve-rose
+            glowColor = Color(0x40B88AAE),       // rose glow
+            surface = Color.White.copy(alpha = 0.55f),
+            surfaceBorder = Color.White.copy(alpha = 0.70f)
         )
 
         // Keep for backward compatibility with DataStore

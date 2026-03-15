@@ -11,7 +11,6 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -37,7 +36,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
@@ -59,7 +57,10 @@ import com.levelup.manifestation.data.content.AffirmationContent
 import com.levelup.manifestation.data.model.Affirmation
 import com.levelup.manifestation.data.store.PrefsKeys
 import com.levelup.manifestation.data.store.dataStore
-import com.levelup.manifestation.ui.components.FeatherBackground
+import androidx.compose.foundation.Image
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import com.levelup.manifestation.R
 import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.GlassChip
 import com.levelup.manifestation.ui.theme.LifeArea
@@ -162,9 +163,12 @@ fun AffirmationsScreen(
 
     Box(modifier = Modifier.fillMaxSize()) {
         if (feedItems.isEmpty()) {
-            Box(Modifier.fillMaxSize().background(Brush.linearGradient(theme.gradientColors))) {
-                FeatherBackground()
-            }
+            Image(
+                painter = painterResource(R.drawable.bg_affirmations),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxSize()
+            )
         } else {
             VerticalPager(
                 state = pagerState,
@@ -228,8 +232,12 @@ private fun NotificationPromoCard(onEnableClick: () -> Unit) {
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Box(Modifier.fillMaxSize().background(Brush.linearGradient(theme.gradientColors)))
-        FeatherBackground()
+        Image(
+            painter = painterResource(R.drawable.bg_affirmations),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
 
         Box(
             modifier = Modifier
@@ -249,21 +257,16 @@ private fun NotificationPromoCard(onEnableClick: () -> Unit) {
                     verticalArrangement = Arrangement.spacedBy(20.dp)
                 ) {
                     Text(
-                        text = "✦",
-                        style = AppTypography.displayMedium,
-                        color = theme.accent
-                    )
-                    Text(
                         text = Translations.ui("notifPromoTitle"),
                         style = AppTypography.headingMedium,
-                        color = Color.White,
+                        color = Color(0xFF2A2A3A),
                         textAlign = TextAlign.Center,
                         lineHeight = 30.sp
                     )
                     Text(
                         text = Translations.ui("notifPromoBody"),
                         style = AppTypography.bodyMedium,
-                        color = Color.White.copy(alpha = 0.6f),
+                        color = Color(0xFF5A5070),
                         textAlign = TextAlign.Center,
                         lineHeight = 20.sp
                     )
@@ -317,12 +320,12 @@ fun AffirmationCard(affirmation: Affirmation) {
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Brush.linearGradient(theme.gradientColors))
+        Image(
+            painter = painterResource(R.drawable.bg_affirmations),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
         )
-        FeatherBackground()
 
         Box(
             modifier = Modifier
@@ -358,7 +361,7 @@ fun AffirmationCard(affirmation: Affirmation) {
                         text = affirmation.text,
                         fontFamily = PlayfairDisplay,
                         fontSize = fontSize,
-                        color = Color.White,
+                        color = Color(0xFF2A2A3A),
                         textAlign = TextAlign.Center,
                         lineHeight = lineHeight,
                         modifier = Modifier.padding(horizontal = 32.dp, vertical = 40.dp)

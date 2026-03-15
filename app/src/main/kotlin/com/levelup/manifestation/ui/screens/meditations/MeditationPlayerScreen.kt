@@ -35,7 +35,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -51,7 +50,6 @@ import com.levelup.manifestation.R
 import com.levelup.manifestation.Translations
 import com.levelup.manifestation.data.audio.PlaybackState
 import com.levelup.manifestation.data.model.Meditation
-import com.levelup.manifestation.ui.components.FeatherBackground
 import com.levelup.manifestation.ui.theme.AppTypography
 import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.LocalToneTheme
@@ -86,9 +84,13 @@ fun MeditationPlayerScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Brush.linearGradient(theme.gradientColors))
     ) {
-        FeatherBackground()
+        Image(
+            painter = painterResource(R.drawable.bg_player),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
 
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -214,12 +216,12 @@ fun MeditationPlayerScreen(
 
                 Spacer(Modifier.width(32.dp))
 
-                // Play/Pause — large white button
+                // Play/Pause — large dark button
                 Box(
                     modifier = Modifier
                         .size(80.dp)
                         .clip(CircleShape)
-                        .background(Color.White)
+                        .background(Color(0xFF2A2A3A))
                         .clickable(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null
@@ -236,7 +238,7 @@ fun MeditationPlayerScreen(
                     Icon(
                         if (isPlaying) Icons.Filled.Pause else Icons.Filled.PlayArrow,
                         contentDescription = null,
-                        tint = Color(0xFF0B0B0B),
+                        tint = Color.White,
                         modifier = Modifier.size(40.dp)
                     )
                 }

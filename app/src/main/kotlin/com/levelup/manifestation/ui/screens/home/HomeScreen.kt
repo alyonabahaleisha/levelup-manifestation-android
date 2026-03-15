@@ -11,7 +11,6 @@ import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -41,10 +40,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -62,7 +59,6 @@ import com.levelup.manifestation.Translations
 import com.levelup.manifestation.data.content.AffirmationContent
 import com.levelup.manifestation.data.content.ProgramContent
 import com.levelup.manifestation.data.model.Meditation
-import com.levelup.manifestation.ui.components.FeatherBackground
 import com.levelup.manifestation.ui.theme.AppTypography
 import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.LifeArea
@@ -74,6 +70,9 @@ import com.levelup.manifestation.ui.viewmodel.MeditationViewModel
 import com.levelup.manifestation.ui.viewmodel.SavedProgramsViewModel
 import kotlinx.coroutines.delay
 import java.time.LocalDate
+
+private val textOnImage = Color(0xFF2A2A3A)
+private val textSecondary = Color(0xFF5A5070)
 
 @Composable
 fun HomeScreen(
@@ -96,79 +95,62 @@ fun HomeScreen(
     val allMeditations = remember { meditationViewModel.allMeditations() }
     val totalPerArea = remember { LifeArea.entries.associateWith { ProgramContent.programs(it).size } }
 
-    // Breathing glow animation for daily affirmation
-    val breathTransition = rememberInfiniteTransition(label = "breath")
-    val breathAlpha by breathTransition.animateFloat(
-        initialValue = 0.15f,
-        targetValue = 0.35f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(3000, easing = LinearEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "breathAlpha"
-    )
-
     Box(modifier = Modifier.fillMaxSize()) {
-        Box(Modifier.fillMaxSize().background(Brush.linearGradient(theme.gradientColors)))
-        FeatherBackground()
+        // Ethereal background image
+        Image(
+            painter = painterResource(R.drawable.bg_home),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
 
         LazyColumn(
             contentPadding = PaddingValues(bottom = 140.dp),
             modifier = Modifier.fillMaxSize()
         ) {
-            // Hero: Mikhail's portrait + welcome
+            // Hero: Portrait + welcome
             item {
                 var appeared by remember { mutableStateOf(false) }
                 val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(700), label = "heroAlpha")
                 LaunchedEffect(Unit) { appeared = true }
 
-                Box(
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(top = 72.dp)
-                        .graphicsLayer { this.alpha = alpha }
+                        .graphicsLayer { this.alpha = alpha },
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Column(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
-                        // Portrait with gold ring
-                        Box(
-                            contentAlignment = Alignment.Center,
-                            modifier = Modifier.size(120.dp)
-                        ) {
-                            Image(
-                                painter = painterResource(R.drawable.mikhail_portrait),
-                                contentDescription = null,
-                                contentScale = ContentScale.Crop,
-                                modifier = Modifier
-                                    .size(110.dp)
-                                    .clip(CircleShape)
-                                    .border(1.dp, theme.accent.copy(0.4f), CircleShape)
-                            )
-                        }
+                    Image(
+                        painter = painterResource(R.drawable.mikhail_portrait),
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier
+                            .size(110.dp)
+                            .clip(CircleShape)
+                            .border(1.5.dp, Color.White.copy(0.6f), CircleShape)
+                    )
 
-                        Spacer(Modifier.height(24.dp))
+                    Spacer(Modifier.height(24.dp))
 
-                        Text(
-                            Translations.ui("homeGreeting"),
-                            style = AppTypography.headingLarge.copy(fontFamily = PlayfairDisplay),
-                            color = Color.White,
-                            textAlign = TextAlign.Center
-                        )
+                    Text(
+                        Translations.ui("homeGreeting"),
+                        style = AppTypography.headingLarge.copy(fontFamily = PlayfairDisplay),
+                        color = Color.White,
+                        textAlign = TextAlign.Center
+                    )
 
-                        Spacer(Modifier.height(8.dp))
+                    Spacer(Modifier.height(6.dp))
 
-                        Text(
-                            "Школа Михаила Агеева",
-                            style = AppTypography.bodySmall,
-                            color = Color.White.copy(0.35f)
-                        )
-                    }
+                    Text(
+                        "Школа Михаила Агеева",
+                        style = AppTypography.bodySmall,
+                        color = Color.White.copy(0.7f)
+                    )
                 }
             }
 
-            // Daily affirmation — with breathing glow
+            // Daily affirmation
             item {
                 var appeared by remember { mutableStateOf(false) }
                 val scale by animateFloatAsState(if (appeared) 1f else 0.92f, spring(stiffness = Spring.StiffnessMediumLow), label = "dailyScale")
@@ -184,64 +166,39 @@ fun HomeScreen(
                     Text(
                         Translations.ui("homeDailyAffirmation"),
                         style = AppTypography.labelSmall,
-                        color = theme.accent.copy(0.6f),
+                        color = textSecondary,
                         modifier = Modifier.padding(bottom = 16.dp)
                     )
 
                     if (dailyAffirmation != null) {
-                        Box(
+                        GlassCard(
+                            cornerRadius = 28.dp,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                // Breathing glow behind the card
-                                .drawBehind {
-                                    drawRoundRect(
-                                        brush = Brush.radialGradient(
-                                            colors = listOf(
-                                                Color(0xFFC9A96E).copy(alpha = breathAlpha),
-                                                Color.Transparent
-                                            ),
-                                            center = center,
-                                            radius = size.maxDimension * 0.6f
-                                        ),
-                                        cornerRadius = androidx.compose.ui.geometry.CornerRadius(28.dp.toPx())
-                                    )
+                                .clickable(
+                                    interactionSource = remember { MutableInteractionSource() },
+                                    indication = null
+                                ) {
+                                    haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                                    onNavigateToAffirmations()
                                 }
                         ) {
-                            GlassCard(
-                                cornerRadius = 28.dp,
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .clickable(
-                                        interactionSource = remember { MutableInteractionSource() },
-                                        indication = null
-                                    ) {
-                                        haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                                        onNavigateToAffirmations()
-                                    }
+                                    .padding(horizontal = 32.dp, vertical = 44.dp)
                             ) {
-                                Column(
-                                    horizontalAlignment = Alignment.CenterHorizontally,
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .padding(horizontal = 32.dp, vertical = 44.dp)
-                                ) {
-                                    Text(
-                                        "✦",
-                                        style = AppTypography.headingMedium,
-                                        color = theme.accent
-                                    )
-                                    Spacer(Modifier.height(20.dp))
-                                    Text(
-                                        dailyAffirmation.text,
-                                        style = AppTypography.headingSmall.copy(
-                                            fontFamily = PlayfairDisplay,
-                                            fontSize = 20.sp
-                                        ),
-                                        color = Color.White,
-                                        textAlign = TextAlign.Center,
-                                        lineHeight = 30.sp
-                                    )
-                                }
+                                Text(
+                                    dailyAffirmation.text,
+                                    style = AppTypography.headingSmall.copy(
+                                        fontFamily = PlayfairDisplay,
+                                        fontSize = 20.sp
+                                    ),
+                                    color = textOnImage,
+                                    textAlign = TextAlign.Center,
+                                    lineHeight = 30.sp
+                                )
                             }
                         }
                     }
@@ -262,7 +219,7 @@ fun HomeScreen(
                     Text(
                         Translations.ui("homeReprogram"),
                         style = AppTypography.labelSmall,
-                        color = theme.accent.copy(0.6f),
+                        color = textSecondary,
                         modifier = Modifier.padding(start = 24.dp, end = 24.dp, bottom = 16.dp)
                     )
 
@@ -277,7 +234,6 @@ fun HomeScreen(
                                 area = area,
                                 savedCount = savedCount,
                                 totalCount = totalCount,
-                                accentColor = theme.accent,
                                 index = index,
                                 onClick = {
                                     haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
@@ -303,7 +259,7 @@ fun HomeScreen(
                     Text(
                         Translations.ui("homeMeditations"),
                         style = AppTypography.labelSmall,
-                        color = theme.accent.copy(0.6f),
+                        color = textSecondary,
                         modifier = Modifier.padding(start = 24.dp, end = 24.dp, bottom = 16.dp)
                     )
 
@@ -333,7 +289,6 @@ private fun ReprogramAreaCard(
     area: LifeArea,
     savedCount: Int,
     totalCount: Int,
-    accentColor: Color,
     index: Int,
     onClick: () -> Unit
 ) {
@@ -352,7 +307,7 @@ private fun ReprogramAreaCard(
     GlassCard(
         cornerRadius = 22.dp,
         modifier = Modifier
-            .width(140.dp)
+            .width(130.dp)
             .graphicsLayer { scaleX = scale; scaleY = scale; this.alpha = alpha }
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
@@ -364,14 +319,14 @@ private fun ReprogramAreaCard(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.padding(horizontal = 14.dp, vertical = 22.dp)
         ) {
-            Box(contentAlignment = Alignment.Center, modifier = Modifier.size(56.dp)) {
+            Box(contentAlignment = Alignment.Center, modifier = Modifier.size(48.dp)) {
                 Canvas(modifier = Modifier.fillMaxSize()) {
-                    val strokeWidth = 5.dp.toPx()
+                    val strokeWidth = 4.dp.toPx()
                     val inset = strokeWidth / 2f
                     val arcSize = Size(size.width - strokeWidth, size.height - strokeWidth)
                     val topLeft = Offset(inset, inset)
                     drawArc(
-                        color = Color.White.copy(alpha = 0.08f),
+                        color = Color(0xFF2A2A3A).copy(alpha = 0.10f),
                         startAngle = -90f, sweepAngle = 360f, useCenter = false,
                         style = Stroke(strokeWidth, cap = StrokeCap.Round),
                         topLeft = topLeft, size = arcSize
@@ -385,13 +340,12 @@ private fun ReprogramAreaCard(
                         )
                     }
                 }
-                Text(area.emoji, fontSize = 22.sp)
             }
             Spacer(Modifier.height(12.dp))
             Text(
                 Translations.lifeAreaLabel(area),
                 style = AppTypography.caption,
-                color = Color.White.copy(0.85f),
+                color = textOnImage,
                 textAlign = TextAlign.Center,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
@@ -401,7 +355,7 @@ private fun ReprogramAreaCard(
                 Text(
                     "$savedCount / $totalCount",
                     style = AppTypography.caption.copy(fontSize = 10.sp),
-                    color = accentColor.copy(0.7f)
+                    color = textSecondary
                 )
             }
         }
@@ -423,7 +377,7 @@ private fun MeditationPreviewCard(
     GlassCard(
         cornerRadius = 22.dp,
         modifier = Modifier
-            .width(190.dp)
+            .width(180.dp)
             .graphicsLayer { scaleX = scale; scaleY = scale; this.alpha = alpha }
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
@@ -434,21 +388,19 @@ private fun MeditationPreviewCard(
         Column(
             modifier = Modifier.padding(horizontal = 18.dp, vertical = 22.dp)
         ) {
-            Text(meditation.area.emoji, fontSize = 32.sp)
-            Spacer(Modifier.height(14.dp))
             Text(
                 meditation.title,
                 style = AppTypography.bodyMedium.copy(fontFamily = Manrope),
-                color = Color.White,
+                color = textOnImage,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
                 lineHeight = 20.sp
             )
             Spacer(Modifier.height(8.dp))
             Text(
-                "${meditation.durationSeconds / 60} ${Translations.ui("minutesShort")}",
+                "${Translations.lifeAreaLabel(meditation.area)}  ·  ${meditation.durationSeconds / 60} ${Translations.ui("minutesShort")}",
                 style = AppTypography.caption,
-                color = Color.White.copy(0.35f)
+                color = textSecondary
             )
         }
     }
