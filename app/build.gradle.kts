@@ -81,6 +81,10 @@ dependencies {
     // Splash screen
     implementation(libs.androidx.splashscreen)
 
+    // Media3 for meditation audio playback
+    implementation("androidx.media3:media3-exoplayer:1.5.1")
+    implementation("androidx.media3:media3-session:1.5.1")
+
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
