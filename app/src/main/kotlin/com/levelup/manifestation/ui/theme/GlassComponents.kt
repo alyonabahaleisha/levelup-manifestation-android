@@ -17,6 +17,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
@@ -30,16 +31,28 @@ import androidx.compose.foundation.background
 fun GlassCard(
     modifier: Modifier = Modifier,
     cornerRadius: Dp = 24.dp,
-    borderWidth: Dp = 1.dp,
-    borderColor: Color = Color.Transparent,
+    borderWidth: Dp = 0.5.dp,
+    borderColor: Color = Color.Unspecified,
     content: @Composable BoxScope.() -> Unit
 ) {
+    val theme = LocalToneTheme.current
     val shape = RoundedCornerShape(cornerRadius)
+    val resolvedBorder = if (borderColor == Color.Unspecified) {
+        Brush.linearGradient(
+            colors = listOf(
+                theme.accent.copy(alpha = 0.25f),
+                theme.accent.copy(alpha = 0.05f),
+                Color.Transparent
+            )
+        )
+    } else {
+        Brush.linearGradient(listOf(borderColor, borderColor))
+    }
     Box(
         modifier = modifier
             .clip(shape)
-            .background(Color.White.copy(alpha = 0.07f))
-            .border(borderWidth, borderColor, shape),
+            .background(Color.White.copy(alpha = 0.05f))
+            .border(borderWidth, resolvedBorder, shape),
         content = content
     )
 }
@@ -57,12 +70,12 @@ fun GlassChip(
         modifier = modifier
             .clip(CircleShape)
             .background(
-                if (isSelected) accentColor.copy(alpha = 0.18f)
-                else Color.White.copy(alpha = 0.06f)
+                if (isSelected) accentColor.copy(alpha = 0.15f)
+                else Color.White.copy(alpha = 0.04f)
             )
             .border(
-                1.dp,
-                if (isSelected) accentColor.copy(alpha = 0.6f) else Color.White.copy(alpha = 0.14f),
+                0.5.dp,
+                if (isSelected) accentColor.copy(alpha = 0.5f) else Color.White.copy(alpha = 0.10f),
                 CircleShape
             ),
         content = content

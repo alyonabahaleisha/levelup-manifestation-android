@@ -275,8 +275,8 @@ private fun CircularProgressArc(
     modifier: Modifier = Modifier
 ) {
     val density = LocalDensity.current
-    val strokeWidthPx = with(density) { 4.dp.toPx() }
-    val dotRadiusPx = with(density) { 8.dp.toPx() }
+    val strokeWidthPx = with(density) { 6.dp.toPx() }
+    val dotRadiusPx = with(density) { 9.dp.toPx() }
 
     Canvas(modifier = modifier) {
         val strokeWidth = strokeWidthPx
