@@ -40,6 +40,7 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
@@ -179,41 +180,54 @@ private fun AffirmationCard(
                     scaleX = cardScale; scaleY = cardScale; alpha = cardAlpha
                 }
         ) {
-            // Card with image background
+            Spacer(Modifier.height(80.dp))
+
+            // Card with image background — compact, not full screen
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .weight(1f, fill = false)
-                    .padding(top = 60.dp)
-                    .clip(RoundedCornerShape(32.dp)),
+                    .clip(RoundedCornerShape(28.dp)),
                 contentAlignment = Alignment.Center
             ) {
                 Image(
                     painter = painterResource(style.imageRes),
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(420.dp)
                 )
 
-                // Semi-transparent overlay for readability
+                // Dark gradient overlay for text contrast
                 Box(
                     modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.White.copy(alpha = 0.15f))
+                        .fillMaxWidth()
+                        .height(420.dp)
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Black.copy(alpha = 0.05f),
+                                    Color.Black.copy(alpha = 0.35f),
+                                    Color.Black.copy(alpha = 0.45f),
+                                    Color.Black.copy(alpha = 0.35f),
+                                    Color.Black.copy(alpha = 0.05f)
+                                )
+                            )
+                        )
                 )
 
                 // Affirmation text
                 val len = affirmation.text.length
                 val fontSize = when {
-                    len < 60 -> 28.sp
-                    len < 120 -> 24.sp
-                    len < 200 -> 20.sp
-                    else -> 17.sp
+                    len < 60 -> 26.sp
+                    len < 120 -> 22.sp
+                    len < 200 -> 18.sp
+                    else -> 16.sp
                 }
                 val lineHeight = when {
-                    len < 60 -> 38.sp
-                    len < 120 -> 34.sp
-                    len < 200 -> 28.sp
+                    len < 60 -> 36.sp
+                    len < 120 -> 32.sp
+                    len < 200 -> 26.sp
                     else -> 24.sp
                 }
 
@@ -224,11 +238,11 @@ private fun AffirmationCard(
                     color = Color.White,
                     textAlign = TextAlign.Center,
                     lineHeight = lineHeight,
-                    modifier = Modifier.padding(horizontal = 32.dp, vertical = 48.dp)
+                    modifier = Modifier.padding(horizontal = 28.dp, vertical = 40.dp)
                 )
             }
 
-            Spacer(Modifier.height(24.dp))
+            Spacer(Modifier.height(28.dp))
 
             // Like & Share buttons
             Row(
@@ -236,7 +250,7 @@ private fun AffirmationCard(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 100.dp)
+                    .padding(bottom = 80.dp)
             ) {
                 // Like button
                 Box(
