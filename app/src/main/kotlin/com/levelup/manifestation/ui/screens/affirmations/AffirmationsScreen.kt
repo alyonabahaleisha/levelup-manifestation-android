@@ -64,16 +64,16 @@ import com.levelup.manifestation.ui.viewmodel.ThemeViewModel
 private data class CardStyle(val imageRes: Int, val bgColor: Color)
 
 private val cardStyles = listOf(
-    CardStyle(R.drawable.card_bg_1, Color(0xFFD5C4B0)),  // warm beige
-    CardStyle(R.drawable.card_bg_2, Color(0xFFD4C8A8)),  // golden sparkle
-    CardStyle(R.drawable.card_bg_3, Color(0xFFD8A0B0)),  // pink waves
-    CardStyle(R.drawable.card_bg_4, Color(0xFFE8D0D0)),  // pastel tulips
-    CardStyle(R.drawable.card_bg_5, Color(0xFFD8A8C0)),  // pink bokeh
-    CardStyle(R.drawable.card_bg_6, Color(0xFFA8B0C0)),  // cool dreamy
-    CardStyle(R.drawable.card_bg_7, Color(0xFFD8C8D0)),  // pastel flowers
-    CardStyle(R.drawable.card_bg_8, Color(0xFFD0C0D8)),  // lavender lines
-    CardStyle(R.drawable.card_bg_9, Color(0xFFD0B8C8)),  // divine light
-    CardStyle(R.drawable.card_bg_10, Color(0xFFC8C0D0)), // energy circle
+    CardStyle(R.drawable.card_bg_1, Color(0xFFF0E8E0)),  // soft peach
+    CardStyle(R.drawable.card_bg_2, Color(0xFFEDE6E8)),  // blush pink
+    CardStyle(R.drawable.card_bg_3, Color(0xFFE8E0F0)),  // lavender
+    CardStyle(R.drawable.card_bg_4, Color(0xFFE8E0D8)),  // warm cream
+    CardStyle(R.drawable.card_bg_5, Color(0xFFECE4E0)),  // rose cream
+    CardStyle(R.drawable.card_bg_6, Color(0xFFF0E8EC)),  // soft pink
+    CardStyle(R.drawable.card_bg_7, Color(0xFFE8E0E8)),  // light mauve
+    CardStyle(R.drawable.card_bg_8, Color(0xFFE8E0F0)),  // pale lavender
+    CardStyle(R.drawable.card_bg_9, Color(0xFFF0ECE8)),  // warm white
+    CardStyle(R.drawable.card_bg_10, Color(0xFFECE4E8)), // soft rose
 )
 
 @Composable
@@ -213,21 +213,12 @@ private fun AffirmationCard(
                         .height(480.dp)
                 )
 
-                // Dark gradient for text contrast
+                // Light overlay for text contrast
                 Box(
                     Modifier
                         .fillMaxWidth()
                         .height(480.dp)
-                        .background(
-                            Brush.verticalGradient(
-                                colors = listOf(
-                                    Color.Black.copy(alpha = 0.05f),
-                                    Color.Black.copy(alpha = 0.30f),
-                                    Color.Black.copy(alpha = 0.50f),
-                                    Color.Black.copy(alpha = 0.40f)
-                                )
-                            )
-                        )
+                        .background(Color.White.copy(alpha = 0.25f))
                 )
 
                 // Text + action icons inside card
@@ -259,7 +250,7 @@ private fun AffirmationCard(
                         text = affirmation.text,
                         fontFamily = PlayfairDisplay,
                         fontSize = fontSize,
-                        color = Color.White,
+                        color = Color(0xFF2A2A3A),
                         textAlign = TextAlign.Center,
                         lineHeight = lineHeight
                     )
@@ -275,7 +266,7 @@ private fun AffirmationCard(
                         Icon(
                             Icons.Outlined.FavoriteBorder,
                             contentDescription = "Like",
-                            tint = if (liked) Color(0xFFE06080) else Color.White.copy(0.7f),
+                            tint = if (liked) Color(0xFFE06080) else Color(0xFF2A2A3A).copy(0.5f),
                             modifier = Modifier
                                 .size(28.dp)
                                 .clickable(
@@ -290,7 +281,7 @@ private fun AffirmationCard(
                         Icon(
                             Icons.Outlined.Share,
                             contentDescription = "Share",
-                            tint = Color.White.copy(0.7f),
+                            tint = Color(0xFF2A2A3A).copy(0.5f),
                             modifier = Modifier
                                 .size(28.dp)
                                 .clickable(
