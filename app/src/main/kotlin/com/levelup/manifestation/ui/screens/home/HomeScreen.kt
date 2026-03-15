@@ -1,16 +1,12 @@
 package com.levelup.manifestation.ui.screens.home
 
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -42,6 +38,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -71,8 +68,9 @@ import com.levelup.manifestation.ui.viewmodel.SavedProgramsViewModel
 import kotlinx.coroutines.delay
 import java.time.LocalDate
 
-private val textOnImage = Color(0xFF2A2A3A)
-private val textSecondary = Color(0xFF5A5070)
+// Site teal color
+private val siteTeal = Color(0xFF154C6C)
+private val siteTealLight = Color(0xFF1A5A7E)
 
 @Composable
 fun HomeScreen(
@@ -96,61 +94,88 @@ fun HomeScreen(
     val totalPerArea = remember { LifeArea.entries.associateWith { ProgramContent.programs(it).size } }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        // Ethereal background image
-        Image(
-            painter = painterResource(R.drawable.bg_home),
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxSize()
+        // Bottom solid teal fills entire screen
+        Box(
+            Modifier
+                .fillMaxSize()
+                .background(siteTeal)
         )
 
         LazyColumn(
             contentPadding = PaddingValues(bottom = 140.dp),
             modifier = Modifier.fillMaxSize()
         ) {
-            // Hero: Portrait + welcome
+            // Hero section — image background with portrait + welcome
             item {
                 var appeared by remember { mutableStateOf(false) }
                 val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(700), label = "heroAlpha")
                 LaunchedEffect(Unit) { appeared = true }
 
-                Column(
+                Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = 72.dp)
-                        .graphicsLayer { this.alpha = alpha },
-                    horizontalAlignment = Alignment.CenterHorizontally
+                        .height(420.dp)
                 ) {
+                    // Ethereal image
                     Image(
-                        painter = painterResource(R.drawable.mikhail_portrait),
+                        painter = painterResource(R.drawable.bg_home),
                         contentDescription = null,
                         contentScale = ContentScale.Crop,
+                        modifier = Modifier.fillMaxSize()
+                    )
+
+                    // Gradient fade from image into teal at bottom
+                    Box(
                         modifier = Modifier
-                            .size(110.dp)
-                            .clip(CircleShape)
-                            .border(1.5.dp, Color.White.copy(0.6f), CircleShape)
+                            .fillMaxWidth()
+                            .height(120.dp)
+                            .align(Alignment.BottomCenter)
+                            .background(
+                                Brush.verticalGradient(
+                                    colors = listOf(Color.Transparent, siteTeal)
+                                )
+                            )
                     )
 
-                    Spacer(Modifier.height(24.dp))
+                    // Content overlay
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 72.dp)
+                            .graphicsLayer { this.alpha = alpha },
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Image(
+                            painter = painterResource(R.drawable.mikhail_portrait),
+                            contentDescription = null,
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier
+                                .size(110.dp)
+                                .clip(CircleShape)
+                                .border(1.5.dp, Color.White.copy(0.6f), CircleShape)
+                        )
 
-                    Text(
-                        Translations.ui("homeGreeting"),
-                        style = AppTypography.headingLarge.copy(fontFamily = PlayfairDisplay),
-                        color = Color.White,
-                        textAlign = TextAlign.Center
-                    )
+                        Spacer(Modifier.height(24.dp))
 
-                    Spacer(Modifier.height(6.dp))
+                        Text(
+                            Translations.ui("homeGreeting"),
+                            style = AppTypography.headingLarge.copy(fontFamily = PlayfairDisplay),
+                            color = Color.White,
+                            textAlign = TextAlign.Center
+                        )
 
-                    Text(
-                        "Школа Михаила Агеева",
-                        style = AppTypography.bodySmall,
-                        color = Color.White.copy(0.7f)
-                    )
+                        Spacer(Modifier.height(6.dp))
+
+                        Text(
+                            "Школа Михаила Агеева",
+                            style = AppTypography.bodySmall,
+                            color = Color.White.copy(0.7f)
+                        )
+                    }
                 }
             }
 
-            // Daily affirmation
+            // Daily affirmation — on teal background
             item {
                 var appeared by remember { mutableStateOf(false) }
                 val scale by animateFloatAsState(if (appeared) 1f else 0.92f, spring(stiffness = Spring.StiffnessMediumLow), label = "dailyScale")
@@ -160,19 +185,19 @@ fun HomeScreen(
                 Column(
                     modifier = Modifier
                         .padding(horizontal = 24.dp)
-                        .padding(top = 48.dp)
+                        .padding(top = 24.dp)
                         .graphicsLayer { scaleX = scale; scaleY = scale; this.alpha = cardAlpha }
                 ) {
                     Text(
                         Translations.ui("homeDailyAffirmation"),
                         style = AppTypography.labelSmall,
-                        color = textSecondary,
-                        modifier = Modifier.padding(bottom = 16.dp)
+                        color = Color.White.copy(0.45f),
+                        modifier = Modifier.padding(bottom = 14.dp)
                     )
 
                     if (dailyAffirmation != null) {
                         GlassCard(
-                            cornerRadius = 28.dp,
+                            cornerRadius = 24.dp,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable(
@@ -187,17 +212,17 @@ fun HomeScreen(
                                 horizontalAlignment = Alignment.CenterHorizontally,
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(horizontal = 32.dp, vertical = 44.dp)
+                                    .padding(horizontal = 28.dp, vertical = 36.dp)
                             ) {
                                 Text(
                                     dailyAffirmation.text,
                                     style = AppTypography.headingSmall.copy(
                                         fontFamily = PlayfairDisplay,
-                                        fontSize = 20.sp
+                                        fontSize = 18.sp
                                     ),
-                                    color = textOnImage,
+                                    color = Color.White.copy(0.9f),
                                     textAlign = TextAlign.Center,
-                                    lineHeight = 30.sp
+                                    lineHeight = 28.sp
                                 )
                             }
                         }
@@ -205,7 +230,7 @@ fun HomeScreen(
                 }
             }
 
-            // Reprogram section
+            // Reprogram section — on teal background
             item {
                 var appeared by remember { mutableStateOf(false) }
                 val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(400), label = "repAlpha")
@@ -213,19 +238,19 @@ fun HomeScreen(
 
                 Column(
                     modifier = Modifier
-                        .padding(top = 48.dp)
+                        .padding(top = 40.dp)
                         .graphicsLayer { this.alpha = alpha }
                 ) {
                     Text(
                         Translations.ui("homeReprogram"),
                         style = AppTypography.labelSmall,
-                        color = textSecondary,
-                        modifier = Modifier.padding(start = 24.dp, end = 24.dp, bottom = 16.dp)
+                        color = Color.White.copy(0.45f),
+                        modifier = Modifier.padding(start = 24.dp, end = 24.dp, bottom = 14.dp)
                     )
 
                     LazyRow(
                         contentPadding = PaddingValues(horizontal = 24.dp),
-                        horizontalArrangement = Arrangement.spacedBy(14.dp)
+                        horizontalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
                         itemsIndexed(LifeArea.entries.toList()) { index, area ->
                             val savedCount = saved.count { it.area == area }
@@ -245,7 +270,7 @@ fun HomeScreen(
                 }
             }
 
-            // Meditations section
+            // Meditations section — on teal background
             item {
                 var appeared by remember { mutableStateOf(false) }
                 val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(400), label = "medAlpha")
@@ -253,19 +278,19 @@ fun HomeScreen(
 
                 Column(
                     modifier = Modifier
-                        .padding(top = 48.dp)
+                        .padding(top = 40.dp)
                         .graphicsLayer { this.alpha = alpha }
                 ) {
                     Text(
                         Translations.ui("homeMeditations"),
                         style = AppTypography.labelSmall,
-                        color = textSecondary,
-                        modifier = Modifier.padding(start = 24.dp, end = 24.dp, bottom = 16.dp)
+                        color = Color.White.copy(0.45f),
+                        modifier = Modifier.padding(start = 24.dp, end = 24.dp, bottom = 14.dp)
                     )
 
                     LazyRow(
                         contentPadding = PaddingValues(horizontal = 24.dp),
-                        horizontalArrangement = Arrangement.spacedBy(14.dp)
+                        horizontalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
                         itemsIndexed(allMeditations) { index, meditation ->
                             MeditationPreviewCard(
@@ -305,7 +330,7 @@ private fun ReprogramAreaCard(
     LaunchedEffect(Unit) { delay(index * 70L); appeared = true }
 
     GlassCard(
-        cornerRadius = 22.dp,
+        cornerRadius = 20.dp,
         modifier = Modifier
             .width(130.dp)
             .graphicsLayer { scaleX = scale; scaleY = scale; this.alpha = alpha }
@@ -317,7 +342,7 @@ private fun ReprogramAreaCard(
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.padding(horizontal = 14.dp, vertical = 22.dp)
+            modifier = Modifier.padding(horizontal = 14.dp, vertical = 20.dp)
         ) {
             Box(contentAlignment = Alignment.Center, modifier = Modifier.size(48.dp)) {
                 Canvas(modifier = Modifier.fillMaxSize()) {
@@ -326,7 +351,7 @@ private fun ReprogramAreaCard(
                     val arcSize = Size(size.width - strokeWidth, size.height - strokeWidth)
                     val topLeft = Offset(inset, inset)
                     drawArc(
-                        color = Color(0xFF2A2A3A).copy(alpha = 0.10f),
+                        color = Color.White.copy(alpha = 0.15f),
                         startAngle = -90f, sweepAngle = 360f, useCenter = false,
                         style = Stroke(strokeWidth, cap = StrokeCap.Round),
                         topLeft = topLeft, size = arcSize
@@ -341,11 +366,11 @@ private fun ReprogramAreaCard(
                     }
                 }
             }
-            Spacer(Modifier.height(12.dp))
+            Spacer(Modifier.height(10.dp))
             Text(
                 Translations.lifeAreaLabel(area),
                 style = AppTypography.caption,
-                color = textOnImage,
+                color = Color.White.copy(0.85f),
                 textAlign = TextAlign.Center,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
@@ -355,7 +380,7 @@ private fun ReprogramAreaCard(
                 Text(
                     "$savedCount / $totalCount",
                     style = AppTypography.caption.copy(fontSize = 10.sp),
-                    color = textSecondary
+                    color = Color.White.copy(0.5f)
                 )
             }
         }
@@ -375,7 +400,7 @@ private fun MeditationPreviewCard(
     LaunchedEffect(Unit) { delay(index * 70L); appeared = true }
 
     GlassCard(
-        cornerRadius = 22.dp,
+        cornerRadius = 20.dp,
         modifier = Modifier
             .width(180.dp)
             .graphicsLayer { scaleX = scale; scaleY = scale; this.alpha = alpha }
@@ -386,12 +411,12 @@ private fun MeditationPreviewCard(
             )
     ) {
         Column(
-            modifier = Modifier.padding(horizontal = 18.dp, vertical = 22.dp)
+            modifier = Modifier.padding(horizontal = 18.dp, vertical = 20.dp)
         ) {
             Text(
                 meditation.title,
                 style = AppTypography.bodyMedium.copy(fontFamily = Manrope),
-                color = textOnImage,
+                color = Color.White.copy(0.9f),
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
                 lineHeight = 20.sp
@@ -400,7 +425,7 @@ private fun MeditationPreviewCard(
             Text(
                 "${Translations.lifeAreaLabel(meditation.area)}  ·  ${meditation.durationSeconds / 60} ${Translations.ui("minutesShort")}",
                 style = AppTypography.caption,
-                color = textSecondary
+                color = Color.White.copy(0.4f)
             )
         }
     }
