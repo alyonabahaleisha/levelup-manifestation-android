@@ -67,8 +67,8 @@ import com.levelup.manifestation.ui.viewmodel.SavedProgramsViewModel
 import kotlinx.coroutines.delay
 import java.time.LocalDate
 
-// Background color — continues from bg_home image's purple tones
-private val bgDeep = Color(0xFF2A1F35)
+// Light warm background — continues from bg_home image's soft tones
+private val bgDeep = Color(0xFFF0E8F0)
 
 @Composable
 fun HomeScreen(
@@ -174,7 +174,7 @@ fun HomeScreen(
                     Text(
                         Translations.ui("homeDailyAffirmation"),
                         style = AppTypography.labelSmall,
-                        color = Color.White.copy(0.45f),
+                        color = Color(0xFF5A5070),
                         modifier = Modifier.padding(bottom = 14.dp)
                     )
 
@@ -254,7 +254,7 @@ fun HomeScreen(
                     Text(
                         Translations.ui("homeReprogram"),
                         style = AppTypography.labelSmall,
-                        color = Color.White.copy(0.45f),
+                        color = Color(0xFF5A5070),
                         modifier = Modifier.padding(start = 24.dp, end = 24.dp, bottom = 14.dp)
                     )
 
@@ -294,7 +294,7 @@ fun HomeScreen(
                     Text(
                         Translations.ui("homeMeditations"),
                         style = AppTypography.labelSmall,
-                        color = Color.White.copy(0.45f),
+                        color = Color(0xFF5A5070),
                         modifier = Modifier.padding(start = 24.dp, end = 24.dp, bottom = 14.dp)
                     )
 
@@ -361,7 +361,7 @@ private fun ReprogramAreaCard(
                     val arcSize = Size(size.width - strokeWidth, size.height - strokeWidth)
                     val topLeft = Offset(inset, inset)
                     drawArc(
-                        color = Color.White.copy(alpha = 0.15f),
+                        color = Color(0xFF2A2A3A).copy(alpha = 0.10f),
                         startAngle = -90f, sweepAngle = 360f, useCenter = false,
                         style = Stroke(strokeWidth, cap = StrokeCap.Round),
                         topLeft = topLeft, size = arcSize
@@ -380,7 +380,7 @@ private fun ReprogramAreaCard(
             Text(
                 Translations.lifeAreaLabel(area),
                 style = AppTypography.caption,
-                color = Color.White.copy(0.85f),
+                color = Color(0xFF2A2A3A),
                 textAlign = TextAlign.Center,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
@@ -390,7 +390,7 @@ private fun ReprogramAreaCard(
                 Text(
                     "$savedCount / $totalCount",
                     style = AppTypography.caption.copy(fontSize = 10.sp),
-                    color = Color.White.copy(0.5f)
+                    color = Color(0xFF5A5070)
                 )
             }
         }
@@ -426,7 +426,7 @@ private fun MeditationPreviewCard(
             Text(
                 meditation.title,
                 style = AppTypography.bodyMedium.copy(fontFamily = Manrope),
-                color = Color.White.copy(0.9f),
+                color = Color(0xFF2A2A3A),
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
                 lineHeight = 20.sp
@@ -435,7 +435,7 @@ private fun MeditationPreviewCard(
             Text(
                 "${Translations.lifeAreaLabel(meditation.area)}  ·  ${meditation.durationSeconds / 60} ${Translations.ui("minutesShort")}",
                 style = AppTypography.caption,
-                color = Color.White.copy(0.4f)
+                color = Color(0xFF5A5070).copy(0.7f)
             )
         }
     }
