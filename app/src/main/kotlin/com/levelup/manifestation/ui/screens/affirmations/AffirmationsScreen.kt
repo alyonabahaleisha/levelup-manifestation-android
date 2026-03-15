@@ -167,27 +167,38 @@ private fun AffirmationCard(
         appeared = true
     }
 
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
+    // Full-bleed blurred background = same image as card
+    Box(modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(style.imageRes),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 28.dp)
-                .graphicsLayer {
-                    scaleX = cardScale; scaleY = cardScale; alpha = cardAlpha
-                }
-        ) {
-            Spacer(Modifier.height(80.dp))
+                .fillMaxSize()
+                .graphicsLayer { alpha = 0.6f }
+        )
+        // Soft wash over background
+        Box(
+            Modifier
+                .fillMaxSize()
+                .background(style.bgColor.copy(alpha = 0.4f))
+        )
 
-            // Card with image background — compact, not full screen
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 24.dp)
+                .padding(top = 80.dp, bottom = 120.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            // Card
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(28.dp)),
-                contentAlignment = Alignment.Center
+                    .graphicsLayer {
+                        scaleX = cardScale; scaleY = cardScale; alpha = cardAlpha
+                    }
+                    .clip(RoundedCornerShape(36.dp))
             ) {
                 Image(
                     painter = painterResource(style.imageRes),
@@ -195,109 +206,98 @@ private fun AffirmationCard(
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(420.dp)
+                        .height(480.dp)
                 )
 
-                // Dark gradient overlay for text contrast
+                // Dark gradient for text contrast
                 Box(
-                    modifier = Modifier
+                    Modifier
                         .fillMaxWidth()
-                        .height(420.dp)
+                        .height(480.dp)
                         .background(
                             Brush.verticalGradient(
                                 colors = listOf(
                                     Color.Black.copy(alpha = 0.05f),
-                                    Color.Black.copy(alpha = 0.35f),
-                                    Color.Black.copy(alpha = 0.45f),
-                                    Color.Black.copy(alpha = 0.35f),
-                                    Color.Black.copy(alpha = 0.05f)
+                                    Color.Black.copy(alpha = 0.30f),
+                                    Color.Black.copy(alpha = 0.50f),
+                                    Color.Black.copy(alpha = 0.40f)
                                 )
                             )
                         )
                 )
 
-                // Affirmation text
-                val len = affirmation.text.length
-                val fontSize = when {
-                    len < 60 -> 26.sp
-                    len < 120 -> 22.sp
-                    len < 200 -> 18.sp
-                    else -> 16.sp
-                }
-                val lineHeight = when {
-                    len < 60 -> 36.sp
-                    len < 120 -> 32.sp
-                    len < 200 -> 26.sp
-                    else -> 24.sp
-                }
-
-                Text(
-                    text = affirmation.text,
-                    fontFamily = PlayfairDisplay,
-                    fontSize = fontSize,
-                    color = Color.White,
-                    textAlign = TextAlign.Center,
-                    lineHeight = lineHeight,
-                    modifier = Modifier.padding(horizontal = 28.dp, vertical = 40.dp)
-                )
-            }
-
-            Spacer(Modifier.height(28.dp))
-
-            // Like & Share buttons
-            Row(
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = 80.dp)
-            ) {
-                // Like button
-                Box(
+                // Text + action icons inside card
+                Column(
                     modifier = Modifier
-                        .size(52.dp)
-                        .clip(CircleShape)
-                        .background(Color.White.copy(alpha = 0.35f))
-                        .clickable(
-                            interactionSource = remember { MutableInteractionSource() },
-                            indication = null
-                        ) {
-                            haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                            liked = !liked
-                        },
-                    contentAlignment = Alignment.Center
+                        .fillMaxWidth()
+                        .height(480.dp)
+                        .padding(horizontal = 28.dp),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Icon(
-                        Icons.Outlined.FavoriteBorder,
-                        contentDescription = "Like",
-                        tint = if (liked) Color(0xFFE06080) else Color.White.copy(0.8f),
-                        modifier = Modifier.size(24.dp)
-                    )
-                }
+                    Spacer(Modifier.weight(1f))
 
-                Spacer(Modifier.width(24.dp))
+                    val len = affirmation.text.length
+                    val fontSize = when {
+                        len < 60 -> 26.sp
+                        len < 120 -> 22.sp
+                        len < 200 -> 18.sp
+                        else -> 16.sp
+                    }
+                    val lineHeight = when {
+                        len < 60 -> 36.sp
+                        len < 120 -> 32.sp
+                        len < 200 -> 26.sp
+                        else -> 24.sp
+                    }
 
-                // Share button
-                Box(
-                    modifier = Modifier
-                        .size(52.dp)
-                        .clip(CircleShape)
-                        .background(Color.White.copy(alpha = 0.35f))
-                        .clickable(
-                            interactionSource = remember { MutableInteractionSource() },
-                            indication = null
-                        ) {
-                            haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                            onShare()
-                        },
-                    contentAlignment = Alignment.Center
-                ) {
-                    Icon(
-                        Icons.Outlined.Share,
-                        contentDescription = "Share",
-                        tint = Color.White.copy(0.8f),
-                        modifier = Modifier.size(24.dp)
+                    Text(
+                        text = affirmation.text,
+                        fontFamily = PlayfairDisplay,
+                        fontSize = fontSize,
+                        color = Color.White,
+                        textAlign = TextAlign.Center,
+                        lineHeight = lineHeight
                     )
+
+                    Spacer(Modifier.weight(1f))
+
+                    // Like & Share — inside card, bottom
+                    Row(
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.padding(bottom = 20.dp)
+                    ) {
+                        Icon(
+                            Icons.Outlined.FavoriteBorder,
+                            contentDescription = "Like",
+                            tint = if (liked) Color(0xFFE06080) else Color.White.copy(0.7f),
+                            modifier = Modifier
+                                .size(28.dp)
+                                .clickable(
+                                    interactionSource = remember { MutableInteractionSource() },
+                                    indication = null
+                                ) {
+                                    haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                                    liked = !liked
+                                }
+                        )
+                        Spacer(Modifier.width(32.dp))
+                        Icon(
+                            Icons.Outlined.Share,
+                            contentDescription = "Share",
+                            tint = Color.White.copy(0.7f),
+                            modifier = Modifier
+                                .size(28.dp)
+                                .clickable(
+                                    interactionSource = remember { MutableInteractionSource() },
+                                    indication = null
+                                ) {
+                                    haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                                    onShare()
+                                }
+                        )
+                    }
                 }
             }
         }
