@@ -63,9 +63,10 @@ import com.levelup.manifestation.ui.viewmodel.SavedProgramsViewModel
 import kotlinx.coroutines.delay
 import java.time.LocalDate
 
-private val bgLight = Color(0xFFF0E8F0)
-private val textPrimary = Color(0xFF0A0A14)
-private val textSecondary = Color(0xFF5A5070)
+private val bgLight = Color(0xFF154C6C)
+private val textPrimary = Color.White
+private val textOnCard = Color(0xFF0A0A14)
+private val textSecondary = Color(0xFFAAC8D8)
 
 private val cardImages = listOf(
     R.drawable.card_bg_1, R.drawable.card_bg_2, R.drawable.card_bg_3,
@@ -108,7 +109,7 @@ fun HomeScreen(
                         .height(340.dp)
                 ) {
                     Image(
-                        painter = painterResource(R.drawable.bg_home),
+                        painter = painterResource(R.drawable.bg_reprogram),
                         contentDescription = null,
                         contentScale = ContentScale.Crop,
                         modifier = Modifier.fillMaxSize()
@@ -198,7 +199,7 @@ fun HomeScreen(
                                     fontFamily = PlayfairDisplay,
                                     fontSize = 16.sp
                                 ),
-                                color = textPrimary,
+                                color = textOnCard,
                                 textAlign = TextAlign.Center,
                                 lineHeight = 24.sp,
                                 maxLines = 7,
@@ -336,7 +337,7 @@ private fun ReprogramAreaCard(
             Text(
                 Translations.lifeAreaLabel(area),
                 style = AppTypography.labelLarge,
-                color = textPrimary,
+                color = textOnCard,
                 textAlign = TextAlign.Center,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
