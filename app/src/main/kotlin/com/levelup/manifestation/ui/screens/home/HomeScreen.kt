@@ -189,15 +189,7 @@ fun HomeScreen(
                             )
                             Box(
                                 Modifier.fillMaxSize().background(
-                                    Brush.radialGradient(
-                                        colors = listOf(
-                                            Color.White.copy(alpha = 0.65f),
-                                            Color.White.copy(alpha = 0.50f),
-                                            Color.White.copy(alpha = 0.15f),
-                                            Color.Transparent
-                                        ),
-                                        radius = 450f
-                                    )
+                                    Color.White.copy(alpha = 0.55f)
                                 )
                             )
                             Text(
