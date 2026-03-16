@@ -40,8 +40,8 @@ fun GlassCard(
     val resolvedBorder = if (borderColor == Color.Unspecified) {
         Brush.linearGradient(
             colors = listOf(
-                Color.White.copy(alpha = 0.25f),
-                Color.White.copy(alpha = 0.08f)
+                Color.White.copy(alpha = 0.60f),
+                Color.White.copy(alpha = 0.20f)
             )
         )
     } else {
@@ -50,7 +50,7 @@ fun GlassCard(
     Box(
         modifier = modifier
             .clip(shape)
-            .background(Color.White.copy(alpha = 0.10f))
+            .background(Color.White.copy(alpha = 0.75f))
             .border(borderWidth, resolvedBorder, shape),
         content = content
     )
@@ -69,12 +69,12 @@ fun GlassChip(
         modifier = modifier
             .clip(CircleShape)
             .background(
-                if (isSelected) accentColor.copy(alpha = 0.18f)
-                else Color.White.copy(alpha = 0.08f)
+                if (isSelected) accentColor.copy(alpha = 0.25f)
+                else Color.White.copy(alpha = 0.50f)
             )
             .border(
                 0.5.dp,
-                if (isSelected) accentColor.copy(alpha = 0.5f) else Color.White.copy(alpha = 0.15f),
+                if (isSelected) accentColor.copy(alpha = 0.6f) else Color.White.copy(alpha = 0.50f),
                 CircleShape
             ),
         content = content
