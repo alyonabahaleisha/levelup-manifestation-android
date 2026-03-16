@@ -47,6 +47,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -198,6 +199,48 @@ fun SettingsSheet(
                                         }
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+
+            Spacer(Modifier.height(24.dp))
+
+            // Theme mode section
+            SettingsSection(title = "ОФОРМЛЕНИЕ") {
+                val currentMode = com.levelup.manifestation.ui.theme.LocalThemeMode.current
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    listOf(
+                        com.levelup.manifestation.ui.theme.ThemeMode.Teal to "Классический",
+                        com.levelup.manifestation.ui.theme.ThemeMode.Ethereal to "Атмосферный"
+                    ).forEach { (mode, label) ->
+                        val isSelected = currentMode == mode
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable(
+                                    interactionSource = remember { MutableInteractionSource() },
+                                    indication = null
+                                ) {
+                                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                                    themeViewModel.setThemeMode(mode)
+                                },
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(
+                                label,
+                                style = AppTypography.bodyLarge,
+                                color = Color(0xFF2A2A3A),
+                                modifier = Modifier.weight(1f)
+                            )
+                            if (isSelected) {
+                                Icon(
+                                    Icons.Outlined.Check,
+                                    contentDescription = null,
+                                    tint = theme.accent,
+                                    modifier = Modifier.size(20.dp)
+                                )
                             }
                         }
                     }

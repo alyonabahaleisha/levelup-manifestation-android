@@ -27,6 +27,7 @@ object PrefsKeys {
     val NOTIF_INTERVAL = intPreferencesKey("notif_interval")
     val SCROLL_HINT_SHOWN = booleanPreferencesKey("scroll_hint_shown")
     val LAST_MEDITATION_ID = stringPreferencesKey("last_meditation_id")
+    val THEME_MODE = stringPreferencesKey("theme_mode")
 }
 
 @Module

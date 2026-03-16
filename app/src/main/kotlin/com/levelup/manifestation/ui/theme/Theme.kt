@@ -78,16 +78,25 @@ fun areaColor(area: LifeArea): Color = when (area) {
     LifeArea.Body           -> Color(0xFF7FFFD4)
 }
 
+// ── Theme Mode ───────────────────────────────────────────────────────────────
+
+enum class ThemeMode { Teal, Ethereal }
+
 // ── Composition locals ────────────────────────────────────────────────────────
 
 val LocalToneTheme = staticCompositionLocalOf { ToneTheme.Default }
+val LocalThemeMode = staticCompositionLocalOf { ThemeMode.Teal }
 
 @Composable
 fun LevelUpTheme(
     tone: ToneTheme = ToneTheme.Default,
+    themeMode: ThemeMode = ThemeMode.Teal,
     content: @Composable () -> Unit
 ) {
-    CompositionLocalProvider(LocalToneTheme provides tone) {
+    CompositionLocalProvider(
+        LocalToneTheme provides tone,
+        LocalThemeMode provides themeMode
+    ) {
         content()
     }
 }

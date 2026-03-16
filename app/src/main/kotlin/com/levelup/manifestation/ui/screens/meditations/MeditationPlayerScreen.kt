@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -29,7 +30,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -39,6 +42,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.style.TextAlign
@@ -55,6 +59,7 @@ import com.levelup.manifestation.ui.theme.GlassCard
 import com.levelup.manifestation.ui.theme.LocalToneTheme
 import com.levelup.manifestation.ui.theme.PlayfairDisplay
 import com.levelup.manifestation.ui.viewmodel.MeditationViewModel
+import kotlin.math.atan2
 import kotlin.math.cos
 import kotlin.math.sin
 
@@ -81,16 +86,27 @@ fun MeditationPlayerScreen(
     val displayPos = if (isActive) currentPos else 0L
     val displayDur = if (isActive && duration > 0) duration else meditation.durationSeconds * 1000L
 
+    // Dragging state for the arc
+    var isDragging by remember { mutableFloatStateOf(0f) } // 0 = not dragging
+    var dragProgress by remember { mutableFloatStateOf(0f) }
+    val effectiveProgress = if (isDragging > 0f) dragProgress else progress
+
     Box(
         modifier = Modifier
             .fillMaxSize()
     ) {
-        Image(
-            painter = painterResource(R.drawable.bg_player),
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxSize()
-        )
+        // Background: teal or ethereal image based on theme mode
+        val themeMode = com.levelup.manifestation.ui.theme.LocalThemeMode.current
+        if (themeMode == com.levelup.manifestation.ui.theme.ThemeMode.Ethereal) {
+            Image(
+                painter = painterResource(R.drawable.bg_player),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxSize()
+            )
+        } else {
+            Box(Modifier.fillMaxSize().background(Color(0xFF154C6C)))
+        }
 
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -123,31 +139,53 @@ fun MeditationPlayerScreen(
 
             Spacer(Modifier.weight(0.8f))
 
-            // Circular progress arc
+            // Circular progress arc — draggable
+            val startAngle = 150f
+            val sweepAngle = 240f
+
             Box(
                 contentAlignment = Alignment.Center,
-                modifier = Modifier.size(280.dp)
+                modifier = Modifier
+                    .size(280.dp)
+                    .pointerInput(isActive, duration) {
+                        if (!isActive) return@pointerInput
+                        detectDragGestures(
+                            onDragStart = { offset ->
+                                isDragging = 1f
+                                dragProgress = angleToProgress(offset, size.width.toFloat(), size.height.toFloat(), startAngle, sweepAngle)
+                            },
+                            onDrag = { change, _ ->
+                                change.consume()
+                                dragProgress = angleToProgress(change.position, size.width.toFloat(), size.height.toFloat(), startAngle, sweepAngle)
+                            },
+                            onDragEnd = {
+                                val seekPos = (dragProgress * duration).toLong().coerceIn(0, duration)
+                                viewModel.seekTo(seekPos)
+                                isDragging = 0f
+                            },
+                            onDragCancel = {
+                                isDragging = 0f
+                            }
+                        )
+                    }
             ) {
                 CircularProgressArc(
-                    progress = progress,
+                    progress = effectiveProgress,
                     accentColor = theme.accent,
                     modifier = Modifier.fillMaxSize()
                 )
 
-                // Mikhail's portrait in center — circular crop with subtle border
-                Image(
-                    painter = painterResource(R.drawable.mikhail_portrait),
-                    contentDescription = null,
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier
-                        .size(180.dp)
-                        .clip(CircleShape)
-                        .border(1.5.dp, Color.White.copy(alpha = 0.15f), CircleShape)
+                // Area emoji in center
+                Text(
+                    meditation.area.emoji,
+                    fontSize = 48.sp,
+                    textAlign = TextAlign.Center
                 )
 
                 // Elapsed time — left side
+                val displayElapsed = if (isDragging > 0f) (dragProgress * displayDur).toLong() else displayPos
                 Text(
-                    formatMs(displayPos),
+                    formatMs(displayElapsed),
                     style = AppTypography.bodySmall,
                     color = Color.White.copy(0.6f),
                     modifier = Modifier
@@ -156,8 +194,9 @@ fun MeditationPlayerScreen(
                 )
 
                 // Remaining time — right side
+                val displayRemaining = if (isDragging > 0f) displayDur - (dragProgress * displayDur).toLong() else displayDur - displayPos
                 Text(
-                    "- ${formatMs(displayDur - displayPos)}",
+                    "- ${formatMs(displayRemaining)}",
                     style = AppTypography.bodySmall,
                     color = Color.White.copy(0.6f),
                     modifier = Modifier
@@ -270,6 +309,21 @@ fun MeditationPlayerScreen(
     }
 }
 
+/** Convert a touch position within the arc box to a 0..1 progress value. */
+private fun angleToProgress(position: Offset, width: Float, height: Float, startAngle: Float, sweepAngle: Float): Float {
+    val cx = width / 2f
+    val cy = height / 2f
+    val dx = position.x - cx
+    val dy = position.y - cy
+    // atan2 returns angle in radians, convert to degrees (0° = right, clockwise)
+    var angleDeg = Math.toDegrees(atan2(dy.toDouble(), dx.toDouble())).toFloat()
+    if (angleDeg < 0) angleDeg += 360f
+    // Map from absolute angle to progress within the arc
+    var relative = angleDeg - startAngle
+    if (relative < 0) relative += 360f
+    return (relative / sweepAngle).coerceIn(0f, 1f)
+}
+
 @Composable
 private fun CircularProgressArc(
     progress: Float,
@@ -286,7 +340,6 @@ private fun CircularProgressArc(
         val arcSize = Size(size.width - inset * 2, size.height - inset * 2)
         val topLeft = Offset(inset, inset)
 
-        // Track arc (semi-circle, from bottom-left to bottom-right going up)
         val startAngle = 150f
         val sweepAngle = 240f
 
@@ -300,7 +353,6 @@ private fun CircularProgressArc(
             size = arcSize
         )
 
-        // Progress arc
         if (progress > 0f) {
             drawArc(
                 color = accentColor,
@@ -313,7 +365,6 @@ private fun CircularProgressArc(
             )
         }
 
-        // Dot at current position
         val cx = size.width / 2f
         val cy = size.height / 2f
         val radius = (size.width - inset * 2) / 2f
@@ -321,13 +372,11 @@ private fun CircularProgressArc(
         val dotX = cx + radius * cos(dotAngle).toFloat()
         val dotY = cy + radius * sin(dotAngle).toFloat()
 
-        // Outer glow
         drawCircle(
             color = accentColor.copy(alpha = 0.3f),
             radius = dotRadiusPx * 1.5f,
             center = Offset(dotX, dotY)
         )
-        // Inner dot
         drawCircle(
             color = Color.White,
             radius = dotRadiusPx,

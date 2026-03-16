@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             val tone by themeViewModel.tone.collectAsState()
+            val themeMode by themeViewModel.themeMode.collectAsState()
             var showSplash by remember { mutableStateOf(true) }
 
             LaunchedEffect(Unit) {
@@ -43,7 +44,7 @@ class MainActivity : ComponentActivity() {
                 showSplash = false
             }
 
-            LevelUpTheme(tone = tone) {
+            LevelUpTheme(tone = tone, themeMode = themeMode) {
                 AnimatedVisibility(
                     visible = showSplash,
                     enter = fadeIn(),
