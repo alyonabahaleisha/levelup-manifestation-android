@@ -175,12 +175,18 @@ fun MeditationPlayerScreen(
                     modifier = Modifier.fillMaxSize()
                 )
 
-                // Area emoji in center
-                Text(
-                    meditation.area.emoji,
-                    fontSize = 48.sp,
-                    textAlign = TextAlign.Center
-                )
+                // Center content: Ageev portrait for teal, nothing for ethereal
+                if (themeMode == com.levelup.manifestation.ui.theme.ThemeMode.Teal) {
+                    Image(
+                        painter = painterResource(R.drawable.mikhail_portrait),
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier
+                            .size(180.dp)
+                            .clip(CircleShape)
+                            .border(1.5.dp, Color.White.copy(alpha = 0.15f), CircleShape)
+                    )
+                }
 
                 // Elapsed time — left side
                 val displayElapsed = if (isDragging > 0f) (dragProgress * displayDur).toLong() else displayPos
