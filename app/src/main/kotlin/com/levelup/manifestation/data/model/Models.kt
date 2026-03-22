@@ -1,5 +1,7 @@
 package com.levelup.manifestation.data.model
 
+// iOS Migration: -> Models.swift — data class -> struct (Codable, Identifiable), UUID -> UUID().uuidString
+
 import com.levelup.manifestation.ui.theme.LifeArea
 import java.util.UUID
 

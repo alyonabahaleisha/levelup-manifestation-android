@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.viewmodel
 
+// iOS Migration: -> MeditationViewModel.swift — @HiltViewModel -> @Observable, StateFlow -> @Published, viewModelScope.launch -> Task
+
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit

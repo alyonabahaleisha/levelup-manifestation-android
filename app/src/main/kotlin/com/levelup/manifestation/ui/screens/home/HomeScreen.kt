@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.screens.home
 
+// iOS Migration: -> HomeView.swift — LazyColumn -> ScrollView+VStack, LazyRow -> ScrollView(.horizontal), HorizontalPager -> TabView(.page)
+
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
@@ -21,7 +23,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -97,48 +101,67 @@ fun HomeScreen(
             contentPadding = PaddingValues(bottom = 140.dp),
             modifier = Modifier.fillMaxSize()
         ) {
-            // Hero image + welcome
+            // Hero image + portrait + welcome
             item {
                 var appeared by remember { mutableStateOf(false) }
                 val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(700), label = "heroAlpha")
                 LaunchedEffect(Unit) { appeared = true }
 
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(340.dp)
+                Column(
+                    modifier = Modifier.graphicsLayer { this.alpha = alpha }
                 ) {
-                    Image(
-                        painter = painterResource(R.drawable.bg_reprogram),
-                        contentDescription = null,
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier.fillMaxSize()
-                    )
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(140.dp)
-                            .align(Alignment.BottomCenter)
-                            .background(Brush.verticalGradient(listOf(Color.Transparent, bgLight)))
-                    )
-                    Column(
-                        modifier = Modifier
-                            .align(Alignment.BottomStart)
-                            .padding(start = 24.dp, end = 24.dp, bottom = 24.dp)
-                            .graphicsLayer { this.alpha = alpha }
+                            .height(380.dp)
                     ) {
-                        Text(
-                            Translations.ui("homeGreeting"),
-                            style = AppTypography.headingLarge.copy(fontFamily = PlayfairDisplay),
-                            color = Color.White
+                        Image(
+                            painter = painterResource(R.drawable.bg_home_top),
+                            contentDescription = null,
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier.fillMaxSize()
                         )
-                        Spacer(Modifier.height(4.dp))
-                        Text(
-                            "Школа Михаила Агеева",
-                            style = AppTypography.bodySmall,
-                            color = Color.White.copy(0.6f)
+                        // Bottom gradient fade into teal background
+                        Box(
+                            Modifier
+                                .fillMaxWidth()
+                                .height(160.dp)
+                                .align(Alignment.BottomCenter)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(Color.Transparent, bgLight)
+                                    )
+                                )
                         )
+                        // Portrait + text overlay at bottom
+                        Column(
+                            modifier = Modifier
+                                .align(Alignment.BottomStart)
+                                .padding(start = 24.dp, end = 24.dp, bottom = 8.dp)
+                        ) {
+                            Image(
+                                painter = painterResource(R.drawable.mikhail_portrait),
+                                contentDescription = "Михаил Агеев",
+                                contentScale = ContentScale.Crop,
+                                modifier = Modifier
+                                    .size(80.dp)
+                                    .clip(CircleShape)
+                            )
+                            Spacer(Modifier.height(12.dp))
+                            Text(
+                                "Школа Михаила Агеева",
+                                style = AppTypography.bodySmall,
+                                color = Color.White.copy(0.85f)
+                            )
+                        }
                     }
+
+                    Text(
+                        Translations.ui("homeGreeting"),
+                        style = AppTypography.headingLarge.copy(fontFamily = PlayfairDisplay),
+                        color = Color.White,
+                        modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 8.dp)
+                    )
                 }
             }
 
@@ -182,15 +205,9 @@ fun HomeScreen(
                                 },
                             contentAlignment = Alignment.Center
                         ) {
-                            Image(
-                                painter = painterResource(cardImages[index % cardImages.size]),
-                                contentDescription = null,
-                                contentScale = ContentScale.Crop,
-                                modifier = Modifier.fillMaxSize()
-                            )
                             Box(
                                 Modifier.fillMaxSize().background(
-                                    Color.White.copy(alpha = 0.55f)
+                                    Color.White.copy(alpha = 0.10f)
                                 )
                             )
                             Text(
@@ -199,7 +216,7 @@ fun HomeScreen(
                                     fontFamily = PlayfairDisplay,
                                     fontSize = 16.sp
                                 ),
-                                color = textOnCard,
+                                color = Color.White,
                                 textAlign = TextAlign.Center,
                                 lineHeight = 24.sp,
                                 maxLines = 7,
@@ -211,11 +228,47 @@ fun HomeScreen(
                 }
             }
 
+            // ── Meditations section ──────────────────────────────────────
+            item {
+                var appeared by remember { mutableStateOf(false) }
+                val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(400), label = "medAlpha")
+                LaunchedEffect(Unit) { delay(300); appeared = true }
+
+                Column(
+                    modifier = Modifier
+                        .padding(top = 56.dp)
+                        .graphicsLayer { this.alpha = alpha }
+                ) {
+                    Text(
+                        "Медитации",
+                        style = AppTypography.headingSmall.copy(fontFamily = PlayfairDisplay),
+                        color = textPrimary,
+                        modifier = Modifier.padding(start = 24.dp, bottom = 16.dp)
+                    )
+
+                    LazyRow(
+                        contentPadding = PaddingValues(horizontal = 24.dp),
+                        horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        itemsIndexed(allMeditations) { index, meditation ->
+                            MeditationPreviewCard(
+                                meditation = meditation,
+                                index = index,
+                                onClick = {
+                                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                                    onNavigateToMeditations()
+                                }
+                            )
+                        }
+                    }
+                }
+            }
+
             // ── Reprogram section ────────────────────────────────────────
             item {
                 var appeared by remember { mutableStateOf(false) }
                 val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(400), label = "repAlpha")
-                LaunchedEffect(Unit) { delay(300); appeared = true }
+                LaunchedEffect(Unit) { delay(450); appeared = true }
 
                 Column(
                     modifier = Modifier
@@ -244,42 +297,6 @@ fun HomeScreen(
                                 onClick = {
                                     haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
                                     onNavigateToReprogram()
-                                }
-                            )
-                        }
-                    }
-                }
-            }
-
-            // ── Meditations section ──────────────────────────────────────
-            item {
-                var appeared by remember { mutableStateOf(false) }
-                val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(400), label = "medAlpha")
-                LaunchedEffect(Unit) { delay(450); appeared = true }
-
-                Column(
-                    modifier = Modifier
-                        .padding(top = 56.dp)
-                        .graphicsLayer { this.alpha = alpha }
-                ) {
-                    Text(
-                        "Медитации",
-                        style = AppTypography.headingSmall.copy(fontFamily = PlayfairDisplay),
-                        color = textPrimary,
-                        modifier = Modifier.padding(start = 24.dp, bottom = 16.dp)
-                    )
-
-                    LazyRow(
-                        contentPadding = PaddingValues(horizontal = 24.dp),
-                        horizontalArrangement = Arrangement.spacedBy(12.dp)
-                    ) {
-                        itemsIndexed(allMeditations) { index, meditation ->
-                            MeditationPreviewCard(
-                                meditation = meditation,
-                                index = index,
-                                onClick = {
-                                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
-                                    onNavigateToMeditations()
                                 }
                             )
                         }

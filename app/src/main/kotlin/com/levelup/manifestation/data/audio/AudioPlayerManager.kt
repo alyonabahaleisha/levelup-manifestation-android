@@ -1,5 +1,7 @@
 package com.levelup.manifestation.data.audio
 
+// iOS Migration: -> AudioPlayerManager.swift — ExoPlayer -> AVPlayer, StateFlow -> @Published, @Singleton -> actor or class with static shared
+
 import android.content.Context
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player

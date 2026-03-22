@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.components
 
+// iOS Migration: -> FeatherBackground.swift — Canvas + withFrameNanos -> TimelineView + Canvas, same particle logic
+
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable

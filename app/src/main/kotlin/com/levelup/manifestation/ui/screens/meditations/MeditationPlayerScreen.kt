@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.screens.meditations
 
+// iOS Migration: -> MeditationPlayerView.swift — Canvas -> SwiftUI Canvas, CircleShape -> Circle(), ExoPlayer -> AVPlayer
+
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

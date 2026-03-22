@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.navigation
 
+// iOS Migration: -> ContentView.swift — NavigationBar -> TabView, NavigationBarItem -> .tabItem { Label }, AnimatedContent -> .transition
+
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut

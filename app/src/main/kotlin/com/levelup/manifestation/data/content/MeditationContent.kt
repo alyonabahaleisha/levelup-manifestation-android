@@ -1,5 +1,7 @@
 package com.levelup.manifestation.data.content
 
+// iOS Migration: -> MeditationContent.swift — Direct port, same logic, same GitHub Release URLs
+
 import com.levelup.manifestation.BuildConfig
 import com.levelup.manifestation.Translations
 import com.levelup.manifestation.data.model.Meditation

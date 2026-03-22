@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.screens.affirmations
 
+// iOS Migration: -> AffirmationsView.swift — VerticalPager -> TabView(.vertical), animateColorAsState -> withAnimation, Crossfade -> .transition
+
 import android.content.Intent
 import androidx.compose.animation.Crossfade
 import androidx.compose.animation.animateColorAsState

@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.screens.settings
 
+// iOS Migration: -> SettingsView.swift — ModalBottomSheet -> .sheet, Switch -> Toggle, TimePickerDialog -> DatePicker(.hourAndMinute)
+
 import android.Manifest
 import android.app.TimePickerDialog
 import android.os.Build

@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.screens.splash
 
+// iOS Migration: -> SplashView.swift — animateFloatAsState -> withAnimation(.easeIn), graphicsLayer -> .opacity/.scaleEffect
+
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image

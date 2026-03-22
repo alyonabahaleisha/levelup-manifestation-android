@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.theme
 
+// iOS Migration: -> Typography.swift — Use Font.custom() for PlayfairDisplay/Manrope, struct AppTypography with static let
+
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily

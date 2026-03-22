@@ -1,5 +1,7 @@
 package com.levelup.manifestation
 
+// iOS Migration: -> Translations.swift — Same JSON parsing approach, use Bundle.main.url(forResource:) for translations.json
+
 import android.content.Context
 import com.levelup.manifestation.ui.theme.LifeArea
 import com.levelup.manifestation.ui.theme.ToneTheme

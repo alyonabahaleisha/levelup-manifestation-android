@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.viewmodel
 
+// iOS Migration: -> SavedProgramsViewModel.swift — DataStore JSON persistence -> @AppStorage or SwiftData
+
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit

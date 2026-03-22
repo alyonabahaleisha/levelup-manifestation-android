@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.screens.meditations
 
+// iOS Migration: -> MeditationsView.swift — LazyColumn -> List, GlassCard -> .background(.ultraThinMaterial).clipShape(RoundedRectangle)
+
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring

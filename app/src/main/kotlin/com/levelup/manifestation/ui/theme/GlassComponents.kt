@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.theme
 
+// iOS Migration: -> GlassComponents.swift — GlassCard -> custom ViewModifier with .background(.ultraThinMaterial), GlassChip -> custom View
+
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring

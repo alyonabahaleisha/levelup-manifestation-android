@@ -1,5 +1,7 @@
 package com.levelup.manifestation.ui.screens.reprogram
 
+// iOS Migration: -> ReprogramView.swift — AnimatedContent -> .transition + if/else, LazyVerticalGrid -> LazyVGrid, Canvas drawArc -> Path+arc
+
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring

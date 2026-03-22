@@ -1,5 +1,8 @@
 package com.levelup.manifestation.ui.theme
 
+// iOS Migration: -> AppTheme.swift — Use @Observable class for ToneTheme, enum for ThemeMode/LifeArea/AppTab
+// CompositionLocal -> @Environment
+
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.staticCompositionLocalOf

@@ -14,7 +14,7 @@ class AffirmationReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         ensureChannel(context)
-        val text = AffirmationContent.all.randomOrNull()?.text
+        val text = AffirmationContent.feed().randomOrNull()?.text
             ?: "You are becoming who you are meant to be."
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
