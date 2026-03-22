@@ -161,17 +161,6 @@ fun MainTabScreen(
             )
 
             NavigationBarItem(
-                selected = selectedTab is AppTab.Reprogram,
-                onClick = {
-                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
-                    selectedTab = AppTab.Reprogram
-                },
-                icon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
-                label = { Text(Translations.ui("reprogramTab"), style = AppTypography.tabLabel) },
-                colors = itemColors
-            )
-
-            NavigationBarItem(
                 selected = selectedTab is AppTab.Meditations,
                 onClick = {
                     haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
@@ -179,6 +168,17 @@ fun MainTabScreen(
                 },
                 icon = { Icon(Icons.Outlined.Headphones, contentDescription = null) },
                 label = { Text(Translations.ui("meditationsTab"), style = AppTypography.tabLabel) },
+                colors = itemColors
+            )
+
+            NavigationBarItem(
+                selected = selectedTab is AppTab.Reprogram,
+                onClick = {
+                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                    selectedTab = AppTab.Reprogram
+                },
+                icon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
+                label = { Text(Translations.ui("reprogramTab"), style = AppTypography.tabLabel) },
                 colors = itemColors
             )
 
