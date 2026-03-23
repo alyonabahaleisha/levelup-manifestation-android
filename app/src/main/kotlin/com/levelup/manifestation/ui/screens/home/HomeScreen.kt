@@ -45,6 +45,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
@@ -64,8 +65,10 @@ import com.levelup.manifestation.ui.theme.PlayfairDisplay
 import com.levelup.manifestation.ui.theme.areaColor
 import com.levelup.manifestation.ui.viewmodel.MeditationViewModel
 import com.levelup.manifestation.ui.viewmodel.SavedProgramsViewModel
+import android.os.Build
 import kotlinx.coroutines.delay
 import java.time.LocalDate
+import java.time.LocalTime
 
 private val bgLight = Color(0xFF154C6C)
 private val textPrimary = Color.White
@@ -101,71 +104,56 @@ fun HomeScreen(
             contentPadding = PaddingValues(bottom = 140.dp),
             modifier = Modifier.fillMaxSize()
         ) {
-            // Hero image + portrait + welcome
+            // ── Compact header: portrait + school name + greeting ─────
             item {
                 var appeared by remember { mutableStateOf(false) }
                 val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(700), label = "heroAlpha")
                 LaunchedEffect(Unit) { appeared = true }
 
+                val timeGreeting = remember {
+                    val hour = LocalTime.now().hour
+                    when {
+                        hour < 12 -> Translations.ui("greetingMorning")
+                        hour < 18 -> Translations.ui("greetingDay")
+                        else -> Translations.ui("greetingEvening")
+                    }
+                }
+
                 Column(
-                    modifier = Modifier.graphicsLayer { this.alpha = alpha }
+                    modifier = Modifier
+                        .padding(start = 24.dp, end = 24.dp, top = 56.dp)
+                        .graphicsLayer { this.alpha = alpha }
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(380.dp)
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
                         Image(
-                            painter = painterResource(R.drawable.bg_home_top),
-                            contentDescription = null,
+                            painter = painterResource(R.drawable.mikhail_portrait),
+                            contentDescription = "Михаил Агеев",
                             contentScale = ContentScale.Crop,
-                            modifier = Modifier.fillMaxSize()
-                        )
-                        // Bottom gradient fade into teal background
-                        Box(
-                            Modifier
-                                .fillMaxWidth()
-                                .height(160.dp)
-                                .align(Alignment.BottomCenter)
-                                .background(
-                                    Brush.verticalGradient(
-                                        colors = listOf(Color.Transparent, bgLight)
-                                    )
-                                )
-                        )
-                        // Portrait + text overlay at bottom
-                        Column(
                             modifier = Modifier
-                                .align(Alignment.BottomStart)
-                                .padding(start = 24.dp, end = 24.dp, bottom = 8.dp)
-                        ) {
-                            Image(
-                                painter = painterResource(R.drawable.mikhail_portrait),
-                                contentDescription = "Михаил Агеев",
-                                contentScale = ContentScale.Crop,
-                                modifier = Modifier
-                                    .size(80.dp)
-                                    .clip(CircleShape)
-                            )
-                            Spacer(Modifier.height(12.dp))
+                                .size(44.dp)
+                                .clip(CircleShape)
+                        )
+                        Spacer(Modifier.width(12.dp))
+                        Column {
                             Text(
                                 "Школа Михаила Агеева",
                                 style = AppTypography.bodySmall,
-                                color = Color.White.copy(0.85f)
+                                color = Color.White.copy(0.7f)
+                            )
+                            Spacer(Modifier.height(2.dp))
+                            Text(
+                                timeGreeting,
+                                style = AppTypography.headingMedium.copy(fontFamily = PlayfairDisplay),
+                                color = Color.White
                             )
                         }
                     }
-
-                    Text(
-                        Translations.ui("homeGreeting"),
-                        style = AppTypography.headingLarge.copy(fontFamily = PlayfairDisplay),
-                        color = Color.White,
-                        modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 8.dp)
-                    )
                 }
             }
 
-            // ── Affirmation pager ────────────────────────────────────────
+            // ── Affirmation hero card ─────────────────────────────────
             item {
                 var appeared by remember { mutableStateOf(false) }
                 val cardAlpha by animateFloatAsState(if (appeared) 1f else 0f, tween(500), label = "affAlpha")
@@ -173,7 +161,7 @@ fun HomeScreen(
 
                 Column(
                     modifier = Modifier
-                        .padding(top = 16.dp)
+                        .padding(top = 24.dp)
                         .graphicsLayer { this.alpha = cardAlpha }
                 ) {
                     Text(
@@ -187,14 +175,14 @@ fun HomeScreen(
 
                     HorizontalPager(
                         state = affPagerState,
-                        contentPadding = PaddingValues(horizontal = 32.dp),
+                        contentPadding = PaddingValues(horizontal = 24.dp),
                         pageSpacing = 14.dp
                     ) { index ->
                         val affirmation = topAffirmations[index]
                         Box(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .height(280.dp)
+                                .height(260.dp)
                                 .clip(RoundedCornerShape(28.dp))
                                 .clickable(
                                     interactionSource = remember { MutableInteractionSource() },
@@ -205,23 +193,52 @@ fun HomeScreen(
                                 },
                             contentAlignment = Alignment.Center
                         ) {
+                            // Card background image
+                            Image(
+                                painter = painterResource(R.drawable.bg_affirmation_card),
+                                contentDescription = null,
+                                contentScale = ContentScale.Crop,
+                                modifier = Modifier.fillMaxSize()
+                            )
+                            // Overlay for text readability
                             Box(
                                 Modifier.fillMaxSize().background(
-                                    Color.White.copy(alpha = 0.10f)
+                                    Color.Black.copy(alpha = 0.35f)
                                 )
                             )
                             Text(
                                 affirmation.text,
                                 style = AppTypography.bodyMedium.copy(
                                     fontFamily = PlayfairDisplay,
-                                    fontSize = 16.sp
+                                    fontSize = 18.sp
                                 ),
                                 color = Color.White,
                                 textAlign = TextAlign.Center,
-                                lineHeight = 24.sp,
-                                maxLines = 7,
+                                lineHeight = 26.sp,
+                                maxLines = 5,
                                 overflow = TextOverflow.Ellipsis,
-                                modifier = Modifier.padding(horizontal = 24.dp, vertical = 24.dp)
+                                modifier = Modifier.padding(horizontal = 28.dp, vertical = 24.dp)
+                            )
+                        }
+                    }
+
+                    // Page indicator dots
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 12.dp),
+                        horizontalArrangement = Arrangement.Center
+                    ) {
+                        repeat(topAffirmations.size) { i ->
+                            Box(
+                                modifier = Modifier
+                                    .padding(horizontal = 3.dp)
+                                    .size(if (i == affPagerState.currentPage) 8.dp else 6.dp)
+                                    .clip(CircleShape)
+                                    .background(
+                                        if (i == affPagerState.currentPage) Color.White
+                                        else Color.White.copy(alpha = 0.3f)
+                                    )
                             )
                         }
                     }
@@ -236,7 +253,7 @@ fun HomeScreen(
 
                 Column(
                     modifier = Modifier
-                        .padding(top = 56.dp)
+                        .padding(top = 32.dp)
                         .graphicsLayer { this.alpha = alpha }
                 ) {
                     Text(
@@ -272,7 +289,7 @@ fun HomeScreen(
 
                 Column(
                     modifier = Modifier
-                        .padding(top = 56.dp)
+                        .padding(top = 32.dp)
                         .graphicsLayer { this.alpha = alpha }
                 ) {
                     Text(

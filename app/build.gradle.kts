@@ -74,6 +74,7 @@ dependencies {
 
     // Image loading
     implementation(libs.coil.compose)
+    implementation(libs.coil.gif)
 
     // System UI
     implementation(libs.accompanist.systemuicontroller)
