@@ -53,6 +53,7 @@ object Translations {
     data class MeditationRaw(
         val id: String,
         val title: String,
+        val description: String,
         val fileName: String,
         val durationSeconds: Int
     )
@@ -65,6 +66,7 @@ object Translations {
             MeditationRaw(
                 id = obj.getString("id"),
                 title = obj.getString("title"),
+                description = obj.optString("description", ""),
                 fileName = obj.getString("fileName"),
                 durationSeconds = obj.getInt("durationSeconds")
             )

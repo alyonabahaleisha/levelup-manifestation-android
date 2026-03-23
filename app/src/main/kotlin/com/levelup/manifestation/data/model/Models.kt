@@ -22,6 +22,7 @@ data class HiddenProgram(
 data class Meditation(
     val id: String,
     val title: String,
+    val description: String,
     val area: LifeArea,
     val fileName: String,
     val durationSeconds: Int

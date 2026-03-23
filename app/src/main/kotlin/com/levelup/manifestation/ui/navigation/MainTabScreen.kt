@@ -6,14 +6,11 @@ import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.FavoriteBorder
-import androidx.compose.material.icons.outlined.FormatQuote
 import androidx.compose.material.icons.outlined.Headphones
-import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -72,11 +69,12 @@ fun MainTabScreen(
     val haptics = LocalHapticFeedback.current
     var selectedTab by remember { mutableStateOf<AppTab>(AppTab.Home) }
     var showSettings by remember { mutableStateOf(false) }
+    var showAffirmations by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     LaunchedEffect(openAffirmations) {
         if (openAffirmations) {
-            selectedTab = AppTab.Affirmations
+            showAffirmations = true
             onAffirmationsOpened()
         }
     }
@@ -98,14 +96,9 @@ fun MainTabScreen(
                 is AppTab.Home -> HomeScreen(
                     savedProgramsViewModel = savedProgramsViewModel,
                     meditationViewModel = meditationViewModel,
-                    onNavigateToAffirmations = { selectedTab = AppTab.Affirmations },
+                    onNavigateToAffirmations = { showAffirmations = true },
                     onNavigateToReprogram = { selectedTab = AppTab.Reprogram },
                     onNavigateToMeditations = { selectedTab = AppTab.Meditations }
-                )
-                is AppTab.Affirmations -> AffirmationsScreen(
-                    themeViewModel = themeViewModel,
-                    deepLinkText = deepLinkAffirmation,
-                    onDeepLinkConsumed = onAffirmationDeepLinked
                 )
                 is AppTab.Reprogram -> ReprogramScreen(
                     savedProgramsViewModel = savedProgramsViewModel,
@@ -148,17 +141,6 @@ fun MainTabScreen(
                 },
                 icon = { Icon(Icons.Outlined.FavoriteBorder, contentDescription = null) },
                 label = { Text(Translations.ui("homeTab"), style = AppTypography.tabLabel) },
-                colors = itemColors
-            )
-
-            NavigationBarItem(
-                selected = selectedTab is AppTab.Affirmations,
-                onClick = {
-                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
-                    selectedTab = AppTab.Affirmations
-                },
-                icon = { Icon(Icons.Outlined.FormatQuote, contentDescription = null) },
-                label = { Text(Translations.ui("affirmationsTab"), style = AppTypography.tabLabel) },
                 colors = itemColors
             )
 
@@ -207,6 +189,22 @@ fun MainTabScreen(
                 SettingsSheet(
                     themeViewModel = themeViewModel,
                     onDismiss = { showSettings = false }
+                )
+            }
+        }
+
+        // Affirmations bottom sheet
+        if (showAffirmations) {
+            ModalBottomSheet(
+                onDismissRequest = { showAffirmations = false },
+                sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+                containerColor = Color.Transparent,
+                dragHandle = null
+            ) {
+                AffirmationsScreen(
+                    themeViewModel = themeViewModel,
+                    deepLinkText = deepLinkAffirmation,
+                    onDeepLinkConsumed = onAffirmationDeepLinked
                 )
             }
         }

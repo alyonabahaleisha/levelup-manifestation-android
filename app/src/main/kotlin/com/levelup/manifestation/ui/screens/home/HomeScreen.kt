@@ -52,6 +52,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.ImageLoader
+import coil.compose.AsyncImage
+import coil.decode.GifDecoder
+import coil.decode.ImageDecoderDecoder
+import coil.request.ImageRequest
 import com.levelup.manifestation.R
 import com.levelup.manifestation.Translations
 import com.levelup.manifestation.data.content.AffirmationContent
@@ -193,9 +198,21 @@ fun HomeScreen(
                                 },
                             contentAlignment = Alignment.Center
                         ) {
-                            // Card background image
-                            Image(
-                                painter = painterResource(R.drawable.bg_affirmation_card),
+                            // Animated GIF background
+                            val context = LocalContext.current
+                            val gifLoader = remember {
+                                ImageLoader.Builder(context)
+                                    .components {
+                                        if (Build.VERSION.SDK_INT >= 28) add(ImageDecoderDecoder.Factory())
+                                        else add(GifDecoder.Factory())
+                                    }
+                                    .build()
+                            }
+                            AsyncImage(
+                                model = ImageRequest.Builder(context)
+                                    .data(R.raw.bg_affirmation_card)
+                                    .build(),
+                                imageLoader = gifLoader,
                                 contentDescription = null,
                                 contentScale = ContentScale.Crop,
                                 modifier = Modifier.fillMaxSize()

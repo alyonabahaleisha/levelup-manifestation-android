@@ -61,7 +61,6 @@ data class ToneTheme(
 
 sealed class AppTab {
     object Home : AppTab()
-    object Affirmations : AppTab()
     object Reprogram : AppTab()
     object Meditations : AppTab()
 }

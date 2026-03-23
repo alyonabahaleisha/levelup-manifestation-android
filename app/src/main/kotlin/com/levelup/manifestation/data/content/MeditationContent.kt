@@ -14,6 +14,7 @@ object MeditationContent {
             Meditation(
                 id = raw.id,
                 title = raw.title,
+                description = raw.description,
                 area = area,
                 fileName = raw.fileName,
                 durationSeconds = raw.durationSeconds
