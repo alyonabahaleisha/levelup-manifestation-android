@@ -55,6 +55,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -82,6 +83,8 @@ import com.mikhail.manifestation.ui.theme.LocalToneTheme
 import com.mikhail.manifestation.ui.theme.Manrope
 import com.mikhail.manifestation.ui.theme.PlayfairDisplay
 import com.mikhail.manifestation.ui.theme.areaColor
+import com.mikhail.manifestation.ui.viewmodel.ClubsUiState
+import com.mikhail.manifestation.ui.viewmodel.ClubsViewModel
 import com.mikhail.manifestation.ui.viewmodel.MeditationViewModel
 import com.mikhail.manifestation.ui.viewmodel.SavedProgramsViewModel
 import android.os.Build
@@ -120,14 +123,17 @@ private val homeMoodBubbles = listOf(
 fun HomeScreen(
     savedProgramsViewModel: SavedProgramsViewModel,
     meditationViewModel: MeditationViewModel,
+    clubsViewModel: ClubsViewModel,
     onNavigateToAffirmations: (String) -> Unit,
     onNavigateToReprogram: () -> Unit,
     onNavigateToMeditations: () -> Unit,
+    onExpandClubsMap: () -> Unit = {},
     onMoodBubbleTapped: (String) -> Unit = {},
     onMeditationTapped: (Meditation) -> Unit = {}
 ) {
     val haptics = LocalHapticFeedback.current
     val saved by savedProgramsViewModel.saved.collectAsState()
+    val clubsUiState by clubsViewModel.uiState.collectAsState()
 
     val randomAffirmation = remember { AffirmationContent.feed().randomOrNull() }
     val allMeds = remember { MeditationContent.allMeditations() }
@@ -298,6 +304,45 @@ fun HomeScreen(
                 }
             }
 
+            // ── Clubs map section ─────────────────────────────────────────
+            item {
+                var appeared by remember { mutableStateOf(false) }
+                val alpha by animateFloatAsState(if (appeared) 1f else 0f, tween(400), label = "clubsAlpha")
+                LaunchedEffect(Unit) { delay(400); appeared = true }
+
+                Box(
+                    modifier = Modifier
+                        .padding(top = 32.dp)
+                        .graphicsLayer { this.alpha = alpha }
+                ) {
+                    when (val state = clubsUiState) {
+                        is ClubsUiState.Loading -> {
+                            ClubsMapSectionSkeleton()
+                        }
+                        is ClubsUiState.Success -> {
+                            if (state.clubs.isEmpty()) {
+                                ClubsMapSectionEmpty(
+                                    masterTelegramUrl = state.masterTelegramUrl,
+                                    onJoinTapped = {}
+                                )
+                            } else {
+                                ClubsMapSection(
+                                    clubs = state.clubs,
+                                    masterTelegramUrl = state.masterTelegramUrl,
+                                    onExpandMap = onExpandClubsMap,
+                                    onJoinTapped = {}
+                                )
+                            }
+                        }
+                        is ClubsUiState.Error -> {
+                            ClubsMapSectionError(
+                                onRetry = { clubsViewModel.loadClubs() }
+                            )
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
@@ -368,7 +413,7 @@ private fun PopularMeditationCard(
         ) {
             Text(
                 meditation.title,
-                style = AppTypography.bodyMedium.copy(fontFamily = Manrope),
+                style = AppTypography.headingSmall,
                 color = Color.White,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,

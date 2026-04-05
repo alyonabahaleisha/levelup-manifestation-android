@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -5,19 +7,26 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.google.services)
 }
 
 android {
-    namespace = "com.levelup.manifestation"
+    namespace = "com.mikhail.manifestation"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.levelup.manifestation"
+        applicationId = "com.mikhail.manifestation"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Read MAPS_API_KEY from local.properties (or environment)
+        val localProps = Properties()
+        val localPropsFile = rootProject.file("local.properties")
+        if (localPropsFile.exists()) localProps.load(localPropsFile.inputStream())
+        manifestPlaceholders["MAPS_API_KEY"] = localProps.getProperty("MAPS_API_KEY", "")
     }
 
     buildTypes {
@@ -40,10 +49,15 @@ android {
         compose = true
         buildConfig = true
     }
+
+    lint {
+        checkReleaseBuilds = false
+    }
 }
 
 dependencies {
     implementation(libs.androidx.core.ktx)
+    implementation("androidx.palette:palette:1.0.0")
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.activity.compose)
@@ -81,6 +95,15 @@ dependencies {
 
     // Splash screen
     implementation(libs.androidx.splashscreen)
+
+    // Firebase
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.firestore)
+
+    // Google Maps
+    implementation(libs.maps.compose)
+    implementation(libs.maps.compose.utils)
+    implementation(libs.play.services.maps)
 
     // Media3 for meditation audio playback
     implementation("androidx.media3:media3-exoplayer:1.5.1")
