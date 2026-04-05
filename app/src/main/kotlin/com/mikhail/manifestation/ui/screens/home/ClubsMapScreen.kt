@@ -222,7 +222,6 @@ fun ClubsMapScreen(
             onZoomOut = { scope.launch { cameraPositionState.animate(CameraUpdateFactory.zoomOut()) } },
             modifier = Modifier
                 .align(Alignment.TopCenter)
-                .statusBarsPadding()
         )
 
         // ── Club detail bottom sheet ─────────────────────────────────────────
@@ -279,22 +278,46 @@ private fun ClubsInteractiveMap(
             mapToolbarEnabled = false
         )
     ) {
-        val tealHue = 195f // HSV hue for teal/cyan
-        clusterItems.forEach { item ->
-            com.google.maps.android.compose.Marker(
-                state = com.google.maps.android.compose.MarkerState(
-                    position = item.position
-                ),
-                title = item.title,
-                snippet = item.snippet,
-                icon = com.google.android.gms.maps.model.BitmapDescriptorFactory
-                    .defaultMarker(tealHue),
-                onClick = {
-                    onPinTapped(item)
-                    true
+        Clustering(
+            items = clusterItems,
+            onClusterClick = { cluster ->
+                onClusterTapped(cluster)
+                true
+            },
+            onClusterItemClick = { item ->
+                onPinTapped(item)
+                true
+            },
+            clusterContent = { cluster ->
+                // Teal circle with count
+                val sizeDp = when {
+                    cluster.size <= 5 -> 36.dp
+                    cluster.size <= 15 -> 44.dp
+                    else -> 52.dp
                 }
-            )
-        }
+                Box(
+                    contentAlignment = Alignment.Center,
+                    modifier = Modifier
+                        .size(sizeDp)
+                        .background(accentTeal, CircleShape)
+                ) {
+                    Text(
+                        "${cluster.size}",
+                        color = Color.White,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                }
+            },
+            clusterItemContent = {
+                // Teal dot for individual pins
+                Box(
+                    modifier = Modifier
+                        .size(20.dp)
+                        .background(accentTeal, CircleShape)
+                )
+            }
+        )
     }
 }
 
@@ -395,8 +418,10 @@ private fun TopBar(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
             .fillMaxWidth()
-            .height(56.dp)
             .background(topBarBg)
+            .statusBarsPadding()
+            .padding(top = 12.dp)
+            .height(56.dp)
             .drawBehind {
                 drawLine(
                     color = topBarBorder,
@@ -405,29 +430,21 @@ private fun TopBar(
                     strokeWidth = 1.dp.toPx()
                 )
             }
-            .padding(horizontal = 8.dp)
+            .padding(horizontal = 16.dp)
     ) {
-        // Back button — left side
+        // X close button — matches iOS
         IconButton(
             onClick = onBack,
-            modifier = Modifier.semantics {
-                contentDescription = "Вернуться на главный экран"
-            }
+            modifier = Modifier
+                .size(36.dp)
+                .background(Color.Black.copy(alpha = 0.3f), CircleShape)
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(
-                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = null,
-                    tint = Color.White,
-                    modifier = Modifier.size(24.dp)
-                )
-                Spacer(Modifier.width(4.dp))
-                Text(
-                    "Назад",
-                    style = AppTypography.bodySmall.copy(fontWeight = FontWeight.Normal),
-                    color = Color.White
-                )
-            }
+            Icon(
+                imageVector = Icons.Filled.Close,
+                contentDescription = "Вернуться на главный экран",
+                tint = Color.White,
+                modifier = Modifier.size(18.dp)
+            )
         }
 
         // Title — centered
@@ -445,13 +462,8 @@ private fun TopBar(
             )
         }
 
-        // Zoom controls — right side
-        Row {
-            ZoomButton(label = "+", contentDesc = "Увеличить масштаб", onClick = onZoomIn)
-            Spacer(Modifier.width(8.dp))
-            ZoomButton(label = "–", contentDesc = "Уменьшить масштаб", onClick = onZoomOut)
-        }
-        Spacer(Modifier.width(8.dp))
+        // Invisible spacer to balance close button
+        Spacer(Modifier.size(36.dp))
     }
 }
 
