@@ -272,13 +272,9 @@ fun MeditationPlayerScreen(
                     ) {
                         Box(
                             modifier = Modifier
-                                .size(thumbSize)
-                                .align(Alignment.CenterStart)
-                                .padding(start = 0.dp)
-                                // offset thumb center to match progress fraction
-                                .then(
-                                    Modifier.fillMaxWidth(effectiveProgress.coerceIn(0f, 1f))
-                                ),
+                                .fillMaxWidth(effectiveProgress.coerceIn(0.001f, 1f))
+                                .height(thumbSize)
+                                .align(Alignment.CenterStart),
                             contentAlignment = Alignment.CenterEnd
                         ) {
                             Box(
