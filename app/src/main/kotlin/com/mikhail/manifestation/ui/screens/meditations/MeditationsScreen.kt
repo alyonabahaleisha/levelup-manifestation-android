@@ -152,7 +152,8 @@ fun meditationHasGif(id: String): Boolean =
 fun MeditationsScreen(
     viewModel: MeditationViewModel,
     initialMeditation: Meditation? = null,
-    initialMoodKey: String? = null
+    initialMoodKey: String? = null,
+    onPlayerVisibilityChanged: (Boolean) -> Unit = {}
 ) {
     var selectedMeditation by remember { mutableStateOf(initialMeditation) }
     // Use remember without key so it captures the initial value and doesn't reset on recomposition
@@ -161,6 +162,9 @@ fun MeditationsScreen(
     }
 
     val currentMeditation = selectedMeditation
+    LaunchedEffect(currentMeditation) {
+        onPlayerVisibilityChanged(currentMeditation != null)
+    }
     if (currentMeditation != null) {
         MeditationPlayerScreen(
             meditation = currentMeditation,

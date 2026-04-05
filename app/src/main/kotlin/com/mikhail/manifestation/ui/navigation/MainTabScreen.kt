@@ -85,6 +85,7 @@ fun MainTabScreen(
     var affirmationStartText by remember { mutableStateOf<String?>(null) }
     var pendingMeditation by remember { mutableStateOf<Meditation?>(null) }
     var pendingMoodKey by remember { mutableStateOf<String?>(null) }
+    var isMeditationPlayerOpen by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     LaunchedEffect(openAffirmations) {
@@ -96,7 +97,7 @@ fun MainTabScreen(
 
     SideEffect {
         systemUiController.isStatusBarVisible = false
-        systemUiController.isNavigationBarVisible = true
+        systemUiController.isNavigationBarVisible = !isMeditationPlayerOpen
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
@@ -140,7 +141,8 @@ fun MainTabScreen(
                     MeditationsScreen(
                         viewModel = meditationViewModel,
                         initialMeditation = meditation,
-                        initialMoodKey = moodKey
+                        initialMoodKey = moodKey,
+                        onPlayerVisibilityChanged = { isMeditationPlayerOpen = it }
                     )
                 }
                 is AppTab.Music -> MusicScreen(
@@ -149,8 +151,8 @@ fun MainTabScreen(
             }
         }
 
-        // Bottom navigation bar
-        NavigationBar(
+        // Bottom navigation bar — hidden during meditation player
+        if (!isMeditationPlayerOpen) NavigationBar(
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .drawBehind {
