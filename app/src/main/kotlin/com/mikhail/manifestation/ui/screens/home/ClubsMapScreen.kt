@@ -276,27 +276,22 @@ private fun ClubsInteractiveMap(
             mapToolbarEnabled = false
         )
     ) {
-        Clustering(
-            items = clusterItems,
-            onClusterClick = { cluster ->
-                onClusterTapped(cluster)
-                // Return true = we handled the event, suppress default behavior
-                true
-            },
-            onClusterItemClick = { item ->
-                onPinTapped(item)
-                // Return true = we handled the event
-                true
-            },
-            clusterContent = { cluster ->
-                ClusterMarker(count = cluster.size)
-            },
-            clusterItemContent = { item ->
-                PinMarker(
-                    contentDesc = "${item.title}. Руководитель: ${item.snippet}. Нажмите, чтобы открыть подробности."
-                )
-            }
-        )
+        val tealHue = 195f // HSV hue for teal/cyan
+        clusterItems.forEach { item ->
+            com.google.maps.android.compose.Marker(
+                state = com.google.maps.android.compose.MarkerState(
+                    position = item.position
+                ),
+                title = item.title,
+                snippet = item.snippet,
+                icon = com.google.android.gms.maps.model.BitmapDescriptorFactory
+                    .defaultMarker(tealHue),
+                onClick = {
+                    onPinTapped(item)
+                    true
+                }
+            )
+        }
     }
 }
 

@@ -188,39 +188,50 @@ private fun MapPreviewLayer(clubs: List<Club>) {
         }
     }
 
-    GoogleMap(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(288.dp),
-        cameraPositionState = cameraPositionState,
-        properties = MapProperties(
-            mapStyleOptions = mapStyle,
-            isMyLocationEnabled = false,
-            isTrafficEnabled = false,
-            isIndoorEnabled = false
-        ),
-        uiSettings = MapUiSettings(
-            scrollGesturesEnabled = false,
-            zoomGesturesEnabled = false,
-            tiltGesturesEnabled = false,
-            rotationGesturesEnabled = false,
-            zoomControlsEnabled = false,
-            compassEnabled = false,
-            myLocationButtonEnabled = false,
-            mapToolbarEnabled = false,
-            scrollGesturesEnabledDuringRotateOrZoom = false
-        )
-    ) {
-        clubs.forEach { club ->
-            if (club.latitude != 0.0 || club.longitude != 0.0) {
-                Marker(
-                    state = MarkerState(LatLng(club.latitude, club.longitude)),
-                    title = club.city,
-                    // Accessibility: decorative at preview zoom — hidden from TalkBack
-                    visible = true
-                )
+    Box(modifier = Modifier.fillMaxWidth().height(288.dp)) {
+        GoogleMap(
+            modifier = Modifier.fillMaxSize(),
+            cameraPositionState = cameraPositionState,
+            properties = MapProperties(
+                mapStyleOptions = mapStyle,
+                isMyLocationEnabled = false,
+                isTrafficEnabled = false,
+                isIndoorEnabled = false
+            ),
+            uiSettings = MapUiSettings(
+                scrollGesturesEnabled = false,
+                zoomGesturesEnabled = false,
+                tiltGesturesEnabled = false,
+                rotationGesturesEnabled = false,
+                zoomControlsEnabled = false,
+                compassEnabled = false,
+                myLocationButtonEnabled = false,
+                mapToolbarEnabled = false,
+                scrollGesturesEnabledDuringRotateOrZoom = false
+            )
+        ) {
+            val tealIcon = com.google.android.gms.maps.model.BitmapDescriptorFactory.defaultMarker(195f)
+            clubs.forEach { club ->
+                if (club.latitude != 0.0 || club.longitude != 0.0) {
+                    Marker(
+                        state = MarkerState(LatLng(club.latitude, club.longitude)),
+                        title = club.city,
+                        icon = tealIcon,
+                        visible = true
+                    )
+                }
             }
         }
+
+        // Transparent overlay to intercept touches — GoogleMap consumes clicks even with gestures disabled
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = null
+                ) { /* parent handles click */ }
+        )
     }
 }
 
