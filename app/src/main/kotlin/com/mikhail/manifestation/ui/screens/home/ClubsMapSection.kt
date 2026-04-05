@@ -99,13 +99,6 @@ fun ClubsMapSection(
                 .fillMaxWidth()
                 .height(288.dp)
                 .clip(RoundedCornerShape(24.dp))
-                .clickable(
-                    interactionSource = remember { MutableInteractionSource() },
-                    indication = null
-                ) {
-                    haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                    onExpandMap()
-                }
         ) {
             // ── Map layer (non-interactive) ──────────────────────────────
             MapPreviewLayer(clubs = clubs)
@@ -166,6 +159,18 @@ fun ClubsMapSection(
                     modifier = Modifier.size(16.dp)
                 )
             }
+
+            // ── Touch overlay — sits on TOP of everything to catch taps ──
+            // GoogleMap swallows all touch events even with gestures disabled.
+            // This transparent Box is the last child so it's on top in Z-order.
+            Box(
+                modifier = Modifier
+                    .matchParentSize()
+                    .clickable {
+                        haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                        onExpandMap()
+                    }
+            )
         }
     }
 }
@@ -188,10 +193,14 @@ private fun MapPreviewLayer(clubs: List<Club>) {
         }
     }
 
-    Box(modifier = Modifier.fillMaxWidth().height(288.dp)) {
+    Box(modifier = Modifier
+        .fillMaxWidth()
+        .height(288.dp)
+    ) {
         GoogleMap(
             modifier = Modifier.fillMaxSize(),
             cameraPositionState = cameraPositionState,
+            onMapClick = { },
             properties = MapProperties(
                 mapStyleOptions = mapStyle,
                 isMyLocationEnabled = false,
@@ -223,15 +232,6 @@ private fun MapPreviewLayer(clubs: List<Club>) {
             }
         }
 
-        // Transparent overlay to intercept touches — GoogleMap consumes clicks even with gestures disabled
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .clickable(
-                    interactionSource = remember { MutableInteractionSource() },
-                    indication = null
-                ) { /* parent handles click */ }
-        )
     }
 }
 

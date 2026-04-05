@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -219,7 +220,9 @@ fun ClubsMapScreen(
             onBack = onDismiss,
             onZoomIn = { scope.launch { cameraPositionState.animate(CameraUpdateFactory.zoomIn()) } },
             onZoomOut = { scope.launch { cameraPositionState.animate(CameraUpdateFactory.zoomOut()) } },
-            modifier = Modifier.align(Alignment.TopCenter)
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .statusBarsPadding()
         )
 
         // ── Club detail bottom sheet ─────────────────────────────────────────
