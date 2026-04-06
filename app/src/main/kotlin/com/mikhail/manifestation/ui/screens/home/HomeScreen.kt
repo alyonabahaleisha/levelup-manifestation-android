@@ -35,6 +35,10 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -128,7 +132,8 @@ fun HomeScreen(
     onNavigateToReprogram: () -> Unit,
     onNavigateToMeditations: () -> Unit,
     onExpandClubsMap: () -> Unit = {},
-    onMeditationTapped: (Meditation) -> Unit = {}
+    onMeditationTapped: (Meditation) -> Unit = {},
+    onOpenSettings: () -> Unit = {}
 ) {
     val haptics = LocalHapticFeedback.current
     val saved by savedProgramsViewModel.saved.collectAsState()
@@ -178,7 +183,7 @@ fun HomeScreen(
                                 .clip(CircleShape)
                         )
                         Spacer(Modifier.width(12.dp))
-                        Column {
+                        Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 "Школа Михаила Агеева",
                                 style = AppTypography.bodySmall,
@@ -189,6 +194,14 @@ fun HomeScreen(
                                 timeGreeting,
                                 style = AppTypography.headingMedium.copy(fontFamily = PlayfairDisplay),
                                 color = Color.White
+                            )
+                        }
+                        IconButton(onClick = onOpenSettings) {
+                            Icon(
+                                Icons.Outlined.Settings,
+                                contentDescription = "Settings",
+                                tint = Color.White.copy(alpha = 0.6f),
+                                modifier = Modifier.size(24.dp)
                             )
                         }
                     }

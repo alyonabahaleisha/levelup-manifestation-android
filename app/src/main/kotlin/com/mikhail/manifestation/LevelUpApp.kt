@@ -1,6 +1,7 @@
 package com.mikhail.manifestation
 
 import android.app.Application
+import android.content.res.Configuration
 import coil.ImageLoader
 import coil.ImageLoaderFactory
 import coil.disk.DiskCache
@@ -13,9 +14,19 @@ import dagger.hilt.android.HiltAndroidApp
 class LevelUpApp : Application(), ImageLoaderFactory {
     override fun onCreate() {
         super.onCreate()
+        forceRussianLocale()
         Translations.load(this)
         Translations.syncFromFirestore()
         prefetchCovers()
+    }
+
+    private fun forceRussianLocale() {
+        val locale = java.util.Locale("ru")
+        java.util.Locale.setDefault(locale)
+        val config = Configuration(resources.configuration)
+        config.setLocale(locale)
+        @Suppress("DEPRECATION")
+        resources.updateConfiguration(config, resources.displayMetrics)
     }
 
     override fun newImageLoader(): ImageLoader {
