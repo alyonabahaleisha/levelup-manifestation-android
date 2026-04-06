@@ -48,7 +48,11 @@ import com.mikhail.manifestation.ui.screens.affirmations.AffirmationsScreen
 import com.mikhail.manifestation.ui.screens.home.ClubsMapScreen
 import com.mikhail.manifestation.ui.screens.home.HomeScreen
 import com.mikhail.manifestation.data.model.Meditation
+import com.mikhail.manifestation.data.content.MeditationContent
+import com.mikhail.manifestation.ui.screens.meditations.MeditationPlayerScreen
 import com.mikhail.manifestation.ui.screens.meditations.MeditationsScreen
+import com.mikhail.manifestation.ui.screens.meditations.meditationCardImage
+import com.mikhail.manifestation.ui.screens.meditations.meditationHasGif
 import com.mikhail.manifestation.ui.screens.music.MusicScreen
 import com.mikhail.manifestation.ui.screens.reprogram.ReprogramScreen
 import com.mikhail.manifestation.ui.screens.settings.SettingsSheet
@@ -83,7 +87,7 @@ fun MainTabScreen(
     var showAffirmations by remember { mutableStateOf(false) }
     var showClubsMap by remember { mutableStateOf(false) }
     var affirmationStartText by remember { mutableStateOf<String?>(null) }
-    var pendingMeditation by remember { mutableStateOf<Meditation?>(null) }
+    var homeMeditation by remember { mutableStateOf<Meditation?>(null) }
     var isMeditationPlayerOpen by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
@@ -120,8 +124,8 @@ fun MainTabScreen(
                     onNavigateToMeditations = { selectedTab = AppTab.Meditations },
                     onExpandClubsMap = { showClubsMap = true },
                     onMeditationTapped = { meditation ->
-                        pendingMeditation = meditation
-                        selectedTab = AppTab.Meditations
+                        homeMeditation = meditation
+                        isMeditationPlayerOpen = true
                     }
                 )
                 is AppTab.Reprogram -> ReprogramScreen(
@@ -129,11 +133,8 @@ fun MainTabScreen(
                     themeViewModel = themeViewModel
                 )
                 is AppTab.Meditations -> {
-                    val meditation = pendingMeditation
-                    pendingMeditation = null
                     MeditationsScreen(
                         viewModel = meditationViewModel,
-                        initialMeditation = meditation,
                         onPlayerVisibilityChanged = { isMeditationPlayerOpen = it }
                     )
                 }
@@ -219,6 +220,22 @@ fun MainTabScreen(
                 icon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                 label = { Text(Translations.ui("settingsTitle"), style = AppTypography.tabLabel) },
                 colors = itemColors
+            )
+        }
+
+        // Meditation player overlay (from Home tap)
+        val homeMediation = homeMeditation
+        if (homeMediation != null) {
+            MeditationPlayerScreen(
+                meditation = homeMediation,
+                viewModel = meditationViewModel,
+                backgroundImageRes = meditationCardImage(homeMediation.id, 0),
+                isGif = meditationHasGif(homeMediation.id),
+                coverUrl = MeditationContent.coverUrl(homeMediation),
+                onBack = {
+                    homeMeditation = null
+                    isMeditationPlayerOpen = false
+                }
             )
         }
 

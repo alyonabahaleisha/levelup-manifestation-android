@@ -52,10 +52,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
-import coil.ImageLoader
 import coil.compose.AsyncImage
-import coil.decode.GifDecoder
-import coil.decode.ImageDecoderDecoder
 import coil.request.ImageRequest
 import com.mikhail.manifestation.R
 import com.mikhail.manifestation.Translations
@@ -111,28 +108,38 @@ fun MeditationsScreen(
     viewModel: MeditationViewModel,
     initialMeditation: Meditation? = null,
     initialMoodKey: String? = null,
-    onPlayerVisibilityChanged: (Boolean) -> Unit = {}
+    onPlayerVisibilityChanged: (Boolean) -> Unit = {},
+    onNavigateToHome: () -> Unit = {}
 ) {
     var selectedMeditation by remember { mutableStateOf(initialMeditation) }
+    val openedFromHome = remember { initialMeditation != null }
 
     val currentMeditation = selectedMeditation
     LaunchedEffect(currentMeditation) {
         onPlayerVisibilityChanged(currentMeditation != null)
     }
-    if (currentMeditation != null) {
-        MeditationPlayerScreen(
-            meditation = currentMeditation,
-            viewModel = viewModel,
-            backgroundImageRes = meditationCardImage(currentMeditation.id, 0),
-            isGif = meditationHasGif(currentMeditation.id),
-            coverUrl = MeditationContent.coverUrl(currentMeditation),
-            onBack = { selectedMeditation = null }
-        )
-    } else {
-        MeditationListScreen(
-            viewModel = viewModel,
-            onSelectMeditation = { selectedMeditation = it }
-        )
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (currentMeditation == null || !openedFromHome) {
+            MeditationListScreen(
+                viewModel = viewModel,
+                onSelectMeditation = { selectedMeditation = it }
+            )
+        }
+
+        if (currentMeditation != null) {
+            MeditationPlayerScreen(
+                meditation = currentMeditation,
+                viewModel = viewModel,
+                backgroundImageRes = meditationCardImage(currentMeditation.id, 0),
+                isGif = meditationHasGif(currentMeditation.id),
+                coverUrl = MeditationContent.coverUrl(currentMeditation),
+                onBack = {
+                    selectedMeditation = null
+                    if (openedFromHome) onNavigateToHome()
+                }
+            )
+        }
     }
 }
 
@@ -268,38 +275,19 @@ private fun MeditationVisualCard(
             }
         }
 
-        // Background image: prefer remote coverUrl, fall back to local drawable/GIF
+        // Background image: remote coverUrl with color placeholder
         if (!coverUrl.isNullOrEmpty()) {
             AsyncImage(
                 model = ImageRequest.Builder(context).data(coverUrl)
-                    .crossfade(true).build(),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
-            )
-        } else if (meditationHasGif(meditation.id)) {
-            val gifLoader = remember {
-                ImageLoader.Builder(context)
-                    .components {
-                        if (android.os.Build.VERSION.SDK_INT >= 28) add(ImageDecoderDecoder.Factory())
-                        else add(GifDecoder.Factory())
-                    }
-                    .build()
-            }
-            AsyncImage(
-                model = ImageRequest.Builder(context).data(cardImageRes).build(),
-                imageLoader = gifLoader,
+                    .crossfade(true)
+                    .memoryCacheKey(coverUrl)
+                    .build(),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
             )
         } else {
-            Image(
-                painter = painterResource(cardImageRes),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
-            )
+            Box(Modifier.fillMaxSize().background(areaColor))
         }
 
         // Color gradient overlay — intense bottom third

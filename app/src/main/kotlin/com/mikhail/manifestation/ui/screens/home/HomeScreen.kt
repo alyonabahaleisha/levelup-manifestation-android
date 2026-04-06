@@ -378,20 +378,15 @@ private fun PopularMeditationCard(
         if (!coverUrl.isNullOrEmpty()) {
             AsyncImage(
                 model = ImageRequest.Builder(ctx).data(coverUrl)
-                    .crossfade(true).build(),
+                    .crossfade(true)
+                    .memoryCacheKey(coverUrl)
+                    .build(),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
             )
         } else {
-            Image(
-                painter = painterResource(
-                    com.mikhail.manifestation.ui.screens.meditations.meditationCardImage(meditation.id, index)
-                ),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
-            )
+            Box(Modifier.fillMaxSize().background(dominantColor))
         }
         Box(
             Modifier.fillMaxSize().background(

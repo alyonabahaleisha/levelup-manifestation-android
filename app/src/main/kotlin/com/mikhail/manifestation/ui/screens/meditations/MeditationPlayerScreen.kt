@@ -49,16 +49,14 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import coil.ImageLoader
 import coil.compose.AsyncImage
-import coil.decode.GifDecoder
-import coil.decode.ImageDecoderDecoder
 import coil.request.ImageRequest
 import com.mikhail.manifestation.R
 import com.mikhail.manifestation.Translations
 import com.mikhail.manifestation.data.audio.PlaybackState
 import com.mikhail.manifestation.data.model.Meditation
 import com.mikhail.manifestation.ui.theme.AppTypography
+import com.mikhail.manifestation.ui.theme.areaColor
 import com.mikhail.manifestation.ui.theme.LocalToneTheme
 import com.mikhail.manifestation.ui.theme.PlayfairDisplay
 import com.mikhail.manifestation.ui.viewmodel.MeditationViewModel
@@ -100,39 +98,20 @@ fun MeditationPlayerScreen(
         modifier = Modifier
             .fillMaxSize()
     ) {
-        // Background: prefer remote coverUrl, fall back to local drawable/GIF
+        // Background: remote coverUrl with color placeholder
         val context = LocalContext.current
         if (!coverUrl.isNullOrEmpty()) {
             AsyncImage(
                 model = ImageRequest.Builder(context).data(coverUrl)
-                    .crossfade(true).build(),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
-            )
-        } else if (isGif) {
-            val gifLoader = remember {
-                ImageLoader.Builder(context)
-                    .components {
-                        if (android.os.Build.VERSION.SDK_INT >= 28) add(ImageDecoderDecoder.Factory())
-                        else add(GifDecoder.Factory())
-                    }
-                    .build()
-            }
-            AsyncImage(
-                model = ImageRequest.Builder(context).data(backgroundImageRes).build(),
-                imageLoader = gifLoader,
+                    .crossfade(true)
+                    .memoryCacheKey(coverUrl)
+                    .build(),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
             )
         } else {
-            Image(
-                painter = painterResource(backgroundImageRes),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
-            )
+            Box(Modifier.fillMaxSize().background(areaColor(meditation.area)))
         }
 
         // Gradient overlay matching iOS
@@ -198,7 +177,7 @@ fun MeditationPlayerScreen(
 
             // Area label
             Text(
-                "${meditation.area.emoji}  ${Translations.lifeAreaLabel(meditation.area)}  ·  ${formatDurationFull(meditation.durationSeconds)}",
+                formatDurationFull(meditation.durationSeconds),
                 style = AppTypography.bodyMedium,
                 color = Color.White.copy(0.65f),
                 textAlign = TextAlign.Center

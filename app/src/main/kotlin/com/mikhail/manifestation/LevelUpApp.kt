@@ -1,0 +1,50 @@
+package com.mikhail.manifestation
+
+import android.app.Application
+import coil.ImageLoader
+import coil.ImageLoaderFactory
+import coil.disk.DiskCache
+import coil.memory.MemoryCache
+import coil.request.ImageRequest
+import com.mikhail.manifestation.data.content.MeditationContent
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class LevelUpApp : Application(), ImageLoaderFactory {
+    override fun onCreate() {
+        super.onCreate()
+        Translations.load(this)
+        Translations.syncFromFirestore()
+        prefetchCovers()
+    }
+
+    override fun newImageLoader(): ImageLoader {
+        return ImageLoader.Builder(this)
+            .memoryCache {
+                MemoryCache.Builder(this)
+                    .maxSizePercent(0.3)
+                    .build()
+            }
+            .diskCache {
+                DiskCache.Builder()
+                    .directory(cacheDir.resolve("image_cache"))
+                    .maxSizePercent(0.05)
+                    .build()
+            }
+            .crossfade(true)
+            .build()
+    }
+
+    private fun prefetchCovers() {
+        val loader = ImageLoader(this)
+        val meditations = MeditationContent.allMeditations()
+        for (med in meditations) {
+            val url = MeditationContent.coverUrl(med) ?: continue
+            val request = ImageRequest.Builder(this)
+                .data(url)
+                .memoryCacheKey(url)
+                .build()
+            loader.enqueue(request)
+        }
+    }
+}
