@@ -128,7 +128,6 @@ fun HomeScreen(
     onNavigateToReprogram: () -> Unit,
     onNavigateToMeditations: () -> Unit,
     onExpandClubsMap: () -> Unit = {},
-    onMoodBubbleTapped: (String) -> Unit = {},
     onMeditationTapped: (Meditation) -> Unit = {}
 ) {
     val haptics = LocalHapticFeedback.current

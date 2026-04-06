@@ -84,7 +84,6 @@ fun MainTabScreen(
     var showClubsMap by remember { mutableStateOf(false) }
     var affirmationStartText by remember { mutableStateOf<String?>(null) }
     var pendingMeditation by remember { mutableStateOf<Meditation?>(null) }
-    var pendingMoodKey by remember { mutableStateOf<String?>(null) }
     var isMeditationPlayerOpen by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
@@ -120,10 +119,6 @@ fun MainTabScreen(
                     onNavigateToReprogram = { selectedTab = AppTab.Reprogram },
                     onNavigateToMeditations = { selectedTab = AppTab.Meditations },
                     onExpandClubsMap = { showClubsMap = true },
-                    onMoodBubbleTapped = { moodKey ->
-                        pendingMoodKey = moodKey
-                        selectedTab = AppTab.Meditations
-                    },
                     onMeditationTapped = { meditation ->
                         pendingMeditation = meditation
                         selectedTab = AppTab.Meditations
@@ -135,13 +130,10 @@ fun MainTabScreen(
                 )
                 is AppTab.Meditations -> {
                     val meditation = pendingMeditation
-                    val moodKey = pendingMoodKey
                     pendingMeditation = null
-                    pendingMoodKey = null
                     MeditationsScreen(
                         viewModel = meditationViewModel,
                         initialMeditation = meditation,
-                        initialMoodKey = moodKey,
                         onPlayerVisibilityChanged = { isMeditationPlayerOpen = it }
                     )
                 }

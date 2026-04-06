@@ -4,13 +4,8 @@ package com.mikhail.manifestation.ui.screens.meditations
 
 import android.graphics.BitmapFactory
 import androidx.compose.animation.animateColorAsState
-import androidx.compose.animation.core.FastOutSlowInEasing
-import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
@@ -20,7 +15,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -28,19 +22,12 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material.icons.outlined.ChevronLeft
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Pause
-import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -83,35 +70,6 @@ import androidx.palette.graphics.Palette
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
-
-// ── Mood → LifeArea mapping ─────────────────────────────────────────────────
-
-private enum class MeditationMood(
-    val translationKey: String,
-    val areas: List<LifeArea>,
-    val color: Color
-) {
-    Calm("moodCalm", listOf(LifeArea.Calm, LifeArea.Body), Color(0xFFA8D8EA)),
-    Energy("moodEnergy", listOf(LifeArea.Confidence, LifeArea.Career), Color(0xFFE0C8A0)),
-    Love("moodLove", listOf(LifeArea.Love, LifeArea.FeminineEnergy), Color(0xFFD4A0BE)),
-    Release("moodRelease", listOf(LifeArea.Fear, LifeArea.Relationships), Color(0xFF8EC8DC)),
-    Transform("moodTransform", listOf(LifeArea.Money, LifeArea.Career), Color(0xFFB8A8D8)),
-    Protection("moodProtection", listOf(LifeArea.SelfWorth, LifeArea.Body), Color(0xFFA0D4C4))
-}
-
-// Bubble layout: relative x, y position (0..1) and diameter in dp
-private data class BubbleLayout(val relX: Float, val relY: Float, val size: Float)
-
-private val moodBubbleLayouts = listOf(
-    BubbleLayout(0.28f, 0.04f, 170f),  // Calm
-    BubbleLayout(0.68f, 0.06f, 180f),  // Energy
-    BubbleLayout(0.18f, 0.24f, 175f),  // Love
-    BubbleLayout(0.58f, 0.28f, 165f),  // Release
-    BubbleLayout(0.35f, 0.46f, 185f),  // Transform
-    BubbleLayout(0.72f, 0.50f, 160f),  // Protection
-)
-
-private val showAllBubbleLayout = BubbleLayout(0.25f, 0.68f, 175f)
 
 private val cardImages = listOf(
     R.drawable.card_bg_1, R.drawable.card_bg_2, R.drawable.card_bg_3,
@@ -156,10 +114,6 @@ fun MeditationsScreen(
     onPlayerVisibilityChanged: (Boolean) -> Unit = {}
 ) {
     var selectedMeditation by remember { mutableStateOf(initialMeditation) }
-    // Use remember without key so it captures the initial value and doesn't reset on recomposition
-    val initialMood = remember {
-        initialMoodKey?.let { key -> MeditationMood.entries.find { it.translationKey == key } }
-    }
 
     val currentMeditation = selectedMeditation
     LaunchedEffect(currentMeditation) {
@@ -177,244 +131,8 @@ fun MeditationsScreen(
     } else {
         MeditationListScreen(
             viewModel = viewModel,
-            selectedMood = initialMood,
-            onBack = {},
             onSelectMeditation = { selectedMeditation = it }
         )
-    }
-}
-
-@Composable
-private fun MeditationListScreen(
-    viewModel: MeditationViewModel,
-    onSelectMeditation: (Meditation) -> Unit
-) {
-    val haptics = LocalHapticFeedback.current
-    var selectedMood by remember { mutableStateOf<MeditationMood?>(null) }
-    var showList by remember { mutableStateOf(false) }
-
-    if (showList) {
-        MeditationListScreen(
-            viewModel = viewModel,
-            selectedMood = selectedMood,
-            onBack = { showList = false },
-            onSelectMeditation = onSelectMeditation
-        )
-    } else {
-        BubbleDiscoveryScreen(
-            onMoodSelected = { mood ->
-                haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
-                selectedMood = mood
-                showList = true
-            },
-            onShowAll = {
-                haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
-                selectedMood = null
-                showList = true
-            }
-        )
-    }
-}
-
-// ── Bubble Discovery Screen ──────────────────────────────────────────────────
-
-@Composable
-private fun BubbleDiscoveryScreen(
-    onMoodSelected: (MeditationMood) -> Unit,
-    onShowAll: () -> Unit
-) {
-    Box(modifier = Modifier.fillMaxSize().background(Color(0xFF154C6C))) {
-        Column(modifier = Modifier.fillMaxSize()) {
-            // Header
-            Column(
-                modifier = Modifier.fillMaxWidth().padding(top = 60.dp, bottom = 20.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text(
-                    Translations.ui("meditationsTitle"),
-                    style = AppTypography.headingLarge,
-                    color = Color.White
-                )
-                Spacer(Modifier.height(8.dp))
-                Text(
-                    Translations.ui("moodQuestion"),
-                    style = AppTypography.bodyMedium,
-                    color = Color.White.copy(0.55f)
-                )
-            }
-
-            // Bubbles area
-            BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
-                val w = maxWidth
-                val h = maxHeight
-
-                // Mood bubbles
-                MeditationMood.entries.forEachIndexed { index, mood ->
-                    val layout = moodBubbleLayouts[index]
-                    val sizeDp = layout.size.dp
-
-                    MoodCircleBubble(
-                        label = Translations.ui(mood.translationKey),
-                        bubbleColor = mood.color,
-                        sizeDp = layout.size,
-                        index = index,
-                        onTap = { onMoodSelected(mood) },
-                        modifier = Modifier.offset(
-                            x = w * layout.relX - sizeDp / 2,
-                            y = h * layout.relY - sizeDp / 2
-                        )
-                    )
-                }
-
-                // Show All bubble
-                MoodCircleBubble(
-                    label = Translations.ui("moodShowAll"),
-                    bubbleColor = Color.White,
-                    sizeDp = showAllBubbleLayout.size,
-                    index = MeditationMood.entries.size,
-                    onTap = onShowAll,
-                    modifier = Modifier.offset(
-                        x = w * showAllBubbleLayout.relX - showAllBubbleLayout.size.dp / 2,
-                        y = h * showAllBubbleLayout.relY - showAllBubbleLayout.size.dp / 2
-                    )
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun MoodCircleBubble(
-    label: String,
-    bubbleColor: Color,
-    sizeDp: Float,
-    index: Int,
-    onTap: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    var appeared by remember { mutableStateOf(false) }
-    val scale by animateFloatAsState(
-        if (appeared) 1f else 0.3f,
-        spring(dampingRatio = 0.65f, stiffness = Spring.StiffnessLow),
-        label = "bubbleScale"
-    )
-    val alpha by animateFloatAsState(
-        if (appeared) 1f else 0f,
-        tween(400),
-        label = "bubbleAlpha"
-    )
-
-    val infiniteTransition = rememberInfiniteTransition(label = "float$index")
-
-    val driftX by infiniteTransition.animateFloat(
-        initialValue = -8f,
-        targetValue = 8f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(2400 + index * 600, easing = FastOutSlowInEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "driftX$index"
-    )
-    val driftY by infiniteTransition.animateFloat(
-        initialValue = -6f,
-        targetValue = 6f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(2800 + index * 500, easing = FastOutSlowInEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "driftY$index"
-    )
-
-    val pulse by infiniteTransition.animateFloat(
-        initialValue = 0.97f,
-        targetValue = 1.03f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(2000 + index * 300, easing = FastOutSlowInEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "pulse$index"
-    )
-
-    val glowAlpha by infiniteTransition.animateFloat(
-        initialValue = 0.3f,
-        targetValue = 0.6f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(2200 + index * 400, easing = FastOutSlowInEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "glow$index"
-    )
-
-    LaunchedEffect(Unit) { delay(index * 100L); appeared = true }
-
-    val glowSize = sizeDp * 1.35f
-
-    Box(
-        modifier = modifier.size(glowSize.dp),
-        contentAlignment = Alignment.Center
-    ) {
-        // Outer glow
-        Box(
-            modifier = Modifier
-                .size(glowSize.dp)
-                .graphicsLayer {
-                    scaleX = scale * pulse; scaleY = scale * pulse; this.alpha = alpha * glowAlpha
-                    translationX = driftX * 2.5f
-                    translationY = driftY * 2.5f
-                }
-                .background(
-                    Brush.radialGradient(
-                        colors = listOf(
-                            bubbleColor.copy(alpha = 0.35f),
-                            Color.White.copy(alpha = 0.15f),
-                            Color.Transparent
-                        )
-                    ),
-                    CircleShape
-                )
-        )
-
-        // Main bubble
-        Box(
-            modifier = Modifier
-                .size(sizeDp.dp)
-                .graphicsLayer {
-                    scaleX = scale * pulse; scaleY = scale * pulse; this.alpha = alpha
-                    translationX = driftX * 2.5f
-                    translationY = driftY * 2.5f
-                }
-                .clip(CircleShape)
-                .background(
-                    Brush.radialGradient(
-                        colors = listOf(
-                            Color.White.copy(alpha = 0.45f),
-                            bubbleColor.copy(alpha = 0.2f),
-                            Color.White.copy(alpha = 0.12f)
-                        ),
-                        center = androidx.compose.ui.geometry.Offset(
-                            sizeDp * 0.35f,
-                            sizeDp * 0.3f
-                        )
-                    )
-                )
-                .border(1.dp, Color.White.copy(alpha = 0.5f), CircleShape)
-                .clickable(
-                    interactionSource = remember { MutableInteractionSource() },
-                    indication = null,
-                    onClick = onTap
-                ),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                label,
-                fontSize = (sizeDp * 0.10f).sp,
-                fontWeight = FontWeight.Bold,
-                color = Color.White,
-                maxLines = 2,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.padding(horizontal = 20.dp)
-            )
-        }
     }
 }
 
@@ -423,81 +141,37 @@ private fun MoodCircleBubble(
 @Composable
 private fun MeditationListScreen(
     viewModel: MeditationViewModel,
-    selectedMood: MeditationMood?,
-    onBack: () -> Unit,
     onSelectMeditation: (Meditation) -> Unit
 ) {
     val haptics = LocalHapticFeedback.current
-    val meditations = remember(selectedMood) {
-        val raw = if (selectedMood == null) viewModel.allMeditations()
-                  else selectedMood.areas.flatMap { viewModel.meditationsForArea(it) }
-        raw.distinctBy { it.fileName }
-    }
+    val meditations = remember { viewModel.allMeditations().distinctBy { it.fileName } }
     val playbackState by viewModel.playbackState.collectAsState()
     val currentId by viewModel.currentMeditationId.collectAsState()
 
     Box(modifier = Modifier.fillMaxSize().background(Color(0xFF154C6C))) {
         Column(modifier = Modifier.fillMaxSize()) {
             // Header
-            if (selectedMood != null) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp)
-                        .padding(top = 54.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .size(44.dp)
-                            .clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = null,
-                                onClick = onBack
-                            ),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Icon(
-                            Icons.Outlined.ChevronLeft,
-                            contentDescription = "Back",
-                            tint = Color.White,
-                            modifier = Modifier.size(24.dp)
-                        )
-                    }
-
-                    Text(
-                        Translations.ui(selectedMood.translationKey),
-                        style = AppTypography.headingMedium,
-                        color = Color.White,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.weight(1f)
-                    )
-
-                    Spacer(Modifier.size(44.dp))
-                }
-            } else {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 24.dp, end = 24.dp, top = 60.dp)
+                    .padding(bottom = 4.dp),
+                horizontalAlignment = Alignment.Start
+            ) {
                 Text(
                     Translations.ui("meditationsTitle"),
                     style = AppTypography.headingLarge,
-                    color = Color.White,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 60.dp)
-                        .padding(bottom = 4.dp),
-                    textAlign = TextAlign.Center
+                    color = Color.White
+                )
+
+                // Count label
+                Text(
+                    "${meditations.size} ${Translations.ui("meditationsCountLabel")}",
+                    style = AppTypography.bodyMedium,
+                    color = Color.White.copy(0.55f),
+                    modifier = Modifier.padding(top = 4.dp)
                 )
             }
-
-            // Count label
-            Text(
-                "${meditations.size} ${Translations.ui("meditationsCountLabel")}",
-                style = AppTypography.bodyMedium,
-                color = Color.White.copy(0.55f),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 4.dp),
-                textAlign = TextAlign.Center
-            )
 
             // Meditation list
             LazyColumn(
@@ -642,25 +316,13 @@ private fun MeditationVisualCard(
             )
         )
 
-        // Top badges
+        // Duration badge
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp, vertical = 16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween
+            horizontalArrangement = Arrangement.End
         ) {
-            // Area badge
-            Text(
-                Translations.lifeAreaLabel(meditation.area),
-                style = AppTypography.caption,
-                fontWeight = FontWeight.SemiBold,
-                color = Color.White,
-                modifier = Modifier
-                    .background(Color.Black.copy(0.4f), RoundedCornerShape(50))
-                    .padding(horizontal = 12.dp, vertical = 6.dp)
-            )
-
-            // Duration badge
             Text(
                 formatDuration(meditation.durationSeconds),
                 style = AppTypography.caption,
@@ -700,23 +362,6 @@ private fun MeditationVisualCard(
                 }
             }
 
-            Spacer(Modifier.width(12.dp))
-
-            // Play button
-            Box(
-                modifier = Modifier
-                    .size(44.dp)
-                    .clip(CircleShape)
-                    .background(Color.White.copy(if (isActive) 0.35f else 0.2f)),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    if (isPlaying) Icons.Filled.Pause else Icons.Filled.PlayArrow,
-                    contentDescription = null,
-                    tint = Color.White,
-                    modifier = Modifier.size(20.dp)
-                )
-            }
         }
 
         // Active border overlay
