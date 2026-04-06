@@ -15,6 +15,7 @@ import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -42,6 +43,8 @@ import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material.icons.filled.Psychology
 import androidx.compose.material.icons.outlined.LightMode
 import androidx.compose.material.icons.outlined.Bedtime
+import androidx.compose.ui.res.painterResource
+import com.mikhail.manifestation.R
 import androidx.compose.material.icons.outlined.ChatBubbleOutline
 import androidx.compose.material.icons.outlined.MusicNote
 import androidx.compose.material.icons.outlined.Psychology
@@ -62,6 +65,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -73,6 +77,8 @@ import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -119,6 +125,7 @@ fun MainTabScreen(
     val theme = LocalToneTheme.current
     val systemUiController = rememberSystemUiController()
     val haptics = LocalHapticFeedback.current
+    val density = LocalDensity.current.density
     var selectedTab by remember { mutableStateOf<AppTab>(AppTab.Home) }
     var showSettings by remember { mutableStateOf(false) }
     var showAffirmations by remember { mutableStateOf(false) }
@@ -126,6 +133,8 @@ fun MainTabScreen(
     var affirmationStartText by remember { mutableStateOf<String?>(null) }
     var homeMeditation by remember { mutableStateOf<Meditation?>(null) }
     var isMeditationPlayerOpen by remember { mutableStateOf(false) }
+    var miniPlayerAtTop by remember { mutableStateOf(false) }
+    var miniPlayerDragOffset by remember { mutableFloatStateOf(0f) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val currentTitle by meditationViewModel.currentTitle.collectAsState()
     val contentType by meditationViewModel.contentType.collectAsState()
@@ -195,42 +204,70 @@ fun MainTabScreen(
             }
         }
 
-        // Bottom navigation bar + mini-player — hidden during meditation player
+        // Mini player — draggable between top and bottom
         val showMiniPlayer = currentTitle != null &&
             playbackState != PlaybackState.Idle &&
             homeMeditation == null &&
             !isMeditationPlayerOpen
 
-        if (!isMeditationPlayerOpen) {
-            Column(modifier = Modifier.align(Alignment.BottomCenter)) {
-                AnimatedVisibility(
-                    visible = showMiniPlayer,
-                    enter = slideInVertically(initialOffsetY = { it }) + fadeIn(),
-                    exit = slideOutVertically(targetOffsetY = { it }) + fadeOut()
-                ) {
-                    MiniPlayerBar(
-                        title = currentTitle ?: "",
-                        contentType = contentType ?: ContentType.Meditation,
-                        isPlaying = playbackState == PlaybackState.Playing,
-                        isBuffering = playbackState == PlaybackState.Buffering,
-                        progress = if (audioDuration > 0) (currentPosition.toFloat() / audioDuration.toFloat()).coerceIn(0f, 1f) else 0f,
-                        coverUrl = currentCoverUrl,
-                        onTogglePlayPause = { meditationViewModel.togglePlayPause() },
-                        onDismiss = { meditationViewModel.stop() },
-                        onClick = {
-                            when (contentType) {
-                                ContentType.Music -> selectedTab = AppTab.Music
-                                else -> {
-                                    val med = meditationViewModel.allMeditations().find { it.id == currentId }
-                                    if (med != null) {
-                                        homeMeditation = med
-                                        isMeditationPlayerOpen = true
-                                    }
+        if (showMiniPlayer) {
+            Box(
+                modifier = Modifier
+                    .align(if (miniPlayerAtTop) Alignment.TopCenter else Alignment.BottomCenter)
+                    .offset(y = miniPlayerDragOffset.dp)
+                    .pointerInput(Unit) {
+                        detectDragGestures(
+                            onDrag = { change, dragAmount ->
+                                change.consume()
+                                miniPlayerDragOffset += dragAmount.y / density
+                            },
+                            onDragEnd = {
+                                val threshold = 100f
+                                if (miniPlayerAtTop && miniPlayerDragOffset > threshold) {
+                                    miniPlayerAtTop = false
+                                } else if (!miniPlayerAtTop && miniPlayerDragOffset < -threshold) {
+                                    miniPlayerAtTop = true
+                                }
+                                miniPlayerDragOffset = 0f
+                            },
+                            onDragCancel = {
+                                miniPlayerDragOffset = 0f
+                            }
+                        )
+                    }
+                    .then(
+                        if (miniPlayerAtTop) Modifier.padding(top = 56.dp)
+                        else Modifier.padding(bottom = 90.dp).navigationBarsPadding()
+                    )
+            ) {
+                MiniPlayerBar(
+                    title = currentTitle ?: "",
+                    contentType = contentType ?: ContentType.Meditation,
+                    isPlaying = playbackState == PlaybackState.Playing,
+                    isBuffering = playbackState == PlaybackState.Buffering,
+                    progress = if (audioDuration > 0) (currentPosition.toFloat() / audioDuration.toFloat()).coerceIn(0f, 1f) else 0f,
+                    coverUrl = currentCoverUrl,
+                    onTogglePlayPause = { meditationViewModel.togglePlayPause() },
+                    onDismiss = { meditationViewModel.stop() },
+                    onClick = {
+                        when (contentType) {
+                            ContentType.Music -> selectedTab = AppTab.Music
+                            else -> {
+                                val med = meditationViewModel.allMeditations().find { it.id == currentId }
+                                if (med != null) {
+                                    homeMeditation = med
+                                    isMeditationPlayerOpen = true
                                 }
                             }
                         }
-                    )
-                }
+                    }
+                )
+            }
+        }
+
+        // Bottom navigation bar — hidden during meditation player
+        if (!isMeditationPlayerOpen) {
+            Column(modifier = Modifier.align(Alignment.BottomCenter)) {
 
             // Glass tab bar matching iOS
             val tabCount = 5
@@ -313,7 +350,7 @@ fun MainTabScreen(
                             when (index) {
                                 0 -> Icon(if (selected) Icons.Filled.LightMode else Icons.Outlined.LightMode, contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
                                 1 -> Icon(if (selected) Icons.Filled.ChatBubble else Icons.Outlined.ChatBubbleOutline, contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
-                                2 -> Icon(if (selected) Icons.Filled.Bedtime else Icons.Outlined.Bedtime, contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
+                                2 -> Icon(painterResource(R.drawable.ic_wing), contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
                                 3 -> Icon(if (selected) Icons.Filled.MusicNote else Icons.Outlined.MusicNote, contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
                                 4 -> Icon(if (selected) Icons.Filled.Psychology else Icons.Outlined.Psychology, contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
                             }
@@ -330,7 +367,7 @@ fun MainTabScreen(
                     }
                 }
             }
-            }
+            } // Column
         }
 
         // Meditation player overlay (from Home tap)
