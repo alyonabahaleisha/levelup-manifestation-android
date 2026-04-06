@@ -154,7 +154,7 @@ private fun MeditationListScreen(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(start = 24.dp, end = 24.dp, top = 60.dp)
+                    .padding(start = 24.dp, end = 24.dp, top = 40.dp)
                     .padding(bottom = 4.dp),
                 horizontalAlignment = Alignment.Start
             ) {
