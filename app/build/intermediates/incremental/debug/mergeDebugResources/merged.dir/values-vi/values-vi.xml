@@ -10,9 +10,54 @@
     <string msgid="59049573811482460" name="call_notification_screening_text">"Đang sàng lọc cuộc gọi đến"</string>
     <string msgid="406453423630273620" name="close_drawer">"Đóng trình đơn điều hướng"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Đóng trang tính"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Bật</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s sẽ không hoạt động nếu bạn không bật dịch vụ của Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Bật dịch vụ của Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Cài đặt</string>
+    <string name="common_google_play_services_install_text">%1$s sẽ không chạy nếu không có dịch vụ của Google Play. Thiết bị của bạn bị thiếu dịch vụ này.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Cài đặt dịch vụ của Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Phạm vi cung cấp Dịch vụ Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Lỗi dịch vụ của Google Play</string>
+    <string name="common_google_play_services_unknown_issue">%1$s đang gặp sự cố với Dịch vụ Google Play. Hãy thử lại.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s sẽ không chạy nếu không có Dịch vụ Google Play. Thiết bị của bạn không hỗ trợ các dịch vụ này.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Cập nhật</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s sẽ không chạy trừ khi bạn cập nhật Dịch vụ Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Cập nhật dịch vụ của Google Play</string>
+    <string name="common_google_play_services_updating_text">%1$s sẽ không chạy nếu không có dịch vụ của Google Play. Dịch vụ này hiện đang cập nhật.</string>
+    <string name="common_google_play_services_wear_update_text">Cần phiên bản mới của dịch vụ Google Play. Dịch vụ sẽ sớm tự động cập nhật.</string>
+    <string name="common_open_on_phone">Mở trên điện thoại</string>
+    <string name="common_signin_button_text">Đăng nhập</string>
+    <string name="common_signin_button_text_long">Đăng nhập bằng Google</string>
     <string msgid="8038256446254964252" name="default_error_message">"Giá trị nhập không hợp lệ"</string>
+    <string name="default_notification_channel_name">Đang phát</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"Cửa sổ bật lên"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"Trình đơn thả xuống"</string>
+    <string name="error_message_authentication_expired">Hãy đăng nhập để dùng ứng dụng này</string>
+    <string name="error_message_bad_value">Dữ liệu đầu vào không chính xác</string>
+    <string name="error_message_concurrent_stream_limit">Đang nghe trên quá nhiều thiết bị</string>
+    <string name="error_message_content_already_playing">Đang phát nội dung đó</string>
+    <string name="error_message_disconnected">Đã ngắt kết nối khỏi ứng dụng nghe nhìn</string>
+    <string name="error_message_end_of_playlist">Không có nội dung nào khác trong danh sách chờ</string>
+    <string name="error_message_fallback">Đã xảy ra lỗi. Hãy thử lại sau.</string>
+    <string name="error_message_info_cancelled">Không thể hoàn tất hành động. Hãy thử lại.</string>
+    <string name="error_message_invalid_state">Không thực hiện được yêu cầu đó ngay bây giờ</string>
+    <string name="error_message_io">Lỗi đầu vào/đầu ra</string>
+    <string name="error_message_not_available_in_region">Không xem được nội dung đó tại đây</string>
+    <string name="error_message_not_supported">Ứng dụng này không thực hiện được yêu cầu đó</string>
+    <string name="error_message_parental_control_restricted">Nội dung đó đã bị chặn</string>
+    <string name="error_message_permission_denied">Yêu cầu truy cập bị từ chối</string>
+    <string name="error_message_premium_account_required">Cần có tài khoản Premium</string>
+    <string name="error_message_setup_required">Yêu cầu thiết lập</string>
+    <string name="error_message_skip_limit_reached">Không thể bỏ qua bản nhạc nào nữa</string>
+    <string name="exo_download_completed">Đã hoàn tất tải xuống</string>
+    <string name="exo_download_description">Tải xuống</string>
+    <string name="exo_download_downloading">Đang tải xuống</string>
+    <string name="exo_download_failed">Không tải xuống được</string>
+    <string name="exo_download_notification_channel_name">Tài nguyên đã tải xuống</string>
+    <string name="exo_download_paused">Đã tạm dừng tải xuống</string>
+    <string name="exo_download_paused_for_network">Đang chờ có mạng để tải xuống</string>
+    <string name="exo_download_paused_for_wifi">Đang chờ có Wi-Fi để tải xuống</string>
+    <string name="exo_download_removing">Đang xóa các mục đã tải xuống</string>
     <string msgid="6827826412747255547" name="in_progress">"Đang thực hiện"</string>
     <string msgid="7933458017204019916" name="indeterminate">"Đã kiểm tra một phần"</string>
     <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"Thu gọn bảng dưới cùng"</string>
@@ -73,6 +118,12 @@
     <string msgid="1805687647081129904" name="m3c_tooltip_long_press_label">"Hiện chú giải công cụ"</string>
     <string msgid="5460405025248574620" name="m3c_tooltip_pane_description">"Chú giải công cụ"</string>
     <string msgid="2792228137354697160" name="mc2_snackbar_pane_title">"Cảnh báo"</string>
+    <string name="media3_controls_pause_description">Tạm dừng</string>
+    <string name="media3_controls_play_description">Phát</string>
+    <string name="media3_controls_seek_back_description">Tua lại</string>
+    <string name="media3_controls_seek_forward_description">Tua đi</string>
+    <string name="media3_controls_seek_to_next_description">Tua đến mục tiếp theo</string>
+    <string name="media3_controls_seek_to_previous_description">Tua về mục trước</string>
     <string msgid="542007171693138492" name="navigation_menu">"Trình đơn điều hướng"</string>
     <string msgid="6610465462668679431" name="not_selected">"Chưa chọn"</string>
     <string msgid="5941395253238309765" name="range_end">"Điểm kết thúc phạm vi"</string>

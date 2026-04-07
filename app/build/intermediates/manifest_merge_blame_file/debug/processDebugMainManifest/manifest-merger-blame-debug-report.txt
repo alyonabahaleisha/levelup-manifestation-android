@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.levelup.manifestation"
+3    package="com.mikhail.manifestation"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -9,170 +9,295 @@
 9        android:targetSdkVersion="35" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:4:5-67
-11-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:4:22-64
+11-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:4:5-67
+11-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:4:22-64
 12    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-12-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:5:5-77
-12-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:5:22-74
+12-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:5:5-77
+12-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:5:22-74
 13    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-13-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:6:5-79
-13-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:6:22-76
+13-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:6:5-79
+13-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:6:22-76
 14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-14-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:7:5-81
-14-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:7:22-78
-15
-16    <permission
-16-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/17fcaf59454b9c83947c2710c51fd089/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
-17        android:name="com.levelup.manifestation.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-17-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/17fcaf59454b9c83947c2710c51fd089/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
-18        android:protectionLevel="signature" />
-18-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/17fcaf59454b9c83947c2710c51fd089/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
-19
-20    <uses-permission android:name="com.levelup.manifestation.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-20-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/17fcaf59454b9c83947c2710c51fd089/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
-20-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/17fcaf59454b9c83947c2710c51fd089/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
-21
-22    <application
-22-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:9:5-40:19
-23        android:name="com.levelup.manifestation.LevelUpApp"
-23-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:10:9-35
-24        android:allowBackup="true"
-24-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:11:9-35
-25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-25-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/17fcaf59454b9c83947c2710c51fd089/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
-26        android:debuggable="true"
-27        android:extractNativeLibs="false"
-28        android:icon="@mipmap/ic_launcher"
-28-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:12:9-43
-29        android:label="@string/app_name"
-29-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:13:9-41
-30        android:roundIcon="@mipmap/ic_launcher_round"
-30-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:14:9-54
-31        android:supportsRtl="true"
-31-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:15:9-35
-32        android:theme="@style/Theme.LevelUp" >
-32-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:16:9-45
-33        <activity
-33-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:18:9-26:20
-34            android:name="com.levelup.manifestation.MainActivity"
-34-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:19:13-41
-35            android:exported="true"
-35-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:20:13-36
-36            android:windowSoftInputMode="adjustResize" >
-36-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:21:13-55
-37            <intent-filter>
-37-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:22:13-25:29
-38                <action android:name="android.intent.action.MAIN" />
-38-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:23:17-69
-38-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:23:25-66
-39
-40                <category android:name="android.intent.category.LAUNCHER" />
-40-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:24:17-77
-40-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:24:27-74
-41            </intent-filter>
-42        </activity>
-43
-44        <receiver
-44-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:28:9-30:40
-45            android:name="com.levelup.manifestation.data.notifications.AffirmationReceiver"
-45-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:29:13-67
-46            android:exported="false" />
-46-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:30:13-37
-47        <receiver
-47-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:32:9-38:20
-48            android:name="com.levelup.manifestation.data.notifications.BootReceiver"
-48-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:33:13-60
-49            android:exported="true" >
-49-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:34:13-36
-50            <intent-filter>
-50-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:35:13-37:29
-51                <action android:name="android.intent.action.BOOT_COMPLETED" />
-51-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:36:17-79
-51-->/Users/alyonayanuchek/levelup-manifestation-android/app/src/main/AndroidManifest.xml:36:25-76
-52            </intent-filter>
-53        </receiver>
-54
-55        <activity
-55-->[androidx.compose.ui:ui-tooling-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9a1e4f247637cfb0f554e84d77993a3a/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
-56            android:name="androidx.compose.ui.tooling.PreviewActivity"
-56-->[androidx.compose.ui:ui-tooling-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9a1e4f247637cfb0f554e84d77993a3a/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
-57            android:exported="true" />
-57-->[androidx.compose.ui:ui-tooling-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9a1e4f247637cfb0f554e84d77993a3a/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
-58
-59        <provider
-59-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3fc5ba7e72816c7c8364434156cb8c43/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
-60            android:name="androidx.startup.InitializationProvider"
-60-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3fc5ba7e72816c7c8364434156cb8c43/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
-61            android:authorities="com.levelup.manifestation.androidx-startup"
-61-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3fc5ba7e72816c7c8364434156cb8c43/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
-62            android:exported="false" >
-62-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3fc5ba7e72816c7c8364434156cb8c43/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
-63            <meta-data
-63-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3fc5ba7e72816c7c8364434156cb8c43/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
-64                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-64-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3fc5ba7e72816c7c8364434156cb8c43/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
-65                android:value="androidx.startup" />
-65-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3fc5ba7e72816c7c8364434156cb8c43/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
-66            <meta-data
-66-->[androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6a2c1ed541d89e928b8c917647c1b831/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:29:13-31:52
-67                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-67-->[androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6a2c1ed541d89e928b8c917647c1b831/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:30:17-78
-68                android:value="androidx.startup" />
-68-->[androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6a2c1ed541d89e928b8c917647c1b831/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:31:17-49
-69            <meta-data
-69-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
-70                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-70-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
-71                android:value="androidx.startup" />
-71-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
-72        </provider>
-73
-74        <activity
-74-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/81ff26c76fa59b15c14df24c3f86b040/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:23:9-26:79
-75            android:name="androidx.activity.ComponentActivity"
-75-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/81ff26c76fa59b15c14df24c3f86b040/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:24:13-63
-76            android:exported="true"
-76-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/81ff26c76fa59b15c14df24c3f86b040/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:25:13-36
-77            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
-77-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/81ff26c76fa59b15c14df24c3f86b040/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:26:13-76
+14-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:7:5-81
+14-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:7:22-78
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:8:5-77
+15-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:8:22-74
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+16-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:9:5-92
+16-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:9:22-89
+17
+18    <!-- Include required permissions for Google Maps API to run. -->
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->[com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:20:5-78
+19-->[com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:20:22-76
+20
+21    <uses-feature
+21-->[com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:22:5-24:33
+22        android:glEsVersion="0x00020000"
+22-->[com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:23:8-40
+23        android:required="true" />
+23-->[com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:24:8-31
+24
+25    <queries>
+25-->[com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:27:5-30:15
+26
+27        <!-- Needs to be explicitly declared on Android R+ -->
+28        <package android:name="com.google.android.apps.maps" />
+28-->[com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:29:7-61
+28-->[com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:29:16-59
+29    </queries>
+30
+31    <permission
+31-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+32        android:name="com.mikhail.manifestation.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+33        android:protectionLevel="signature" />
+33-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+34
+35    <uses-permission android:name="com.mikhail.manifestation.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+35-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+36
+37    <application
+37-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:11:5-62:19
+38        android:name="com.mikhail.manifestation.LevelUpApp"
+38-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:12:9-35
+39        android:allowBackup="true"
+39-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:13:9-35
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
+41        android:debuggable="true"
+42        android:extractNativeLibs="false"
+43        android:icon="@mipmap/ic_launcher"
+43-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:14:9-43
+44        android:label="@string/app_name"
+44-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:15:9-41
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:16:9-54
+46        android:supportsRtl="true"
+46-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:17:9-35
+47        android:theme="@style/Theme.LevelUp" >
+47-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:18:9-45
+48        <meta-data
+49            android:name="com.google.android.geo.API_KEY"
+49-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:21:13-58
+50            android:value="AIzaSyC3frg1OancykQX-RwVfL4XOIV9rU_KFOo" />
+50-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:22:13-44
+51
+52        <activity
+52-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:24:9-33:20
+53            android:name="com.mikhail.manifestation.MainActivity"
+53-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:25:13-41
+54            android:exported="true"
+54-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:26:13-36
+55            android:screenOrientation="portrait"
+55-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:27:13-49
+56            android:windowSoftInputMode="adjustResize" >
+56-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:28:13-55
+57            <intent-filter>
+57-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:29:13-32:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:30:17-69
+58-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:30:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:31:17-77
+60-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:31:27-74
+61            </intent-filter>
+62        </activity>
+63
+64        <!--
+65            PlaybackService keeps audio alive in the background and provides
+66            lock-screen / notification media controls via Media3 MediaSession.
+67            foregroundServiceType="mediaPlayback" is required on API 29+ for
+68            the foreground service to be granted media playback privileges.
+69        -->
+70        <service
+70-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:41:9-48:19
+71            android:name="com.mikhail.manifestation.data.audio.PlaybackService"
+71-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:42:13-55
+72            android:exported="true"
+72-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:43:13-36
+73            android:foregroundServiceType="mediaPlayback" >
+73-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:44:13-58
+74            <intent-filter>
+74-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:45:13-47:29
+75                <action android:name="androidx.media3.session.MediaSessionService" />
+75-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:46:17-86
+75-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:46:25-83
+76            </intent-filter>
+77        </service>
 78
 79        <receiver
-79-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
-80            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-80-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
-81            android:directBootAware="false"
-81-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
-82            android:enabled="true"
-82-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
-83            android:exported="true"
-83-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
-84            android:permission="android.permission.DUMP" >
-84-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+79-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:50:9-52:40
+80            android:name="com.mikhail.manifestation.data.notifications.AffirmationReceiver"
+80-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:51:13-67
+81            android:exported="false" />
+81-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:52:13-37
+82        <receiver
+82-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:54:9-60:20
+83            android:name="com.mikhail.manifestation.data.notifications.BootReceiver"
+83-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:55:13-60
+84            android:exported="true" >
+84-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:56:13-36
 85            <intent-filter>
-85-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
-86                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-86-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
-86-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+85-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:57:13-59:29
+86                <action android:name="android.intent.action.BOOT_COMPLETED" />
+86-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:58:17-79
+86-->/Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:58:25-76
 87            </intent-filter>
-88            <intent-filter>
-88-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
-89                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-89-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
-89-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
-90            </intent-filter>
-91            <intent-filter>
-91-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
-92                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-92-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
-92-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
-93            </intent-filter>
-94            <intent-filter>
-94-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
-95                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-95-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
-95-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9ed728ad803dd8394b18826a49b76f33/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
-96            </intent-filter>
-97        </receiver>
-98    </application>
-99
-100</manifest>
+88        </receiver>
+89
+90        <activity
+90-->[androidx.compose.ui:ui-tooling-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/51d4be059c841fcf7b2e305e96a76c9b/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+91            android:name="androidx.compose.ui.tooling.PreviewActivity"
+91-->[androidx.compose.ui:ui-tooling-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/51d4be059c841fcf7b2e305e96a76c9b/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+92            android:exported="true" />
+92-->[androidx.compose.ui:ui-tooling-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/51d4be059c841fcf7b2e305e96a76c9b/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+93
+94        <meta-data
+94-->[com.google.maps.android:android-maps-utils:3.8.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b98085f30447ed6fc1def3679e3880b6/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:8:9-10:69
+95            android:name="com.google.android.gms.version"
+95-->[com.google.maps.android:android-maps-utils:3.8.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b98085f30447ed6fc1def3679e3880b6/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:9:13-58
+96            android:value="@integer/google_play_services_version" /> <!-- Needs to be explicitly declared on P+ -->
+96-->[com.google.maps.android:android-maps-utils:3.8.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b98085f30447ed6fc1def3679e3880b6/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:10:13-66
+97        <uses-library
+97-->[com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:33:7-86
+98            android:name="org.apache.http.legacy"
+98-->[com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:33:21-58
+99            android:required="false" />
+99-->[com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:33:59-83
+100
+101        <service
+101-->[com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:14:9-23:19
+102            android:name="com.google.firebase.components.ComponentDiscoveryService"
+102-->[com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:15:13-84
+103            android:directBootAware="true"
+103-->[com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+104            android:exported="false" >
+104-->[com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:16:13-37
+105            <meta-data
+105-->[com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:17:13-19:85
+106                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+106-->[com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:18:17-122
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:19:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:20:13-22:85
+109                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+109-->[com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:21:17-111
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:22:17-82
+111            <meta-data
+111-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+112                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+112-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+114            <meta-data
+114-->[com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+115                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+115-->[com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+116                android:value="com.google.firebase.components.ComponentRegistrar" />
+116-->[com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+117        </service>
+118
+119        <activity
+119-->[com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+120            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+120-->[com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+121            android:exported="false"
+121-->[com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+122            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+122-->[com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+123
+124        <provider
+124-->[com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+125            android:name="com.google.firebase.provider.FirebaseInitProvider"
+125-->[com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+126            android:authorities="com.mikhail.manifestation.firebaseinitprovider"
+126-->[com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+127            android:directBootAware="true"
+127-->[com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+128            android:exported="false"
+128-->[com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+129            android:initOrder="100" />
+129-->[com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+130        <provider
+130-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+131            android:name="androidx.startup.InitializationProvider"
+131-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
+132            android:authorities="com.mikhail.manifestation.androidx-startup"
+132-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
+133            android:exported="false" >
+133-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
+134            <meta-data
+134-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+135                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+135-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+136                android:value="androidx.startup" />
+136-->[androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+137            <meta-data
+137-->[androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:29:13-31:52
+138                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+138-->[androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:30:17-78
+139                android:value="androidx.startup" />
+139-->[androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:31:17-49
+140            <meta-data
+140-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+141                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+141-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+142                android:value="androidx.startup" />
+142-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+143        </provider>
+144
+145        <activity
+145-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/78b8469ca788a867bf559eea8f24a7c3/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:23:9-26:79
+146            android:name="androidx.activity.ComponentActivity"
+146-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/78b8469ca788a867bf559eea8f24a7c3/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:24:13-63
+147            android:exported="true"
+147-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/78b8469ca788a867bf559eea8f24a7c3/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:25:13-36
+148            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+148-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/78b8469ca788a867bf559eea8f24a7c3/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:26:13-76
+149
+150        <receiver
+150-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+151            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+151-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+152            android:directBootAware="false"
+152-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+153            android:enabled="true"
+153-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+154            android:exported="true"
+154-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+155            android:permission="android.permission.DUMP" >
+155-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+156            <intent-filter>
+156-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+157                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+157-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+157-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+158            </intent-filter>
+159            <intent-filter>
+159-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+160                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+160-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+160-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+161            </intent-filter>
+162            <intent-filter>
+162-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+163                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+163-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+163-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+164            </intent-filter>
+165            <intent-filter>
+165-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+166                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+166-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+166-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+167            </intent-filter>
+168        </receiver>
+169    </application>
+170
+171</manifest>

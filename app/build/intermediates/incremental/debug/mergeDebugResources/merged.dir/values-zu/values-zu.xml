@@ -10,9 +10,54 @@
     <string msgid="59049573811482460" name="call_notification_screening_text">"Ukuveza ikholi engenayo"</string>
     <string msgid="406453423630273620" name="close_drawer">"Vala imenyu yokuzulazula"</string>
     <string msgid="7573152094250666567" name="close_sheet">"Vala ishidi"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Nika amandla</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">I-%1$s ngeke isebenze ngaphandle kokuthi unike amandla amasevisi we-Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Nika amandla amasevisi we-Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Faka</string>
+    <string name="common_google_play_services_install_text">I-%1$s ngeke ize iqalise ngaphandle kwamasevisi we-Google Play, angekho kusukela kudivayisi yakho.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Thola amasevisi we-Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Ukungatholakali kwamasevisi e-Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Iphutha lamasevisi we-Google Play</string>
+    <string name="common_google_play_services_unknown_issue">%1$s inenkinga ngamasevisi e-Google Play. Sicela uzame futhi.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s ngeke isebenze ngaphandle kwamasevisi e-Google Play, angasekelwa idivayisi yakho.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Isibuyekezo</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">I-%1$s ngeke ize iqalise ngaphandle kokuthi ubuyekeze i-Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Buyekeza amasevisi we-Google Play</string>
+    <string name="common_google_play_services_updating_text">I-%1$s ngeke ize iqalise ngaphandle kwamasevisi we-Google Play, okwamanje abuyekezwayo.</string>
+    <string name="common_google_play_services_wear_update_text">Kudingeka inguqulo entsha yamasevisi we-Google Play. Izozibuyekeza ngokwayo maduze.</string>
+    <string name="common_open_on_phone">Vula kufoni</string>
+    <string name="common_signin_button_text">Ngena ngemvume</string>
+    <string name="common_signin_button_text_long">Ngena ngemvume nge-Google</string>
     <string msgid="8038256446254964252" name="default_error_message">"Okufakwayo okungalungile"</string>
+    <string name="default_notification_channel_name">Okudlala manje</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"Iwindi Lesikhashana"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"Imenyu eya phansi"</string>
+    <string name="error_message_authentication_expired">Ngena ngemvume ukuze usebenzise le app</string>
+    <string name="error_message_bad_value">Idatha yokufakwayo engalungile</string>
+    <string name="error_message_concurrent_stream_limit">Ilalele emadivayisini amaningi kakhulu</string>
+    <string name="error_message_content_already_playing">Isivele idlala lokho okuqukethwe</string>
+    <string name="error_message_disconnected">Kunqanyuliwe ku-app yemidiya</string>
+    <string name="error_message_end_of_playlist">Akukho okunye okufakwe olayinini</string>
+    <string name="error_message_fallback">Kukhona okungalungile. Zama emuva kwesikhathi.</string>
+    <string name="error_message_info_cancelled">Ayikwazanga ukuqeda. Zama futhi.</string>
+    <string name="error_message_invalid_state">Ayikwazi ukwenza lokho khona manje</string>
+    <string name="error_message_io">Iphutha lokufakwayo/lomphumela</string>
+    <string name="error_message_not_available_in_region">Ayikwazi ukuletha lokho okuqukethwe lapha</string>
+    <string name="error_message_not_supported">Le app ayikwazi ukwenza lokho</string>
+    <string name="error_message_parental_control_restricted">Lokho okuqukethwe kuvinjiwe</string>
+    <string name="error_message_permission_denied">Ukufinyelelwa kunqatshiwe</string>
+    <string name="error_message_premium_account_required">Ukufinyelela kwepremium kuyadingeka</string>
+    <string name="error_message_setup_required">Kudingeka ukusetha</string>
+    <string name="error_message_skip_limit_reached">Ayikwazi ukweqa amanye amathrekhi amaningi</string>
+    <string name="exo_download_completed">Ukulanda kuqedile</string>
+    <string name="exo_download_description">Landa</string>
+    <string name="exo_download_downloading">Iyalanda</string>
+    <string name="exo_download_failed">Ukulanda kuhlulekile</string>
+    <string name="exo_download_notification_channel_name">Ukulandwa</string>
+    <string name="exo_download_paused">Okulandwayo kumiswe isikhashana</string>
+    <string name="exo_download_paused_for_network">Ukulanda kulinde inethiwekhi</string>
+    <string name="exo_download_paused_for_wifi">Ukulanda kulinde i-WiFi</string>
+    <string name="exo_download_removing">Kususwa okulandiwe</string>
     <string msgid="6827826412747255547" name="in_progress">"Kuyaqhubeka"</string>
     <string msgid="7933458017204019916" name="indeterminate">"Kuhlolwe kancane"</string>
     <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"Goqa ishidi eliphansi"</string>
@@ -73,6 +118,12 @@
     <string msgid="1805687647081129904" name="m3c_tooltip_long_press_label">"Bonisa ithulithiphu"</string>
     <string msgid="5460405025248574620" name="m3c_tooltip_pane_description">"Ithulithiphu"</string>
     <string msgid="2792228137354697160" name="mc2_snackbar_pane_title">"Isexwayiso"</string>
+    <string name="media3_controls_pause_description">Phumula</string>
+    <string name="media3_controls_play_description">Dlala</string>
+    <string name="media3_controls_seek_back_description">Funa okwangemuva</string>
+    <string name="media3_controls_seek_forward_description">Funa uye phambili</string>
+    <string name="media3_controls_seek_to_next_description">Funa into elandelayo</string>
+    <string name="media3_controls_seek_to_previous_description">Funa into yangaphambilini</string>
     <string msgid="542007171693138492" name="navigation_menu">"Imenyu yokuzulazula"</string>
     <string msgid="6610465462668679431" name="not_selected">"Ayikhethiwe"</string>
     <string msgid="5941395253238309765" name="range_end">"Umkhawulo wobubanzi"</string>

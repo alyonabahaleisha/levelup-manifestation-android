@@ -1,0 +1,656 @@
+-- Merging decision tree log ---
+meta-data#com.google.android.geo.API_KEY
+INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:18:9-20:47
+	android:value
+		INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:20:13-44
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:19:13-58
+manifest
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:2:1-47:12
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/05c2357c7cffb0de13442bb135d4790b/transformed/hilt-navigation-compose-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/33e455e4ab96af06a46d0e9210bb13bc/transformed/hilt-navigation-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.dagger:hilt-android:2.56.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b714986478102428ade3b15f8ced137e/transformed/hilt-android-2.56.2/AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/06a02352c696c9e8de639c3725123c07/transformed/navigation-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-android:2.9.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4d706af46c88295ce898d28a0bf8b74c/transformed/navigation-common-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-compose-android:2.9.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3e608ec01846fe3841d9827711213dd5/transformed/navigation-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.maps.android:maps-compose-utils:6.4.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6c171740f20de02e96a5b49c3c0b1ed0/transformed/maps-compose-utils-6.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.maps.android:maps-compose:6.4.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a30ca53488c21f9a389bf2be17f52c4d/transformed/maps-compose-6.4.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.maps.android:maps-ktx:5.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/bc3ede332773a96c4664055a04af3092/transformed/maps-ktx-5.1.1/AndroidManifest.xml:18:1-23:12
+MERGED from [com.google.maps.android:maps-utils-ktx:5.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1863efdf1dc9ab371f09fc4cdfb6d672/transformed/maps-utils-ktx-5.1.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b98085f30447ed6fc1def3679e3880b6/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:16:1-35:12
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d442f03655cb251d5d76d30de343c330/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:15:1-25:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b88cb662f9dffec8969fbcd2da61a8ec/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8dc9fb95dbd8a61c72ddcededb07ec00/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.accompanist:accompanist-systemuicontroller:0.36.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0684d07de0b9d7fec08a49f112bf2186/transformed/accompanist-systemuicontroller-0.36.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.palette:palette:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/55a0b58b7abf25a6455f3290e3c95a4f/transformed/palette-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3a4cef61379af35b818b486aea2395c0/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/f4455421219577ef209e8ecbcdf6e250/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-session:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4152be1d77ce0fbca4f0cc4f2331c8e0/transformed/media3-session-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-extractor:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1c91bca2d0ca7c4b0ea33241eaa49537/transformed/media3-extractor-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-container:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fa1d022092cbee4fca5828b1cd0ed4b0/transformed/media3-container-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-datasource:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7d82ab75d63e4d8a5f82e025e2ea4938/transformed/media3-datasource-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-decoder:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/23d0bb635bc0179f6d08bce64f3f6897/transformed/media3-decoder-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-database:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6facf0ad3be43d3388955914b43f6a88/transformed/media3-database-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-common:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3ff9f65eaa89b7db69e4946f71455042/transformed/media3-common-1.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media3:media3-exoplayer:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9aec6b76d3a5e6d1458659c7e45b3252/transformed/media3-exoplayer-1.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4187f4337652ef08dcf86362fcf35327/transformed/media-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/97ad82ab246b5f6e8b34d06704b0b77a/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [io.coil-kt:coil-gif:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/182082ee9beb73cd72b79fb8a066d763/transformed/coil-gif-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-compose:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/222b78b798f36a37ff9e5b642efc7e31/transformed/coil-compose-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-compose-base:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/de62f2ee7039e83f5e4e755f7377cc2a/transformed/coil-compose-base-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c1e7e338dc9e596d22309de3822ab706/transformed/coil-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-base:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/f2043dc983c311bd24af61a192ebfd6e/transformed/coil-base-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b909cd6da1c89967881ed9849f0b7553/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/745b98f4d0a46a65d4e5c010ca3e62fe/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/04f268d4cf464d8871bb5985dd126570/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/626bc98730668b4328a4ec7439291a25/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.compose.material3:material3-android:1.3.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/68e771c319644b79b0886b76a0ddc98b/transformed/material3-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.animation:animation-core-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/5f0de6ab0e2ebad61c334a46edab5921/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/92bf210027e8c3ae86d192ed9883108f/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6483b21fb37fc87ed75a5bd0ac514ac1/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c73bcf08ba2b04f30f7d86083196cccb/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/333cf5912f6f8c414e85a7ebdb056a50/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/656564062a3af2a249c581e0af17e079/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6fe15bf5083fe41bd9f070803729dde2/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e9f2b1abd0fb560459e218f9aa8ab42e/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/19352dfc6a9ac77e05d07079019b689a/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4f7bc1e6473a5a8ca80ee144938ea9c3/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3583cedafab1ab042e9e15042c6a3b78/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0814a79ceaacf14f64476daf80346dc3/transformed/lifecycle-livedata-core-ktx-2.9.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c71f8c062922e7ad2903800935a5dd25/transformed/lifecycle-viewmodel-savedstate-2.9.1/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d86970c8fed3c8cfb18deb37aea2cb4c/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/349f78ebb80a6110483d55fd78d9b148/transformed/lifecycle-viewmodel-2.9.1/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8ec916215ce563c448944e5123c8a93b/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1082f478ea1b1fd83e9945847d5f9719/transformed/savedstate-ktx-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c41d688354e13141df39060ee250a903/transformed/savedstate-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/cc2d08b96a3f66f7622fa4f42e9d75ea/transformed/savedstate-1.3.0/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.savedstate:savedstate-android:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/45a606f745cecc3f54accd8901871553/transformed/savedstate-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0005682fdd13b33a71a35c7e2b9ac5f7/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6583850242210c16407ab664c8fe074c/transformed/material-icons-extended-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/302d6a001e13737b8e431da3ccd650e9/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/2145fd164ac96f8d91c3b9184f9f6ead/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8e195b7358d32ddd4c3a4167fd88bbda/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/119f81fe6b98c5f8758d91221ca4ade5/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6f1b99c197636e7f19e419df97690715/transformed/graphics-path-1.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1491e93b65cc341b62ab1a370c13972d/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fdae5b14e74d0144c5a1bf4ee26bd980/transformed/lifecycle-livedata-2.9.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/bf4723224e1ff18bfe4f5fb92f458c5e/transformed/lifecycle-livedata-core-2.9.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e8fe27a8c298d18edff2319cd0855deb/transformed/lifecycle-viewmodel-ktx-2.9.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b2e1e6e7dabb3743cd9fe87f0af7ca70/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/2bc226568a17f054912b3aab466e5a8a/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ab340f49021937623962a27d1a254c37/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/81169c14e3280e7eec4f3b5ab8142dd9/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-core-android:1.1.4] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4584c8b88854916a50777e855b6ee86c/transformed/datastore-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-android:1.1.4] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e95b00b84fd734aff9e7a8ea1681587e/transformed/datastore-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.4] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0830a0642a81783401d2a32df485ea79/transformed/datastore-preferences-release/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/899b1423744118fa8284f315fbd261ab/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fd4ab7cd58351a75faa80e42992987a9/transformed/play-services-basement-18.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e5cb45fcd49d3bd6c98dc95a9106c83f/transformed/fragment-1.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.10.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3282be9e2d474ab27509be6d6d229023/transformed/activity-1.10.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/52a39f282af84ee919598209ca8b9a20/transformed/activity-ktx-1.10.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-compose:1.10.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0fca76a091c9e1f92d13f321d40b2527/transformed/activity-compose-1.10.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7d16fd84fa499211907f4fc75813d35e/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ab007025493bccce980f75d90baa220a/transformed/core-ktx-1.16.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-splashscreen:1.0.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/17e37e076d3e3d2301cd8c524139fce7/transformed/core-splashscreen-1.0.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/724ca3f3e76ad2defe0a6381ec9eaf71/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d1caf38bd1288936653cf785a7d21a18/transformed/core-viewtree-1.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d36a95cf09080976cc24cd3d9d7e729f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/5800b7fec30625065ee0be5f60d557d9/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7e9119aa02061341e865f3701db9b7b1/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fbe31c2983b9a78e662b94f3d57c8595/transformed/tracing-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/508d3e5f9a13704d39b4c255af29830e/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/007e112ccb62a2310f8e4a90f056d8a3/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fd0d82f5618a81380436fa293702aaa9/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/55731435ecfbcb4dc0173bde45cdc248/transformed/exifinterface-1.3.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/01d3d7b00e629c4aac712f773650ae1b/transformed/firebase-components-18.0.0/AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.databinding:viewbinding:8.4.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ba0eecb14c8f0d6ddbdd4dff9df21a94/transformed/viewbinding-8.4.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/bb4f1db3f9fc57e4229c6a914e09e3c2/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.56.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8d3cda1bb37dea553c3642f6a40c62b4/transformed/dagger-lint-aar-2.56.2/AndroidManifest.xml:16:1-19:12
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c893a65c88f8d064664e02bd7e7e54e9/transformed/grpc-android-1.62.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/29b56bba4df71a7b37956666c5c3adf1/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
+	package
+		INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:21:5-66
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:5:22-74
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:7:22-78
+application
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:9:5-45:19
+INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:9:5-45:19
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b98085f30447ed6fc1def3679e3880b6/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b98085f30447ed6fc1def3679e3880b6/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:31:5-34:19
+MERGED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:31:5-34:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d442f03655cb251d5d76d30de343c330/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d442f03655cb251d5d76d30de343c330/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8dc9fb95dbd8a61c72ddcededb07ec00/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8dc9fb95dbd8a61c72ddcededb07ec00/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:22:5-39:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:28:5-89
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/899b1423744118fa8284f315fbd261ab/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/899b1423744118fa8284f315fbd261ab/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fd4ab7cd58351a75faa80e42992987a9/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fd4ab7cd58351a75faa80e42992987a9/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d36a95cf09080976cc24cd3d9d7e729f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d36a95cf09080976cc24cd3d9d7e729f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7e9119aa02061341e865f3701db9b7b1/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7e9119aa02061341e865f3701db9b7b1/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:15:9-35
+	android:label
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:13:9-41
+	android:roundIcon
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:14:9-54
+	android:icon
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:16:9-45
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:10:9-35
+activity#com.mikhail.manifestation.MainActivity
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:22:9-31:20
+	android:screenOrientation
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:25:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:26:13-55
+	android:exported
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:24:13-36
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:23:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:27:13-30:29
+action#android.intent.action.MAIN
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:29:17-77
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:29:27-74
+receiver#com.mikhail.manifestation.data.notifications.AffirmationReceiver
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:33:9-35:40
+	android:exported
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:34:13-67
+receiver#com.mikhail.manifestation.data.notifications.BootReceiver
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:37:9-43:20
+	android:exported
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:39:13-36
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:38:13-60
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:40:13-42:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:41:17-79
+	android:name
+		ADDED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml:41:25-76
+uses-sdk
+INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/05c2357c7cffb0de13442bb135d4790b/transformed/hilt-navigation-compose-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/05c2357c7cffb0de13442bb135d4790b/transformed/hilt-navigation-compose-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/33e455e4ab96af06a46d0e9210bb13bc/transformed/hilt-navigation-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/33e455e4ab96af06a46d0e9210bb13bc/transformed/hilt-navigation-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.dagger:hilt-android:2.56.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b714986478102428ade3b15f8ced137e/transformed/hilt-android-2.56.2/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.56.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b714986478102428ade3b15f8ced137e/transformed/hilt-android-2.56.2/AndroidManifest.xml:18:3-42
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/06a02352c696c9e8de639c3725123c07/transformed/navigation-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/06a02352c696c9e8de639c3725123c07/transformed/navigation-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-android:2.9.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4d706af46c88295ce898d28a0bf8b74c/transformed/navigation-common-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-android:2.9.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4d706af46c88295ce898d28a0bf8b74c/transformed/navigation-common-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-compose-android:2.9.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3e608ec01846fe3841d9827711213dd5/transformed/navigation-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose-android:2.9.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3e608ec01846fe3841d9827711213dd5/transformed/navigation-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:maps-compose-utils:6.4.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6c171740f20de02e96a5b49c3c0b1ed0/transformed/maps-compose-utils-6.4.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:maps-compose-utils:6.4.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6c171740f20de02e96a5b49c3c0b1ed0/transformed/maps-compose-utils-6.4.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:maps-compose:6.4.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a30ca53488c21f9a389bf2be17f52c4d/transformed/maps-compose-6.4.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:maps-compose:6.4.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a30ca53488c21f9a389bf2be17f52c4d/transformed/maps-compose-6.4.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:maps-ktx:5.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/bc3ede332773a96c4664055a04af3092/transformed/maps-ktx-5.1.1/AndroidManifest.xml:21:5-44
+MERGED from [com.google.maps.android:maps-ktx:5.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/bc3ede332773a96c4664055a04af3092/transformed/maps-ktx-5.1.1/AndroidManifest.xml:21:5-44
+MERGED from [com.google.maps.android:maps-utils-ktx:5.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1863efdf1dc9ab371f09fc4cdfb6d672/transformed/maps-utils-ktx-5.1.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:maps-utils-ktx:5.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1863efdf1dc9ab371f09fc4cdfb6d672/transformed/maps-utils-ktx-5.1.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b98085f30447ed6fc1def3679e3880b6/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b98085f30447ed6fc1def3679e3880b6/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:26:5-43
+MERGED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:26:5-43
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d442f03655cb251d5d76d30de343c330/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d442f03655cb251d5d76d30de343c330/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b88cb662f9dffec8969fbcd2da61a8ec/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b88cb662f9dffec8969fbcd2da61a8ec/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8dc9fb95dbd8a61c72ddcededb07ec00/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8dc9fb95dbd8a61c72ddcededb07ec00/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:19:5-44
+MERGED from [com.google.accompanist:accompanist-systemuicontroller:0.36.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0684d07de0b9d7fec08a49f112bf2186/transformed/accompanist-systemuicontroller-0.36.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-systemuicontroller:0.36.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0684d07de0b9d7fec08a49f112bf2186/transformed/accompanist-systemuicontroller-0.36.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.palette:palette:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/55a0b58b7abf25a6455f3290e3c95a4f/transformed/palette-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/55a0b58b7abf25a6455f3290e3c95a4f/transformed/palette-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3a4cef61379af35b818b486aea2395c0/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3a4cef61379af35b818b486aea2395c0/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/f4455421219577ef209e8ecbcdf6e250/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/f4455421219577ef209e8ecbcdf6e250/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-session:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4152be1d77ce0fbca4f0cc4f2331c8e0/transformed/media3-session-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-session:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4152be1d77ce0fbca4f0cc4f2331c8e0/transformed/media3-session-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-extractor:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1c91bca2d0ca7c4b0ea33241eaa49537/transformed/media3-extractor-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-extractor:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1c91bca2d0ca7c4b0ea33241eaa49537/transformed/media3-extractor-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fa1d022092cbee4fca5828b1cd0ed4b0/transformed/media3-container-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fa1d022092cbee4fca5828b1cd0ed4b0/transformed/media3-container-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7d82ab75d63e4d8a5f82e025e2ea4938/transformed/media3-datasource-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7d82ab75d63e4d8a5f82e025e2ea4938/transformed/media3-datasource-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/23d0bb635bc0179f6d08bce64f3f6897/transformed/media3-decoder-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/23d0bb635bc0179f6d08bce64f3f6897/transformed/media3-decoder-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6facf0ad3be43d3388955914b43f6a88/transformed/media3-database-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6facf0ad3be43d3388955914b43f6a88/transformed/media3-database-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3ff9f65eaa89b7db69e4946f71455042/transformed/media3-common-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3ff9f65eaa89b7db69e4946f71455042/transformed/media3-common-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9aec6b76d3a5e6d1458659c7e45b3252/transformed/media3-exoplayer-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9aec6b76d3a5e6d1458659c7e45b3252/transformed/media3-exoplayer-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4187f4337652ef08dcf86362fcf35327/transformed/media-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.media:media:1.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4187f4337652ef08dcf86362fcf35327/transformed/media-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/97ad82ab246b5f6e8b34d06704b0b77a/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/97ad82ab246b5f6e8b34d06704b0b77a/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [io.coil-kt:coil-gif:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/182082ee9beb73cd72b79fb8a066d763/transformed/coil-gif-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-gif:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/182082ee9beb73cd72b79fb8a066d763/transformed/coil-gif-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/222b78b798f36a37ff9e5b642efc7e31/transformed/coil-compose-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/222b78b798f36a37ff9e5b642efc7e31/transformed/coil-compose-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/de62f2ee7039e83f5e4e755f7377cc2a/transformed/coil-compose-base-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/de62f2ee7039e83f5e4e755f7377cc2a/transformed/coil-compose-base-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c1e7e338dc9e596d22309de3822ab706/transformed/coil-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c1e7e338dc9e596d22309de3822ab706/transformed/coil-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/f2043dc983c311bd24af61a192ebfd6e/transformed/coil-base-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.7.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/f2043dc983c311bd24af61a192ebfd6e/transformed/coil-base-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b909cd6da1c89967881ed9849f0b7553/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b909cd6da1c89967881ed9849f0b7553/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/745b98f4d0a46a65d4e5c010ca3e62fe/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/745b98f4d0a46a65d4e5c010ca3e62fe/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/04f268d4cf464d8871bb5985dd126570/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/04f268d4cf464d8871bb5985dd126570/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/626bc98730668b4328a4ec7439291a25/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/626bc98730668b4328a4ec7439291a25/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/68e771c319644b79b0886b76a0ddc98b/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/68e771c319644b79b0886b76a0ddc98b/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/5f0de6ab0e2ebad61c334a46edab5921/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/5f0de6ab0e2ebad61c334a46edab5921/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/92bf210027e8c3ae86d192ed9883108f/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/92bf210027e8c3ae86d192ed9883108f/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6483b21fb37fc87ed75a5bd0ac514ac1/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6483b21fb37fc87ed75a5bd0ac514ac1/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c73bcf08ba2b04f30f7d86083196cccb/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c73bcf08ba2b04f30f7d86083196cccb/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/333cf5912f6f8c414e85a7ebdb056a50/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/333cf5912f6f8c414e85a7ebdb056a50/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/656564062a3af2a249c581e0af17e079/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/656564062a3af2a249c581e0af17e079/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6fe15bf5083fe41bd9f070803729dde2/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6fe15bf5083fe41bd9f070803729dde2/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e9f2b1abd0fb560459e218f9aa8ab42e/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e9f2b1abd0fb560459e218f9aa8ab42e/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/19352dfc6a9ac77e05d07079019b689a/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/19352dfc6a9ac77e05d07079019b689a/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4f7bc1e6473a5a8ca80ee144938ea9c3/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4f7bc1e6473a5a8ca80ee144938ea9c3/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3583cedafab1ab042e9e15042c6a3b78/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3583cedafab1ab042e9e15042c6a3b78/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0814a79ceaacf14f64476daf80346dc3/transformed/lifecycle-livedata-core-ktx-2.9.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0814a79ceaacf14f64476daf80346dc3/transformed/lifecycle-livedata-core-ktx-2.9.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c71f8c062922e7ad2903800935a5dd25/transformed/lifecycle-viewmodel-savedstate-2.9.1/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c71f8c062922e7ad2903800935a5dd25/transformed/lifecycle-viewmodel-savedstate-2.9.1/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d86970c8fed3c8cfb18deb37aea2cb4c/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d86970c8fed3c8cfb18deb37aea2cb4c/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/349f78ebb80a6110483d55fd78d9b148/transformed/lifecycle-viewmodel-2.9.1/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/349f78ebb80a6110483d55fd78d9b148/transformed/lifecycle-viewmodel-2.9.1/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8ec916215ce563c448944e5123c8a93b/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8ec916215ce563c448944e5123c8a93b/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1082f478ea1b1fd83e9945847d5f9719/transformed/savedstate-ktx-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1082f478ea1b1fd83e9945847d5f9719/transformed/savedstate-ktx-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c41d688354e13141df39060ee250a903/transformed/savedstate-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c41d688354e13141df39060ee250a903/transformed/savedstate-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/cc2d08b96a3f66f7622fa4f42e9d75ea/transformed/savedstate-1.3.0/AndroidManifest.xml:4:5-43
+MERGED from [androidx.savedstate:savedstate:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/cc2d08b96a3f66f7622fa4f42e9d75ea/transformed/savedstate-1.3.0/AndroidManifest.xml:4:5-43
+MERGED from [androidx.savedstate:savedstate-android:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/45a606f745cecc3f54accd8901871553/transformed/savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.3.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/45a606f745cecc3f54accd8901871553/transformed/savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0005682fdd13b33a71a35c7e2b9ac5f7/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0005682fdd13b33a71a35c7e2b9ac5f7/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6583850242210c16407ab664c8fe074c/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6583850242210c16407ab664c8fe074c/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/302d6a001e13737b8e431da3ccd650e9/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/302d6a001e13737b8e431da3ccd650e9/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/2145fd164ac96f8d91c3b9184f9f6ead/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/2145fd164ac96f8d91c3b9184f9f6ead/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8e195b7358d32ddd4c3a4167fd88bbda/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8e195b7358d32ddd4c3a4167fd88bbda/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/119f81fe6b98c5f8758d91221ca4ade5/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/119f81fe6b98c5f8758d91221ca4ade5/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6f1b99c197636e7f19e419df97690715/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/6f1b99c197636e7f19e419df97690715/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1491e93b65cc341b62ab1a370c13972d/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/1491e93b65cc341b62ab1a370c13972d/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fdae5b14e74d0144c5a1bf4ee26bd980/transformed/lifecycle-livedata-2.9.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fdae5b14e74d0144c5a1bf4ee26bd980/transformed/lifecycle-livedata-2.9.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/bf4723224e1ff18bfe4f5fb92f458c5e/transformed/lifecycle-livedata-core-2.9.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/bf4723224e1ff18bfe4f5fb92f458c5e/transformed/lifecycle-livedata-core-2.9.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e8fe27a8c298d18edff2319cd0855deb/transformed/lifecycle-viewmodel-ktx-2.9.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e8fe27a8c298d18edff2319cd0855deb/transformed/lifecycle-viewmodel-ktx-2.9.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b2e1e6e7dabb3743cd9fe87f0af7ca70/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b2e1e6e7dabb3743cd9fe87f0af7ca70/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/2bc226568a17f054912b3aab466e5a8a/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/2bc226568a17f054912b3aab466e5a8a/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ab340f49021937623962a27d1a254c37/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ab340f49021937623962a27d1a254c37/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/81169c14e3280e7eec4f3b5ab8142dd9/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.8.3] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/81169c14e3280e7eec4f3b5ab8142dd9/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.4] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4584c8b88854916a50777e855b6ee86c/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.4] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/4584c8b88854916a50777e855b6ee86c/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.4] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e95b00b84fd734aff9e7a8ea1681587e/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.4] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e95b00b84fd734aff9e7a8ea1681587e/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.4] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0830a0642a81783401d2a32df485ea79/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.4] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0830a0642a81783401d2a32df485ea79/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/899b1423744118fa8284f315fbd261ab/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/899b1423744118fa8284f315fbd261ab/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fd4ab7cd58351a75faa80e42992987a9/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fd4ab7cd58351a75faa80e42992987a9/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e5cb45fcd49d3bd6c98dc95a9106c83f/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e5cb45fcd49d3bd6c98dc95a9106c83f/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.10.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3282be9e2d474ab27509be6d6d229023/transformed/activity-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.10.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3282be9e2d474ab27509be6d6d229023/transformed/activity-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/52a39f282af84ee919598209ca8b9a20/transformed/activity-ktx-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/52a39f282af84ee919598209ca8b9a20/transformed/activity-ktx-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.10.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0fca76a091c9e1f92d13f321d40b2527/transformed/activity-compose-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.10.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0fca76a091c9e1f92d13f321d40b2527/transformed/activity-compose-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7d16fd84fa499211907f4fc75813d35e/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7d16fd84fa499211907f4fc75813d35e/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ab007025493bccce980f75d90baa220a/transformed/core-ktx-1.16.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ab007025493bccce980f75d90baa220a/transformed/core-ktx-1.16.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-splashscreen:1.0.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/17e37e076d3e3d2301cd8c524139fce7/transformed/core-splashscreen-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-splashscreen:1.0.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/17e37e076d3e3d2301cd8c524139fce7/transformed/core-splashscreen-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/724ca3f3e76ad2defe0a6381ec9eaf71/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/724ca3f3e76ad2defe0a6381ec9eaf71/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d1caf38bd1288936653cf785a7d21a18/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d1caf38bd1288936653cf785a7d21a18/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d36a95cf09080976cc24cd3d9d7e729f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/d36a95cf09080976cc24cd3d9d7e729f/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/5800b7fec30625065ee0be5f60d557d9/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/5800b7fec30625065ee0be5f60d557d9/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7e9119aa02061341e865f3701db9b7b1/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7e9119aa02061341e865f3701db9b7b1/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fbe31c2983b9a78e662b94f3d57c8595/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fbe31c2983b9a78e662b94f3d57c8595/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/508d3e5f9a13704d39b4c255af29830e/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/508d3e5f9a13704d39b4c255af29830e/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/007e112ccb62a2310f8e4a90f056d8a3/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/007e112ccb62a2310f8e4a90f056d8a3/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fd0d82f5618a81380436fa293702aaa9/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fd0d82f5618a81380436fa293702aaa9/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/55731435ecfbcb4dc0173bde45cdc248/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/55731435ecfbcb4dc0173bde45cdc248/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/01d3d7b00e629c4aac712f773650ae1b/transformed/firebase-components-18.0.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/01d3d7b00e629c4aac712f773650ae1b/transformed/firebase-components-18.0.0/AndroidManifest.xml:18:5-44
+MERGED from [androidx.databinding:viewbinding:8.4.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ba0eecb14c8f0d6ddbdd4dff9df21a94/transformed/viewbinding-8.4.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.4.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ba0eecb14c8f0d6ddbdd4dff9df21a94/transformed/viewbinding-8.4.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/bb4f1db3f9fc57e4229c6a914e09e3c2/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/bb4f1db3f9fc57e4229c6a914e09e3c2/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-lint-aar:2.56.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8d3cda1bb37dea553c3642f6a40c62b4/transformed/dagger-lint-aar-2.56.2/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.56.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/8d3cda1bb37dea553c3642f6a40c62b4/transformed/dagger-lint-aar-2.56.2/AndroidManifest.xml:18:3-42
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c893a65c88f8d064664e02bd7e7e54e9/transformed/grpc-android-1.62.2/AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c893a65c88f8d064664e02bd7e7e54e9/transformed/grpc-android-1.62.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/29b56bba4df71a7b37956666c5c3adf1/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/29b56bba4df71a7b37956666c5c3adf1/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/alyonayanuchek/ageev-app/levelup-manifestation-android/app/src/main/AndroidManifest.xml
+meta-data#com.google.android.gms.version
+ADDED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b98085f30447ed6fc1def3679e3880b6/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fd4ab7cd58351a75faa80e42992987a9/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/fd4ab7cd58351a75faa80e42992987a9/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+	android:value
+		ADDED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b98085f30447ed6fc1def3679e3880b6/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:10:13-66
+	android:name
+		ADDED from [com.google.maps.android:android-maps-utils:3.8.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/b98085f30447ed6fc1def3679e3880b6/transformed/android-maps-utils-3.8.2/AndroidManifest.xml:9:13-58
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:20:5-78
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:10:5-79
+MERGED from [androidx.media3:media3-common:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3ff9f65eaa89b7db69e4946f71455042/transformed/media3-common-1.5.1/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-common:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/3ff9f65eaa89b7db69e4946f71455042/transformed/media3-common-1.5.1/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9aec6b76d3a5e6d1458659c7e45b3252/transformed/media3-exoplayer-1.5.1/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.5.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/9aec6b76d3a5e6d1458659c7e45b3252/transformed/media3-exoplayer-1.5.1/AndroidManifest.xml:22:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c893a65c88f8d064664e02bd7e7e54e9/transformed/grpc-android-1.62.2/AndroidManifest.xml:7:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c893a65c88f8d064664e02bd7e7e54e9/transformed/grpc-android-1.62.2/AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:20:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:22:5-24:33
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:23:8-40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:24:8-31
+queries
+ADDED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:27:5-30:15
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:29:7-61
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:29:16-59
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:33:7-86
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:33:59-83
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:19.1.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/87f04fa6417cbeff7863768a19b5d690/transformed/play-services-maps-19.1.0/AndroidManifest.xml:33:21-58
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:30:9-38:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:16:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:15:13-84
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:18:17-122
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/a79df59b4ad26fa8af318e2d1de631fd/transformed/firebase-firestore-25.1.1/AndroidManifest.xml:21:17-111
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c4e1f1a6329eac448eb4eded33ef2e08/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/e7918ae4d668c4801d47b7888df9757b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/c0b1400a8be96e7c5ce3b738f40f49ab/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7e9119aa02061341e865f3701db9b7b1/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/7e9119aa02061341e865f3701db9b7b1/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/0c1242271e7949291cc37bfee9ad73d5/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.9.1] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/60bb1e402eacbe74ef9aeedc87798466/transformed/lifecycle-process-2.9.1/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+permission#com.mikhail.manifestation.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+uses-permission#com.mikhail.manifestation.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/ebdc5680b4a73e2fde2850fc77f0e206/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/alyonayanuchek/.gradle/caches/9.0.0/transforms/40ad7615609c9a6a1d47919f925ff5b7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92

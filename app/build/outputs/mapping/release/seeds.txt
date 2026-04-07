@@ -1,0 +1,1679 @@
+com.google.firebase.provider.FirebaseInitProvider
+androidx.compose.foundation.layout.FillElement
+androidx.media.AudioAttributesImplApi21
+com.google.firebase.ktx.FirebaseCommonKtxRegistrar
+com.mikhail.manifestation.ui.viewmodel.MusicViewModel
+kotlin.coroutines.Continuation
+com.google.android.gms.common.api.Scope
+androidx.compose.ui.semantics.AppendedSemanticsElement
+io.grpc.internal.JndiResourceResolverFactory
+androidx.fragment.app.DialogFragment
+androidx.versionedparcelable.CustomVersionedParcelable
+androidx.startup.InitializationProvider
+com.google.firebase.concurrent.ExecutorsRegistrar
+android.support.v4.media.session.MediaSessionCompat$Token
+android.support.v4.media.session.ParcelableVolumeInfo
+com.google.android.gms.dynamite.DynamiteModule$DynamiteLoaderClassLoader
+com.mikhail.manifestation.data.notifications.AffirmationReceiver
+dagger.hilt.android.internal.managers.ActivityRetainedComponentManager$ActivityRetainedLifecycleEntryPoint
+androidx.media.AudioAttributesImplApi26
+com.mikhail.manifestation.LevelUpApp_GeneratedInjector
+kotlinx.coroutines.internal.StackTraceRecoveryKt
+androidx.compose.ui.draw.DrawBehindElement
+androidx.compose.foundation.text.modifiers.SelectableTextAnnotatedStringElement
+dagger.hilt.android.internal.lifecycle.HiltViewModelFactory$ViewModelFactoriesEntryPoint
+com.mikhail.manifestation.MainActivity
+com.google.android.gms.common.api.Status
+android.support.v4.media.MediaBrowserCompat$CustomActionResultReceiver
+dagger.hilt.android.internal.managers.ActivityRetainedComponentManager$ActivityRetainedComponentBuilderEntryPoint
+androidx.compose.material3.ThumbElement
+androidx.compose.ui.graphics.GraphicsLayerElement
+androidx.core.app.RemoteActionCompat
+com.google.android.gms.common.GooglePlayServicesIncorrectManifestValueException
+androidx.compose.ui.layout.LayoutIdElement
+androidx.compose.material3.MinimumInteractiveModifier
+androidx.media.AudioAttributesImplApi21Parcelizer
+androidx.compose.animation.EnterExitTransitionElement
+androidx.media.AudioAttributesImplApi26Parcelizer
+android.support.v4.graphics.drawable.IconCompatParcelizer
+android.support.v4.media.MediaMetadataCompat
+android.support.v4.media.session.MediaSessionCompat$QueueItem
+io.grpc.util.SecretRoundRobinLoadBalancerProvider$Provider
+androidx.compose.foundation.IndicationModifierElement
+io.grpc.okhttp.OkHttpChannelProvider
+androidx.compose.ui.layout.OnGloballyPositionedElement
+com.google.firebase.firestore.core.ActivityScope$StopListenerSupportFragment
+androidx.compose.foundation.layout.HorizontalAlignElement
+com.google.firebase.firestore.core.ActivityScope$StopListenerFragment
+androidx.core.graphics.drawable.IconCompat
+coil.compose.ContentPainterElement
+androidx.lifecycle.ReportFragment$LifecycleCallbacks
+androidx.media.AudioAttributesImpl
+androidx.compose.ui.layout.OnSizeChangedModifier
+com.google.android.gms.common.api.internal.BasePendingResult
+com.google.android.gms.common.annotation.KeepName
+com.google.android.gms.common.GooglePlayServicesMissingManifestValueException
+android.support.v4.media.AudioAttributesImplApi26Parcelizer
+androidx.compose.foundation.text.modifiers.TextStringSimpleElement
+androidx.compose.foundation.BorderModifierNodeElement
+androidx.lifecycle.LifecycleDispatcher$DispatcherActivityCallback
+androidx.media.AudioAttributesImplBase
+androidx.compose.foundation.layout.SizeElement
+com.google.android.gms.common.ErrorDialogFragment
+android.support.v4.media.AudioAttributesCompatParcelizer
+com.google.android.gms.auth.api.signin.GoogleSignInAccount
+dagger.hilt.android.internal.lifecycle.HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint
+androidx.compose.ui.viewinterop.FocusTargetPropertiesElement
+com.mikhail.manifestation.MainActivity_GeneratedInjector
+androidx.compose.ui.focus.FocusOwnerImpl$modifier$1
+com.mikhail.manifestation.ui.viewmodel.NotificationViewModel
+com.google.android.gms.common.internal.ReflectedParcelable
+androidx.compose.ui.input.key.KeyInputElement
+com.mikhail.manifestation.ui.viewmodel.ThemeViewModel
+androidx.compose.foundation.layout.UnspecifiedConstraintsElement
+com.mikhail.manifestation.ui.viewmodel.ClubsViewModel
+androidx.compose.foundation.gestures.DraggableElement
+androidx.compose.foundation.layout.WrapContentElement
+androidx.compose.foundation.lazy.layout.LazyLayoutItemAnimator$DisplayingDisappearingItemsElement
+androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsModifierElement
+androidx.emoji2.text.EmojiCompatInitializer
+com.google.android.gms.maps.model.LatLngBounds
+android.support.v4.media.MediaBrowserCompat$MediaItem
+com.google.android.gms.maps.GoogleMapOptions
+androidx.versionedparcelable.ParcelImpl
+com.google.firebase.firestore.FirestoreRegistrar
+androidx.compose.ui.layout.LayoutElement
+androidx.media.AudioAttributesCompatParcelizer
+androidx.compose.foundation.text.modifiers.TextAnnotatedStringElement
+com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar
+com.mikhail.manifestation.ui.viewmodel.SavedProgramsViewModel
+androidx.compose.foundation.layout.BoxChildDataElement
+androidx.compose.foundation.layout.LayoutWeightElement
+com.google.firebase.FirebaseCommonKtxRegistrar
+androidx.compose.foundation.layout.PaddingElement
+android.support.v4.media.AudioAttributesImplBaseParcelizer
+androidx.compose.ui.input.pointer.PointerInputEventHandler
+com.google.android.gms.common.api.internal.LifecycleCallback
+okhttp3.internal.publicsuffix.PublicSuffixDatabase
+com.mikhail.manifestation.ui.viewmodel.MeditationViewModel
+dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories$ActivityEntryPoint
+androidx.lifecycle.ProcessLifecycleInitializer
+androidx.compose.ui.semantics.EmptySemanticsElement
+androidx.compose.ui.input.nestedscroll.NestedScrollElement
+com.google.android.gms.common.SupportErrorDialogFragment
+androidx.core.graphics.drawable.IconCompatParcelizer
+androidx.compose.ui.focus.FocusTargetNode$FocusTargetElement
+androidx.annotation.Keep
+com.google.android.gms.maps.model.CameraPosition
+io.grpc.internal.PickFirstLoadBalancerProvider
+android.support.v4.media.session.PlaybackStateCompat$CustomAction
+androidx.compose.foundation.selection.ToggleableElement
+android.support.v4.media.AudioAttributesImplApi21Parcelizer
+com.mikhail.manifestation.data.notifications.BootReceiver
+androidx.compose.foundation.ClickableElement
+androidx.compose.ui.semantics.ClearAndSetSemanticsElement
+androidx.compose.foundation.lazy.layout.TraversablePrefetchStateModifierElement
+com.google.maps.android.ui.RotationLayout
+com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+androidx.compose.material3.internal.DraggableAnchorsElement
+com.google.android.gms.common.api.internal.zzd
+android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper
+androidx.compose.ui.input.pointer.SuspendPointerInputElement
+androidx.compose.foundation.ScrollingLayoutElement
+androidx.core.app.CoreComponentFactory
+androidx.compose.foundation.lazy.layout.LazyLayoutSemanticsModifier
+androidx.compose.ui.platform.AndroidCompositionLocals_androidKt
+androidx.compose.foundation.BackgroundElement
+com.mikhail.manifestation.LevelUpApp
+android.support.v4.media.MediaBrowserCompat$SearchResultReceiver
+androidx.compose.ui.graphics.BlockGraphicsLayerElement
+com.google.firebase.components.ComponentDiscoveryService
+com.google.firebase.firestore.FirebaseFirestore
+kotlinx.coroutines.android.AndroidDispatcherFactory
+com.google.firebase.FirebaseCommonRegistrar
+androidx.profileinstaller.ProfileInstallReceiver
+androidx.media.AudioAttributesCompat
+androidx.lifecycle.ProcessLifecycleOwner$attach$1
+android.support.v4.media.session.PlaybackStateCompat
+com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
+dagger.hilt.android.internal.managers.ActivityComponentManager$ActivityComponentBuilderEntryPoint
+com.google.firebase.components.ComponentRegistrar
+androidx.compose.foundation.ScrollingContainerElement
+androidx.lifecycle.ReportFragment
+com.google.android.gms.common.GooglePlayServicesManifestException
+com.google.android.gms.common.util.DynamiteApi
+androidx.compose.ui.viewinterop.FocusGroupPropertiesElement
+com.google.android.gms.maps.model.LatLng
+com.google.android.gms.common.api.internal.zzb
+androidx.lifecycle.LegacySavedStateHandleController$OnRecreation
+androidx.compose.ui.platform.AndroidComposeView$bringIntoViewNode$1
+kotlin.coroutines.jvm.internal.BaseContinuationImpl
+android.support.v4.media.RatingCompat
+androidx.lifecycle.ProcessLifecycleOwner$attach$1$onActivityPreCreated$1
+dagger.hilt.android.internal.lifecycle.HiltViewModelFactory$ActivityCreatorEntryPoint
+androidx.compose.foundation.layout.PaddingValuesElement
+androidx.media.AudioAttributesImplBaseParcelizer
+androidx.graphics.path.ConicConverter
+androidx.profileinstaller.ProfileInstallerInitializer
+androidx.core.app.RemoteActionCompatParcelizer
+androidx.compose.animation.AnimatedContentTransitionScopeImpl$SizeModifierElement
+android.support.v4.media.MediaDescriptionCompat
+androidx.loader.app.LoaderManagerImpl$LoaderViewModel
+androidx.compose.foundation.selection.SelectableElement
+androidx.graphics.path.PathIteratorPreApi34Impl
+android.support.v4.app.RemoteActionCompatParcelizer
+android.support.v4.media.MediaBrowserCompat$ItemReceiver
+androidx.lifecycle.SavedStateHandlesVM
+androidx.compose.ui.input.rotary.RotaryInputElement
+android.support.v4.media.session.MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver
+com.google.android.gms.common.api.GoogleApiActivity
+androidx.compose.ui.draw.PainterElement
+androidx.compose.ui.draganddrop.AndroidDragAndDropManager$modifier$1
+androidx.compose.ui.input.pointer.PointerHoverIconModifierElement
+io.grpc.internal.DnsNameResolverProvider
+com.google.firestore.v1.Cursor: com.google.firestore.v1.Cursor DEFAULT_INSTANCE
+com.google.firestore.v1.Target: int bitField0_
+kotlinx.coroutines.scheduling.WorkQueue: int blockingTasksInBuffer$volatile
+com.google.firestore.v1.DocumentMask: com.google.protobuf.Internal$ProtobufList fieldPaths_
+com.google.firestore.v1.StructuredQuery$UnaryFilter: java.lang.Object operandType_
+androidx.datastore.preferences.PreferencesProto$StringSet: int STRINGS_FIELD_NUMBER
+com.google.firebase.firestore.proto.WriteBatch: com.google.protobuf.Internal$ProtobufList baseWrites_
+kotlinx.coroutines.scheduling.WorkQueue: int consumerIndex$volatile
+kotlinx.coroutines.JobSupport$Finishing: java.lang.Object _exceptionsHolder$volatile
+com.google.firestore.v1.DocumentMask: int FIELD_PATHS_FIELD_NUMBER
+com.google.firestore.v1.TargetChange: int RESUME_TOKEN_FIELD_NUMBER
+com.google.firebase.firestore.proto.MaybeDocument: int documentTypeCase_
+androidx.datastore.preferences.PreferencesProto$Value: int LONG_FIELD_NUMBER
+com.google.firebase.firestore.proto.UnknownDocument: int NAME_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery: int bitField0_
+com.google.type.LatLng: com.google.type.LatLng DEFAULT_INSTANCE
+com.google.firestore.v1.Precondition: com.google.firestore.v1.Precondition DEFAULT_INSTANCE
+com.google.firestore.v1.Target: int QUERY_FIELD_NUMBER
+com.google.firestore.v1.Write: int UPDATE_MASK_FIELD_NUMBER
+kotlinx.coroutines.channels.BufferedChannel: java.lang.Object receiveSegment$volatile
+androidx.media3.extractor.metadata.scte35.SpliceScheduleCommand: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.WriteRequest: int STREAM_ID_FIELD_NUMBER
+com.google.firestore.v1.DocumentTransform$FieldTransform: int INCREMENT_FIELD_NUMBER
+com.google.android.gms.maps.model.VisibleRegion: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.StructuredQuery$FieldFilter: int OP_FIELD_NUMBER
+androidx.media3.extractor.metadata.id3.InternalFrame: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Value: int TIMESTAMP_VALUE_FIELD_NUMBER
+com.google.firestore.v1.WriteResult: com.google.protobuf.Internal$ProtobufList transformResults_
+com.google.rpc.Status: com.google.rpc.Status DEFAULT_INSTANCE
+com.google.firestore.v1.StructuredQuery$FieldFilter: int bitField0_
+androidx.compose.runtime.ParcelableSnapshotMutableState: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.StructuredQuery$Filter: int FIELD_FILTER_FIELD_NUMBER
+com.google.firestore.v1.BloomFilter: int bitField0_
+com.google.firestore.admin.v1.Index$IndexField: int valueModeCase_
+com.google.android.gms.common.internal.ConnectionTelemetryConfiguration: android.os.Parcelable$Creator CREATOR
+androidx.media3.extractor.metadata.scte35.TimeSignalCommand: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.DocumentDelete: int DOCUMENT_FIELD_NUMBER
+kotlinx.coroutines.channels.BufferedChannel: long bufferEnd$volatile
+com.google.firestore.v1.DocumentMask: com.google.protobuf.Parser PARSER
+androidx.concurrent.futures.AbstractResolvableFuture$Waiter: java.lang.Thread thread
+com.google.firestore.v1.WriteResponse: com.google.protobuf.Internal$ProtobufList writeResults_
+com.google.firestore.v1.Write: int UPDATE_TRANSFORMS_FIELD_NUMBER
+com.google.android.gms.common.api.Status: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Precondition: int EXISTS_FIELD_NUMBER
+com.google.firestore.v1.WriteResponse: int bitField0_
+kotlinx.coroutines.channels.BufferedChannel: java.lang.Object closeHandler$volatile
+com.google.firestore.admin.v1.Index$IndexField: java.lang.String fieldPath_
+com.google.firestore.v1.DocumentChange: com.google.firestore.v1.Document document_
+com.google.firestore.v1.ArrayValue: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.StructuredQuery$Order: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.StructuredQuery$FieldReference: int FIELD_PATH_FIELD_NUMBER
+androidx.datastore.preferences.protobuf.GeneratedMessageLite: int UNINITIALIZED_SERIALIZED_SIZE
+com.google.firestore.v1.WriteResult: com.google.protobuf.Timestamp updateTime_
+com.google.firestore.v1.DocumentRemove: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.Target: int resumeTypeCase_
+android.support.v4.media.MediaDescriptionCompat: android.os.Parcelable$Creator CREATOR
+com.google.protobuf.GeneratedMessageLite: java.util.Map defaultInstanceMap
+com.google.firestore.v1.DocumentChange: int DOCUMENT_FIELD_NUMBER
+com.google.firebase.firestore.proto.Target: int bitField0_
+com.google.firebase.firestore.proto.UnknownDocument: int bitField0_
+kotlinx.coroutines.internal.LockFreeLinkedListNode: java.lang.Object _removedRef$volatile
+com.google.firebase.firestore.proto.WriteBatch: com.google.protobuf.Internal$ProtobufList writes_
+com.google.firestore.v1.Value: com.google.protobuf.Parser PARSER
+com.google.protobuf.Any: java.lang.String typeUrl_
+kotlinx.coroutines.CompletedExceptionally: int _handled$volatile
+com.google.firestore.v1.WriteRequest: com.google.protobuf.Internal$ProtobufList writes_
+com.google.rpc.Status: int DETAILS_FIELD_NUMBER
+com.google.protobuf.Timestamp: int NANOS_FIELD_NUMBER
+com.google.firestore.v1.DocumentTransform$FieldTransform: java.lang.Object transformType_
+com.google.firebase.firestore.proto.UnknownDocument: java.lang.String name_
+com.google.firebase.firestore.proto.NoDocument: java.lang.String name_
+com.google.firestore.v1.Target: int targetTypeCase_
+com.google.android.gms.maps.model.LatLngBounds: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.ExistenceFilter: int bitField0_
+com.google.firestore.v1.ArrayValue: int VALUES_FIELD_NUMBER
+kotlinx.coroutines.android.HandlerDispatcherKt: android.view.Choreographer choreographer
+com.google.android.gms.maps.GoogleMapOptions: android.os.Parcelable$Creator CREATOR
+com.google.firebase.firestore.FirestoreRegistrar: java.lang.String LIBRARY_NAME
+kotlinx.coroutines.channels.BufferedChannel: java.lang.Object _closeCause$volatile
+com.google.firestore.v1.StructuredQuery$Projection: com.google.firestore.v1.StructuredQuery$Projection DEFAULT_INSTANCE
+com.google.firestore.v1.Document: com.google.protobuf.Timestamp updateTime_
+androidx.fragment.app.BackStackRecordState: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Cursor: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.TargetChange: com.google.protobuf.ByteString resumeToken_
+com.google.firestore.v1.WriteRequest: int DATABASE_FIELD_NUMBER
+com.google.firebase.firestore.proto.Target: com.google.protobuf.Parser PARSER
+androidx.lifecycle.ProcessLifecycleOwner$attach$1$onActivityPreCreated$1: androidx.lifecycle.ProcessLifecycleOwner this$0
+com.google.firestore.v1.Target$QueryTarget: com.google.protobuf.Parser PARSER
+com.google.firestore.admin.v1.Index$IndexField: int FIELD_PATH_FIELD_NUMBER
+com.google.firebase.firestore.proto.NoDocument: com.google.protobuf.Timestamp readTime_
+com.google.firestore.v1.ListenResponse: com.google.protobuf.Parser PARSER
+androidx.media3.container.MdtaMetadataEntry: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Precondition: java.lang.Object conditionType_
+com.google.firestore.v1.StructuredQuery$FieldFilter: int VALUE_FIELD_NUMBER
+kotlinx.coroutines.DispatchedCoroutine: int _decision$volatile
+androidx.activity.result.IntentSenderRequest: android.os.Parcelable$Creator CREATOR
+androidx.fragment.app.FragmentManager$LaunchedFragmentInfo: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Write: java.lang.Object operation_
+com.google.firestore.v1.DocumentRemove: int READ_TIME_FIELD_NUMBER
+com.google.firestore.v1.DocumentTransform$FieldTransform: int MINIMUM_FIELD_NUMBER
+com.google.firestore.v1.DocumentTransform$FieldTransform: int MAXIMUM_FIELD_NUMBER
+androidx.compose.foundation.lazy.layout.DefaultLazyKey: android.os.Parcelable$Creator CREATOR
+com.google.rpc.Status: java.lang.String message_
+androidx.concurrent.futures.AbstractResolvableFuture: java.lang.Object value
+com.google.firestore.v1.WriteResponse: int STREAM_TOKEN_FIELD_NUMBER
+com.google.firestore.v1.WriteRequest: com.google.protobuf.MapFieldLite labels_
+com.google.firestore.v1.TargetChange: int CAUSE_FIELD_NUMBER
+com.google.firestore.v1.Precondition: int UPDATE_TIME_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$Order: int direction_
+com.google.firestore.v1.Target: int EXPECTED_COUNT_FIELD_NUMBER
+com.google.firebase.firestore.proto.NoDocument: int READ_TIME_FIELD_NUMBER
+com.google.android.gms.common.internal.RootTelemetryConfiguration: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Target$QueryTarget: java.lang.String parent_
+androidx.datastore.preferences.PreferencesProto$Value: int STRING_FIELD_NUMBER
+com.google.android.gms.common.internal.zat: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.BitSequence: com.google.firestore.v1.BitSequence DEFAULT_INSTANCE
+androidx.datastore.preferences.protobuf.AbstractMessageLite: int memoizedHashCode
+com.google.firestore.v1.ArrayValue: com.google.protobuf.Internal$ProtobufList values_
+com.google.firestore.admin.v1.Index: com.google.protobuf.Internal$ProtobufList fields_
+com.google.firestore.v1.StructuredQuery: int LIMIT_FIELD_NUMBER
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_STOP
+com.google.firestore.v1.WriteResponse: com.google.protobuf.ByteString streamToken_
+com.google.firestore.v1.BloomFilter: int BITS_FIELD_NUMBER
+com.google.firestore.v1.BitSequence: com.google.protobuf.ByteString bitmap_
+com.google.firebase.firestore.proto.UnknownDocument: com.google.firebase.firestore.proto.UnknownDocument DEFAULT_INSTANCE
+com.google.android.gms.auth.api.signin.GoogleSignInAccount: android.os.Parcelable$Creator CREATOR
+androidx.datastore.preferences.protobuf.GeneratedMessageLite: int UNINITIALIZED_HASH_CODE
+com.google.android.gms.common.internal.zzk: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.EventLoopImplBase: int _isCompleted$volatile
+com.google.firestore.v1.ExistenceFilter: int TARGET_ID_FIELD_NUMBER
+com.google.type.LatLng: int LATITUDE_FIELD_NUMBER
+com.google.firestore.v1.MapValue: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.Write: com.google.firestore.v1.DocumentMask updateMask_
+com.google.firestore.admin.v1.Index: int NAME_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$Filter: java.lang.Object filterType_
+com.google.firestore.v1.StructuredQuery: com.google.firestore.v1.StructuredQuery$Projection select_
+com.google.firebase.firestore.proto.MaybeDocument: int UNKNOWN_DOCUMENT_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$CompositeFilter: int FILTERS_FIELD_NUMBER
+com.google.firestore.v1.Write: int CURRENT_DOCUMENT_FIELD_NUMBER
+com.google.firestore.v1.ExistenceFilter: com.google.firestore.v1.ExistenceFilter DEFAULT_INSTANCE
+kotlinx.coroutines.channels.BufferedChannel: long completedExpandBuffersAndPauseFlag$volatile
+com.google.firebase.firestore.proto.WriteBatch: int bitField0_
+com.google.firestore.v1.StructuredQuery$UnaryFilter: com.google.firestore.v1.StructuredQuery$UnaryFilter DEFAULT_INSTANCE
+com.google.firestore.v1.StructuredQuery$CompositeFilter: int op_
+com.google.android.gms.signin.internal.zag: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.DocumentDelete: int REMOVED_TARGET_IDS_FIELD_NUMBER
+kotlinx.coroutines.internal.LockFreeLinkedListNode: java.lang.Object _next$volatile
+androidx.media3.extractor.metadata.mp4.MotionPhotoMetadata: android.os.Parcelable$Creator CREATOR
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_ANY
+com.google.rpc.Status: int CODE_FIELD_NUMBER
+com.google.firestore.v1.DocumentDelete: com.google.protobuf.Parser PARSER
+com.google.protobuf.Int32Value: com.google.protobuf.Int32Value DEFAULT_INSTANCE
+com.google.firestore.v1.TargetChange: int targetChangeType_
+com.google.firestore.v1.StructuredQuery$FieldReference: com.google.firestore.v1.StructuredQuery$FieldReference DEFAULT_INSTANCE
+coil.memory.MemoryCache$Key: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Write: int bitField0_
+com.google.firestore.v1.ListenRequest: int REMOVE_TARGET_FIELD_NUMBER
+com.google.firestore.v1.WriteRequest: java.lang.String streamId_
+com.google.firestore.v1.TargetChange: com.google.firestore.v1.TargetChange DEFAULT_INSTANCE
+com.google.firestore.v1.StructuredQuery: com.google.firestore.v1.StructuredQuery$Filter where_
+androidx.media3.extractor.metadata.emsg.EventMessage: android.os.Parcelable$Creator CREATOR
+com.google.type.LatLng: double longitude_
+kotlinx.coroutines.DefaultExecutor: java.lang.Thread _thread
+kotlinx.coroutines.internal.Segment: int cleanedAndPointers$volatile
+com.google.protobuf.AbstractMessageLite: int memoizedHashCode
+androidx.media3.extractor.metadata.scte35.SpliceNullCommand: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.WriteResponse: java.lang.String streamId_
+com.google.firebase.firestore.proto.Target: com.google.protobuf.Timestamp snapshotVersion_
+com.google.firestore.v1.StructuredQuery$Filter: com.google.firestore.v1.StructuredQuery$Filter DEFAULT_INSTANCE
+com.google.android.gms.dynamite.DynamiteModule$DynamiteLoaderClassLoader: java.lang.ClassLoader sClassLoader
+androidx.concurrent.futures.AbstractResolvableFuture$Waiter: androidx.concurrent.futures.AbstractResolvableFuture$Waiter next
+androidx.media3.extractor.metadata.mp4.SlowMotionData$Segment: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Precondition: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.WriteResponse: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.WriteResponse: int STREAM_ID_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$FieldFilter: com.google.firestore.v1.StructuredQuery$FieldReference field_
+com.google.firestore.v1.DocumentChange: com.google.protobuf.Parser PARSER
+com.google.protobuf.Timestamp: int SECONDS_FIELD_NUMBER
+com.google.protobuf.Timestamp: com.google.protobuf.Timestamp DEFAULT_INSTANCE
+com.google.firestore.v1.Target: boolean once_
+com.google.firebase.firestore.proto.Target: java.lang.Object targetType_
+androidx.datastore.preferences.PreferencesProto$Value: int valueCase_
+kotlinx.coroutines.DefaultExecutor: int debugStatus
+com.google.firestore.v1.TargetChange: com.google.rpc.Status cause_
+com.google.firestore.v1.StructuredQuery: int FROM_FIELD_NUMBER
+androidx.datastore.preferences.PreferencesProto$Value: int BOOLEAN_FIELD_NUMBER
+com.google.firestore.v1.BloomFilter: int HASH_COUNT_FIELD_NUMBER
+com.google.firestore.admin.v1.Index$IndexField: int ARRAY_CONFIG_FIELD_NUMBER
+com.google.firestore.admin.v1.Index$IndexField: java.lang.Object valueMode_
+com.google.firestore.v1.StructuredQuery: int SELECT_FIELD_NUMBER
+androidx.datastore.preferences.protobuf.GeneratedMessageLite: int MUTABLE_FLAG_MASK
+com.google.firestore.admin.v1.Index: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.Value: int BYTES_VALUE_FIELD_NUMBER
+android.support.v4.media.MediaBrowserCompat$MediaItem: android.os.Parcelable$Creator CREATOR
+com.google.protobuf.GeneratedMessageLite: int UNINITIALIZED_SERIALIZED_SIZE
+com.google.android.gms.maps.model.PointOfInterest: android.os.Parcelable$Creator CREATOR
+com.google.firestore.admin.v1.Index: int queryScope_
+com.google.firestore.v1.StructuredQuery$CollectionSelector: int ALL_DESCENDANTS_FIELD_NUMBER
+androidx.media3.extractor.metadata.icy.IcyHeaders: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.BitSequence: int BITMAP_FIELD_NUMBER
+androidx.media3.common.Metadata: android.os.Parcelable$Creator CREATOR
+com.google.firebase.firestore.proto.WriteBatch: com.google.firebase.firestore.proto.WriteBatch DEFAULT_INSTANCE
+com.google.firebase.firestore.proto.Target: com.google.protobuf.ByteString resumeToken_
+com.google.firestore.v1.Target: int targetId_
+com.google.firestore.v1.DocumentDelete: int READ_TIME_FIELD_NUMBER
+kotlinx.coroutines.scheduling.CoroutineScheduler$Worker: java.lang.Object nextParkedWorker
+com.google.firebase.firestore.proto.Target: int TARGET_ID_FIELD_NUMBER
+com.google.firestore.v1.Document: int bitField0_
+com.google.firestore.admin.v1.Index$IndexField: int ORDER_FIELD_NUMBER
+androidx.datastore.preferences.PreferencesProto$Value: int BYTES_FIELD_NUMBER
+com.google.firestore.v1.WriteResult: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.StructuredQuery$Order: int FIELD_FIELD_NUMBER
+android.support.v4.media.MediaMetadataCompat: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.WriteResult: int TRANSFORM_RESULTS_FIELD_NUMBER
+com.google.firestore.v1.WriteRequest: int LABELS_FIELD_NUMBER
+com.google.firestore.v1.TargetChange: int TARGET_IDS_FIELD_NUMBER
+kotlinx.coroutines.sync.SemaphoreAndMutexImpl: long deqIdx$volatile
+com.google.protobuf.Any: com.google.protobuf.ByteString value_
+com.google.firestore.v1.Document: com.google.firestore.v1.Document DEFAULT_INSTANCE
+android.support.v4.media.session.PlaybackStateCompat$CustomAction: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.DocumentTransform: int FIELD_TRANSFORMS_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$FieldFilter: com.google.firestore.v1.StructuredQuery$FieldFilter DEFAULT_INSTANCE
+com.google.firestore.v1.StructuredQuery$UnaryFilter: int operandTypeCase_
+androidx.compose.runtime.ParcelableSnapshotMutableFloatState: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.StructuredQuery: com.google.protobuf.Internal$ProtobufList orderBy_
+com.google.firestore.v1.DocumentRemove: int bitField0_
+androidx.media3.extractor.metadata.mp4.SlowMotionData: android.os.Parcelable$Creator CREATOR
+com.google.protobuf.Any: com.google.protobuf.Parser PARSER
+androidx.datastore.preferences.PreferencesProto$Value: int FLOAT_FIELD_NUMBER
+com.google.firebase.firestore.proto.MaybeDocument: boolean hasCommittedMutations_
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_DESTROY
+android.support.v4.media.session.PlaybackStateCompat: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Write: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.WriteResponse: com.google.firestore.v1.WriteResponse DEFAULT_INSTANCE
+com.google.firestore.v1.StructuredQuery: com.google.protobuf.Internal$ProtobufList from_
+com.google.firestore.v1.StructuredQuery$Projection: com.google.protobuf.Internal$ProtobufList fields_
+kotlinx.coroutines.EventLoopImplBase: java.lang.Object _queue$volatile
+kotlinx.coroutines.sync.MutexImpl: java.lang.Object owner$volatile
+com.google.firebase.firestore.proto.NoDocument: int bitField0_
+kotlinx.coroutines.scheduling.CoroutineScheduler: long parkedWorkersStack$volatile
+com.google.android.gms.maps.model.MapStyleOptions: android.os.Parcelable$Creator CREATOR
+com.google.rpc.Status: int code_
+kotlinx.coroutines.internal.ConcurrentLinkedListNode: java.lang.Object _next$volatile
+com.google.firestore.v1.DocumentChange: int REMOVED_TARGET_IDS_FIELD_NUMBER
+com.google.firestore.v1.ExistenceFilter: int count_
+com.google.firestore.v1.BloomFilter: com.google.firestore.v1.BitSequence bits_
+com.google.firestore.v1.DocumentTransform$FieldTransform: int FIELD_PATH_FIELD_NUMBER
+com.google.android.gms.signin.internal.zai: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.ListenRequest: int DATABASE_FIELD_NUMBER
+kotlinx.coroutines.scheduling.CoroutineScheduler$Worker: int indexInArray
+com.google.firestore.v1.ListenResponse: int DOCUMENT_REMOVE_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery: com.google.protobuf.Int32Value limit_
+com.google.firebase.firestore.proto.MaybeDocument: int HAS_COMMITTED_MUTATIONS_FIELD_NUMBER
+com.google.android.gms.common.internal.zav: android.os.Parcelable$Creator CREATOR
+androidx.media3.extractor.metadata.id3.MlltFrame: android.os.Parcelable$Creator CREATOR
+com.google.firebase.firestore.proto.Target: int RESUME_TOKEN_FIELD_NUMBER
+com.google.firestore.v1.Write: com.google.firestore.v1.Write DEFAULT_INSTANCE
+com.google.firebase.firestore.proto.WriteBatch: int BATCH_ID_FIELD_NUMBER
+com.google.firestore.v1.DocumentDelete: com.google.firestore.v1.DocumentDelete DEFAULT_INSTANCE
+com.google.firestore.v1.Value: int GEO_POINT_VALUE_FIELD_NUMBER
+com.google.firestore.v1.ListenRequest: int targetChangeCase_
+com.google.firestore.v1.DocumentTransform$FieldTransform: java.lang.String fieldPath_
+com.google.protobuf.Int32Value: int value_
+com.google.firestore.v1.ListenResponse: int DOCUMENT_CHANGE_FIELD_NUMBER
+com.google.firestore.v1.Document: int CREATE_TIME_FIELD_NUMBER
+com.google.firestore.v1.ListenRequest: java.lang.String database_
+com.google.firestore.v1.Write: com.google.firestore.v1.Precondition currentDocument_
+com.google.firestore.v1.Write: com.google.protobuf.Internal$ProtobufList updateTransforms_
+androidx.datastore.preferences.PreferencesProto$PreferenceMap: androidx.datastore.preferences.PreferencesProto$PreferenceMap DEFAULT_INSTANCE
+androidx.lifecycle.Lifecycle$Event: kotlin.enums.EnumEntries $ENTRIES
+androidx.concurrent.futures.AbstractResolvableFuture: androidx.concurrent.futures.AbstractResolvableFuture$Waiter waiters
+com.google.firebase.firestore.proto.WriteBatch: com.google.protobuf.Parser PARSER
+androidx.fragment.app.FragmentState: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.WriteResult: com.google.firestore.v1.WriteResult DEFAULT_INSTANCE
+kotlinx.coroutines.UndispatchedCoroutine: boolean threadLocalIsSet
+com.google.firestore.v1.Document: com.google.protobuf.Timestamp createTime_
+com.google.firestore.v1.StructuredQuery$Order: com.google.firestore.v1.StructuredQuery$FieldReference field_
+com.google.firestore.admin.v1.Index$IndexField: com.google.protobuf.Parser PARSER
+com.google.firebase.firestore.proto.NoDocument: com.google.firebase.firestore.proto.NoDocument DEFAULT_INSTANCE
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_PAUSE
+com.google.firestore.v1.Target: int ONCE_FIELD_NUMBER
+com.google.firestore.v1.ListenResponse: com.google.firestore.v1.ListenResponse DEFAULT_INSTANCE
+kotlin.SafePublicationLazyImpl: java.lang.Object _value
+androidx.activity.result.ActivityResult: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.flow.StateFlowImpl: java.lang.Object _state$volatile
+kotlinx.coroutines.internal.LockFreeTaskQueueCore: long _state$volatile
+com.google.firestore.v1.Value: java.lang.Object valueType_
+androidx.media3.extractor.metadata.id3.ChapterTocFrame: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.DocumentTransform$FieldTransform: com.google.protobuf.Parser PARSER
+kotlinx.coroutines.JobSupport: java.lang.Object _parentHandle$volatile
+androidx.media3.extractor.metadata.id3.ApicFrame: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Target$DocumentsTarget: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.WriteRequest: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.ExistenceFilter: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.Document: int NAME_FIELD_NUMBER
+com.google.firestore.v1.TargetChange: int bitField0_
+com.google.firestore.v1.DocumentDelete: com.google.protobuf.Timestamp readTime_
+com.google.firestore.admin.v1.Index: int QUERY_SCOPE_FIELD_NUMBER
+com.google.firebase.firestore.proto.Target: int QUERY_FIELD_NUMBER
+com.google.firestore.v1.DocumentRemove: int REMOVED_TARGET_IDS_FIELD_NUMBER
+com.google.firebase.firestore.proto.Target: com.google.firebase.firestore.proto.Target DEFAULT_INSTANCE
+androidx.media3.extractor.metadata.dvbsi.AppInfoTable: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.BloomFilter: int hashCount_
+kotlinx.coroutines.EventLoopImplBase: java.lang.Object _delayed$volatile
+kotlinx.coroutines.internal.LockFreeLinkedListNode: java.lang.Object _prev$volatile
+kotlinx.coroutines.EventLoopImplBase$DelayedTask: java.lang.Object _heap
+com.google.protobuf.Timestamp: long seconds_
+com.google.firestore.v1.Cursor: com.google.protobuf.Internal$ProtobufList values_
+com.google.firestore.admin.v1.Index: java.lang.String name_
+androidx.media3.extractor.metadata.flac.VorbisComment: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.CancellableContinuationImpl: java.lang.Object _state$volatile
+com.google.firebase.Timestamp: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Cursor: int BEFORE_FIELD_NUMBER
+androidx.media3.extractor.metadata.scte35.SpliceInsertCommand: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.ParcelableVolumeInfo: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.internal.LockFreeTaskQueueCore: java.lang.Object _next$volatile
+com.google.firebase.firestore.proto.WriteBatch: int WRITES_FIELD_NUMBER
+com.google.firestore.v1.Value: int NULL_VALUE_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery: int offset_
+kotlinx.coroutines.android.AndroidExceptionPreHandler: java.lang.Object _preHandler
+com.google.firestore.v1.DocumentTransform$FieldTransform: int APPEND_MISSING_ELEMENTS_FIELD_NUMBER
+com.google.protobuf.GeneratedMessageLite: com.google.protobuf.UnknownFieldSetLite unknownFields
+com.google.firestore.v1.StructuredQuery: int END_AT_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$CollectionSelector: java.lang.String collectionId_
+com.google.firestore.v1.Value: int MAP_VALUE_FIELD_NUMBER
+com.google.firestore.v1.Value: int ARRAY_VALUE_FIELD_NUMBER
+androidx.compose.runtime.ParcelableSnapshotMutableIntState: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.internal.DispatchedContinuation: java.lang.Object _reusableCancellableContinuation$volatile
+com.google.firestore.v1.WriteResponse: int COMMIT_TIME_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$FieldFilter: int FIELD_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$UnaryFilter: int op_
+com.google.firestore.v1.DocumentMask: com.google.firestore.v1.DocumentMask DEFAULT_INSTANCE
+kotlinx.coroutines.channels.BufferedChannel: java.lang.Object bufferEndSegment$volatile
+com.google.firestore.v1.WriteResult: int UPDATE_TIME_FIELD_NUMBER
+com.google.firestore.v1.DocumentRemove: com.google.protobuf.Internal$IntList removedTargetIds_
+com.google.firestore.v1.BloomFilter: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.DocumentChange: com.google.firestore.v1.DocumentChange DEFAULT_INSTANCE
+io.grpc.internal.SerializingExecutor: int runState
+androidx.datastore.preferences.PreferencesProto$Value: androidx.datastore.preferences.protobuf.Parser PARSER
+com.google.firestore.v1.MapValue: com.google.protobuf.MapFieldLite fields_
+androidx.media3.extractor.metadata.id3.UrlLinkFrame: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.StructuredQuery$CollectionSelector: com.google.firestore.v1.StructuredQuery$CollectionSelector DEFAULT_INSTANCE
+com.google.android.gms.common.ConnectionResult: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.ListenResponse: int DOCUMENT_DELETE_FIELD_NUMBER
+com.google.firebase.firestore.proto.Target: int targetId_
+com.google.firestore.v1.ExistenceFilter: int targetId_
+com.google.firestore.v1.Value: int INTEGER_VALUE_FIELD_NUMBER
+com.google.firestore.v1.Target$QueryTarget: int queryTypeCase_
+com.google.firestore.v1.ExistenceFilter: int UNCHANGED_NAMES_FIELD_NUMBER
+com.google.firestore.v1.DocumentChange: int TARGET_IDS_FIELD_NUMBER
+androidx.datastore.preferences.PreferencesProto$Value: androidx.datastore.preferences.PreferencesProto$Value DEFAULT_INSTANCE
+kotlinx.coroutines.ThreadState: int _state$volatile
+androidx.media3.extractor.metadata.scte35.PrivateCommand: android.os.Parcelable$Creator CREATOR
+com.google.firebase.firestore.proto.Target: long lastListenSequenceNumber_
+com.google.protobuf.Timestamp: com.google.protobuf.Parser PARSER
+com.google.firebase.firestore.proto.UnknownDocument: int VERSION_FIELD_NUMBER
+com.google.protobuf.Timestamp: int nanos_
+com.google.firestore.v1.Document: java.lang.String name_
+com.google.firestore.v1.ListenResponse: int TARGET_CHANGE_FIELD_NUMBER
+com.google.firestore.v1.ArrayValue: com.google.firestore.v1.ArrayValue DEFAULT_INSTANCE
+com.google.firestore.v1.StructuredQuery$Filter: int UNARY_FILTER_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$Filter: int COMPOSITE_FILTER_FIELD_NUMBER
+androidx.datastore.preferences.PreferencesProto$Value: int INTEGER_FIELD_NUMBER
+com.google.firestore.v1.Target: int READ_TIME_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$Projection: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.DocumentRemove: com.google.firestore.v1.DocumentRemove DEFAULT_INSTANCE
+com.google.android.gms.common.internal.TelemetryData: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.scheduling.CoroutineScheduler: int _isTerminated$volatile
+com.google.firestore.v1.Value: int BOOLEAN_VALUE_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery: int OFFSET_FIELD_NUMBER
+androidx.media3.common.DrmInitData: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Target$DocumentsTarget: int DOCUMENTS_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$CompositeFilter: int OP_FIELD_NUMBER
+com.google.firestore.admin.v1.Index$IndexField: com.google.firestore.admin.v1.Index$IndexField DEFAULT_INSTANCE
+com.google.firestore.v1.Write: int UPDATE_FIELD_NUMBER
+kotlinx.coroutines.CancellableContinuationImpl: java.lang.Object _parentHandle$volatile
+com.google.protobuf.Any: int VALUE_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$CompositeFilter: com.google.protobuf.Internal$ProtobufList filters_
+com.google.firestore.v1.Target: int RESUME_TOKEN_FIELD_NUMBER
+com.google.firebase.firestore.proto.MaybeDocument: int NO_DOCUMENT_FIELD_NUMBER
+com.google.firestore.v1.ListenResponse: int FILTER_FIELD_NUMBER
+com.google.protobuf.GeneratedMessageLite: int UNINITIALIZED_HASH_CODE
+com.google.firestore.v1.StructuredQuery$FieldReference: java.lang.String fieldPath_
+kotlinx.coroutines.InvokeOnCancelling: int _invoked$volatile
+com.google.firebase.firestore.proto.WriteBatch: int LOCAL_WRITE_TIME_FIELD_NUMBER
+com.google.firestore.v1.Target: int DOCUMENTS_FIELD_NUMBER
+kotlinx.coroutines.scheduling.WorkQueue: int producerIndex$volatile
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event[] $VALUES
+androidx.datastore.preferences.protobuf.GeneratedMessageLite: int memoizedSerializedSize
+com.google.firestore.v1.Target: com.google.protobuf.Int32Value expectedCount_
+androidx.media3.extractor.metadata.vorbis.VorbisComment: android.os.Parcelable$Creator CREATOR
+androidx.lifecycle.ProcessLifecycleOwner$attach$1: androidx.lifecycle.ProcessLifecycleOwner this$0
+com.google.firestore.v1.Target$QueryTarget: int STRUCTURED_QUERY_FIELD_NUMBER
+com.google.firebase.firestore.proto.MaybeDocument: java.lang.Object documentType_
+androidx.media3.extractor.metadata.id3.BinaryFrame: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.WriteRequest: int STREAM_TOKEN_FIELD_NUMBER
+kotlin.coroutines.SafeContinuation: java.lang.Object result
+com.google.firestore.v1.Write: int VERIFY_FIELD_NUMBER
+com.google.firestore.v1.Value: int DOUBLE_VALUE_FIELD_NUMBER
+com.google.firestore.v1.DocumentTransform: com.google.protobuf.Internal$ProtobufList fieldTransforms_
+kotlinx.coroutines.internal.ConcurrentLinkedListNode: java.lang.Object _prev$volatile
+com.google.firestore.v1.Write: int TRANSFORM_FIELD_NUMBER
+com.google.firestore.v1.Target$QueryTarget: int PARENT_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$CollectionSelector: int COLLECTION_ID_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$FieldFilter: int op_
+com.google.protobuf.Any: com.google.protobuf.Any DEFAULT_INSTANCE
+androidx.datastore.preferences.protobuf.GeneratedMessageLite: java.util.Map defaultInstanceMap
+com.google.firestore.v1.DocumentTransform$FieldTransform: int SET_TO_SERVER_VALUE_FIELD_NUMBER
+com.google.android.gms.common.api.Scope: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Target: com.google.firestore.v1.Target DEFAULT_INSTANCE
+com.google.firebase.firestore.proto.Target: com.google.protobuf.Timestamp lastLimboFreeSnapshotVersion_
+kotlinx.coroutines.channels.BufferedChannel: long sendersAndCloseStatus$volatile
+com.google.android.gms.maps.model.LatLng: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.StructuredQuery$UnaryFilter: com.google.protobuf.Parser PARSER
+androidx.media3.extractor.metadata.id3.GeobFrame: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.StructuredQuery$Order: int DIRECTION_FIELD_NUMBER
+com.google.firestore.v1.Target$DocumentsTarget: com.google.protobuf.Internal$ProtobufList documents_
+com.google.firestore.v1.StructuredQuery$UnaryFilter: int FIELD_FIELD_NUMBER
+androidx.media3.extractor.metadata.id3.ChapterFrame: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.JobSupport$Finishing: int _isCompleting$volatile
+kotlinx.coroutines.sync.SemaphoreAndMutexImpl: java.lang.Object tail$volatile
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_RESUME
+androidx.datastore.preferences.PreferencesProto$PreferenceMap: int PREFERENCES_FIELD_NUMBER
+com.google.firestore.v1.Document: com.google.protobuf.MapFieldLite fields_
+com.google.firestore.v1.WriteResponse: int WRITE_RESULTS_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$Order: int bitField0_
+com.google.firebase.firestore.proto.UnknownDocument: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.WriteResponse: com.google.protobuf.Timestamp commitTime_
+com.google.firestore.v1.DocumentTransform$FieldTransform: com.google.firestore.v1.DocumentTransform$FieldTransform DEFAULT_INSTANCE
+com.google.firestore.v1.Value: int valueTypeCase_
+androidx.media3.container.Mp4LocationData: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.channels.BufferedChannel: long receivers$volatile
+com.google.protobuf.Any: int TYPE_URL_FIELD_NUMBER
+kotlinx.coroutines.internal.ThreadSafeHeap: int _size$volatile
+kotlinx.coroutines.CancelledContinuation: int _resumed$volatile
+kotlinx.coroutines.internal.ResizableAtomicArray: java.util.concurrent.atomic.AtomicReferenceArray array
+com.google.firestore.v1.Document: com.google.protobuf.Parser PARSER
+com.google.android.gms.signin.internal.zak: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.StructuredQuery$CompositeFilter: com.google.firestore.v1.StructuredQuery$CompositeFilter DEFAULT_INSTANCE
+com.google.firestore.v1.Target$DocumentsTarget: com.google.firestore.v1.Target$DocumentsTarget DEFAULT_INSTANCE
+com.google.firestore.v1.ExistenceFilter: com.google.firestore.v1.BloomFilter unchangedNames_
+androidx.media3.extractor.metadata.id3.PrivFrame: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.TargetChange: int targetIdsMemoizedSerializedSize
+com.google.firestore.v1.WriteRequest: int WRITES_FIELD_NUMBER
+com.google.firestore.v1.DocumentTransform: int DOCUMENT_FIELD_NUMBER
+android.support.v4.media.session.MediaSessionCompat$QueueItem: android.os.Parcelable$Creator CREATOR
+androidx.compose.runtime.ParcelableSnapshotMutableLongState: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.DocumentTransform: com.google.firestore.v1.DocumentTransform DEFAULT_INSTANCE
+com.google.android.gms.maps.model.MarkerOptions: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.DocumentDelete: int removedTargetIdsMemoizedSerializedSize
+com.google.firestore.v1.DocumentDelete: com.google.protobuf.Internal$IntList removedTargetIds_
+com.google.firestore.v1.StructuredQuery: com.google.firestore.v1.StructuredQuery DEFAULT_INSTANCE
+com.google.firestore.v1.ListenResponse: int responseTypeCase_
+com.google.firestore.v1.MapValue: int FIELDS_FIELD_NUMBER
+com.google.firestore.v1.TargetChange: com.google.protobuf.Internal$IntList targetIds_
+com.google.firestore.v1.StructuredQuery$FieldFilter: com.google.firestore.v1.Value value_
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_START
+kotlinx.coroutines.internal.LimitedDispatcher: int runningWorkers$volatile
+kotlinx.coroutines.scheduling.WorkQueue: java.lang.Object lastScheduledTask$volatile
+com.google.firestore.v1.StructuredQuery$Order: com.google.firestore.v1.StructuredQuery$Order DEFAULT_INSTANCE
+com.google.protobuf.Int32Value: com.google.protobuf.Parser PARSER
+kotlinx.coroutines.JobSupport$Finishing: java.lang.Object _rootCause$volatile
+com.google.firestore.v1.DocumentTransform$FieldTransform: int transformTypeCase_
+com.google.firebase.firestore.proto.WriteBatch: int batchId_
+com.google.firebase.firestore.proto.Target: int targetTypeCase_
+com.google.firebase.firestore.proto.Target: int LAST_LIMBO_FREE_SNAPSHOT_VERSION_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$Filter: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.WriteRequest: com.google.protobuf.ByteString streamToken_
+com.google.firestore.v1.StructuredQuery: int START_AT_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$UnaryFilter: int OP_FIELD_NUMBER
+com.google.firestore.v1.DocumentChange: int removedTargetIdsMemoizedSerializedSize
+kotlinx.coroutines.internal.LockFreeTaskQueue: java.lang.Object _cur$volatile
+com.google.firestore.v1.DocumentRemove: int removedTargetIdsMemoizedSerializedSize
+com.google.firestore.v1.StructuredQuery$CollectionSelector: boolean allDescendants_
+kotlinx.coroutines.sync.SemaphoreAndMutexImpl: int _availablePermits$volatile
+com.google.firestore.v1.Cursor: int VALUES_FIELD_NUMBER
+com.google.firestore.v1.Value: com.google.firestore.v1.Value DEFAULT_INSTANCE
+com.google.firestore.v1.StructuredQuery$CompositeFilter: com.google.protobuf.Parser PARSER
+com.google.firestore.admin.v1.Index: int FIELDS_FIELD_NUMBER
+com.google.firestore.v1.DocumentDelete: int bitField0_
+androidx.media3.extractor.metadata.flac.PictureFrame: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.common.Feature: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Target$QueryTarget: com.google.firestore.v1.Target$QueryTarget DEFAULT_INSTANCE
+com.google.firestore.v1.DocumentRemove: com.google.protobuf.Timestamp readTime_
+com.google.rpc.Status: com.google.protobuf.Internal$ProtobufList details_
+com.google.firestore.v1.StructuredQuery$FieldReference: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.BitSequence: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.ListenResponse: java.lang.Object responseType_
+com.google.firestore.v1.WriteRequest: java.lang.String database_
+androidx.datastore.preferences.PreferencesProto$Value: int DOUBLE_FIELD_NUMBER
+android.support.v4.os.ResultReceiver: android.os.Parcelable$Creator CREATOR
+com.google.firebase.firestore.proto.NoDocument: int NAME_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery$Projection: int FIELDS_FIELD_NUMBER
+com.google.firestore.v1.ListenRequest: java.lang.Object targetChange_
+androidx.datastore.preferences.PreferencesProto$PreferenceMap: androidx.datastore.preferences.protobuf.Parser PARSER
+com.google.type.LatLng: double latitude_
+com.google.firestore.v1.StructuredQuery: int WHERE_FIELD_NUMBER
+com.google.firestore.v1.ListenRequest: int ADD_TARGET_FIELD_NUMBER
+kotlinx.coroutines.CancellableContinuationImpl: int _decisionAndIndex$volatile
+com.google.firebase.firestore.proto.MaybeDocument: com.google.firebase.firestore.proto.MaybeDocument DEFAULT_INSTANCE
+androidx.media3.extractor.metadata.icy.IcyInfo: android.os.Parcelable$Creator CREATOR
+androidx.media3.extractor.metadata.mp4.SmtaMetadataEntry: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.StructuredQuery: com.google.firestore.v1.Cursor endAt_
+com.google.firebase.firestore.proto.Target: int LAST_LISTEN_SEQUENCE_NUMBER_FIELD_NUMBER
+com.google.firestore.v1.Target$QueryTarget: java.lang.Object queryType_
+com.google.firestore.v1.Write: int DELETE_FIELD_NUMBER
+androidx.datastore.preferences.PreferencesProto$StringSet: androidx.datastore.preferences.protobuf.Internal$ProtobufList strings_
+androidx.fragment.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+com.google.type.LatLng: int LONGITUDE_FIELD_NUMBER
+androidx.media3.extractor.metadata.id3.CommentFrame: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Target: int TARGET_ID_FIELD_NUMBER
+com.google.firestore.v1.DocumentChange: int targetIdsMemoizedSerializedSize
+com.google.rpc.Status: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.BitSequence: int PADDING_FIELD_NUMBER
+androidx.fragment.app.BackStackState: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.JobSupport: java.lang.Object _state$volatile
+com.google.firestore.v1.Document: int UPDATE_TIME_FIELD_NUMBER
+com.google.firestore.v1.Write: int operationCase_
+com.google.firestore.v1.BloomFilter: com.google.firestore.v1.BloomFilter DEFAULT_INSTANCE
+kotlinx.coroutines.scheduling.CoroutineScheduler$Worker: int workerCtl$volatile
+com.google.firestore.v1.Precondition: int conditionTypeCase_
+androidx.media3.common.DrmInitData$SchemeData: android.os.Parcelable$Creator CREATOR
+androidx.media3.extractor.metadata.id3.TextInformationFrame: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.DocumentDelete: java.lang.String document_
+com.google.firestore.admin.v1.Index: int state_
+com.google.firestore.v1.BitSequence: int padding_
+com.google.firestore.v1.StructuredQuery$CollectionSelector: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.ListenRequest: com.google.firestore.v1.ListenRequest DEFAULT_INSTANCE
+com.google.rpc.Status: int MESSAGE_FIELD_NUMBER
+androidx.datastore.preferences.protobuf.GeneratedMessageLite: androidx.datastore.preferences.protobuf.UnknownFieldSetLite unknownFields
+com.google.firestore.v1.Value: int REFERENCE_VALUE_FIELD_NUMBER
+com.google.firestore.v1.Target: java.lang.Object resumeType_
+androidx.datastore.preferences.PreferencesProto$PreferenceMap: androidx.datastore.preferences.protobuf.MapFieldLite preferences_
+android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.MapValue: com.google.firestore.v1.MapValue DEFAULT_INSTANCE
+androidx.concurrent.futures.AbstractResolvableFuture: androidx.concurrent.futures.AbstractResolvableFuture$Listener listeners
+com.google.firestore.v1.ListenRequest: com.google.protobuf.MapFieldLite labels_
+com.google.protobuf.GeneratedMessageLite: int MUTABLE_FLAG_MASK
+android.support.v4.media.RatingCompat: android.os.Parcelable$Creator CREATOR
+androidx.media3.container.Mp4TimestampData: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Value: int STRING_VALUE_FIELD_NUMBER
+com.google.firestore.v1.WriteRequest: com.google.firestore.v1.WriteRequest DEFAULT_INSTANCE
+com.google.firebase.firestore.proto.Target: int SNAPSHOT_VERSION_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.ExistenceFilter: int COUNT_FIELD_NUMBER
+com.google.android.gms.signin.internal.zaa: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.StructuredQuery$Filter: int filterTypeCase_
+kotlinx.coroutines.sync.SemaphoreAndMutexImpl: java.lang.Object head$volatile
+com.google.firestore.admin.v1.Index: int STATE_FIELD_NUMBER
+androidx.datastore.preferences.PreferencesProto$StringSet: androidx.datastore.preferences.PreferencesProto$StringSet DEFAULT_INSTANCE
+com.google.firestore.v1.ListenRequest: com.google.protobuf.Parser PARSER
+com.google.firebase.firestore.proto.Target: int DOCUMENTS_FIELD_NUMBER
+com.google.firestore.v1.TargetChange: int READ_TIME_FIELD_NUMBER
+com.google.firestore.v1.DocumentTransform: java.lang.String document_
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: androidx.lifecycle.ReportFragment$LifecycleCallbacks$Companion Companion
+com.google.firestore.v1.TargetChange: int TARGET_CHANGE_TYPE_FIELD_NUMBER
+com.google.firestore.v1.Target: java.lang.Object targetType_
+com.google.firestore.v1.DocumentChange: int bitField0_
+com.google.firebase.firestore.proto.WriteBatch: com.google.protobuf.Timestamp localWriteTime_
+androidx.datastore.preferences.PreferencesProto$Value: java.lang.Object value_
+com.google.firestore.admin.v1.Index: com.google.firestore.admin.v1.Index DEFAULT_INSTANCE
+com.google.firestore.v1.Cursor: boolean before_
+com.google.firestore.v1.TargetChange: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.Target: com.google.protobuf.Parser PARSER
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event ON_CREATE
+com.google.firestore.v1.StructuredQuery$FieldFilter: com.google.protobuf.Parser PARSER
+com.google.firestore.v1.DocumentRemove: int DOCUMENT_FIELD_NUMBER
+com.google.protobuf.Int32Value: int VALUE_FIELD_NUMBER
+com.google.firestore.v1.DocumentRemove: java.lang.String document_
+com.google.firestore.v1.WriteResult: int bitField0_
+kotlinx.coroutines.channels.BufferedChannel: java.lang.Object sendSegment$volatile
+com.google.type.LatLng: com.google.protobuf.Parser PARSER
+com.google.firebase.firestore.proto.UnknownDocument: com.google.protobuf.Timestamp version_
+com.google.protobuf.GeneratedMessageLite: int memoizedSerializedSize
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event$Companion Companion
+com.google.firestore.v1.DocumentChange: com.google.protobuf.Internal$IntList removedTargetIds_
+com.google.firestore.v1.TargetChange: com.google.protobuf.Timestamp readTime_
+com.google.firestore.v1.ListenRequest: int LABELS_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery: com.google.firestore.v1.Cursor startAt_
+com.google.firebase.firestore.proto.MaybeDocument: com.google.protobuf.Parser PARSER
+androidx.versionedparcelable.ParcelImpl: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.DocumentTransform: com.google.protobuf.Parser PARSER
+kotlinx.coroutines.sync.SemaphoreAndMutexImpl: long enqIdx$volatile
+com.google.firestore.v1.DocumentChange: com.google.protobuf.Internal$IntList targetIds_
+com.google.android.gms.common.internal.GetServiceRequest: android.os.Parcelable$Creator CREATOR
+com.google.android.gms.common.internal.MethodInvocation: android.os.Parcelable$Creator CREATOR
+kotlinx.coroutines.scheduling.CoroutineScheduler: long controlState$volatile
+com.google.firebase.firestore.proto.WriteBatch: int BASE_WRITES_FIELD_NUMBER
+androidx.datastore.preferences.PreferencesProto$Value: int STRING_SET_FIELD_NUMBER
+com.google.firestore.v1.DocumentTransform$FieldTransform: int REMOVE_ALL_FROM_ARRAY_FIELD_NUMBER
+com.google.protobuf.GeneratedMessageLite: int MEMOIZED_SERIALIZED_SIZE_MASK
+androidx.datastore.preferences.protobuf.GeneratedMessageLite: int MEMOIZED_SERIALIZED_SIZE_MASK
+com.google.android.gms.maps.model.CameraPosition: android.os.Parcelable$Creator CREATOR
+com.google.firestore.v1.Document: int FIELDS_FIELD_NUMBER
+com.google.firebase.firestore.proto.MaybeDocument: int DOCUMENT_FIELD_NUMBER
+com.google.firestore.v1.StructuredQuery: int ORDER_BY_FIELD_NUMBER
+android.support.v4.media.session.MediaSessionCompat$Token: android.os.Parcelable$Creator CREATOR
+com.google.firebase.firestore.proto.NoDocument: com.google.protobuf.Parser PARSER
+androidx.datastore.preferences.PreferencesProto$StringSet: androidx.datastore.preferences.protobuf.Parser PARSER
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.focus.FocusOwner getFocusOwner()
+androidx.compose.ui.platform.AndroidComposeView: void getFontLoader$annotations()
+io.grpc.util.OutlierDetectionLoadBalancerProvider: java.lang.String getPolicyName()
+androidx.core.view.WindowInsetsCompat$BuilderImpl: void setStableInsets(androidx.core.graphics.Insets)
+androidx.compose.ui.node.NodeMeasuringIntrinsics$IntrinsicWidthHeight: androidx.compose.ui.node.NodeMeasuringIntrinsics$IntrinsicWidthHeight valueOf(java.lang.String)
+androidx.core.app.RemoteActionCompatParcelizer: androidx.core.app.RemoteActionCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.core.view.WindowInsetsCompat$Impl20: boolean isTypeVisible(int)
+androidx.core.view.ViewCompat$Api21Impl: void callCompatInsetAnimationCallback(android.view.WindowInsets,android.view.View)
+com.google.firebase.FirebaseCommonKtxRegistrar: FirebaseCommonKtxRegistrar()
+com.google.firestore.v1.ListenResponse$ResponseTypeCase: com.google.firestore.v1.ListenResponse$ResponseTypeCase valueOf(java.lang.String)
+androidx.compose.ui.layout.IntrinsicWidthHeight: androidx.compose.ui.layout.IntrinsicWidthHeight valueOf(java.lang.String)
+com.google.maps.android.compose.DragState: com.google.maps.android.compose.DragState[] values()
+com.google.firebase.firestore.core.Query$LimitType: com.google.firebase.firestore.core.Query$LimitType[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.AndroidAccessibilityManager getAccessibilityManager()
+com.google.maps.android.ui.RotationLayout: RotationLayout(android.content.Context,android.util.AttributeSet)
+androidx.lifecycle.ProcessLifecycleOwner$attach$1$onActivityPreCreated$1: ProcessLifecycleOwner$attach$1$onActivityPreCreated$1(androidx.lifecycle.ProcessLifecycleOwner)
+com.google.firebase.ktx.FirebaseCommonLegacyRegistrar: java.util.List getComponents()
+androidx.appcompat.resources.Compatibility$Api18Impl: void setAutoCancel(android.animation.ObjectAnimator,boolean)
+androidx.compose.foundation.layout.Direction: androidx.compose.foundation.layout.Direction valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl29: WindowInsetsCompat$Impl29(androidx.core.view.WindowInsetsCompat,android.view.WindowInsets)
+androidx.compose.ui.platform.CalculateMatrixToWindowApi29: void calculateMatrixToWindow-EL8BTi8(android.view.View,float[])
+kotlinx.coroutines.channels.BufferOverflow: kotlinx.coroutines.channels.BufferOverflow valueOf(java.lang.String)
+com.google.firebase.firestore.core.FieldFilter$Operator: com.google.firebase.firestore.core.FieldFilter$Operator valueOf(java.lang.String)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.autofill.AndroidAutofillManager get_autofillManager$ui_release()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.text.font.Font$ResourceLoader getFontLoader()
+coil.transform.PixelOpacity: coil.transform.PixelOpacity[] values()
+com.google.protobuf.Writer$FieldOrder: com.google.protobuf.Writer$FieldOrder valueOf(java.lang.String)
+io.grpc.okhttp.internal.TlsVersion: io.grpc.okhttp.internal.TlsVersion valueOf(java.lang.String)
+androidx.core.view.ViewCompat$Api21Impl: void setTransitionName(android.view.View,java.lang.String)
+com.google.firebase.firestore.proto.Target$TargetTypeCase: com.google.firebase.firestore.proto.Target$TargetTypeCase valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.view.WindowInsetsCompat consumeSystemWindowInsets()
+androidx.compose.ui.viewinterop.ViewFactoryHolder: kotlin.jvm.functions.Function1 getResetBlock()
+androidx.compose.ui.platform.OutlineVerificationHelper: void setPath(android.graphics.Outline,androidx.compose.ui.graphics.Path)
+androidx.compose.ui.layout.IntrinsicWidthHeight: androidx.compose.ui.layout.IntrinsicWidthHeight[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.contentcapture.AndroidContentCaptureManager getContentCaptureManager$ui_release()
+androidx.lifecycle.EmptyActivityLifecycleCallbacks: void onActivityDestroyed(android.app.Activity)
+com.google.firebase.firestore.core.EventManager$ListenerRemovalAction: com.google.firebase.firestore.core.EventManager$ListenerRemovalAction[] values()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: android.os.Bundle getExtras(android.media.MediaDescription)
+androidx.core.view.WindowInsetsCompat$BuilderImpl: void setTappableElementInsets(androidx.core.graphics.Insets)
+io.grpc.SecurityLevel: io.grpc.SecurityLevel valueOf(java.lang.String)
+androidx.compose.ui.unit.InlineClassHelperKt: void throwIllegalStateException(java.lang.String)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: ReportFragment$LifecycleCallbacks()
+androidx.compose.material3.tokens.TypographyKeyTokens: androidx.compose.material3.tokens.TypographyKeyTokens valueOf(java.lang.String)
+androidx.compose.material3.tokens.ColorSchemeKeyTokens: androidx.compose.material3.tokens.ColorSchemeKeyTokens[] values()
+androidx.compose.animation.core.MutatePriority: androidx.compose.animation.core.MutatePriority[] values()
+com.google.firebase.firestore.core.CompositeFilter$Operator: com.google.firebase.firestore.core.CompositeFilter$Operator[] values()
+androidx.fragment.app.FragmentContainerView: void setLayoutTransition(android.animation.LayoutTransition)
+android.support.v4.media.AudioAttributesImplApi26Parcelizer: AudioAttributesImplApi26Parcelizer()
+io.grpc.Status$Code: io.grpc.Status$Code valueOf(java.lang.String)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getTranslateY()
+kotlin.collections.AbstractList: AbstractList()
+com.google.firebase.firestore.Source: com.google.firebase.firestore.Source valueOf(java.lang.String)
+androidx.compose.ui.text.internal.InlineClassHelperKt: void throwIllegalStateException(java.lang.String)
+androidx.emoji2.text.EmojiExclusions$EmojiExclusions_Api34: java.util.Set getExclusions()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: java.lang.CharSequence getDescription(android.media.MediaDescription)
+com.google.firestore.v1.Write$OperationCase: com.google.firestore.v1.Write$OperationCase valueOf(java.lang.String)
+coil.decode.ExifOrientationPolicy: coil.decode.ExifOrientationPolicy valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$BuilderImpl20: void setStableInsets(androidx.core.graphics.Insets)
+androidx.compose.ui.layout.MeasuringIntrinsics$IntrinsicMinMax: androidx.compose.ui.layout.MeasuringIntrinsics$IntrinsicMinMax valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$BuilderImpl: WindowInsetsCompat$BuilderImpl(androidx.core.view.WindowInsetsCompat)
+androidx.core.view.WindowInsetsCompat$Impl20: androidx.core.graphics.Insets getInsets(int)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.semantics.SemanticsOwner getSemanticsOwner()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: android.graphics.Bitmap getIconBitmap(android.media.MediaDescription)
+androidx.media.AudioAttributesImplApi26: AudioAttributesImplApi26()
+com.google.android.gms.common.ErrorDialogFragment: ErrorDialogFragment()
+androidx.compose.ui.text.style.ResolvedTextDirection: androidx.compose.ui.text.style.ResolvedTextDirection[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPathRenderer: void setAlpha(float)
+com.google.protobuf.FieldType: com.google.protobuf.FieldType valueOf(java.lang.String)
+androidx.compose.ui.platform.AndroidComposeView: androidx.collection.IntObjectMap getLayoutNodes()
+androidx.versionedparcelable.CustomVersionedParcelable: CustomVersionedParcelable()
+androidx.compose.runtime.InvalidationResult: androidx.compose.runtime.InvalidationResult[] values()
+androidx.core.view.WindowInsetsCompat$BuilderImpl29: void setStableInsets(androidx.core.graphics.Insets)
+io.grpc.okhttp.internal.Platform$TlsExtensionType: io.grpc.okhttp.internal.Platform$TlsExtensionType valueOf(java.lang.String)
+com.google.android.gms.common.SupportErrorDialogFragment: SupportErrorDialogFragment()
+androidx.compose.ui.viewinterop.AndroidViewHolder: void setReset(kotlin.jvm.functions.Function0)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.AndroidClipboard getClipboard()
+androidx.compose.ui.window.SecureFlagPolicy: androidx.compose.ui.window.SecureFlagPolicy valueOf(java.lang.String)
+io.grpc.okhttp.internal.Protocol: io.grpc.okhttp.internal.Protocol valueOf(java.lang.String)
+android.support.v4.media.AudioAttributesCompatParcelizer: androidx.media.AudioAttributesCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.compose.ui.viewinterop.AndroidViewHolder: java.lang.CharSequence getAccessibilityClassName()
+io.grpc.internal.GrpcUtil$Http2Error: io.grpc.internal.GrpcUtil$Http2Error[] values()
+androidx.compose.animation.core.RepeatMode: androidx.compose.animation.core.RepeatMode valueOf(java.lang.String)
+com.google.common.util.concurrent.DirectExecutor: com.google.common.util.concurrent.DirectExecutor valueOf(java.lang.String)
+androidx.compose.ui.platform.AbstractComposeView: void setTransitionGroup(boolean)
+androidx.compose.ui.platform.AndroidComposeView: void getTextInputService$annotations()
+androidx.compose.ui.internal.InlineClassHelperKt: void throwIllegalArgumentException(java.lang.String)
+androidx.compose.ui.input.pointer.PointerInteropFilter$DispatchToViewState: androidx.compose.ui.input.pointer.PointerInteropFilter$DispatchToViewState valueOf(java.lang.String)
+androidx.compose.ui.viewinterop.FocusGroupPropertiesElement: FocusGroupPropertiesElement()
+androidx.core.view.WindowInsetsCompat$Impl: void setOverriddenInsets(androidx.core.graphics.Insets[])
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.autofill.Autofill getAutofill()
+androidx.core.view.ViewCompat$Api29Impl: android.view.View$AccessibilityDelegate getAccessibilityDelegate(android.view.View)
+kotlin.coroutines.intrinsics.CoroutineSingletons: kotlin.coroutines.intrinsics.CoroutineSingletons valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl28: androidx.core.view.WindowInsetsCompat consumeDisplayCutout()
+androidx.compose.ui.graphics.Path$Direction: androidx.compose.ui.graphics.Path$Direction valueOf(java.lang.String)
+com.google.maps.android.compose.MapType: com.google.maps.android.compose.MapType[] values()
+com.google.firebase.firestore.DocumentSnapshot$ServerTimestampBehavior: com.google.firebase.firestore.DocumentSnapshot$ServerTimestampBehavior valueOf(java.lang.String)
+androidx.activity.EdgeToEdgeApi29: void setUp(androidx.activity.SystemBarStyle,androidx.activity.SystemBarStyle,android.view.Window,android.view.View,boolean,boolean)
+io.grpc.util.SecretRoundRobinLoadBalancerProvider$Provider: int getPriority()
+com.google.firestore.v1.StructuredQuery$FieldFilter$Operator: com.google.firestore.v1.StructuredQuery$FieldFilter$Operator valueOf(java.lang.String)
+androidx.compose.ui.node.TraversableNode$Companion$TraverseDescendantsAction: androidx.compose.ui.node.TraversableNode$Companion$TraverseDescendantsAction valueOf(java.lang.String)
+android.support.v4.graphics.drawable.IconCompatParcelizer: androidx.core.graphics.drawable.IconCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.compose.ui.platform.AndroidComposeView: void setContentCaptureManager$ui_release(androidx.compose.ui.contentcapture.AndroidContentCaptureManager)
+androidx.core.graphics.drawable.IconCompatParcelizer: IconCompatParcelizer()
+androidx.emoji2.text.EmojiCompatInitializer: EmojiCompatInitializer()
+androidx.datastore.preferences.protobuf.FieldType$Collection: androidx.datastore.preferences.protobuf.FieldType$Collection valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl30: void copyRootViewBounds(android.view.View)
+com.google.firebase.firestore.local.IndexManager$IndexType: com.google.firebase.firestore.local.IndexManager$IndexType[] values()
+io.grpc.okhttp.internal.CipherSuite: io.grpc.okhttp.internal.CipherSuite[] values()
+androidx.compose.ui.viewinterop.ViewFactoryHolder: void setReleaseBlock(kotlin.jvm.functions.Function1)
+com.google.firebase.firestore.core.CompositeFilter$Operator: com.google.firebase.firestore.core.CompositeFilter$Operator valueOf(java.lang.String)
+androidx.activity.EdgeToEdgeApi28: void adjustLayoutInDisplayCutoutMode(android.view.Window)
+androidx.core.view.WindowInsetsCompat$Impl21: WindowInsetsCompat$Impl21(androidx.core.view.WindowInsetsCompat,androidx.core.view.WindowInsetsCompat$Impl21)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setFillAlpha(float)
+kotlinx.coroutines.android.AndroidDispatcherFactory: int getLoadPriority()
+com.google.firestore.v1.Value$ValueTypeCase: com.google.firestore.v1.Value$ValueTypeCase valueOf(java.lang.String)
+androidx.compose.runtime.collection.MutableVectorKt: void throwOutOfRangeException(int,int)
+com.google.common.collect.AbstractMapEntry: AbstractMapEntry()
+androidx.media3.datasource.RawResourceDataSource: android.net.Uri buildRawResourceUri(int)
+androidx.compose.ui.graphics.layer.ViewLayer: void setInvalidated(boolean)
+androidx.compose.ui.platform.AndroidComposeView: void setAccessibilityEventBatchIntervalMillis(long)
+androidx.core.view.WindowInsetsCompat$Impl34: WindowInsetsCompat$Impl34(androidx.core.view.WindowInsetsCompat,android.view.WindowInsets)
+androidx.fragment.app.FragmentContainerView: void setOnApplyWindowInsetsListener(android.view.View$OnApplyWindowInsetsListener)
+androidx.fragment.app.strictmode.FragmentStrictMode$Flag: androidx.fragment.app.strictmode.FragmentStrictMode$Flag valueOf(java.lang.String)
+androidx.compose.ui.focus.CustomDestinationResult: androidx.compose.ui.focus.CustomDestinationResult valueOf(java.lang.String)
+androidx.compose.ui.viewinterop.ViewFactoryHolder: void setSavableRegistryEntry(androidx.compose.runtime.saveable.SaveableStateRegistry$Entry)
+com.google.firestore.v1.DocumentTransform$FieldTransform$TransformTypeCase: com.google.firestore.v1.DocumentTransform$FieldTransform$TransformTypeCase valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$BuilderImpl29: androidx.core.view.WindowInsetsCompat build()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.input.InputModeManager getInputModeManager()
+kotlin.time.DurationUnit: kotlin.time.DurationUnit[] values()
+androidx.compose.material3.tokens.ShapeKeyTokens: androidx.compose.material3.tokens.ShapeKeyTokens[] values()
+androidx.core.view.WindowInsetsCompat$Impl29: androidx.core.graphics.Insets getTappableElementInsets()
+com.google.firebase.firestore.local.QueryPurpose: com.google.firebase.firestore.local.QueryPurpose valueOf(java.lang.String)
+androidx.compose.material3.ModalBottomSheetDialogLayout$Api33Impl: android.window.OnBackInvokedCallback createBackCallback(kotlin.jvm.functions.Function0)
+com.google.protobuf.JavaType: com.google.protobuf.JavaType[] values()
+io.grpc.okhttp.internal.framed.ErrorCode: io.grpc.okhttp.internal.framed.ErrorCode valueOf(java.lang.String)
+androidx.compose.runtime.PreconditionsKt: void throwIllegalStateException(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.graphics.Insets getSystemGestureInsets()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getPivotY()
+androidx.core.view.WindowInsetsCompat$Impl30: WindowInsetsCompat$Impl30(androidx.core.view.WindowInsetsCompat,android.view.WindowInsets)
+androidx.fragment.app.FragmentContainerView: void setDrawDisappearingViewsLast(boolean)
+androidx.core.view.WindowInsetsCompat$Impl20: WindowInsetsCompat$Impl20(androidx.core.view.WindowInsetsCompat,android.view.WindowInsets)
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.graphics.Insets getMandatorySystemGestureInsets()
+androidx.compose.ui.platform.AndroidComposeView: boolean getShowLayoutBounds()
+androidx.core.view.WindowInsetsCompat$BuilderImpl20: WindowInsetsCompat$BuilderImpl20()
+com.google.firebase.firestore.model.MutableDocument$DocumentType: com.google.firebase.firestore.model.MutableDocument$DocumentType valueOf(java.lang.String)
+kotlinx.coroutines.android.AndroidExceptionPreHandler: AndroidExceptionPreHandler()
+androidx.core.view.WindowInsetsCompat$BuilderImpl34: void setInsets(int,androidx.core.graphics.Insets)
+android.support.v4.media.AudioAttributesImplBaseParcelizer: void write(androidx.media.AudioAttributesImplBase,androidx.versionedparcelable.VersionedParcel)
+com.google.common.base.Function: boolean equals(java.lang.Object)
+androidx.compose.ui.focus.FocusTargetNode$FocusTargetElement: FocusTargetNode$FocusTargetElement()
+androidx.lifecycle.EmptyActivityLifecycleCallbacks: void onActivityPaused(android.app.Activity)
+io.grpc.stub.ClientCalls$StubType: io.grpc.stub.ClientCalls$StubType[] values()
+com.google.firebase.firestore.model.FieldIndex$Segment$Kind: com.google.firebase.firestore.model.FieldIndex$Segment$Kind valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl20: boolean isVisible(int)
+com.google.firebase.firestore.MetadataChanges: com.google.firebase.firestore.MetadataChanges[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.graphics.GraphicsContext getGraphicsContext()
+androidx.compose.ui.viewinterop.ViewFactoryHolder: void setUpdateBlock(kotlin.jvm.functions.Function1)
+com.mikhail.manifestation.data.audio.PlaybackState: com.mikhail.manifestation.data.audio.PlaybackState[] values()
+androidx.compose.foundation.internal.InlineClassHelperKt: void throwIllegalArgumentException(java.lang.String)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getStrokeAlpha()
+com.google.firestore.v1.DocumentTransform$FieldTransform$ServerValue: com.google.firestore.v1.DocumentTransform$FieldTransform$ServerValue valueOf(java.lang.String)
+androidx.compose.material3.SheetValue: androidx.compose.material3.SheetValue[] values()
+androidx.core.view.WindowInsetsCompat$BuilderImpl: void setInsets(int,androidx.core.graphics.Insets)
+com.google.firebase.database.collection.LLRBNode$Color: com.google.firebase.database.collection.LLRBNode$Color[] values()
+com.google.common.collect.Maps$EntryFunction: com.google.common.collect.Maps$EntryFunction[] values()
+io.grpc.okhttp.NegotiationType: io.grpc.okhttp.NegotiationType valueOf(java.lang.String)
+io.grpc.util.OutlierDetectionLoadBalancerProvider: io.grpc.NameResolver$ConfigOrError parseLoadBalancingPolicyConfig(java.util.Map)
+androidx.lifecycle.ProcessLifecycleInitializer: ProcessLifecycleInitializer()
+com.mikhail.manifestation.MainActivity: MainActivity()
+kotlinx.coroutines.flow.SharingCommand: kotlinx.coroutines.flow.SharingCommand valueOf(java.lang.String)
+com.google.firestore.v1.StructuredQuery$CompositeFilter$Operator: com.google.firestore.v1.StructuredQuery$CompositeFilter$Operator[] values()
+androidx.core.app.RemoteActionCompatParcelizer: RemoteActionCompatParcelizer()
+androidx.compose.ui.platform.AbstractComposeView: void setParentCompositionContext(androidx.compose.runtime.CompositionContext)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.WindowInfo getWindowInfo()
+androidx.core.view.WindowInsetsCompat$Impl21: boolean isConsumed()
+androidx.appcompat.resources.Compatibility$Api21Impl: android.graphics.drawable.Drawable createFromXmlInner(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)
+androidx.compose.animation.core.PreconditionsKt: void throwIllegalArgumentException(java.lang.String)
+androidx.compose.ui.viewinterop.AndroidViewHolder: androidx.compose.ui.node.LayoutNode getLayoutNode()
+androidx.core.app.NotificationCompat$BubbleMetadata$Api30Impl: android.app.Notification$BubbleMetadata toPlatform(androidx.core.app.NotificationCompat$BubbleMetadata)
+com.mikhail.manifestation.ui.theme.LifeArea: com.mikhail.manifestation.ui.theme.LifeArea valueOf(java.lang.String)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPreStopped(android.app.Activity)
+androidx.fragment.app.DialogFragment: DialogFragment()
+io.grpc.okhttp.internal.framed.HeadersMode: io.grpc.okhttp.internal.framed.HeadersMode valueOf(java.lang.String)
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: void setDescription(android.media.MediaDescription$Builder,java.lang.CharSequence)
+androidx.core.view.ViewCompat$Api30Impl: android.view.WindowInsets dispatchApplyWindowInsets(android.view.View,android.view.WindowInsets)
+com.google.firebase.firestore.remote.ConnectivityMonitor$NetworkStatus: com.google.firebase.firestore.remote.ConnectivityMonitor$NetworkStatus[] values()
+com.google.firestore.v1.DocumentTransform$FieldTransform$TransformTypeCase: com.google.firestore.v1.DocumentTransform$FieldTransform$TransformTypeCase[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPathRenderer: float getAlpha()
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.view.DisplayCutoutCompat getDisplayCutout()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: android.net.Uri getIconUri(android.media.MediaDescription)
+androidx.compose.ui.platform.AbstractComposeView: boolean getShowLayoutBounds()
+com.google.common.util.concurrent.DirectExecutor: com.google.common.util.concurrent.DirectExecutor[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: int getStrokeColor()
+androidx.compose.ui.platform.AndroidComposeView: android.view.View findViewByAccessibilityIdTraversal(int)
+androidx.compose.ui.input.pointer.PointerInputEventHandler: java.lang.Object invoke(androidx.compose.ui.input.pointer.PointerInputScope,kotlin.coroutines.Continuation)
+androidx.core.graphics.drawable.IconCompatParcelizer: androidx.core.graphics.drawable.IconCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.compose.ui.viewinterop.AndroidViewHolder: androidx.compose.ui.unit.Density getDensity()
+androidx.compose.runtime.ComposerKt: void composeImmediateRuntimeError(java.lang.String)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VectorDrawableCompatState: int getChangingConfigurations()
+androidx.lifecycle.SavedStateHandlesVM: SavedStateHandlesVM()
+androidx.compose.ui.platform.AbstractComposeView: boolean getShouldCreateCompositionOnAttachedToWindow()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.AndroidComposeView$ViewTreeOwners getViewTreeOwners()
+io.grpc.internal.PickFirstLoadBalancerProvider: PickFirstLoadBalancerProvider()
+io.grpc.internal.PickFirstLoadBalancerProvider: int getPriority()
+android.support.v4.media.AudioAttributesImplApi21Parcelizer: androidx.media.AudioAttributesImplApi21 read(androidx.versionedparcelable.VersionedParcel)
+androidx.compose.ui.unit.LayoutDirection: androidx.compose.ui.unit.LayoutDirection valueOf(java.lang.String)
+androidx.media.AudioAttributesImplApi26Parcelizer: AudioAttributesImplApi26Parcelizer()
+android.support.v4.media.AudioAttributesImplBaseParcelizer: androidx.media.AudioAttributesImplBase read(androidx.versionedparcelable.VersionedParcel)
+io.grpc.ChannelLogger$ChannelLogLevel: io.grpc.ChannelLogger$ChannelLogLevel[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setPivotY(float)
+androidx.compose.ui.viewinterop.AndroidViewHolder: void setModifier(androidx.compose.ui.Modifier)
+androidx.core.view.WindowInsetsCompat$BuilderImpl30: WindowInsetsCompat$BuilderImpl30(androidx.core.view.WindowInsetsCompat)
+androidx.core.view.WindowInsetsCompat$Impl30: boolean isVisible(int)
+androidx.lifecycle.ProcessLifecycleOwner$attach$1: void onActivityCreated(android.app.Activity,android.os.Bundle)
+androidx.graphics.path.PathIteratorPreApi34Impl: void destroyInternalPathIterator(long)
+androidx.compose.ui.node.LayoutNode$LayoutState: androidx.compose.ui.node.LayoutNode$LayoutState valueOf(java.lang.String)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setTranslateX(float)
+androidx.compose.ui.viewinterop.AndroidViewHolder: kotlin.jvm.functions.Function0 getUpdate()
+androidx.compose.ui.viewinterop.AndroidViewHolder: kotlin.jvm.functions.Function1 getOnModifierChanged$ui_release()
+io.grpc.internal.KeepAliveManager$State: io.grpc.internal.KeepAliveManager$State valueOf(java.lang.String)
+coil.decode.DataSource: coil.decode.DataSource valueOf(java.lang.String)
+com.google.firestore.v1.StructuredQuery$UnaryFilter$Operator: com.google.firestore.v1.StructuredQuery$UnaryFilter$Operator[] values()
+androidx.core.view.ViewCompat$Api28Impl: boolean isAccessibilityHeading(android.view.View)
+androidx.compose.ui.text.internal.InlineClassHelperKt: java.lang.Void throwIllegalArgumentExceptionForNullCheck(java.lang.String)
+com.google.maps.android.compose.CameraMoveStartedReason: com.google.maps.android.compose.CameraMoveStartedReason[] values()
+androidx.compose.ui.graphics.AndroidPath_androidKt: void throwIllegalStateException(java.lang.String)
+androidx.compose.ui.platform.ComposeView: boolean getShouldCreateCompositionOnAttachedToWindow()
+androidx.core.view.WindowInsetsCompat$BuilderImpl30: void setInsets(int,androidx.core.graphics.Insets)
+androidx.compose.ui.text.font.FontWeightAdjustmentHelperApi31: int fontWeightAdjustment(android.content.Context)
+androidx.compose.ui.unit.ConstraintsKt: void throwInvalidConstraintException(int,int)
+androidx.compose.ui.util.ListUtilsKt: void throwUnsupportedOperationException(java.lang.String)
+com.google.firestore.v1.TargetChange$TargetChangeType: com.google.firestore.v1.TargetChange$TargetChangeType valueOf(java.lang.String)
+androidx.core.graphics.drawable.IconCompatParcelizer: void write(androidx.core.graphics.drawable.IconCompat,androidx.versionedparcelable.VersionedParcel)
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: android.media.MediaDescription build(android.media.MediaDescription$Builder)
+io.grpc.util.OutlierDetectionLoadBalancerProvider: boolean isAvailable()
+android.support.v4.app.RemoteActionCompatParcelizer: androidx.core.app.RemoteActionCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.compose.animation.core.AnimationEndReason: androidx.compose.animation.core.AnimationEndReason[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.node.LayoutNodeDrawScope getSharedDrawScope()
+com.google.firebase.firestore.core.DocumentViewChange$Type: com.google.firebase.firestore.core.DocumentViewChange$Type[] values()
+androidx.media.AudioAttributesImplApi21: AudioAttributesImplApi21()
+androidx.compose.ui.focus.CustomDestinationResult: androidx.compose.ui.focus.CustomDestinationResult[] values()
+com.google.protobuf.Writer$FieldOrder: com.google.protobuf.Writer$FieldOrder[] values()
+androidx.compose.ui.platform.AndroidComposeView: void setConfigurationChangeObserver(kotlin.jvm.functions.Function1)
+io.grpc.okhttp.OkHttpChannelProvider: OkHttpChannelProvider()
+com.google.firebase.firestore.MetadataChanges: com.google.firebase.firestore.MetadataChanges valueOf(java.lang.String)
+androidx.compose.ui.platform.AndroidComposeView: void setFontFamilyResolver(androidx.compose.ui.text.font.FontFamily$Resolver)
+androidx.compose.runtime.collection.MutableVectorKt: void throwReversedIndicesException(int,int)
+com.google.firestore.v1.DocumentTransform$FieldTransform$ServerValue: com.google.firestore.v1.DocumentTransform$FieldTransform$ServerValue[] values()
+androidx.exifinterface.media.ExifInterfaceUtils$Api23Impl: void setDataSource(android.media.MediaMetadataRetriever,android.media.MediaDataSource)
+androidx.compose.ui.node.LayoutNode$LayoutState: androidx.compose.ui.node.LayoutNode$LayoutState[] values()
+io.grpc.ChannelLogger$ChannelLogLevel: io.grpc.ChannelLogger$ChannelLogLevel valueOf(java.lang.String)
+com.google.firebase.firestore.ListenSource: com.google.firebase.firestore.ListenSource[] values()
+coil.size.Precision: coil.size.Precision valueOf(java.lang.String)
+io.grpc.stub.ClientCalls$StubType: io.grpc.stub.ClientCalls$StubType valueOf(java.lang.String)
+androidx.profileinstaller.ProfileInstallerInitializer: ProfileInstallerInitializer()
+androidx.graphics.path.ConicConverter: int internalConicToQuadratics(float[],int,float[],float,float)
+androidx.compose.ui.platform.AndroidViewsHandler: java.util.HashMap getHolderToLayoutNode()
+androidx.core.view.WindowInsetsCompat$Impl: boolean isConsumed()
+androidx.graphics.path.PathIteratorPreApi34Impl: int internalPathIteratorNext(long,float[],int)
+androidx.core.view.WindowInsetsCompat$BuilderImpl: void setSystemWindowInsets(androidx.core.graphics.Insets)
+io.grpc.util.SecretRoundRobinLoadBalancerProvider$Provider: java.lang.String getPolicyName()
+androidx.compose.ui.text.input.TextInputServiceAndroid$TextInputCommand: androidx.compose.ui.text.input.TextInputServiceAndroid$TextInputCommand valueOf(java.lang.String)
+androidx.compose.ui.platform.AndroidComposeView: boolean getScrollCaptureInProgress$ui_release()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.draganddrop.DragAndDropManager getDragAndDropManager()
+androidx.compose.ui.layout.MeasuringIntrinsics$IntrinsicWidthHeight: androidx.compose.ui.layout.MeasuringIntrinsics$IntrinsicWidthHeight valueOf(java.lang.String)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPathRenderer: int getRootAlpha()
+androidx.compose.ui.node.LayoutNode$UsageByParent: androidx.compose.ui.node.LayoutNode$UsageByParent valueOf(java.lang.String)
+androidx.datastore.preferences.protobuf.GeneratedMessageLite$MethodToInvoke: androidx.datastore.preferences.protobuf.GeneratedMessageLite$MethodToInvoke valueOf(java.lang.String)
+androidx.datastore.preferences.protobuf.ProtoSyntax: androidx.datastore.preferences.protobuf.ProtoSyntax[] values()
+com.google.firebase.ktx.FirebaseCommonKtxRegistrar: FirebaseCommonKtxRegistrar()
+androidx.compose.ui.text.style.ResolvedTextDirection: androidx.compose.ui.text.style.ResolvedTextDirection valueOf(java.lang.String)
+io.grpc.util.SecretRoundRobinLoadBalancerProvider$Provider: io.grpc.NameResolver$ConfigOrError parseLoadBalancingPolicyConfig(java.util.Map)
+androidx.appcompat.resources.Compatibility$Api21Impl: int getChangingConfigurations(android.content.res.TypedArray)
+kotlinx.coroutines.android.AndroidExceptionPreHandler: void handleException(kotlin.coroutines.CoroutineContext,java.lang.Throwable)
+androidx.lifecycle.EmptyActivityLifecycleCallbacks: void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle)
+okhttp3.TlsVersion: okhttp3.TlsVersion[] values()
+com.google.common.collect.AbstractIterator$State: com.google.common.collect.AbstractIterator$State[] values()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: void setTitle(android.media.MediaDescription$Builder,java.lang.CharSequence)
+androidx.core.view.WindowInsetsCompat$Impl21: WindowInsetsCompat$Impl21(androidx.core.view.WindowInsetsCompat,android.view.WindowInsets)
+kotlinx.coroutines.selects.TrySelectDetailedResult: kotlinx.coroutines.selects.TrySelectDetailedResult[] values()
+com.google.firebase.firestore.FirestoreRegistrar: com.google.firebase.firestore.FirestoreMultiDbComponent lambda$getComponents$0(com.google.firebase.components.ComponentContainer)
+com.google.common.collect.Iterators$EmptyModifiableIterator: com.google.common.collect.Iterators$EmptyModifiableIterator[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.unit.Density getDensity()
+androidx.core.view.WindowInsetsCompat$Impl20: boolean equals(java.lang.Object)
+com.google.firebase.database.collection.LLRBNode$Color: com.google.firebase.database.collection.LLRBNode$Color valueOf(java.lang.String)
+androidx.compose.ui.input.pointer.PointerInteropFilter$DispatchToViewState: androidx.compose.ui.input.pointer.PointerInteropFilter$DispatchToViewState[] values()
+androidx.compose.ui.viewinterop.AndroidViewHolder: void setOnModifierChanged$ui_release(kotlin.jvm.functions.Function1)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getScaleY()
+io.grpc.okhttp.OkHttpChannelBuilder$NegotiationType: io.grpc.okhttp.OkHttpChannelBuilder$NegotiationType valueOf(java.lang.String)
+coil.request.CachePolicy: coil.request.CachePolicy[] values()
+okhttp3.internal.http2.ErrorCode: okhttp3.internal.http2.ErrorCode[] values()
+io.grpc.MethodDescriptor$MethodType: io.grpc.MethodDescriptor$MethodType valueOf(java.lang.String)
+androidx.compose.ui.input.pointer.PointerEventPass: androidx.compose.ui.input.pointer.PointerEventPass[] values()
+com.mikhail.manifestation.LevelUpApp: LevelUpApp()
+androidx.compose.ui.platform.AndroidComposeView: void getShowLayoutBounds$annotations()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.ClipboardManager getClipboardManager()
+androidx.compose.ui.platform.ViewLayer: float[] getUnderlyingMatrix-sQKQjiQ()
+com.google.firebase.concurrent.UiExecutor: com.google.firebase.concurrent.UiExecutor valueOf(java.lang.String)
+androidx.compose.ui.platform.AndroidComposeView: void setOnViewTreeOwnersAvailable(kotlin.jvm.functions.Function1)
+io.grpc.internal.MessageDeframer$State: io.grpc.internal.MessageDeframer$State valueOf(java.lang.String)
+androidx.compose.ui.contentcapture.ContentCaptureEventType: androidx.compose.ui.contentcapture.ContentCaptureEventType valueOf(java.lang.String)
+com.google.firebase.firestore.remote.WatchChangeAggregator$BloomFilterApplicationStatus: com.google.firebase.firestore.remote.WatchChangeAggregator$BloomFilterApplicationStatus[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPath: androidx.core.graphics.PathParser$PathDataNode[] getPathData()
+io.grpc.internal.DnsNameResolver$JdkAddressResolver: io.grpc.internal.DnsNameResolver$JdkAddressResolver valueOf(java.lang.String)
+androidx.core.view.ViewCompat$Api21Impl: void setOnApplyWindowInsetsListener(android.view.View,androidx.core.view.OnApplyWindowInsetsListener)
+io.grpc.TlsChannelCredentials$Feature: io.grpc.TlsChannelCredentials$Feature[] values()
+androidx.compose.foundation.internal.InlineClassHelperKt: java.lang.Void throwIllegalArgumentExceptionForNullCheck(java.lang.String)
+androidx.compose.animation.core.MutatePriority: androidx.compose.animation.core.MutatePriority valueOf(java.lang.String)
+io.grpc.internal.DnsNameResolverProvider: boolean isAvailable()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getTrimPathStart()
+com.google.firebase.FirebaseCommonRegistrar: FirebaseCommonRegistrar()
+androidx.compose.ui.unit.InlineClassHelperKt: void throwIllegalArgumentException(java.lang.String)
+android.support.v4.media.AudioAttributesImplBaseParcelizer: AudioAttributesImplBaseParcelizer()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getTrimPathOffset()
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.view.WindowInsetsCompat inset(int,int,int,int)
+androidx.loader.app.LoaderManagerImpl$LoaderViewModel: LoaderManagerImpl$LoaderViewModel()
+androidx.compose.ui.platform.ViewLayer: androidx.compose.ui.platform.DrawChildContainer getContainer()
+androidx.exifinterface.media.ExifInterfaceUtils$Api21Impl: long lseek(java.io.FileDescriptor,long,int)
+androidx.compose.foundation.internal.InlineClassHelperKt: void throwIllegalStateException(java.lang.String)
+io.grpc.util.SecretRoundRobinLoadBalancerProvider$Provider: SecretRoundRobinLoadBalancerProvider$Provider()
+androidx.core.view.WindowInsetsCompat$BuilderImpl: void setMandatorySystemGestureInsets(androidx.core.graphics.Insets)
+androidx.compose.ui.viewinterop.ViewFactoryHolder: android.view.View getViewRoot()
+androidx.core.view.WindowInsetsCompat$Impl28: WindowInsetsCompat$Impl28(androidx.core.view.WindowInsetsCompat,android.view.WindowInsets)
+androidx.compose.ui.viewinterop.ViewFactoryHolder: kotlin.jvm.functions.Function1 getReleaseBlock()
+com.google.firebase.heartbeatinfo.HeartBeatInfo$HeartBeat: com.google.firebase.heartbeatinfo.HeartBeatInfo$HeartBeat valueOf(java.lang.String)
+kotlinx.coroutines.selects.TrySelectDetailedResult: kotlinx.coroutines.selects.TrySelectDetailedResult valueOf(java.lang.String)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setStrokeWidth(float)
+androidx.compose.ui.internal.InlineClassHelperKt: java.lang.Void throwIllegalStateExceptionForNullCheck(java.lang.String)
+androidx.compose.ui.platform.AndroidComposeViewStartDragAndDropN: boolean startDragAndDrop(android.view.View,androidx.compose.ui.draganddrop.DragAndDropTransferData,androidx.compose.ui.draganddrop.ComposeDragShadowBuilder)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.text.input.TextInputService getTextInputService()
+com.mikhail.manifestation.ui.theme.ThemeMode: com.mikhail.manifestation.ui.theme.ThemeMode valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$BuilderImpl: void applyInsetTypes()
+androidx.lifecycle.ProcessLifecycleOwner$attach$1: void onActivityPreCreated(android.app.Activity,android.os.Bundle)
+com.google.protobuf.WireFormat$JavaType: com.google.protobuf.WireFormat$JavaType[] values()
+androidx.core.view.WindowInsetsCompat$Impl30: androidx.core.graphics.Insets getInsets(int)
+androidx.compose.ui.viewinterop.AndroidViewHolder: android.view.View getView()
+androidx.core.view.WindowInsetsCompat$Impl: int hashCode()
+io.grpc.ConnectivityState: io.grpc.ConnectivityState valueOf(java.lang.String)
+androidx.compose.ui.graphics.layer.ViewLayer: void setCanUseCompositingLayer$ui_graphics_release(boolean)
+com.google.gson.stream.JsonToken: com.google.gson.stream.JsonToken valueOf(java.lang.String)
+androidx.compose.ui.platform.AndroidComposeView: int getImportantForAutofill()
+androidx.graphics.path.PathIteratorPreApi34Impl: int internalPathIteratorPeek(long)
+com.google.protobuf.NullValue: com.google.protobuf.NullValue[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: int getFillColor()
+io.grpc.okhttp.internal.Platform$TlsExtensionType: io.grpc.okhttp.internal.Platform$TlsExtensionType[] values()
+com.google.firebase.firestore.model.MutableDocument$DocumentState: com.google.firebase.firestore.model.MutableDocument$DocumentState valueOf(java.lang.String)
+com.google.firestore.v1.StructuredQuery$CompositeFilter$Operator: com.google.firestore.v1.StructuredQuery$CompositeFilter$Operator valueOf(java.lang.String)
+com.google.firestore.v1.Write$OperationCase: com.google.firestore.v1.Write$OperationCase[] values()
+com.google.firestore.admin.v1.Index$IndexField$ArrayConfig: com.google.firestore.admin.v1.Index$IndexField$ArrayConfig[] values()
+androidx.core.view.WindowInsetsCompat$Impl: void setStableInsets(androidx.core.graphics.Insets)
+androidx.compose.ui.viewinterop.AndroidViewHolder: androidx.compose.ui.node.OwnerSnapshotObserver getSnapshotObserver()
+androidx.compose.ui.node.NodeMeasuringIntrinsics$IntrinsicMinMax: androidx.compose.ui.node.NodeMeasuringIntrinsics$IntrinsicMinMax[] values()
+com.google.firebase.firestore.core.FieldFilter$Operator: com.google.firebase.firestore.core.FieldFilter$Operator[] values()
+com.google.firebase.firestore.local.IndexManager$IndexType: com.google.firebase.firestore.local.IndexManager$IndexType valueOf(java.lang.String)
+kotlinx.coroutines.CoroutineStart: kotlinx.coroutines.CoroutineStart valueOf(java.lang.String)
+androidx.compose.ui.text.input.TextInputServiceAndroid$TextInputCommand: androidx.compose.ui.text.input.TextInputServiceAndroid$TextInputCommand[] values()
+androidx.core.view.ViewCompat$Api21Impl$1: ViewCompat$Api21Impl$1(android.view.View,androidx.core.view.OnApplyWindowInsetsListener)
+androidx.core.view.WindowInsetsCompat$BuilderImpl20: WindowInsetsCompat$BuilderImpl20(androidx.core.view.WindowInsetsCompat)
+androidx.compose.ui.node.LookaheadPassDelegate$PlacedState: androidx.compose.ui.node.LookaheadPassDelegate$PlacedState[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VectorDrawableDelegateState: int getChangingConfigurations()
+androidx.compose.ui.viewinterop.AndroidViewHolder: void setLifecycleOwner(androidx.lifecycle.LifecycleOwner)
+androidx.compose.animation.EnterExitState: androidx.compose.animation.EnterExitState valueOf(java.lang.String)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.node.RootForTest getRootForTest()
+androidx.compose.ui.node.TraversableNode$Companion$TraverseDescendantsAction: androidx.compose.ui.node.TraversableNode$Companion$TraverseDescendantsAction[] values()
+com.google.firebase.firestore.core.DocumentViewChange$Type: com.google.firebase.firestore.core.DocumentViewChange$Type valueOf(java.lang.String)
+androidx.compose.ui.contentcapture.AndroidContentCaptureManager$TranslateStatus: androidx.compose.ui.contentcapture.AndroidContentCaptureManager$TranslateStatus valueOf(java.lang.String)
+io.grpc.okhttp.OkHttpFrameLogger$SettingParams: io.grpc.okhttp.OkHttpFrameLogger$SettingParams[] values()
+kotlinx.coroutines.android.AndroidDispatcherFactory: AndroidDispatcherFactory()
+io.grpc.MethodDescriptor$MethodType: io.grpc.MethodDescriptor$MethodType[] values()
+com.google.firebase.firestore.proto.MaybeDocument$DocumentTypeCase: com.google.firebase.firestore.proto.MaybeDocument$DocumentTypeCase valueOf(java.lang.String)
+com.google.firestore.admin.v1.Index$QueryScope: com.google.firestore.admin.v1.Index$QueryScope[] values()
+androidx.datastore.preferences.protobuf.WireFormat$FieldType: androidx.datastore.preferences.protobuf.WireFormat$FieldType valueOf(java.lang.String)
+androidx.lifecycle.EmptyActivityLifecycleCallbacks: void onActivityStopped(android.app.Activity)
+androidx.compose.ui.viewinterop.AndroidViewHolder: kotlin.jvm.functions.Function1 getOnDensityChanged$ui_release()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getTranslateX()
+androidx.media.AudioAttributesImplApi26Parcelizer: void write(androidx.media.AudioAttributesImplApi26,androidx.versionedparcelable.VersionedParcel)
+androidx.compose.ui.platform.AndroidComposeViewTranslationCallbackS: void clearViewTranslationCallback(android.view.View)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setStrokeColor(int)
+androidx.compose.ui.focus.FocusStateImpl: androidx.compose.ui.focus.FocusStateImpl valueOf(java.lang.String)
+androidx.compose.ui.state.ToggleableState: androidx.compose.ui.state.ToggleableState valueOf(java.lang.String)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityCreated(android.app.Activity,android.os.Bundle)
+androidx.core.view.WindowInsetsCompat$Impl20: boolean isRound()
+androidx.compose.foundation.gestures.Orientation: androidx.compose.foundation.gestures.Orientation valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl20: androidx.core.graphics.Insets getInsetsForType(int,boolean)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: android.graphics.Matrix getLocalMatrix()
+com.google.firebase.firestore.model.FieldIndex$Segment$Kind: com.google.firebase.firestore.model.FieldIndex$Segment$Kind[] values()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: void setSubtitle(android.media.MediaDescription$Builder,java.lang.CharSequence)
+io.grpc.TlsChannelCredentials$Feature: io.grpc.TlsChannelCredentials$Feature valueOf(java.lang.String)
+androidx.compose.foundation.MutatePriority: androidx.compose.foundation.MutatePriority[] values()
+androidx.compose.ui.platform.DrawChildContainer: int getChildCount()
+androidx.core.view.WindowInsetsCompat$Impl: void copyRootViewBounds(android.view.View)
+androidx.compose.ui.internal.InlineClassHelperKt: void throwIndexOutOfBoundsException(java.lang.String)
+androidx.core.view.WindowInsetsCompat$BuilderImpl30: WindowInsetsCompat$BuilderImpl30()
+io.grpc.InternalChannelz$ChannelTrace$Event$Severity: io.grpc.InternalChannelz$ChannelTrace$Event$Severity valueOf(java.lang.String)
+io.grpc.okhttp.internal.framed.ErrorCode: io.grpc.okhttp.internal.framed.ErrorCode[] values()
+androidx.core.view.WindowInsetsCompat$Impl20: androidx.core.graphics.Insets getSystemWindowInsets()
+io.grpc.internal.ManagedChannelImpl$ResolutionState: io.grpc.internal.ManagedChannelImpl$ResolutionState[] values()
+kotlin.coroutines.intrinsics.CoroutineSingletons: kotlin.coroutines.intrinsics.CoroutineSingletons[] values()
+androidx.compose.runtime.SlotTableKt: void throwConcurrentModificationException()
+com.google.android.gms.common.GooglePlayServicesMissingManifestValueException: GooglePlayServicesMissingManifestValueException()
+com.google.firebase.firestore.ListenSource: com.google.firebase.firestore.ListenSource valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl21: androidx.core.graphics.Insets getStableInsets()
+androidx.core.view.WindowInsetsCompat$Impl: boolean isRound()
+io.grpc.SecurityLevel: io.grpc.SecurityLevel[] values()
+androidx.compose.ui.window.SecureFlagPolicy: androidx.compose.ui.window.SecureFlagPolicy[] values()
+androidx.lifecycle.ProcessLifecycleOwner$attach$1: void onActivityPaused(android.app.Activity)
+com.google.common.collect.Iterators$EmptyModifiableIterator: com.google.common.collect.Iterators$EmptyModifiableIterator valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl20: void setOverriddenInsets(androidx.core.graphics.Insets[])
+io.grpc.okhttp.internal.TlsVersion: io.grpc.okhttp.internal.TlsVersion[] values()
+com.google.firebase.firestore.core.OnlineState: com.google.firebase.firestore.core.OnlineState valueOf(java.lang.String)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityStarted(android.app.Activity)
+androidx.compose.material.ripple.RippleHostView: void setRippleState(boolean)
+androidx.core.app.CoreComponentFactory: CoreComponentFactory()
+coil.size.Scale: coil.size.Scale valueOf(java.lang.String)
+androidx.compose.ui.viewinterop.FocusTargetPropertiesElement: FocusTargetPropertiesElement()
+androidx.compose.ui.viewinterop.ViewFactoryHolder: void setResetBlock(kotlin.jvm.functions.Function1)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.TextToolbar getTextToolbar()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPath: java.lang.String getPathName()
+android.support.v4.media.AudioAttributesImplApi26Parcelizer: androidx.media.AudioAttributesImplApi26 read(androidx.versionedparcelable.VersionedParcel)
+com.google.firebase.ktx.FirebaseCommonKtxRegistrar: java.util.List getComponents()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: void setMediaId(android.media.MediaDescription$Builder,java.lang.String)
+androidx.compose.material3.tokens.ColorSchemeKeyTokens: androidx.compose.material3.tokens.ColorSchemeKeyTokens valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$BuilderImpl20: void setSystemWindowInsets(androidx.core.graphics.Insets)
+com.google.firebase.firestore.core.EventManager$ListenerSetupAction: com.google.firebase.firestore.core.EventManager$ListenerSetupAction[] values()
+androidx.media.AudioAttributesCompat: AudioAttributesCompat()
+com.google.maps.android.compose.ComposeMapColorScheme: com.google.maps.android.compose.ComposeMapColorScheme valueOf(java.lang.String)
+androidx.graphics.path.PathIteratorPreApi34Impl: int internalPathIteratorRawSize(long)
+androidx.datastore.preferences.protobuf.FieldType: androidx.datastore.preferences.protobuf.FieldType[] values()
+com.google.protobuf.FieldType: com.google.protobuf.FieldType[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.modifier.ModifierLocalManager getModifierLocalManager()
+com.google.firebase.firestore.core.ViewSnapshot$SyncState: com.google.firebase.firestore.core.ViewSnapshot$SyncState valueOf(java.lang.String)
+androidx.compose.ui.platform.AndroidCompositionLocals_androidKt: androidx.compose.runtime.ProvidableCompositionLocal getLocalSavedStateRegistryOwner()
+androidx.core.view.ViewCompat$Api20Impl: android.view.WindowInsets onApplyWindowInsets(android.view.View,android.view.WindowInsets)
+androidx.core.view.WindowInsetsCompat$BuilderImpl20: androidx.core.view.WindowInsetsCompat build()
+io.grpc.ConnectivityState: io.grpc.ConnectivityState[] values()
+androidx.compose.ui.platform.AndroidComposeViewVerificationHelperMethodsN: void setPointerIcon(android.view.View,androidx.compose.ui.input.pointer.PointerIcon)
+androidx.compose.ui.autofill.AutofillType: androidx.compose.ui.autofill.AutofillType valueOf(java.lang.String)
+androidx.compose.ui.platform.TextToolbarStatus: androidx.compose.ui.platform.TextToolbarStatus[] values()
+androidx.tracing.TraceApi29Impl: boolean isEnabled()
+androidx.media.AudioAttributesImplApi21Parcelizer: AudioAttributesImplApi21Parcelizer()
+androidx.core.view.WindowInsetsCompat$Impl20: void setSystemUiVisibility(int)
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: android.media.MediaDescription$Builder createBuilder()
+androidx.compose.ui.platform.AbstractComposeView: void setShowLayoutBounds(boolean)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.node.LayoutNode getRoot()
+androidx.compose.animation.core.AnimationEndReason: androidx.compose.animation.core.AnimationEndReason valueOf(java.lang.String)
+android.support.v4.media.MediaDescriptionCompat$Api23Impl: void setMediaUri(android.media.MediaDescription$Builder,android.net.Uri)
+coil.size.Scale: coil.size.Scale[] values()
+com.mikhail.manifestation.data.notifications.AffirmationReceiver: AffirmationReceiver()
+androidx.datastore.preferences.protobuf.JavaType: androidx.datastore.preferences.protobuf.JavaType valueOf(java.lang.String)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPreDestroyed(android.app.Activity)
+androidx.compose.ui.platform.AbstractComposeView: void setParentContext(androidx.compose.runtime.CompositionContext)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getScaleX()
+io.grpc.internal.ManagedChannelImpl$ResolutionState: io.grpc.internal.ManagedChannelImpl$ResolutionState valueOf(java.lang.String)
+androidx.profileinstaller.FileSectionType: androidx.profileinstaller.FileSectionType valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl20: androidx.core.graphics.Insets getInsetsIgnoringVisibility(int)
+com.google.firebase.firestore.remote.WatchChangeAggregator$BloomFilterApplicationStatus: com.google.firebase.firestore.remote.WatchChangeAggregator$BloomFilterApplicationStatus valueOf(java.lang.String)
+androidx.compose.ui.viewinterop.ViewFactoryHolder: kotlin.jvm.functions.Function1 getUpdateBlock()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: java.lang.CharSequence getTitle(android.media.MediaDescription)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setStrokeAlpha(float)
+com.google.firebase.firestore.remote.WatchChange$WatchTargetChangeType: com.google.firebase.firestore.remote.WatchChange$WatchTargetChangeType[] values()
+androidx.core.view.WindowInsetsCompat$Impl20: androidx.core.graphics.Insets getVisibleInsets(android.view.View)
+com.google.maps.android.compose.ComposeMapColorScheme: com.google.maps.android.compose.ComposeMapColorScheme[] values()
+com.google.firebase.firestore.model.MutableDocument$DocumentState: com.google.firebase.firestore.model.MutableDocument$DocumentState[] values()
+io.grpc.internal.PickFirstLoadBalancerProvider: java.lang.String getPolicyName()
+androidx.compose.ui.viewinterop.AndroidViewHolder: androidx.lifecycle.LifecycleOwner getLifecycleOwner()
+com.google.firestore.v1.Precondition$ConditionTypeCase: com.google.firestore.v1.Precondition$ConditionTypeCase valueOf(java.lang.String)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getRotation()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPathRenderer: void setRootAlpha(int)
+androidx.emoji2.text.ConcurrencyHelpers$Handler28Impl: android.os.Handler createAsync(android.os.Looper)
+androidx.core.view.WindowInsetsCompat$BuilderImpl: WindowInsetsCompat$BuilderImpl()
+androidx.fragment.app.SpecialEffectsController$Operation$State: androidx.fragment.app.SpecialEffectsController$Operation$State[] values()
+androidx.compose.ui.layout.MeasuringIntrinsics$IntrinsicWidthHeight: androidx.compose.ui.layout.MeasuringIntrinsics$IntrinsicWidthHeight[] values()
+androidx.compose.ui.platform.MotionEventVerifierApi29: boolean isValidMotionEvent(android.view.MotionEvent,int)
+com.google.firebase.firestore.Source: com.google.firebase.firestore.Source[] values()
+androidx.media.AudioAttributesCompatParcelizer: androidx.media.AudioAttributesCompat read(androidx.versionedparcelable.VersionedParcel)
+androidx.compose.ui.platform.ViewLayer: void setInvalidated(boolean)
+androidx.datastore.preferences.PreferencesProto$Value$ValueCase: androidx.datastore.preferences.PreferencesProto$Value$ValueCase valueOf(java.lang.String)
+com.google.firebase.firestore.core.ViewSnapshot$SyncState: com.google.firebase.firestore.core.ViewSnapshot$SyncState[] values()
+io.grpc.InternalChannelz$ChannelTrace$Event$Severity: io.grpc.InternalChannelz$ChannelTrace$Event$Severity[] values()
+io.grpc.internal.MessageDeframer$State: io.grpc.internal.MessageDeframer$State[] values()
+androidx.media.AudioAttributesCompatParcelizer: void write(androidx.media.AudioAttributesCompat,androidx.versionedparcelable.VersionedParcel)
+androidx.compose.ui.viewinterop.ViewFactoryHolder: androidx.compose.ui.platform.AbstractComposeView getSubCompositionView()
+com.google.firebase.components.ComponentDiscoveryService: ComponentDiscoveryService()
+androidx.compose.ui.platform.AndroidCompositionLocals_androidKt: androidx.compose.runtime.ProvidableCompositionLocal getLocalLifecycleOwner()
+com.google.firebase.firestore.core.LimboDocumentChange$Type: com.google.firebase.firestore.core.LimboDocumentChange$Type[] values()
+androidx.lifecycle.LifecycleDispatcher$DispatcherActivityCallback: void onActivityCreated(android.app.Activity,android.os.Bundle)
+androidx.compose.ui.text.AnnotationType: androidx.compose.ui.text.AnnotationType[] values()
+androidx.compose.foundation.layout.Direction: androidx.compose.foundation.layout.Direction[] values()
+com.google.android.gms.common.api.internal.LifecycleCallback: com.google.android.gms.common.api.internal.LifecycleFragment getChimeraLifecycleFragmentImpl(com.google.android.gms.common.api.internal.LifecycleActivity)
+com.google.firebase.FirebaseCommonKtxRegistrar: java.util.List getComponents()
+coil.decode.ExifOrientationPolicy: coil.decode.ExifOrientationPolicy[] values()
+io.grpc.internal.DnsNameResolverProvider: java.util.Collection getProducedSocketAddressTypes()
+androidx.compose.ui.platform.AbstractComposeView: boolean getHasComposition()
+androidx.compose.ui.viewinterop.AndroidViewHolder: void setDensity(androidx.compose.ui.unit.Density)
+androidx.compose.ui.platform.AndroidViewsHandler: java.util.HashMap getLayoutNodeToHolder()
+androidx.core.view.WindowInsetsCompat$Impl20: void setRootWindowInsets(androidx.core.view.WindowInsetsCompat)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void registerIn(android.app.Activity)
+androidx.compose.foundation.layout.internal.InlineClassHelperKt: void throwIllegalStateException(java.lang.String)
+com.google.firestore.admin.v1.Index$QueryScope: com.google.firestore.admin.v1.Index$QueryScope valueOf(java.lang.String)
+androidx.profileinstaller.ProfileInstallReceiver: ProfileInstallReceiver()
+androidx.compose.ui.platform.AndroidComposeView: long getLastMatrixRecalculationAnimationTime$ui_release()
+androidx.core.app.RemoteActionCompat: RemoteActionCompat()
+androidx.graphics.path.PathIteratorPreApi34Impl: boolean internalPathIteratorHasNext(long)
+androidx.core.view.WindowInsetsCompat$Impl28: int hashCode()
+com.google.firebase.firestore.util.AsyncQueue$TimerId: com.google.firebase.firestore.util.AsyncQueue$TimerId[] values()
+androidx.lifecycle.EmptyActivityLifecycleCallbacks: void onActivityCreated(android.app.Activity,android.os.Bundle)
+com.google.firestore.admin.v1.Index$IndexField$Order: com.google.firestore.admin.v1.Index$IndexField$Order[] values()
+com.google.firebase.firestore.local.QueryPurpose: com.google.firebase.firestore.local.QueryPurpose[] values()
+io.grpc.internal.GrpcUtil$Http2Error: io.grpc.internal.GrpcUtil$Http2Error valueOf(java.lang.String)
+com.google.android.gms.maps.MapsInitializer$Renderer: com.google.android.gms.maps.MapsInitializer$Renderer valueOf(java.lang.String)
+androidx.compose.ui.platform.ViewLayer: long getLayerId()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.layout.Placeable$PlacementScope getPlacementScope()
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityDestroyed(android.app.Activity)
+androidx.core.view.ViewCompat$Api23Impl: androidx.core.view.WindowInsetsCompat getRootWindowInsets(android.view.View)
+androidx.compose.ui.viewinterop.AndroidViewHolder: void setRelease(kotlin.jvm.functions.Function0)
+androidx.fragment.app.SpecialEffectsController$Operation$State: androidx.fragment.app.SpecialEffectsController$Operation$State valueOf(java.lang.String)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getFillAlpha()
+androidx.compose.ui.platform.AndroidComposeView: kotlin.jvm.functions.Function1 getConfigurationChangeObserver()
+kotlinx.coroutines.android.AndroidDispatcherFactory: java.lang.String hintOnError()
+androidx.lifecycle.ProcessLifecycleOwner$attach$1$onActivityPreCreated$1: void onActivityPostStarted(android.app.Activity)
+kotlin.random.Random: Random()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: void setIconUri(android.media.MediaDescription$Builder,android.net.Uri)
+androidx.compose.ui.platform.AndroidComposeViewAssistHelperMethodsO: void setClassName(android.view.ViewStructure,android.view.View)
+androidx.compose.foundation.gestures.Orientation: androidx.compose.foundation.gestures.Orientation[] values()
+androidx.compose.ui.contentcapture.AndroidContentCaptureManager$TranslateStatus: androidx.compose.ui.contentcapture.AndroidContentCaptureManager$TranslateStatus[] values()
+androidx.compose.ui.platform.AndroidComposeView: void setDensity(androidx.compose.ui.unit.Density)
+com.google.common.collect.AbstractMultimap: AbstractMultimap()
+com.google.common.collect.AbstractIterator$State: com.google.common.collect.AbstractIterator$State valueOf(java.lang.String)
+com.google.firestore.v1.TargetChange$TargetChangeType: com.google.firestore.v1.TargetChange$TargetChangeType[] values()
+kotlinx.coroutines.channels.BufferOverflow: kotlinx.coroutines.channels.BufferOverflow[] values()
+com.google.android.gms.common.api.GoogleApiActivity: GoogleApiActivity()
+androidx.compose.ui.platform.AndroidComposeView: void getLastMatrixRecalculationAnimationTime$ui_release$annotations()
+androidx.compose.ui.platform.TextToolbarStatus: androidx.compose.ui.platform.TextToolbarStatus valueOf(java.lang.String)
+com.google.firebase.provider.FirebaseInitProvider: FirebaseInitProvider()
+androidx.datastore.preferences.protobuf.GeneratedMessageLite$MethodToInvoke: androidx.datastore.preferences.protobuf.GeneratedMessageLite$MethodToInvoke[] values()
+androidx.lifecycle.LegacySavedStateHandleController$OnRecreation: LegacySavedStateHandleController$OnRecreation()
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.graphics.Insets getStableInsets()
+io.grpc.okhttp.internal.framed.HeadersMode: io.grpc.okhttp.internal.framed.HeadersMode[] values()
+io.grpc.internal.DnsNameResolver$JdkAddressResolver: io.grpc.internal.DnsNameResolver$JdkAddressResolver[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: float getPivotX()
+androidx.compose.runtime.ComposerKt: java.lang.Void composeRuntimeError(java.lang.String)
+androidx.core.view.WindowInsetsCompat$BuilderImpl29: void setSystemGestureInsets(androidx.core.graphics.Insets)
+com.google.firebase.firestore.FirebaseFirestore: void setClientLanguage(java.lang.String)
+androidx.core.view.WindowInsetsCompat$BuilderImpl34: WindowInsetsCompat$BuilderImpl34(androidx.core.view.WindowInsetsCompat)
+androidx.core.view.WindowInsetsCompat$Impl21: void setStableInsets(androidx.core.graphics.Insets)
+androidx.graphics.path.PathIteratorPreApi34Impl: int internalPathIteratorSize(long)
+com.google.firebase.firestore.util.Logger$Level: com.google.firebase.firestore.util.Logger$Level valueOf(java.lang.String)
+com.google.maps.android.compose.DragState: com.google.maps.android.compose.DragState valueOf(java.lang.String)
+okhttp3.internal.publicsuffix.PublicSuffixDatabase: PublicSuffixDatabase()
+com.google.common.base.AbstractIterator$State: com.google.common.base.AbstractIterator$State[] values()
+androidx.activity.EdgeToEdgeApi23: void setUp(androidx.activity.SystemBarStyle,androidx.activity.SystemBarStyle,android.view.Window,android.view.View,boolean,boolean)
+com.google.android.gms.dynamite.DynamiteModule$DynamiteLoaderClassLoader: DynamiteModule$DynamiteLoaderClassLoader()
+com.google.protobuf.GeneratedMessageLite$MethodToInvoke: com.google.protobuf.GeneratedMessageLite$MethodToInvoke valueOf(java.lang.String)
+androidx.compose.ui.viewinterop.AndroidViewHolder: void setSavedStateRegistryOwner(androidx.savedstate.SavedStateRegistryOwner)
+androidx.compose.ui.platform.ComposeView: java.lang.CharSequence getAccessibilityClassName()
+androidx.core.view.WindowInsetsCompat$Impl: void setSystemUiVisibility(int)
+androidx.compose.ui.graphics.layer.ViewLayer: android.view.View getOwnerView()
+androidx.core.view.WindowInsetsCompat$Impl30: androidx.core.graphics.Insets getInsetsIgnoringVisibility(int)
+androidx.core.view.WindowInsetsCompat$Impl21: androidx.core.view.WindowInsetsCompat consumeStableInsets()
+androidx.fragment.app.SpecialEffectsController$Operation$LifecycleImpact: androidx.fragment.app.SpecialEffectsController$Operation$LifecycleImpact valueOf(java.lang.String)
+androidx.compose.ui.input.pointer.util.VelocityTracker1D$Strategy: androidx.compose.ui.input.pointer.util.VelocityTracker1D$Strategy[] values()
+androidx.compose.ui.graphics.layer.ViewLayer: boolean getCanUseCompositingLayer$ui_graphics_release()
+com.google.android.gms.maps.GoogleMapOptions: GoogleMapOptions()
+androidx.core.view.WindowInsetsCompat$TypeImpl30: int toPlatformType(int)
+androidx.compose.ui.graphics.InlineClassHelperKt: void throwIllegalArgumentException(java.lang.String)
+androidx.compose.ui.viewinterop.AndroidViewHolder: androidx.savedstate.SavedStateRegistryOwner getSavedStateRegistryOwner()
+androidx.compose.ui.contentcapture.ContentCaptureEventType: androidx.compose.ui.contentcapture.ContentCaptureEventType[] values()
+androidx.compose.ui.unit.LayoutDirection: androidx.compose.ui.unit.LayoutDirection[] values()
+androidx.core.view.WindowInsetsCompat$Impl: boolean equals(java.lang.Object)
+com.google.protobuf.GeneratedMessageLite$MethodToInvoke: com.google.protobuf.GeneratedMessageLite$MethodToInvoke[] values()
+kotlin.LazyThreadSafetyMode: kotlin.LazyThreadSafetyMode[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.AndroidComposeView$ViewTreeOwners get_viewTreeOwners()
+androidx.lifecycle.EmptyActivityLifecycleCallbacks: void onActivityResumed(android.app.Activity)
+kotlinx.coroutines.CoroutineStart: kotlinx.coroutines.CoroutineStart[] values()
+androidx.compose.material3.SheetValue: androidx.compose.material3.SheetValue valueOf(java.lang.String)
+okhttp3.Protocol: okhttp3.Protocol[] values()
+androidx.compose.ui.viewinterop.AndroidViewHolder: void setOnDensityChanged$ui_release(kotlin.jvm.functions.Function1)
+com.google.android.gms.common.api.internal.zzd: zzd()
+io.grpc.okhttp.OkHttpFrameLogger$Direction: io.grpc.okhttp.OkHttpFrameLogger$Direction valueOf(java.lang.String)
+android.support.v4.media.AudioAttributesImplApi21Parcelizer: void write(androidx.media.AudioAttributesImplApi21,androidx.versionedparcelable.VersionedParcel)
+coil.request.CachePolicy: coil.request.CachePolicy valueOf(java.lang.String)
+androidx.datastore.preferences.protobuf.FieldType$Collection: androidx.datastore.preferences.protobuf.FieldType$Collection[] values()
+androidx.compose.ui.viewinterop.ViewFactoryHolder: androidx.compose.ui.input.nestedscroll.NestedScrollDispatcher getDispatcher()
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle)
+kotlin.collections.AbstractMutableList: AbstractMutableList()
+com.google.firebase.firestore.proto.Target$TargetTypeCase: com.google.firebase.firestore.proto.Target$TargetTypeCase[] values()
+com.google.firebase.firestore.FirebaseFirestoreException$Code: com.google.firebase.firestore.FirebaseFirestoreException$Code[] values()
+androidx.core.view.WindowInsetsCompat$Impl34: androidx.core.graphics.Insets getInsetsIgnoringVisibility(int)
+androidx.media.AudioAttributesImplApi21Parcelizer: void write(androidx.media.AudioAttributesImplApi21,androidx.versionedparcelable.VersionedParcel)
+androidx.compose.ui.graphics.Path$Direction: androidx.compose.ui.graphics.Path$Direction[] values()
+com.google.firebase.firestore.core.OnlineState: com.google.firebase.firestore.core.OnlineState[] values()
+io.grpc.util.OutlierDetectionLoadBalancerProvider: OutlierDetectionLoadBalancerProvider()
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.view.WindowInsetsCompat consumeStableInsets()
+androidx.core.view.WindowInsetsCompat$Impl20: androidx.core.view.WindowInsetsCompat inset(int,int,int,int)
+com.google.firebase.firestore.core.ActivityScope$StopListenerSupportFragment: ActivityScope$StopListenerSupportFragment()
+androidx.compose.ui.viewinterop.AndroidViewHolder: void setUpdate(kotlin.jvm.functions.Function0)
+androidx.compose.ui.platform.AbstractComposeView: void getShowLayoutBounds$annotations()
+com.google.firebase.firestore.remote.WatchChange$WatchTargetChangeType: com.google.firebase.firestore.remote.WatchChange$WatchTargetChangeType valueOf(java.lang.String)
+android.support.v4.media.AudioAttributesImplApi26Parcelizer: void write(androidx.media.AudioAttributesImplApi26,androidx.versionedparcelable.VersionedParcel)
+androidx.compose.material3.ModalBottomSheetDialogLayout$Api33Impl: void maybeUnregisterBackCallback(android.view.View,java.lang.Object)
+androidx.graphics.path.PathIteratorPreApi34Impl: long createInternalPathIterator(android.graphics.Path,int,float)
+androidx.core.view.ViewCompat$Api28Impl: java.lang.CharSequence getAccessibilityPaneTitle(android.view.View)
+io.grpc.okhttp.OkHttpFrameLogger$Direction: io.grpc.okhttp.OkHttpFrameLogger$Direction[] values()
+io.grpc.internal.GzipInflatingBuffer$State: io.grpc.internal.GzipInflatingBuffer$State[] values()
+androidx.compose.ui.autofill.AutofillType: androidx.compose.ui.autofill.AutofillType[] values()
+androidx.lifecycle.EmptyActivityLifecycleCallbacks: void onActivityStarted(android.app.Activity)
+com.google.firebase.heartbeatinfo.HeartBeatInfo$HeartBeat: com.google.firebase.heartbeatinfo.HeartBeatInfo$HeartBeat[] values()
+androidx.core.view.WindowInsetsCompat$Impl29: void setStableInsets(androidx.core.graphics.Insets)
+androidx.core.view.WindowInsetsCompat$Impl20: androidx.core.graphics.Insets getRootStableInsets()
+coil.decode.DataSource: coil.decode.DataSource[] values()
+androidx.compose.ui.platform.ViewLayer: androidx.compose.ui.graphics.Path getManualClipPath()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setScaleX(float)
+io.grpc.okhttp.OkHttpChannelProvider: boolean isAvailable()
+androidx.fragment.app.FragmentContainerView: androidx.fragment.app.Fragment getFragment()
+com.google.protobuf.ProtoSyntax: com.google.protobuf.ProtoSyntax[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setTrimPathOffset(float)
+com.google.common.base.AbstractIterator$State: com.google.common.base.AbstractIterator$State valueOf(java.lang.String)
+io.grpc.internal.PickFirstLoadBalancerProvider: boolean isAvailable()
+androidx.compose.ui.platform.ViewLayer: void setCameraDistancePx(float)
+androidx.lifecycle.ProcessLifecycleOwner$attach$1$onActivityPreCreated$1: void onActivityPostResumed(android.app.Activity)
+com.google.firestore.v1.Precondition$ConditionTypeCase: com.google.firestore.v1.Precondition$ConditionTypeCase[] values()
+androidx.core.view.WindowInsetsCompat$Impl: void setRootViewData(androidx.core.graphics.Insets)
+androidx.compose.ui.viewinterop.AndroidViewHolder: android.view.ViewGroup$LayoutParams getLayoutParams()
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl20: void copyRootViewBounds(android.view.View)
+androidx.media.AudioAttributesImplBaseParcelizer: androidx.media.AudioAttributesImplBase read(androidx.versionedparcelable.VersionedParcel)
+android.support.v4.app.RemoteActionCompatParcelizer: void write(androidx.core.app.RemoteActionCompat,androidx.versionedparcelable.VersionedParcel)
+androidx.core.view.WindowInsetsCompat$Impl20: boolean systemBarVisibilityEquals(int,int)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPostStarted(android.app.Activity)
+kotlinx.coroutines.flow.SharingCommand: kotlinx.coroutines.flow.SharingCommand[] values()
+androidx.media.AudioAttributesImplApi26Parcelizer: androidx.media.AudioAttributesImplApi26 read(androidx.versionedparcelable.VersionedParcel)
+com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar: FirebaseFirestoreKtxRegistrar()
+androidx.compose.ui.platform.AndroidComposeViewForceDarkModeQ: void disallowForceDark(android.view.View)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPrePaused(android.app.Activity)
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.graphics.Insets getTappableElementInsets()
+androidx.core.view.WindowInsetsCompat$Impl: void setRootWindowInsets(androidx.core.view.WindowInsetsCompat)
+androidx.core.view.WindowInsetsCompat$Impl20: void copyWindowDataInto(androidx.core.view.WindowInsetsCompat)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: java.lang.String getGroupName()
+androidx.compose.ui.platform.AndroidComposeView: void setLayoutDirection(androidx.compose.ui.unit.LayoutDirection)
+androidx.compose.ui.text.AnnotationType: androidx.compose.ui.text.AnnotationType valueOf(java.lang.String)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPath: void setPathData(androidx.core.graphics.PathParser$PathDataNode[])
+com.google.protobuf.JavaType: com.google.protobuf.JavaType valueOf(java.lang.String)
+androidx.media.AudioAttributesImplBase: AudioAttributesImplBase()
+androidx.core.view.WindowInsetsCompat$Impl20: void setRootViewData(androidx.core.graphics.Insets)
+io.grpc.okhttp.OkHttpFrameLogger$SettingParams: io.grpc.okhttp.OkHttpFrameLogger$SettingParams valueOf(java.lang.String)
+androidx.core.view.ViewCompat$Api28Impl: boolean isScreenReaderFocusable(android.view.View)
+com.google.firebase.concurrent.UiExecutor: com.google.firebase.concurrent.UiExecutor[] values()
+okhttp3.internal.http2.ErrorCode: okhttp3.internal.http2.ErrorCode valueOf(java.lang.String)
+androidx.compose.ui.input.pointer.util.VelocityTracker1D$Strategy: androidx.compose.ui.input.pointer.util.VelocityTracker1D$Strategy valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl: void copyWindowDataInto(androidx.core.view.WindowInsetsCompat)
+io.grpc.okhttp.OkHttpChannelBuilder$NegotiationType: io.grpc.okhttp.OkHttpChannelBuilder$NegotiationType[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setTrimPathEnd(float)
+androidx.compose.ui.viewinterop.AndroidViewHolder: kotlin.jvm.functions.Function0 getRelease()
+android.support.v4.graphics.drawable.IconCompatParcelizer: IconCompatParcelizer()
+androidx.compose.ui.platform.AndroidComposeView: kotlin.coroutines.CoroutineContext getCoroutineContext()
+androidx.core.view.WindowInsetsCompat$Impl: WindowInsetsCompat$Impl(androidx.core.view.WindowInsetsCompat)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setScaleY(float)
+androidx.compose.ui.platform.ViewLayer: float getCameraDistancePx()
+androidx.activity.EdgeToEdgeApi26: void setUp(androidx.activity.SystemBarStyle,androidx.activity.SystemBarStyle,android.view.Window,android.view.View,boolean,boolean)
+androidx.compose.animation.EnterExitState: androidx.compose.animation.EnterExitState[] values()
+io.grpc.okhttp.internal.CipherSuite: io.grpc.okhttp.internal.CipherSuite valueOf(java.lang.String)
+io.grpc.Context$DirectExecutor: io.grpc.Context$DirectExecutor[] values()
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.graphics.Insets getInsetsIgnoringVisibility(int)
+androidx.compose.ui.viewinterop.AndroidViewHolder: void setOnRequestDisallowInterceptTouchEvent$ui_release(kotlin.jvm.functions.Function1)
+androidx.media.AudioAttributesImplApi21Parcelizer: androidx.media.AudioAttributesImplApi21 read(androidx.versionedparcelable.VersionedParcel)
+androidx.compose.ui.platform.AndroidComposeView: void setShowLayoutBounds(boolean)
+androidx.compose.ui.viewinterop.AndroidViewHolder: kotlin.jvm.functions.Function0 getReset()
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPaused(android.app.Activity)
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.view.WindowInsetsCompat consumeDisplayCutout()
+androidx.compose.runtime.PreconditionsKt: void throwIllegalArgumentException(java.lang.String)
+com.google.firestore.admin.v1.Index$IndexField$Order: com.google.firestore.admin.v1.Index$IndexField$Order valueOf(java.lang.String)
+io.grpc.internal.KeepAliveManager$State: io.grpc.internal.KeepAliveManager$State[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.Clipboard getClipboard()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getStrokeWidth()
+androidx.compose.material3.tokens.TypographyKeyTokens: androidx.compose.material3.tokens.TypographyKeyTokens[] values()
+androidx.exifinterface.media.ExifInterfaceUtils$Api21Impl: void close(java.io.FileDescriptor)
+com.mikhail.manifestation.ui.theme.LifeArea: com.mikhail.manifestation.ui.theme.LifeArea[] values()
+coil.transform.PixelOpacity: coil.transform.PixelOpacity valueOf(java.lang.String)
+com.google.firestore.v1.StructuredQuery$Filter$FilterTypeCase: com.google.firestore.v1.StructuredQuery$Filter$FilterTypeCase[] values()
+androidx.compose.ui.platform.AndroidComposeView: void set_viewTreeOwners(androidx.compose.ui.platform.AndroidComposeView$ViewTreeOwners)
+com.google.firebase.firestore.core.ActivityScope$StopListenerFragment: ActivityScope$StopListenerFragment()
+com.mikhail.manifestation.data.audio.PlaybackState: com.mikhail.manifestation.data.audio.PlaybackState valueOf(java.lang.String)
+androidx.compose.material3.ModalBottomSheetDialogLayout$Api34Impl: android.window.OnBackAnimationCallback createBackCallback(kotlin.jvm.functions.Function0,androidx.compose.animation.core.Animatable,kotlinx.coroutines.CoroutineScope)
+androidx.datastore.preferences.protobuf.WireFormat$FieldType: androidx.datastore.preferences.protobuf.WireFormat$FieldType[] values()
+androidx.lifecycle.LifecycleDispatcher$DispatcherActivityCallback: LifecycleDispatcher$DispatcherActivityCallback()
+androidx.core.view.ViewCompat$Api20Impl: android.view.WindowInsets dispatchApplyWindowInsets(android.view.View,android.view.WindowInsets)
+com.google.firestore.admin.v1.Index$IndexField$ValueModeCase: com.google.firestore.admin.v1.Index$IndexField$ValueModeCase valueOf(java.lang.String)
+com.mikhail.manifestation.data.notifications.BootReceiver: BootReceiver()
+androidx.compose.runtime.InvalidationResult: androidx.compose.runtime.InvalidationResult valueOf(java.lang.String)
+androidx.compose.ui.graphics.layer.ViewLayer: androidx.compose.ui.graphics.CanvasHolder getCanvasHolder()
+androidx.core.view.WindowInsetsCompat$Impl29: androidx.core.view.WindowInsetsCompat inset(int,int,int,int)
+androidx.compose.ui.internal.InlineClassHelperKt: void throwIllegalStateException(java.lang.String)
+android.support.v4.graphics.drawable.IconCompatParcelizer: void write(androidx.core.graphics.drawable.IconCompat,androidx.versionedparcelable.VersionedParcel)
+com.google.firebase.firestore.util.Logger$Level: com.google.firebase.firestore.util.Logger$Level[] values()
+androidx.datastore.preferences.protobuf.Writer$FieldOrder: androidx.datastore.preferences.protobuf.Writer$FieldOrder[] values()
+androidx.compose.runtime.Recomposer$State: androidx.compose.runtime.Recomposer$State[] values()
+com.google.firebase.concurrent.ExecutorsRegistrar: ExecutorsRegistrar()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.spatial.RectManager getRectManager()
+androidx.activity.EdgeToEdgeApi21: void setUp(androidx.activity.SystemBarStyle,androidx.activity.SystemBarStyle,android.view.Window,android.view.View,boolean,boolean)
+com.google.firebase.firestore.util.AsyncQueue$TimerId: com.google.firebase.firestore.util.AsyncQueue$TimerId valueOf(java.lang.String)
+com.google.firebase.firestore.core.EventManager$ListenerSetupAction: com.google.firebase.firestore.core.EventManager$ListenerSetupAction valueOf(java.lang.String)
+com.google.firebase.firestore.core.LimboDocumentChange$Type: com.google.firebase.firestore.core.LimboDocumentChange$Type valueOf(java.lang.String)
+com.mikhail.manifestation.ui.theme.ThemeMode: com.mikhail.manifestation.ui.theme.ThemeMode[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.node.OwnerSnapshotObserver getSnapshotObserver()
+androidx.core.graphics.drawable.IconCompat: IconCompat()
+androidx.compose.ui.text.internal.InlineClassHelperKt: void throwIllegalArgumentException(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl28: boolean equals(java.lang.Object)
+androidx.compose.ui.platform.ViewLayer: long getOwnerViewId()
+com.google.firestore.v1.ListenResponse$ResponseTypeCase: com.google.firestore.v1.ListenResponse$ResponseTypeCase[] values()
+androidx.core.app.NotificationCompat$BubbleMetadata$Api29Impl: android.app.Notification$BubbleMetadata toPlatform(androidx.core.app.NotificationCompat$BubbleMetadata)
+android.support.v4.media.MediaDescriptionCompat$Api23Impl: android.net.Uri getMediaUri(android.media.MediaDescription)
+androidx.compose.material.ripple.RippleHostView: void setRippleState$lambda$2(androidx.compose.material.ripple.RippleHostView)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.ViewConfiguration getViewConfiguration()
+androidx.lifecycle.Lifecycle$State: androidx.lifecycle.Lifecycle$State valueOf(java.lang.String)
+androidx.compose.ui.platform.AndroidComposeView: boolean getHasPendingMeasureOrLayout()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: void setExtras(android.media.MediaDescription$Builder,android.os.Bundle)
+androidx.compose.foundation.MutatePriority: androidx.compose.foundation.MutatePriority valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl: boolean isVisible(int)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.text.font.FontFamily$Resolver getFontFamilyResolver()
+androidx.compose.ui.platform.AbstractComposeView: void getDisposeViewCompositionStrategy$annotations()
+kotlin.DeprecationLevel: kotlin.DeprecationLevel[] values()
+okhttp3.Protocol: okhttp3.Protocol valueOf(java.lang.String)
+androidx.fragment.app.strictmode.FragmentStrictMode$Flag: androidx.fragment.app.strictmode.FragmentStrictMode$Flag[] values()
+com.google.firebase.ktx.FirebaseCommonLegacyRegistrar: FirebaseCommonLegacyRegistrar()
+androidx.compose.ui.layout.IntrinsicMinMax: androidx.compose.ui.layout.IntrinsicMinMax[] values()
+androidx.activity.EdgeToEdgeApi30: void adjustLayoutInDisplayCutoutMode(android.view.Window)
+android.support.v4.app.RemoteActionCompatParcelizer: RemoteActionCompatParcelizer()
+com.google.common.collect.Ordering: Ordering()
+androidx.core.view.ViewCompat$Api20Impl: void requestApplyInsets(android.view.View)
+io.grpc.okhttp.OkHttpChannelProvider: int priority()
+androidx.core.view.WindowInsetsCompat$BuilderImpl20: android.view.WindowInsets createWindowInsetsInstance()
+androidx.datastore.preferences.protobuf.WireFormat$JavaType: androidx.datastore.preferences.protobuf.WireFormat$JavaType[] values()
+androidx.compose.ui.platform.AndroidComposeViewTranslationCallbackS: void setViewTranslationCallback(android.view.View)
+com.google.maps.android.compose.CameraMoveStartedReason: com.google.maps.android.compose.CameraMoveStartedReason valueOf(java.lang.String)
+com.google.protobuf.WireFormat$FieldType: com.google.protobuf.WireFormat$FieldType[] values()
+com.google.firestore.v1.StructuredQuery$Direction: com.google.firestore.v1.StructuredQuery$Direction valueOf(java.lang.String)
+androidx.compose.ui.node.LayoutNode: java.lang.String exceptionMessageForParentingOrOwnership(androidx.compose.ui.node.LayoutNode)
+kotlin.time.DurationUnit: kotlin.time.DurationUnit valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl28: androidx.core.view.DisplayCutoutCompat getDisplayCutout()
+androidx.compose.ui.platform.AbstractComposeView: void setPreviousAttachedWindowToken(android.os.IBinder)
+com.google.firebase.firestore.remote.Stream$State: com.google.firebase.firestore.remote.Stream$State valueOf(java.lang.String)
+com.google.common.collect.Maps$EntryFunction: com.google.common.collect.Maps$EntryFunction valueOf(java.lang.String)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.SoftwareKeyboardController getSoftwareKeyboardController()
+io.grpc.util.OutlierDetectionLoadBalancerProvider: int getPriority()
+androidx.compose.ui.platform.ViewLayerContainer: void dispatchGetDisplayList()
+androidx.datastore.preferences.protobuf.JavaType: androidx.datastore.preferences.protobuf.JavaType[] values()
+kotlin.DeprecationLevel: kotlin.DeprecationLevel valueOf(java.lang.String)
+androidx.compose.ui.node.NodeMeasuringIntrinsics$IntrinsicMinMax: androidx.compose.ui.node.NodeMeasuringIntrinsics$IntrinsicMinMax valueOf(java.lang.String)
+io.grpc.internal.GzipInflatingBuffer$State: io.grpc.internal.GzipInflatingBuffer$State valueOf(java.lang.String)
+androidx.compose.ui.unit.ConstraintsKt: java.lang.Void throwInvalidConstraintsSizeException(int)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPostResumed(android.app.Activity)
+androidx.compose.ui.input.pointer.PointerEventPass: androidx.compose.ui.input.pointer.PointerEventPass valueOf(java.lang.String)
+com.google.firebase.firestore.model.MutableDocument$DocumentType: com.google.firebase.firestore.model.MutableDocument$DocumentType[] values()
+androidx.core.view.ViewCompat$Api30Impl: java.lang.CharSequence getStateDescription(android.view.View)
+com.google.maps.android.compose.MapType: com.google.maps.android.compose.MapType valueOf(java.lang.String)
+androidx.datastore.preferences.PreferencesProto$Value$ValueCase: androidx.datastore.preferences.PreferencesProto$Value$ValueCase[] values()
+androidx.compose.ui.viewinterop.AndroidViewHolder: int getNestedScrollAxes()
+kotlin.LazyThreadSafetyMode: kotlin.LazyThreadSafetyMode valueOf(java.lang.String)
+io.grpc.Context$DirectExecutor: io.grpc.Context$DirectExecutor valueOf(java.lang.String)
+com.google.protobuf.ProtoSyntax: com.google.protobuf.ProtoSyntax valueOf(java.lang.String)
+androidx.compose.ui.platform.ComposeView: void setContent(kotlin.jvm.functions.Function2)
+com.google.firebase.firestore.DocumentSnapshot$ServerTimestampBehavior: com.google.firebase.firestore.DocumentSnapshot$ServerTimestampBehavior[] values()
+com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar: FirebaseFirestoreKtxRegistrar()
+androidx.compose.ui.platform.ComposeView: void getShouldCreateCompositionOnAttachedToWindow$annotations()
+androidx.core.view.WindowInsetsCompat$Impl34: androidx.core.graphics.Insets getInsets(int)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.AccessibilityManager getAccessibilityManager()
+com.google.firebase.firestore.core.OrderBy$Direction: com.google.firebase.firestore.core.OrderBy$Direction[] values()
+com.google.firebase.firestore.core.EventManager$ListenerRemovalAction: com.google.firebase.firestore.core.EventManager$ListenerRemovalAction valueOf(java.lang.String)
+androidx.exifinterface.media.ExifInterfaceUtils$Api21Impl: java.io.FileDescriptor dup(java.io.FileDescriptor)
+androidx.compose.foundation.layout.internal.InlineClassHelperKt: void throwIllegalArgumentException(java.lang.String)
+com.google.android.gms.maps.MapsInitializer$Renderer: com.google.android.gms.maps.MapsInitializer$Renderer[] values()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: float getTrimPathEnd()
+androidx.core.view.WindowInsetsCompat$Impl29: androidx.core.graphics.Insets getSystemGestureInsets()
+androidx.compose.runtime.collection.MutableVectorKt: void throwListIndexOutOfBoundsException(int,int)
+androidx.core.view.WindowInsetsCompat$Impl28: WindowInsetsCompat$Impl28(androidx.core.view.WindowInsetsCompat,androidx.core.view.WindowInsetsCompat$Impl28)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityStopped(android.app.Activity)
+androidx.core.view.WindowInsetsCompat$BuilderImpl34: WindowInsetsCompat$BuilderImpl34()
+com.google.firebase.firestore.remote.ConnectivityMonitor$NetworkStatus: com.google.firebase.firestore.remote.ConnectivityMonitor$NetworkStatus valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$BuilderImpl29: void setTappableElementInsets(androidx.core.graphics.Insets)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.autofill.AutofillTree getAutofillTree()
+com.google.android.gms.common.api.internal.zzb: zzb()
+androidx.media.AudioAttributesImplBaseParcelizer: void write(androidx.media.AudioAttributesImplBase,androidx.versionedparcelable.VersionedParcel)
+io.grpc.okhttp.NegotiationType: io.grpc.okhttp.NegotiationType[] values()
+com.google.firebase.firestore.FirestoreRegistrar: FirestoreRegistrar()
+androidx.compose.material3.MinimumInteractiveModifier: MinimumInteractiveModifier()
+androidx.compose.runtime.collection.MutableVectorKt: void throwNegativeIndexException(int)
+androidx.core.view.WindowInsetsCompat$BuilderImpl29: void setSystemWindowInsets(androidx.core.graphics.Insets)
+androidx.compose.ui.platform.AndroidComposeViewVerificationHelperMethodsO: void focusable(android.view.View,int,boolean)
+androidx.core.view.WindowInsetsCompat$BuilderImpl29: WindowInsetsCompat$BuilderImpl29()
+androidx.core.view.WindowInsetsCompat$BuilderImpl29: WindowInsetsCompat$BuilderImpl29(androidx.core.view.WindowInsetsCompat)
+com.google.firestore.v1.StructuredQuery$UnaryFilter$Operator: com.google.firestore.v1.StructuredQuery$UnaryFilter$Operator valueOf(java.lang.String)
+androidx.datastore.preferences.protobuf.WireFormat$JavaType: androidx.datastore.preferences.protobuf.WireFormat$JavaType valueOf(java.lang.String)
+com.google.firestore.v1.StructuredQuery$FieldFilter$Operator: com.google.firestore.v1.StructuredQuery$FieldFilter$Operator[] values()
+kotlinx.coroutines.android.AndroidDispatcherFactory: kotlinx.coroutines.MainCoroutineDispatcher createDispatcher(java.util.List)
+com.google.firebase.firestore.FirebaseFirestoreException$Code: com.google.firebase.firestore.FirebaseFirestoreException$Code valueOf(java.lang.String)
+androidx.lifecycle.ProcessLifecycleOwner$attach$1: ProcessLifecycleOwner$attach$1(androidx.lifecycle.ProcessLifecycleOwner)
+androidx.compose.ui.state.ToggleableState: androidx.compose.ui.state.ToggleableState[] values()
+androidx.compose.ui.node.LookaheadPassDelegate$PlacedState: androidx.compose.ui.node.LookaheadPassDelegate$PlacedState valueOf(java.lang.String)
+com.google.firestore.admin.v1.Index$IndexField$ValueModeCase: com.google.firestore.admin.v1.Index$IndexField$ValueModeCase[] values()
+com.google.protobuf.FieldType$Collection: com.google.protobuf.FieldType$Collection[] values()
+com.google.protobuf.NullValue: com.google.protobuf.NullValue valueOf(java.lang.String)
+com.google.firebase.firestore.remote.Stream$State: com.google.firebase.firestore.remote.Stream$State[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.AndroidViewsHandler getAndroidViewsHandler$ui_release()
+com.google.firestore.v1.Value$ValueTypeCase: com.google.firestore.v1.Value$ValueTypeCase[] values()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: java.lang.String getMediaId(android.media.MediaDescription)
+io.grpc.internal.ClientStreamListener$RpcProgress: io.grpc.internal.ClientStreamListener$RpcProgress[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.collection.MutableIntObjectMap getLayoutNodes()
+androidx.core.view.WindowInsetsCompat$Impl20: WindowInsetsCompat$Impl20(androidx.core.view.WindowInsetsCompat,androidx.core.view.WindowInsetsCompat$Impl20)
+io.grpc.okhttp.OkHttpChannelProvider: io.grpc.ManagedChannelBuilder builderForTarget(java.lang.String)
+androidx.compose.ui.layout.IntrinsicMinMax: androidx.compose.ui.layout.IntrinsicMinMax valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl21: androidx.core.view.WindowInsetsCompat consumeSystemWindowInsets()
+com.google.protobuf.WireFormat$FieldType: com.google.protobuf.WireFormat$FieldType valueOf(java.lang.String)
+androidx.compose.ui.layout.MeasuringIntrinsics$IntrinsicMinMax: androidx.compose.ui.layout.MeasuringIntrinsics$IntrinsicMinMax[] values()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.platform.AndroidClipboardManager getClipboardManager()
+com.google.firestore.v1.StructuredQuery$Direction: com.google.firestore.v1.StructuredQuery$Direction[] values()
+androidx.datastore.preferences.protobuf.Writer$FieldOrder: androidx.datastore.preferences.protobuf.Writer$FieldOrder valueOf(java.lang.String)
+androidx.core.view.ViewCompat$Api21Impl$1: android.view.WindowInsets onApplyWindowInsets(android.view.View,android.view.WindowInsets)
+com.google.maps.android.ui.RotationLayout: void setViewRotation(int)
+androidx.core.view.WindowInsetsCompat$Impl34: WindowInsetsCompat$Impl34(androidx.core.view.WindowInsetsCompat,androidx.core.view.WindowInsetsCompat$Impl34)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setTrimPathStart(float)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.autofill.AutofillManager getAutofillManager()
+com.google.firebase.firestore.core.OrderBy$Direction: com.google.firebase.firestore.core.OrderBy$Direction valueOf(java.lang.String)
+androidx.appcompat.resources.Compatibility$Api21Impl: void inflate(android.graphics.drawable.Drawable,android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setRotation(float)
+okhttp3.TlsVersion: okhttp3.TlsVersion valueOf(java.lang.String)
+androidx.activity.ComponentActivity: void setContentView(android.view.View)
+androidx.core.view.WindowInsetsCompat$BuilderImpl: androidx.core.view.WindowInsetsCompat build()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: void setIconBitmap(android.media.MediaDescription$Builder,android.graphics.Bitmap)
+com.google.protobuf.WireFormat$JavaType: com.google.protobuf.WireFormat$JavaType valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl29: WindowInsetsCompat$Impl29(androidx.core.view.WindowInsetsCompat,androidx.core.view.WindowInsetsCompat$Impl29)
+coil.size.Precision: coil.size.Precision[] values()
+androidx.fragment.app.SpecialEffectsController$Operation$LifecycleImpact: androidx.fragment.app.SpecialEffectsController$Operation$LifecycleImpact[] values()
+androidx.compose.ui.node.NodeMeasuringIntrinsics$IntrinsicWidthHeight: androidx.compose.ui.node.NodeMeasuringIntrinsics$IntrinsicWidthHeight[] values()
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.graphics.Insets getInsets(int)
+io.grpc.internal.PickFirstLoadBalancerProvider: io.grpc.NameResolver$ConfigOrError parseLoadBalancingPolicyConfig(java.util.Map)
+io.grpc.okhttp.OkHttpServerProvider: OkHttpServerProvider()
+com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar: java.util.List getComponents()
+androidx.startup.InitializationProvider: InitializationProvider()
+androidx.compose.ui.node.LayoutNode$UsageByParent: androidx.compose.ui.node.LayoutNode$UsageByParent[] values()
+kotlinx.coroutines.scheduling.CoroutineScheduler$WorkerState: kotlinx.coroutines.scheduling.CoroutineScheduler$WorkerState valueOf(java.lang.String)
+androidx.core.view.ViewCompat$Api21Impl: java.lang.String getTransitionName(android.view.View)
+androidx.compose.material3.tokens.ShapeKeyTokens: androidx.compose.material3.tokens.ShapeKeyTokens valueOf(java.lang.String)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.draganddrop.AndroidDragAndDropManager getDragAndDropManager()
+androidx.compose.foundation.internal.InlineClassHelperKt: void throwIndexOutOfBoundsException(java.lang.String)
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityPostCreated(android.app.Activity,android.os.Bundle)
+androidx.compose.animation.core.PreconditionsKt: void throwIllegalStateException(java.lang.String)
+io.grpc.util.SecretRoundRobinLoadBalancerProvider$Provider: boolean isAvailable()
+androidx.core.view.WindowInsetsCompat$Impl29: androidx.core.graphics.Insets getMandatorySystemGestureInsets()
+androidx.compose.ui.platform.AndroidComposeView: void setCoroutineContext(kotlin.coroutines.CoroutineContext)
+androidx.compose.runtime.Recomposer$State: androidx.compose.runtime.Recomposer$State valueOf(java.lang.String)
+com.google.firebase.firestore.FirestoreRegistrar: java.util.List getComponents()
+androidx.lifecycle.Lifecycle$State: androidx.lifecycle.Lifecycle$State[] values()
+io.grpc.internal.DnsNameResolverProvider: DnsNameResolverProvider()
+android.support.v4.media.AudioAttributesImplApi21Parcelizer: AudioAttributesImplApi21Parcelizer()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.unit.LayoutDirection getLayoutDirection()
+androidx.core.view.WindowInsetsCompat$Impl20: void loadReflectionField()
+com.google.common.base.Function: java.lang.Object apply(java.lang.Object)
+androidx.lifecycle.ProcessLifecycleOwner$attach$1: void onActivityStopped(android.app.Activity)
+android.support.v4.media.AudioAttributesCompatParcelizer: void write(androidx.media.AudioAttributesCompat,androidx.versionedparcelable.VersionedParcel)
+io.grpc.internal.ClientStreamListener$RpcProgress: io.grpc.internal.ClientStreamListener$RpcProgress valueOf(java.lang.String)
+kotlinx.coroutines.scheduling.CoroutineScheduler$WorkerState: kotlinx.coroutines.scheduling.CoroutineScheduler$WorkerState[] values()
+androidx.core.app.RemoteActionCompatParcelizer: void write(androidx.core.app.RemoteActionCompat,androidx.versionedparcelable.VersionedParcel)
+androidx.datastore.preferences.protobuf.FieldType: androidx.datastore.preferences.protobuf.FieldType valueOf(java.lang.String)
+io.grpc.okhttp.internal.Protocol: io.grpc.okhttp.internal.Protocol[] values()
+androidx.compose.ui.platform.AndroidComposeView: void setLastMatrixRecalculationAnimationTime$ui_release(long)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setTranslateY(float)
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.input.pointer.PointerIconService getPointerIconService()
+com.google.firebase.firestore.proto.MaybeDocument$DocumentTypeCase: com.google.firebase.firestore.proto.MaybeDocument$DocumentTypeCase[] values()
+androidx.media.AudioAttributesImplBaseParcelizer: AudioAttributesImplBaseParcelizer()
+androidx.core.view.WindowInsetsCompat$TypeImpl34: int toPlatformType(int)
+android.support.v4.media.AudioAttributesCompatParcelizer: AudioAttributesCompatParcelizer()
+androidx.core.view.ViewCompat$Api21Impl: androidx.core.view.WindowInsetsCompat getRootWindowInsets(android.view.View)
+androidx.compose.ui.platform.AndroidComposeView: android.view.View getView()
+androidx.datastore.preferences.protobuf.ProtoSyntax: androidx.datastore.preferences.protobuf.ProtoSyntax valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$Impl: androidx.core.graphics.Insets getSystemWindowInsets()
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath: void setFillColor(int)
+androidx.lifecycle.Lifecycle$Event: androidx.lifecycle.Lifecycle$Event[] values()
+androidx.compose.ui.viewinterop.AndroidViewHolder: kotlin.jvm.functions.Function1 getOnRequestDisallowInterceptTouchEvent$ui_release()
+androidx.core.view.WindowInsetsCompat$Impl30: WindowInsetsCompat$Impl30(androidx.core.view.WindowInsetsCompat,androidx.core.view.WindowInsetsCompat$Impl30)
+androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup: void setPivotX(float)
+androidx.core.view.WindowInsetsCompat$BuilderImpl29: void setMandatorySystemGestureInsets(androidx.core.graphics.Insets)
+androidx.compose.ui.viewinterop.AndroidViewHolder: androidx.compose.ui.Modifier getModifier()
+androidx.lifecycle.ReportFragment: ReportFragment()
+android.support.v4.media.MediaDescriptionCompat$Api21Impl: java.lang.CharSequence getSubtitle(android.media.MediaDescription)
+com.google.gson.stream.JsonToken: com.google.gson.stream.JsonToken[] values()
+com.google.firebase.firestore.core.Query$LimitType: com.google.firebase.firestore.core.Query$LimitType valueOf(java.lang.String)
+androidx.compose.ui.graphics.layer.view.DrawChildContainer: int getChildCount()
+androidx.compose.ui.platform.AndroidComposeView: androidx.compose.ui.hapticfeedback.HapticFeedback getHapticFeedBack()
+com.google.firestore.admin.v1.Index$IndexField$ArrayConfig: com.google.firestore.admin.v1.Index$IndexField$ArrayConfig valueOf(java.lang.String)
+com.google.protobuf.FieldType$Collection: com.google.protobuf.FieldType$Collection valueOf(java.lang.String)
+androidx.compose.ui.platform.ViewLayer: androidx.compose.ui.platform.AndroidComposeView getOwnerView()
+androidx.compose.material3.ModalBottomSheetDialogLayout$Api33Impl: void maybeRegisterBackCallback(android.view.View,java.lang.Object)
+com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar: java.util.List getComponents()
+androidx.compose.ui.platform.AndroidComposeView: long getMeasureIteration()
+androidx.compose.ui.platform.AbstractComposeView: void setViewCompositionStrategy(androidx.compose.ui.platform.ViewCompositionStrategy)
+androidx.media.AudioAttributesCompatParcelizer: AudioAttributesCompatParcelizer()
+io.grpc.Status$Code: io.grpc.Status$Code[] values()
+androidx.compose.ui.focus.FocusStateImpl: androidx.compose.ui.focus.FocusStateImpl[] values()
+androidx.lifecycle.ReportFragment$LifecycleCallbacks: void onActivityResumed(android.app.Activity)
+androidx.core.view.WindowInsetsCompat$Impl34: boolean isVisible(int)
+androidx.core.view.WindowInsetsCompat$Impl20: androidx.core.graphics.Insets getInsets(int,boolean)
+androidx.compose.ui.viewinterop.AndroidViewHolder: android.view.View getInteropView()
+io.grpc.internal.DnsNameResolverProvider: int priority()
+androidx.profileinstaller.FileSectionType: androidx.profileinstaller.FileSectionType[] values()
+com.google.firestore.v1.StructuredQuery$Filter$FilterTypeCase: com.google.firestore.v1.StructuredQuery$Filter$FilterTypeCase valueOf(java.lang.String)
+androidx.core.view.WindowInsetsCompat$BuilderImpl: void setSystemGestureInsets(androidx.core.graphics.Insets)
+androidx.compose.animation.core.RepeatMode: androidx.compose.animation.core.RepeatMode[] values()

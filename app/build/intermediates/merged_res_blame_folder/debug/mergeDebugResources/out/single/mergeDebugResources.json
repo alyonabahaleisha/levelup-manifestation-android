@@ -1,18 +1,210 @@
 [
     {
-        "merged": "com.levelup.manifestation.app-debug-64:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.levelup.manifestation.app-main-66:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_card_bg_6.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/card_bg_6.jpg"
     },
     {
-        "merged": "com.levelup.manifestation.app-debug-64:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.levelup.manifestation.app-main-66:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.mikhail.manifestation.app-debug-74:/font_playfair_display_semibold.ttf.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/font/playfair_display_semibold.ttf"
     },
     {
-        "merged": "com.levelup.manifestation.app-debug-64:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.levelup.manifestation.app-main-66:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.mikhail.manifestation.app-debug-74:/raw_med_divine_dna.gif.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/raw/med_divine_dna.gif"
     },
     {
-        "merged": "com.levelup.manifestation.app-debug-64:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.levelup.manifestation.app-main-66:/drawable/ic_launcher_background.xml"
+        "merged": "com.mikhail.manifestation.app-debug-74:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_med_angel_activation.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/med_angel_activation.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_bg_meditations.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/bg_meditations.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_card_bg_2.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/card_bg_2.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_med_create_reality.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/med_create_reality.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_bg_home_top.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/bg_home_top.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/font_manrope_bold.ttf.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/font/manrope_bold.ttf"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/font_playfair_display_bold.ttf.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/font/playfair_display_bold.ttf"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/font_manrope_semibold.ttf.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/font/manrope_semibold.ttf"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/raw_map_style_dark.json.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/raw/map_style_dark.json"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_card_bg_9.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/card_bg_9.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/font_manrope_light.ttf.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/font/manrope_light.ttf"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_med_abundance.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/med_abundance.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_card_bg_5.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/card_bg_5.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/font_manrope_medium.ttf.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/font/manrope_medium.ttf"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_mikhail_portrait.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/mikhail_portrait.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/raw_bg_affirmation_card.gif.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/raw/bg_affirmation_card.gif"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable_bg_affirmation_card.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable/bg_affirmation_card.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/font_playfair_display_medium.ttf.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/font/playfair_display_medium.ttf"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_bg_player.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/bg_player.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_bg_home.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/bg_home.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_bg_reprogram.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/bg_reprogram.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_card_bg_8.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/card_bg_8.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_med_subtle_bodies.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/med_subtle_bodies.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_card_bg_10.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/card_bg_10.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_card_bg_1.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/card_bg_1.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_card_bg_4.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/card_bg_4.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_logo_ageev.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/logo_ageev.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_med_harmonize_life.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/med_harmonize_life.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable_med_karmic_release.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable/med_karmic_release.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/font_manrope_regular.ttf.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/font/manrope_regular.ttf"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_med_return_to_self.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/med_return_to_self.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_card_bg_7.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/card_bg_7.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_card_bg_3.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/card_bg_3.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_bg_affirmations.jpg.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/bg_affirmations.jpg"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_med_chakra_harmony.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/med_chakra_harmony.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/drawable-nodpi_med_cleansing.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/drawable-nodpi/med_cleansing.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mikhail.manifestation.app-debug-74:/font_playfair_display_regular.ttf.flat",
+        "source": "com.mikhail.manifestation.app-main-76:/font/playfair_display_regular.ttf"
     }
 ]

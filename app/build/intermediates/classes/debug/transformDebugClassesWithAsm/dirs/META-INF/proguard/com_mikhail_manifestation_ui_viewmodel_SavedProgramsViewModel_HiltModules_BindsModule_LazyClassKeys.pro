@@ -1,0 +1,1 @@
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.SavedProgramsViewModel

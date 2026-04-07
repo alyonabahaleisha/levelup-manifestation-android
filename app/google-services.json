@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "188401884866",
+    "project_id": "mikhail-app",
+    "storage_bucket": "mikhail-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188401884866:android:6bbcf86f57e41a055ca55b",
+        "android_client_info": {
+          "package_name": "com.mikhail.manifestation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3-DuE3GktAynSPP4kIBs5toDVq31Sp1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

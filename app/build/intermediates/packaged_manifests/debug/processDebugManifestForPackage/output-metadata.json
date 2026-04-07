@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.levelup.manifestation",
+  "applicationId": "com.mikhail.manifestation",
   "variantName": "debug",
   "elements": [
     {

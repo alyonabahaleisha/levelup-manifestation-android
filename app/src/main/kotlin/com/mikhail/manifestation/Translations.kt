@@ -24,6 +24,7 @@ object Translations {
     private val remoteUiStrings = ConcurrentHashMap<String, String>()
 
     private val listeners = mutableListOf<ListenerRegistration>()
+    var onMeditationsLoaded: (() -> Unit)? = null
 
     fun load(context: Context) {
         if (::lang.isInitialized) return
@@ -89,6 +90,7 @@ object Translations {
             }
             remoteMeditations.clear()
             remoteMeditations.putAll(byArea)
+            onMeditationsLoaded?.invoke()
         }
 
         // Music

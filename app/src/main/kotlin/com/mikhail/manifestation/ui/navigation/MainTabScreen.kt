@@ -43,8 +43,6 @@ import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material.icons.filled.Psychology
 import androidx.compose.material.icons.outlined.LightMode
 import androidx.compose.material.icons.outlined.Bedtime
-import androidx.compose.ui.res.painterResource
-import com.mikhail.manifestation.R
 import androidx.compose.material.icons.outlined.ChatBubbleOutline
 import androidx.compose.material.icons.outlined.MusicNote
 import androidx.compose.material.icons.outlined.Psychology
@@ -350,7 +348,7 @@ fun MainTabScreen(
                             when (index) {
                                 0 -> Icon(if (selected) Icons.Filled.LightMode else Icons.Outlined.LightMode, contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
                                 1 -> Icon(if (selected) Icons.Filled.ChatBubble else Icons.Outlined.ChatBubbleOutline, contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
-                                2 -> Icon(painterResource(R.drawable.ic_wing), contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
+                                2 -> Icon(if (selected) Icons.Filled.Bedtime else Icons.Outlined.Bedtime, contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
                                 3 -> Icon(if (selected) Icons.Filled.MusicNote else Icons.Outlined.MusicNote, contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
                                 4 -> Icon(if (selected) Icons.Filled.Psychology else Icons.Outlined.Psychology, contentDescription = null, modifier = Modifier.size(26.dp), tint = iconColor)
                             }

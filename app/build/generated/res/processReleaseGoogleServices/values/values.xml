@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">188401884866</string>
+    <string name="google_api_key" translatable="false">AIzaSyD3-DuE3GktAynSPP4kIBs5toDVq31Sp1I</string>
+    <string name="google_app_id" translatable="false">1:188401884866:android:6bbcf86f57e41a055ca55b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD3-DuE3GktAynSPP4kIBs5toDVq31Sp1I</string>
+    <string name="google_storage_bucket" translatable="false">mikhail-app.firebasestorage.app</string>
+    <string name="project_id" translatable="false">mikhail-app</string>
+</resources>

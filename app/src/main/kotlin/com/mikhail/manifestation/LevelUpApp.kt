@@ -5,6 +5,7 @@ import android.content.res.Configuration
 import coil.ImageLoader
 import coil.ImageLoaderFactory
 import coil.disk.DiskCache
+import coil.imageLoader
 import coil.memory.MemoryCache
 import coil.request.ImageRequest
 import com.mikhail.manifestation.data.content.MeditationContent
@@ -16,6 +17,7 @@ class LevelUpApp : Application(), ImageLoaderFactory {
         super.onCreate()
         forceRussianLocale()
         Translations.load(this)
+        Translations.onMeditationsLoaded = { prefetchCovers() }
         Translations.syncFromFirestore()
         prefetchCovers()
     }
@@ -47,13 +49,15 @@ class LevelUpApp : Application(), ImageLoaderFactory {
     }
 
     private fun prefetchCovers() {
-        val loader = ImageLoader(this)
+        val loader = imageLoader
         val meditations = MeditationContent.allMeditations()
         for (med in meditations) {
             val url = MeditationContent.coverUrl(med) ?: continue
             val request = ImageRequest.Builder(this)
                 .data(url)
                 .memoryCacheKey(url)
+                .diskCacheKey(url)
+                .size(coil.size.Size.ORIGINAL)
                 .build()
             loader.enqueue(request)
         }

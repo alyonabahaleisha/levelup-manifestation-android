@@ -50,7 +50,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
@@ -204,6 +203,7 @@ private fun MeditationListScreen(
                         index = index,
                         onPlay = {
                             haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                            viewModel.downloadMeditation(meditation)
                             onSelectMeditation(meditation)
                         }
                     )
@@ -304,12 +304,13 @@ private fun MeditationVisualCard(
             )
         )
 
-        // Duration badge
+        // Top row: duration badge (trailing only)
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp, vertical = 16.dp),
-            horizontalArrangement = Arrangement.End
+            horizontalArrangement = Arrangement.End,
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
                 formatDuration(meditation.durationSeconds),

@@ -1,0 +1,12 @@
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.ClubsViewModel
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.ClubsViewModel
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.MeditationViewModel
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.MeditationViewModel
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.MusicViewModel
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.MusicViewModel
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.NotificationViewModel
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.NotificationViewModel
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.SavedProgramsViewModel
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.SavedProgramsViewModel
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.ThemeViewModel
+-keep,allowobfuscation,allowshrinking class com.mikhail.manifestation.ui.viewmodel.ThemeViewModel

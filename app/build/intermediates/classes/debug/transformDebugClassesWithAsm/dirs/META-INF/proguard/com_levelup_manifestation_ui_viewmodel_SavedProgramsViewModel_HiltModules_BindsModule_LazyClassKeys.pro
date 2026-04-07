@@ -1,1 +1,0 @@
--keep,allowobfuscation,allowshrinking class com.levelup.manifestation.ui.viewmodel.SavedProgramsViewModel
