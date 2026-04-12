@@ -8,6 +8,7 @@ import androidx.datastore.preferences.core.edit
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mikhail.manifestation.data.store.PrefsKeys
+import com.mikhail.manifestation.ui.theme.AffirmationTheme
 import com.mikhail.manifestation.ui.theme.ThemeMode
 import com.mikhail.manifestation.ui.theme.ToneTheme
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -38,6 +39,19 @@ class ThemeViewModel @Inject constructor(
     fun setThemeMode(mode: ThemeMode) {
         viewModelScope.launch {
             dataStore.edit { it[PrefsKeys.THEME_MODE] = mode.name.lowercase() }
+        }
+    }
+
+    val affirmationTheme: StateFlow<AffirmationTheme> = dataStore.data
+        .map { prefs ->
+            val id = prefs[PrefsKeys.AFFIRMATION_THEME] ?: "teal"
+            AffirmationTheme.forId(id)
+        }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, AffirmationTheme.forId("teal"))
+
+    fun setAffirmationTheme(theme: AffirmationTheme) {
+        viewModelScope.launch {
+            dataStore.edit { it[PrefsKeys.AFFIRMATION_THEME] = theme.id }
         }
     }
 }

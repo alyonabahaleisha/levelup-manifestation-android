@@ -29,6 +29,7 @@ object PrefsKeys {
     val LAST_MEDITATION_ID = stringPreferencesKey("last_meditation_id")
     val LAST_MUSIC_TRACK_ID = stringPreferencesKey("last_music_track_id")
     val THEME_MODE = stringPreferencesKey("theme_mode")
+    val AFFIRMATION_THEME = stringPreferencesKey("affirmation_theme_id")
 }
 
 @Module
